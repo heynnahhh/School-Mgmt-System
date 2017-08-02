@@ -299,17 +299,17 @@ desired effect
       </h1>
       <ol class="breadcrumb">
         <li><i class="fa fa-book"></i> &nbsp;Inventory</li>
-        <li class="active">Manage Records</li>  
+        <li>Manage Records</li>  
       </ol>
     </section>
     <br>
     <div class="container-fluid">
       <button type="button"class="btn btn-warning" data-toggle="modal" data-target="#add_item">Create Item <span class="glyphicon glyphicon-send"></span></button>
     </div>
-
+    <br>
     <div class="container-fluid">
       <div class="input-group">
-        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <input type="text" name="q" class="form-control" placeholder="Search in Items">
         <span class="input-group-btn">
           <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
         </span>
@@ -321,59 +321,68 @@ desired effect
             <thead>
               <tr>
                 <th>Item ID</th>
+                <th>Item Name</th>
                 <th>Item Description</th>
                 <th>Item Quantity</th>
                 <th>Item Price</th>
                 <th>Date Delivered</th>
+                <th>Date Received</th>
               </tr>
             </thead>
             <tfoot>
               <tr>
                 <th>Item ID</th>
+                <th>Item Name</th>
                 <th>Item Description</th>
                 <th>Item Quantity</th>
                 <th>Item Price</th>
                 <th>Date Delivered</th>
+                <th>Date Received</th>
               </tr>
             </tfoot>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Short Bondpaper</td>
-                <td>5 rims</td>
+                <td>Bondpaper Ream</td>
+                <td>Legal Multicopy 80 GSM 216x300 mm</td>
+                <td>50</td>
                 <td>$320,800</td>
+                <td>2011/04/25</td>
                 <td>2011/04/25</td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>Xerox Copier</td>
-                <td>1 </td>
+                <td>Konika Minolta</td>
+                <td>5</td>
                 <td>$170,750</td>
+                <td>2011/07/25</td>
                 <td>2011/07/25</td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>Electric fan</td>
-                <td>2</td>
+                <td>Panasonic</td>
+                <td>10</td>
                 <td>$320,800</td>
+                <td>2011/04/25</td>
                 <td>2011/04/25</td>
               </tr>
             </tbody>
           </table>
-      </div><!-- /.container -->
-    </section>
+        </div><!-- /.container -->
+      </section>
     <!-- /.content -->
-  </div>
   <!-- /.content-wrapper -->
 
-  <!-- Create Item Modal -->
+<!-- Create Item Modal -->
 <div class="modal fade" id="add_item" role="dialog">
   <div class="modal-dialog modal-lg">
     <!-- Create Item Modal Content -->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add Item</h4>
+        <h4 class="modal-title"><b>Add Item<b></h4>
       </div>
 
       <div class="modal-body">
@@ -381,33 +390,41 @@ desired effect
           <fieldset>
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-4 control-label">First Name</label>  
+              <label class="col-md-4 control-label">Item Name</label>  
               <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                  <span class="input-group-addon"><i class="fa fa-shopping-cart"></i></span>
+                  <input name="item_name" placeholder="Name of Item" class="form-control" type="text">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-md-4 control-label" >Last Name</label> 
+              <label class="col-md-4 control-label" >Item Description</label> 
               <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                  <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
+                  <input name="item_desc" placeholder="Description of Item" class="form-control"  type="text">
                 </div>
               </div>
             </div>
 
-
-
+            <div class="form-group">
+              <label class="col-md-4 control-label" >Item Quantity</label> 
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input name="item_quantity" placeholder="Quantity of Item" class="form-control"  type="number">
+                </div>
+              </div>
+            </div>
           </fieldset>
         </form>
       </div>
     </div>
   </div>
 </div>
+<!-- End of Modal -->
 
   <!-- Main Footer -->
   <footer class="main-footer">

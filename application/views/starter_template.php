@@ -274,8 +274,8 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i>Manage records</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Borrowed Books</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Books List</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Issued Books</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
           </ul>
         </li>
@@ -294,12 +294,91 @@ desired effect
       </h1>
       <ol class="breadcrumb">
         <li>Main Navigation</a></li>
-        <li class="active"><a href="#"><i class="fa fa-dashboard"></i>Dashboard</li>  
+        <li class="active"><a href="#"><i class="fa fa-dashboard"></i>Dashboard</a></li>  
       </ol>
     </section>
-  </div>
   <!-- /.content-wrapper -->
 
+  <!-- Main Content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>150</h3>
+              <p>Total Items</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-shopping-cart"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>53</sup></h3>
+              <p>List of Books</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-book"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>44</h3>
+              <p>Issued Books</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-sort"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+          
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>65</h3>
+              <p>Returned Books</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>53</sup></h3>
+              <p>Suppliers</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+      <!-- ./col -->
+      </div>
+    </section>
+  </div>
   <!-- Main Footer -->  
   <footer class="main-footer">
     <!-- To the right -->
