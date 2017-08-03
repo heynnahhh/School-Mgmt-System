@@ -30,6 +30,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <!-- CSS -->
+  <link rel="stylesheet" hrf="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" hrf="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -256,15 +261,15 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">Main Navigation</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="<?php echo site_url('Inventory/dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="<?php echo site_url('Inventory/Dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-database active"></i> <span>Inventory</span>
+          <a href="#"><i class="fa fa-database"></i> <span>Inventory</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
+            <li class="active"><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -275,7 +280,7 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo site_url('Library/books_list');?>"><i class="fa fa-circle-o"></i>Books List</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Issued Books</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Borrowed Books</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
           </ul>
         </li>
@@ -290,96 +295,122 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
+        Library Management
       </h1>
       <ol class="breadcrumb">
-        <li>Main Navigation</a></li>
-        <li class="active"><a href=""><i class="fa fa-dashboard"></i>Dashboard</a></li>  
+        <li><i class="fa fa-book"></i> &nbsp;Library</li>
+        <li>Books List</li>  
       </ol>
     </section>
+    <br>
+    <div class="container-fluid">
+      <button type="button"class="btn btn-warning" data-toggle="modal" data-target="#add_item">Add Book <span class="glyphicon glyphicon-send"></span></button>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search in Items">
+        <span class="input-group-btn">
+          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </div>
+    <!-- Main content -->
+      <section class="content">
+          <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Book ID</th>
+                <th>Book Description</th>
+                <th>Book Author</th>
+                <th>Book Published </th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Book ID</th>
+                <th>Book Description</th>
+                <th>Book Author</th>
+                <th>Book Published</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>World Literature</td>
+                <td>Robert Madrilejos</td>
+                <td>2014/5/16</td>
+              <tr>
+                <td>2</td>
+                <td>College Algebra</td>
+                <td>Eilbert Lee</td>
+                <td>2011/04/25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Game of Thrones</td>
+                <td>Hakeem Polistico</td>
+                <td>2010/09/25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /.container -->
+      </section>
+    <!-- /.content -->
   <!-- /.content-wrapper -->
 
-  <!-- Main Content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-              <p>Total Items</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-shopping-cart"></i>
-            </div>
-            <a href="<?php echo site_url('Inventory/manage_records');?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>53</sup></h3>
-              <p>Books List</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-book"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>44</h3>
-              <p>Issued Books</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-sign-in"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-          
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-orange">
-            <div class="inner">
-              <h3>65</h3>
-              <p>Returned Books</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-sign-out"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53</sup></h3>
-              <p>Suppliers</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-users"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
-      <!-- ./col -->
+<!-- Create Item Modal -->
+<div class="modal fade" id="add_item" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <!-- Create Item Modal Content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><b>Add Book<b></h4>
       </div>
-    </section>
+
+      <div class="modal-body">
+        <form class="well form-horizontal" id="contact_form">
+          <fieldset>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Book Name</label>  
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                  <input name="book_name" placeholder="Name of Book" class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" >Book Description</label> 
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
+                  <input name="book_desc" placeholder="Description of Book" class="form-control"  type="text">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" >Book Author</label> 
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input name="book_author" placeholder="Author of the Book" class="form-control"  type="test">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </div>
-  <!-- Main Footer -->  
+</div>
+<!-- End of Modal -->
+
+  <!-- Main Footer -->
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">

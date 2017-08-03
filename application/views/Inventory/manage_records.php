@@ -261,7 +261,7 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">Main Navigation</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="<?php echo site_url('starter_template');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="<?php echo site_url('Inventory/dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-database"></i> <span>Inventory</span>
             <span class="pull-right-container">
@@ -269,7 +269,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i>Manage Records</a></li>
+            <li class="active"><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -279,7 +279,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i>Manage records</a></li>
+            <li><a href="<?php echo site_url('Library/books_list');?>"><i class="fa fa-circle-o"></i>Books List</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Borrowed Books</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
           </ul>
@@ -298,13 +298,13 @@ desired effect
         Inventory
       </h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-book"></i> &nbsp;Inventory</li>
+        <li><i class="fa fa-database"></i> &nbsp;Inventory</li>
         <li>Manage Records</li>  
       </ol>
     </section>
     <br>
     <div class="container-fluid">
-      <button type="button"class="btn btn-warning" data-toggle="modal" data-target="#add_item">Create Item <span class="glyphicon glyphicon-send"></span></button>
+      <button type="button"class="btn btn-warning" data-toggle="modal" data-target="#add_item">Add Item <span class="glyphicon glyphicon-send"></span></button>
     </div>
     <br>
     <div class="container-fluid">
