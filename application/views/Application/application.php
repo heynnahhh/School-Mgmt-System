@@ -13,7 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
@@ -30,18 +30,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
-  <!-- CSS -->
-  <link rel="stylesheet" hrf="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" hrf="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<style type="text/css">
-  th,td{
-    text-align: center;
-  }
-  
-</style>
-  
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -63,7 +51,6 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -269,15 +256,15 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">Main Navigation</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="<?php echo site_url('Inventory/Dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li class="active"><a href="<?php echo site_url('Inventory/dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-database"></i> <span>Inventory</span>
+          <a href="#"><i class="fa fa-database active"></i> <span>Inventory</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
+            <li><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -288,7 +275,7 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo site_url('Library/books_list');?>"><i class="fa fa-circle-o"></i>Books List</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Borrowed Books</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Issued Books</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
           </ul>
         </li>
@@ -303,122 +290,228 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Library Management
+        Dashboard
       </h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-book"></i> &nbsp;Library</li>
-        <li>Books List</li>  
+        <li>Main Navigation</a></li>
+        <li class="active"><a href=""><i class="fa fa-dashboard"></i>Dashboard</a></li>  
       </ol>
     </section>
-    <br>
-    <div class="container-fluid">
-      <button type="button"class="btn btn-warning" data-toggle="modal" data-target="#add_item">Add Book <span class="glyphicon glyphicon-send"></span></button>
-    </div>
-    <br>
-    <div class="container-fluid">
-      <div class="input-group">
-        <input type="text" name="q" class="form-control" placeholder="Search in Items">
-        <span class="input-group-btn">
-          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-        </span>
-      </div>
-    </div>
-    <!-- Main content -->
-      <section class="content">
-          <table class="table table-striped table-bordered" cellspacing="0" width="100%" border="1">
-            <thead>
-              <tr>
-                <th>Book ID</th>
-                <th>Book Description</th>
-                <th>Book Author</th>
-                <th>Book Published </th>
-              </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th>Book ID</th>
-                <th>Book Description</th>
-                <th>Book Author</th>
-                <th>Book Published</th>
-              </tr>
-            </tfoot>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>World Literature</td>
-                <td>Robert Madrilejos</td>
-                <td>2014/5/16</td>
-              <tr>
-                <td>2</td>
-                <td>College Algebra</td>
-                <td>Eilbert Lee</td>
-                <td>2011/04/25</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Game of Thrones</td>
-                <td>Hakeem Polistico</td>
-                <td>2010/09/25</td>
-              </tr>
-            </tbody>
-          </table>
-        </div><!-- /.container -->
-      </section>
-    <!-- /.content -->
-  <!-- /.content-wrapper -->
+    <!-- /.content-wrapper -->
 
-<!-- Create Item Modal -->
-<div class="modal fade" id="add_item" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <!-- Create Item Modal Content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><b>Add Book<b></h4>
-      </div>
+    <!-- Main Content -->
+    <section class="content">
 
-      <div class="modal-body">
-        <form class="well form-horizontal" id="contact_form">
-          <fieldset>
-            <!-- Text input-->
+      <div class="container-fluid" style="border:#000000;">
+
+        <div class="row">
+          <!-- Form Name -->
+          <h2><b>Application for Senior High School</b></h2>
+          <legend><h3>Personal Information</h3></legend>
+
+          <!-- 1st column-->  
+          <div class="col-xs-4">
+
+            <label>Strand:</label>
             <div class="form-group">
-              <label class="col-md-4 control-label">Book Name</label>  
-              <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                  <input name="book_name" placeholder="Name of Book" class="form-control" type="text">
-                </div>
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-information-circled"></i></span>
+                <input  name="strand" class="form-control" type="text" disabled>
               </div>
             </div>
 
+            <label>Learner Reference Number (LRN):</label>
             <div class="form-group">
-              <label class="col-md-4 control-label" >Book Description</label> 
-              <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
-                  <input name="book_desc" placeholder="Description of Book" class="form-control"  type="text">
-                </div>
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-information-circled"></i></span>
+                <input  name="lrn" placeholder=" Enter Learner Reference Number" class="form-control" type="text">
               </div>
             </div>
 
+            <label>Last Name:</label> 
             <div class="form-group">
-              <label class="col-md-4 control-label" >Book Author</label> 
-              <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input name="book_author" placeholder="Author of the Book" class="form-control"  type="test">
-                </div>
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input name="last_name" placeholder=" Enter Last Name" class="form-control"  type="text">
               </div>
             </div>
-          </fieldset>
-        </form>
+
+            <label>First Name:</label> 
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input  name="first_name" placeholder=" Enter First Name" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Middle Name:</label> 
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input  name="middle_name" placeholder=" Enter Middle Name" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Birthdate:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-calendar"></i></span>
+                <input  name="birthdate" placeholder=" Enter Birthdate" class="form-control" type="date">
+              </div>
+            </div>
+
+            <label>Age (As of last birthday):</label>  
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input  name="age" placeholder=" Enter Age" class="form-control" type="number">
+              </div>
+            </div>
+
+            <label>Birthplace:</label>  
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input  name="birthplace" placeholder=" Enter Birthplace" class="form-control" type="text">
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="col-xs-4">
+
+            <label>Gender:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <select name="gender" class="form-control selectpicker">
+                  <option value="selectgender">Select Gender <i class="ion ion-person"></i></option>  
+                  <option value="male">MALE</option>
+                  <option value="female">FEMALE</option>
+                </select>
+              </div>
+            </div>
+
+            <label>Mother Tongue:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input  name="mother_tongue" placeholder=" Enter Mother Tongue" class="form-control" type="text">
+              </div>
+            </div>
+
+             <label>Religion:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input name="religion" placeholder="Enter Religion" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Home Address (House #, Street):</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-home"></i></span>
+                <input name="home_add" placeholder="Enter Home Address" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Barangay:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-home"></i></span>
+                <input name="Barangay" placeholder="Enter Barangay" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>City:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-home"></i></span>
+                <input name="city" placeholder="Enter City" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Provincial Address:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-home"></i></span>
+                <input name="prov_add" placeholder="Enter Address" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Contact #:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-android-phone-portrait"></i></span>
+                <input name="contact_no" placeholder="Enter Phone or telephone number" class="form-control" type="text">
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-xs-4">
+
+            <label>Father's Name:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input name="father_name" placeholder="Enter Father's Name" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Mother's Maiden Name:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input name="mother_name" placeholder="Enter Mother's Maiden Name" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Parent's Contact Number:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-ios-telephone"></i></span>
+                <input name="parents_num" placeholder="Enter Parent's Contact Number" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Guardian Name:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input name="guardian_name" placeholder="Enter Guardian Name" class="form-control" type="text">
+              </div>
+            </div>
+
+            <label>Relationship:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <input type="text" name="relationship" class="form-control" list="relationship" placeholder="Select Relationship">
+                <datalist id="relationship">
+                  <option value="Father">
+                  <option value="Mother">
+                  <option value="Uncle">
+                  <option value="Aunt">
+                  <option value="Grandfather">
+                  <option value="Grandmother">
+                </datalist>
+              </div>
+            </div>
+
+            <label>Guardian's Contact #:</label>
+            <div class="form-group">
+              <div class="col-md-8 input-group">
+                <span class="input-group-addon"><i class="ion ion-person"></i></span>
+                <input name="guardian_num" placeholder="Enter Guardian's Contact number" class="form-control" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
       </div>
-    </div>
+    </section>
   </div>
-</div>
-<!-- End of Modal -->
 
-  <!-- Main Footer -->
+  <!-- Main Footer -->  
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
@@ -435,7 +528,7 @@ desired effect
       <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
-    <!-- Tab panes -->
+    <!-- Tab panels -->
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
