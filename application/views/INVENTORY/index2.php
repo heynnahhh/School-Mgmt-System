@@ -33,11 +33,11 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="<?php echo site_url();?>/INVENTORY/home" class="logo">
+    <a href="<?php echo site_url();?>/starter" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>SM</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>School Management</b></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -321,9 +321,11 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
+        <li><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i> <span>SHS APPLICATION</span></a></li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>LIBRARY</span>
+            <i class="fa fa-book"></i> <span>LIBRARY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -349,7 +351,7 @@
         </li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>INVENTORY</span>
+            <i class="fa fa-database"></i> <span>INVENTORY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -357,6 +359,7 @@
           <ul class="treeview-menu">
             <li class="active"><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
@@ -530,12 +533,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Version 2.0</small>
+        Inventory
+        <small>(Dashboard)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> INVENTORY</a></li>
-        <li class="active">Dashboard</li>
+        <li><i class="fa fa-database"></i>&nbsp; INVENTORY</a></li>
+        <li class="active"> Dashboard</li>
       </ol>
     </section>
 

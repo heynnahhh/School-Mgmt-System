@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>School Management System | Starter</title>
+  <title>INVENTORY | Manage Records</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -65,7 +65,7 @@ desired effect
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>M</span>
+      <span class="logo-mini"><b>SM</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>School Management</b></span>
     </a>
@@ -259,29 +259,51 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">Main Navigation</li>
+        <li class="header">MAIN NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="<?php echo site_url('Inventory/dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i> <span>SHS APPLICATION</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-database"></i> <span>Inventory</span>
+          <a href="#">
+            <i class="fa fa-book"></i> <span>LIBRARY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/add_books"><i class="fa fa-circle-o"></i> Add Book(s)</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/books_list"><i class="fa fa-circle-o"></i> Book(s) List</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/borrowed_books"><i class="fa fa-circle-o"></i> Borrowed Book(s)</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/returned_books"><i class="fa fa-circle-o"></i> Returned Book(s)</a></li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Settings
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> User Management</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Library</span>
+          <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-database"></i> <span>INVENTORY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Library/books_list');?>"><i class="fa fa-circle-o"></i>Books List</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Borrowed Books</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li class="active"><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
       </ul>
@@ -296,9 +318,10 @@ desired effect
     <section class="content-header">
       <h1>
         Inventory
+        <small>(Manage Records)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-database"></i> &nbsp;Inventory</li>
+        <li><i class="fa fa-database"></i>&nbsp; INVENTORY</li>
         <li>Manage Records</li>  
       </ol>
     </section>

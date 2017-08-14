@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Advanced form elements</title>
+  <title>LIBRARY | Add Book</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -43,11 +43,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="<?php echo site_url();?>LIBRARY/home" class="logo">
+    <a href="<?php echo site_url();?>/starter" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>SM</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>School Management</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -333,9 +333,11 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
+        <li><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i> <span>SHS APPLICATION</span></a></li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>LIBRARY</span>
+            <i class="fa fa-book"></i> <span>LIBRARY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -361,14 +363,15 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>INVENTORY</span>
+            <i class="fa fa-database"></i> <span>INVENTORY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
@@ -542,11 +545,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Advanced Form Elements
-        <small>Preview</small>
+        Library
+        <small>(Add Book)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-dashboard"></i> LIBRARY</a></li>
+        <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-book"></i>&nbsp;LIBRARY</a></li>
         <li class="active">Add Book(s)</li>
       </ol>
     </section>
@@ -558,11 +561,11 @@
         <div class="col-md-12">
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Add Book</h3>
+              <h3 class="box-title">Fill up Book Information</h3>
             </div>
             <div class="box-body">
               <form action="<?php echo site_url('LIBRARY/home/addbook')?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-              <div class="col-md-6">
+                <div class="col-md-6">
                   <div class="form-group">
                     <label class="control-label" for="isbn">ISBN</label>
                     <input type="text" name="book_isbn" placeholder="ISBN"  class="form-control" id="book_isbn" required="required" />

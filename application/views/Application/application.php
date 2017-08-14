@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>School Management System | Starter</title>
+  <title>Senior High School Application | Main Navigation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -58,9 +58,9 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="<?php echo site_url();?>/starter" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>M</span>
+      <span class="logo-mini"><b>SM</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>School Management</b></span>
     </a>
@@ -254,29 +254,51 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">Main Navigation</li>
+        <li class="header">MAIN NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="<?php echo site_url('Inventory/dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li class="active"><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i> <span>SHS APPLICATION</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-database active"></i> <span>Inventory</span>
+          <a href="#">
+            <i class="fa fa-book"></i> <span>LIBRARY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/add_books"><i class="fa fa-circle-o"></i> Add Book(s)</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/books_list"><i class="fa fa-circle-o"></i> Book(s) List</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/borrowed_books"><i class="fa fa-circle-o"></i> Borrowed Book(s)</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/returned_books"><i class="fa fa-circle-o"></i> Returned Book(s)</a></li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Settings
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> User Management</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Library</span>
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-database"></i> <span>INVENTORY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Library/books_list');?>"><i class="fa fa-circle-o"></i>Books List</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Issued Books</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
+            <li class="active"><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
       </ul>
@@ -290,219 +312,230 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
+        Senior High School Application
       </h1>
       <ol class="breadcrumb">
         <li>Main Navigation</a></li>
-        <li class="active"><a href=""><i class="fa fa-dashboard"></i>Dashboard</a></li>  
+        <li><a href=""><i class="fa fa-user-plus"></i>SHS APPLICATION</a></li>  
       </ol>
     </section>
     <!-- /.content-wrapper -->
 
     <!-- Main Content -->
-    <section class="content">
+     <section class="content">
 
-      <div class="container-fluid" style="border:#000000;">
-
-        <div class="row">
-          <!-- Form Name -->
-          <h2><b>Application for Senior High School</b></h2>
-          <legend><h3>Personal Information</h3></legend>
-
-          <!-- 1st column-->  
-          <div class="col-xs-4">
-
-            <label>Strand:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-information-circled"></i></span>
-                <input  name="strand" class="form-control" type="text" disabled>
-              </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Fill up Personal Information</h3>
             </div>
 
-            <label>Learner Reference Number (LRN):</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-information-circled"></i></span>
-                <input  name="lrn" placeholder=" Enter Learner Reference Number" class="form-control" type="text">
+            <div class="box-body">
+              <div class="col-md-5">
+
+                <label class="control-label" for="strand">STRAND:</label>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-10">
+                      <input type="text" name="strand" class="form-control" id="book_isbn" disabled />
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <label class="control-label" for="lrn">Learner Reference Number: (LRN)</label>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-12">
+                      <input type="text" name="lrn" class="form-control" id="lrn" placeholder="Enter Learner Reference Number"/>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <label class="control-label" for="name">Full Name:</label>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-4">
+                      <input type="text" class="form-control" placeholder="Surname" style="text-transform: capitalize;">
+                    </div>  
+                    <div class="col-xs-4">
+                      <input type="text" class="form-control" placeholder="First Name" style="text-transform: capitalize;">
+                    </div>
+                    <div class="col-xs-4">
+                      <input type="text" class="form-control" placeholder="Middle Name" style="text-transform: capitalize;">
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-6">
+                      <label class="control-label" for="sex">Sex:</label>
+                      <input type="text" class="form-control" name="sex" list="sex" placeholder="Select Sex" style="text-transform: capitalize;">
+                      <datalist id="sex">
+                        <option>MALE</option>
+                        <option>FEMALE</option>
+                      </datalist>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-6">
+                      <label class="control-label" for="age">Age: *As of last birthday*</label>
+                      <input type="number" min="1" name="age" class="form-control" id="age" placeholder="Enter Age"/>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="birthdate">Birthdate:</label>
+                      <input type="date" name="birthdate" class="form-control" id="birthdate" placeholder="Enter Birthdate"/>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="birthplace">Birthplace:</label>
+                      <input type="text" name="birthplace" class="form-control" id="birthplace" placeholder="Enter Birthplace" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="mtongue">Mother Tongue:</label>
+                      <input type="text" name="mtongue" class="form-control" id="mtongue" placeholder="Enter Mother Tongue" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="religion">Religion:</label>
+                      <input type="text" class="form-control" name="religion" list="religion" placeholder="Select Religion" style="text-transform: capitalize;">
+                      <datalist id="religion">
+                        <option>Roman Catholic</option>
+                        <option>Islam</option>
+                        <option>Born Again Christian</option>
+                        <option>Iglesia Ni Kristo</option>  
+                      </datalist>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <label>Last Name:</label> 
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input name="last_name" placeholder=" Enter Last Name" class="form-control"  type="text">
-              </div>
-            </div>
+              <div class="col-md-7">
 
-            <label>First Name:</label> 
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input  name="first_name" placeholder=" Enter First Name" class="form-control" type="text">
-              </div>
-            </div>
+                <label class="control-label" for="haddress">Address:</label>
+                <div class="row">
+                  <div class="form-group" id="haddress">
+                    <div class="col-xs-4">
+                      <input type="text" name="hstreet" class="form-control" placeholder="Home # , Street" style="text-transform: capitalize;"/>
+                    </div>
 
-            <label>Middle Name:</label> 
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input  name="middle_name" placeholder=" Enter Middle Name" class="form-control" type="text">
-              </div>
-            </div>
+                    <div class="col-xs-2">
+                      <input type="text" name="barangay" class="form-control" placeholder="Barangay" style="text-transform: capitalize;"/>
+                    </div>
 
-            <label>Birthdate:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-calendar"></i></span>
-                <input  name="birthdate" placeholder=" Enter Birthdate" class="form-control" type="date">
-              </div>
-            </div>
+                    <div class="col-xs-3">
+                      <input type="text" name="city" class="form-control" placeholder="City" style="text-transform: capitalize;"/>
+                    </div>
 
-            <label>Age (As of last birthday):</label>  
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input  name="age" placeholder=" Enter Age" class="form-control" type="number">
-              </div>
-            </div>
+                    <div class="col-xs-3">
+                      <input type="text" name="province" class="form-control" placeholder="Province" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
 
-            <label>Birthplace:</label>  
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input  name="birthplace" placeholder=" Enter Birthplace" class="form-control" type="text">
-              </div>
-            </div>
+                <br>
 
-          </div>
-          
-          <div class="col-xs-4">
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="fathername">Father's Name:</label>
+                      <input type="text" name="fathername" class="form-control" id="fathername" placeholder="Enter Father's Name" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
 
-            <label>Gender:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <select name="gender" class="form-control selectpicker">
-                  <option value="selectgender">Select Gender <i class="ion ion-person"></i></option>  
-                  <option value="male">MALE</option>
-                  <option value="female">FEMALE</option>
-                </select>
-              </div>
-            </div>
+                <br>
 
-            <label>Mother Tongue:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input  name="mother_tongue" placeholder=" Enter Mother Tongue" class="form-control" type="text">
-              </div>
-            </div>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="mothername">Mother's Name:</label>
+                      <input type="text" name="mothername" class="form-control" id="mothername" placeholder="Enter Mother's Name" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
 
-             <label>Religion:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input name="religion" placeholder="Enter Religion" class="form-control" type="text">
-              </div>
-            </div>
+                <br>
 
-            <label>Home Address (House #, Street):</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-home"></i></span>
-                <input name="home_add" placeholder="Enter Home Address" class="form-control" type="text">
-              </div>
-            </div>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-7">
+                      <label class="control-label" for="pnumber">Parent's Contact Number:</label>
+                      <input type="text" name="pnumber" class="form-control" id="pnumber" placeholder="Enter Parent's Contact Number" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
 
-            <label>Barangay:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-home"></i></span>
-                <input name="Barangay" placeholder="Enter Barangay" class="form-control" type="text">
-              </div>
-            </div>
+                <br>
 
-            <label>City:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-home"></i></span>
-                <input name="city" placeholder="Enter City" class="form-control" type="text">
-              </div>
-            </div>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="guardian">Guardian's Name</label>
+                      <input type="text" name="guardian" class="form-control" id="guardian" placeholder="Enter Guardian's Name" style="text-transform: capitalize;"/>
+                    </div>
+                  </div>
+                </div>
 
-            <label>Provincial Address:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-home"></i></span>
-                <input name="prov_add" placeholder="Enter Address" class="form-control" type="text">
-              </div>
-            </div>
+                <br>
 
-            <label>Contact #:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-android-phone-portrait"></i></span>
-                <input name="contact_no" placeholder="Enter Phone or telephone number" class="form-control" type="text">
-              </div>
-            </div> 
-          </div>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-xs-8">
+                      <label class="control-label" for="relationship">Relationship:</label>
+                      <input type="text" class="form-control" name="relationship" list="relationship" placeholder="Select Relationship" style="text-transform: capitalize;">
+                      <datalist id="relationship">
+                        <option>Mother</option>
+                        <option>Father</option>
+                        <option>Sister</option>
+                        <option>Brother</option>
+                        <option>Grandfather</option>
+                        <option>Grandmother</option>
+                        <option>Aunt</option>
+                        <option>Uncle</option>
+                      </datalist>
+                    </div>
+                  </div>
+                </div>
 
-          <div class="col-xs-4">
-
-            <label>Father's Name:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input name="father_name" placeholder="Enter Father's Name" class="form-control" type="text">
-              </div>
-            </div>
-
-            <label>Mother's Maiden Name:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input name="mother_name" placeholder="Enter Mother's Maiden Name" class="form-control" type="text">
-              </div>
-            </div>
-
-            <label>Parent's Contact Number:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-ios-telephone"></i></span>
-                <input name="parents_num" placeholder="Enter Parent's Contact Number" class="form-control" type="text">
-              </div>
-            </div>
-
-            <label>Guardian Name:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input name="guardian_name" placeholder="Enter Guardian Name" class="form-control" type="text">
-              </div>
-            </div>
-
-            <label>Relationship:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <input type="text" name="relationship" class="form-control" list="relationship" placeholder="Select Relationship">
-                <datalist id="relationship">
-                  <option value="Father">
-                  <option value="Mother">
-                  <option value="Uncle">
-                  <option value="Aunt">
-                  <option value="Grandfather">
-                  <option value="Grandmother">
-                </datalist>
-              </div>
-            </div>
-
-            <label>Guardian's Contact #:</label>
-            <div class="form-group">
-              <div class="col-md-8 input-group">
-                <span class="input-group-addon"><i class="ion ion-person"></i></span>
-                <input name="guardian_num" placeholder="Enter Guardian's Contact number" class="form-control" type="text">
-              </div>
             </div>
           </div>
         </div>

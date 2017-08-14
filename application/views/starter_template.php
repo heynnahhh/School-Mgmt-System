@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>School Management System | Starter</title>
+  <title>Dashboard | Main Navigation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -58,9 +58,9 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="<?php echo site_url();?>/starter" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>M</span>
+      <span class="logo-mini"><b>SM</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>School Management</b></span>
     </a>
@@ -254,29 +254,51 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">Main Navigation</li>
+        <li class="header">MAIN NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="<?php echo site_url('Inventory/dashboard');?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li class="active"><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i> <span>SHS APPLICATION</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-database active"></i> <span>Inventory</span>
+          <a href="#">
+            <i class="fa fa-book"></i> <span>LIBRARY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Inventory/manage_records');?>"><i class="fa fa-circle-o"></i>Manage Records</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/add_books"><i class="fa fa-circle-o"></i> Add Book(s)</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/books_list"><i class="fa fa-circle-o"></i> Book(s) List</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/borrowed_books"><i class="fa fa-circle-o"></i> Borrowed Book(s)</a></li>
+            <li><a href="<?php echo site_url();?>/LIBRARY/home/returned_books"><i class="fa fa-circle-o"></i> Returned Book(s)</a></li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Settings
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> User Management</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Library</span>
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-database"></i> <span>INVENTORY</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Library/books_list');?>"><i class="fa fa-circle-o"></i>Books List</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Issued Books</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Returned Books</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
       </ul>
@@ -294,7 +316,7 @@ desired effect
       </h1>
       <ol class="breadcrumb">
         <li>Main Navigation</a></li>
-        <li class="active"><a href=""><i class="fa fa-dashboard"></i>Dashboard</a></li>  
+        <li class="active"><a href=""><i class="fa fa-dashboard"></i>&nbsp;Dashboard</a></li>  
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -302,17 +324,19 @@ desired effect
   <!-- Main Content -->
     <section class="content">
       <div class="row">
+
+        <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-aqua">
+          <div class="small-box bg-orange">
             <div class="inner">
-              <h3>150</h3>
-              <p>Total Items</p>
+              <h3>Senior High</h3>
+              <h4> Application</h4>
             </div>
             <div class="icon">
-              <i class="fa fa-shopping-cart"></i>
+              <i class="fa fa-user-plus"></i>
             </div>
-            <a href="<?php echo site_url('Inventory/manage_records');?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url();?>/APPLICATION/application" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
@@ -321,13 +345,27 @@ desired effect
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>53</sup></h3>
-              <p>Books List</p>
+              <h3>Inventory</h3>
+              <h4> Management</h4>
+            </div>
+            <div class="icon">
+              <i class="fa fa-database"></i>
+            </div>
+            <a href="<?php echo site_url();?>/INVENTORY/home" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>Library</h3>
+              <h4> Management</h4>
             </div>
             <div class="icon">
               <i class="fa fa-book"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url();?>/LIBRARY/home"" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
@@ -336,40 +374,11 @@ desired effect
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
-              <p>Issued Books</p>
+              <h3>Medical</h3>
+              <h4> Dental Management</h4>
             </div>
             <div class="icon">
               <i class="fa fa-sign-in"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-          
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-orange">
-            <div class="inner">
-              <h3>65</h3>
-              <p>Returned Books</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-sign-out"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53</sup></h3>
-              <p>Suppliers</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-users"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>

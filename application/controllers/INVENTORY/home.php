@@ -9,4 +9,10 @@ class Home extends CI_Controller {
 		$this->load->view('INVENTORY/index2');
 	}
 
+	public function manage_records()
+	{
+		$this->load->view('INVENTORY/manage_records');
+	}
+
+
 }

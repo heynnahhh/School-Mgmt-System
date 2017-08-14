@@ -7,7 +7,7 @@ class Home extends CI_Controller {
   		parent::__construct();
 
 		$this->load->model('LIBRARY/imagedb');
-    $this->load->model('LIBRARY/books');
+    	$this->load->model('LIBRARY/books');
 		$this->load->model('LIBRARY/user');
 		$this->load->library('form_validation');
 
