@@ -362,8 +362,8 @@
             <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dental Inventory</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Medical Inventory</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
@@ -537,8 +537,9 @@
         <small>(Dashboard)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-database"></i>&nbsp; INVENTORY</a></li>
-        <li class="active"> Dashboard</li>
+        <li>MAIN NAVIGATION</a></li>
+        <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-database"></i>INVENTORY</a></li>
+        <li class="active"><a href="<?php echo site_url();?>/INVENTORY/home">Dasboard</a></li>
       </ol>
     </section>
 

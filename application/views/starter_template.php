@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard | Main Navigation</title>
+  <title>Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -296,8 +296,8 @@ desired effect
             <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dental Inventory</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Medical Inventory</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
@@ -315,8 +315,8 @@ desired effect
         Dashboard
       </h1>
       <ol class="breadcrumb">
-        <li>Main Navigation</a></li>
-        <li class="active"><a href=""><i class="fa fa-dashboard"></i>&nbsp;Dashboard</a></li>  
+        <li>MAIN NAVIGATION</a></li>
+        <li class="active"><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i>DASHBOARD</a></li>  
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -326,7 +326,7 @@ desired effect
       <div class="row">
 
         <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-orange">
             <div class="inner">
@@ -341,7 +341,7 @@ desired effect
         </div>
 
         <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
@@ -355,7 +355,7 @@ desired effect
           </div>
         </div>
 
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
@@ -368,23 +368,6 @@ desired effect
             <a href="<?php echo site_url();?>/LIBRARY/home"" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>Medical</h3>
-              <h4> Dental Management</h4>
-            </div>
-            <div class="icon">
-              <i class="fa fa-sign-in"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
-      <!-- ./col -->
       </div>
     </section>
   </div>

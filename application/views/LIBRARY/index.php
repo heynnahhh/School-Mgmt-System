@@ -543,77 +543,67 @@
         <small>(Dashboard)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-book"></i>&nbsp; LIBRARY</a></li>
-        <li class="active">Dashboard</li>
+        <li>MAIN NAVIGATION</li>
+        <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-book"></i>LIBRARY</a></li>
+        <li class="active"><a href="<?php echo site_url();?>/LIBRARY/home">Dashboard</a></li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
+
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
               <h3>150</h3>
 
-              <p>Books</p>
+              <p>TOTAL BOOKS</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-ios-book"></i>
             </div>
             <a href="<?php echo site_url();?>/LIBRARY/home/books_list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+
         <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-              <p>Borrowed Books</p>
+              <h3>53</sup></h3>
+              <p>BORROWED BOOKS</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-log-out"></i>
+              <i class="ion ion-ios-book"></i>
             </div>
             <a href="<?php echo site_url();?>/LIBRARY/home/borrowed_books" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+
         <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3>44</h3>
-
-              <p>Returned Books</p>
+              <p>RETURNED BOOKS</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="ion ion-ios-book"></i>
+              <i class="ion ion-log-in"></i>
             </div>
             <a href="<?php echo site_url();?>/LIBRARY/home/returned_books" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>65</h3>
-
-              <p>Unique Visitors</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
       </div>
       <!-- /.row -->
+
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->

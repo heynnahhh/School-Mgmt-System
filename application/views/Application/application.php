@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Senior High School Application | Main Navigation</title>
+  <title>Senior High School Application</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -296,8 +296,8 @@ desired effect
             <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dental Inventory</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Medical Inventory</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
@@ -315,8 +315,8 @@ desired effect
         Senior High School Application
       </h1>
       <ol class="breadcrumb">
-        <li>Main Navigation</a></li>
-        <li><a href=""><i class="fa fa-user-plus"></i>SHS APPLICATION</a></li>  
+        <li>MAIN NAVIGATION</a></li>
+        <li class="active"><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i>SHS APPLICATION</a></li>  
       </ol>
     </section>
     <!-- /.content-wrapper -->

@@ -363,8 +363,8 @@
             <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dental Inventory</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Medical Inventory</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
@@ -533,12 +533,11 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Library
-        <small>(Book/s List)</small>
-      </h1>
+      <h1>Book(s) List</h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-book"></i>&nbsp; LIBRARY</a></li>
-        <li class="active">Book(s) list</li>
+        <li>MAIN NAVIGATION</li>
+        <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-book"></i>LIBRARY</a></li>
+        <li class="active"><a href="<?php echo site_url();?>/LIBRARY/home/books_list">Book(s) list</a></li>
       </ol>
     </section>
 
@@ -548,7 +547,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"></h3>
+              <h3 class="box-title">Book(s) List</h3>
+              <small>*Below are the list of books</small>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

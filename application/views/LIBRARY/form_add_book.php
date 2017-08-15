@@ -374,8 +374,8 @@
             <li><a href="<?php echo site_url();?>/INVENTORY/manage_records"><i class="fa fa-circle-o"></i> Manage Records</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Generate Report(s)</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Stocks</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Order(s)</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Expenses</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dental Inventory</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Medical Inventory</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
@@ -549,8 +549,9 @@
         <small>(Add Book)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-book"></i>&nbsp;LIBRARY</a></li>
-        <li class="active">Add Book(s)</li>
+        <li>MAIN NAVIGATION</li>
+        <li><a href="<?php echo site_url();?>/LIBRARY/home"><i class="fa fa-book"></i>LIBRARY</a></li>
+        <li class="active"><a href="<?php echo site_url();?>/LIBRARY/home/add_books">Add Book</a></li>
       </ol>
     </section>
 
