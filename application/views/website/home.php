@@ -77,7 +77,7 @@
 										?>
 									</div>
 								
-									  <div id="footer" style="margin-top:-40px;" class="fl_right"><a href="news"><button>See full details &raquo;</button></a></div>
+									  <div id="footer" style="margin-top:-40px;" class="fl_right"><a class="btn" href="news">See full details &raquo;</a></div>
 									    
 									<div class ="more_news">
 									
@@ -133,13 +133,13 @@
 																			
 									<div class="one_third">
 									
-											<div class="headline_underline"><h6 class="news_heading"><i class="fa fa-calendar-check-o" style="font-size:30px;color:maroon;"></i> Upcoming Events</h6></div>
+											<div class="article_underline"><h6 class="news_heading"><i class="fa fa-calendar-check-o" style="font-size:30px;color:maroon;"></i> Upcoming Events</h6></div>
 											
 											<div class = "news_container">DASDASDASDAS</div>
 										
 										<div class="calendar_container">
 										
-											<div class="headline_underline"><h6 class="news_heading"><i class="fa fa-calendar" style="font-size:30px;color:maroon;"></i> School Calendar</h6></div>
+											<div class="article_underline"><h6 class="news_heading"><i class="fa fa-calendar" style="font-size:30px;color:maroon;"></i> School Calendar</h6></div>
 											
 											<div class = "news_container">
 										
@@ -149,7 +149,7 @@
 										
 										</div>		
 										
-									<div id="footer" style="margin:-50px -1px;" class="fl_right"><a href="#"><button>View calendar</button></a></div>
+									<div id="footer" style="margin:-50px -1px;" class="fl_right"><a class="btn" href="#">View calendar</a></div>
 							</div>
 												
 						  </div>
