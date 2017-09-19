@@ -1,110 +1,103 @@
-<?php include 'templates/header.php';?>
+<?php include 'templates/header.php';?>	
 
-<div class="wrapper row_org">
-	<div class="hoc clear">
-	
+<div class="tree">						
+<div class = "one_third fl_left"><h6 class="org_heading"><i class="fa fa-sitemap" style="font-size:30px;color:maroon;"></i> Organizational Chart</h6></div>
+  <ul class="first">
+    <li>
+      <span class="box">
+        <div class="avatar"></div>
+        <strong>Principal</strong>
+        </br>John Smith
+        </span>
+		
+      <ul>
+        <li>
+		  <ul>
+        <li><span class="box"><div class="avatar"></div>Mathematics Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		  <ul>
+        <li><span class="box"><div class="avatar"></div>English Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		  <ul>
+        <li><span class="box"><div class="avatar"></div>Science Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		  <ul>
+        <li><span class="box"><div class="avatar"></div>Filipino Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		  <ul>
+        <li><span class="box"><div class="avatar"></div>Social Science Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		  <ul>
+        <li><span class="box"><div class="avatar"></div>MAPEH Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		   <ul>
+        <li><span class="box"><div class="avatar"></div>TLE Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+		   <ul>
+        <li><span class="box"><div class="avatar"></div>THE Department -  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+            </li>
+          </ul>
+        </li>
+
+		  <li><span class="box"><div class="avatar"></div>Manager<br/>Jane Smith</span>
+          <ul>
+            <li><span class="box"><div class="avatar"></div>Team Leader<br/>John Doe</span>
+              <ul>
+                <li><span class="box"><div class="avatar"></div>Next Title<br/>Next Name</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+		
+		<li><span class="box"><div class="avatar"></div>Manager<br/>Jane Smith</span>
+          <ul>
+            <li><span class="box"><div class="avatar"></div>Team Leader<br/>John Doe</span>
+              <ul>
+                <li><span class="box"><div class="avatar"></div>Next Title<br/>Next Name</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><span class="box"><div class="avatar"></div>Manager 2</span>
+          <ul>
+            <li><span class="box"><div class="avatar"></div>Name 3</span></li>
+            <li><span class="box"><div class="avatar"></div>Name 4</span></li>
+          </ul>
+        </li>
+		
+		<li><span class="box"><div class="avatar"></div>Manager 2</span>
+          <ul>
+            <li><span class="box"><div class="avatar"></div>Name 3</span></li>
+            <li><span class="box"><div class="avatar"></div>Name 4</span></li>
+          </ul>
+        </li>
 		
 		
-					<div class="tree">
-					<div class="two_third"><h6 class="news_heading"><i class="fa fa-sitemap" style="font-size:30px;color:maroon;margin-bottom:60px;"></i> Organizational Chart</h6></div>
-					<ul>
-						<li>
-						<a href="#"><img src="http://placehold.it/110x110" alt="CEO">
-								CEO</a>
-							<ul>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="CFO">CFO</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a>
-										</li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="">VP Bus Dev</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="" />VP Div A</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="" />VP Div A</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="" />VP Div B</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="">VP Div C</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><img src="http://placehold.it/110x110" alt="VP HR">VP HR</a>
-									<ul>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-										<li><a href="#"><img src="http://placehold.it/25x25" alt="">Employee</img></a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-						</div>
-					<!-- ################################################################################################ -->
-					<div class="clear"></div>
-				</div>
-			</div>
+		 <li><span class="box"><div class="avatar"></div>Librarian-  <strong>HEAD</strong><br/>Hannah Patrcia Liao</span>
+          <ul>
+            <li><span class="box"><div class="avatar"></div>Librarian-  <strong>Assistant</strong><br/>Hannah Patrcia Liao</span>
+              <ul>
+				<li><span class="box"><div class="avatar"></div>Librarian-  <strong>Assistant</strong><br/>Hannah Patrcia Liao</span>
+				<ul>
+                <li><span class="box"><div class="avatar"></div>Librarian-  <strong>Assistant</strong><br/>Hannah Patrcia Liao</span>
+              </ul>
+            </li>
+          </ul>
+        </li>
+		
+      </ul>
+    </li>
+  </ul>
+</div>
 
-					
+
+				
 <?php include 'templates/footer.php';?>

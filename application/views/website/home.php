@@ -52,7 +52,7 @@
 					
 					
 					<div class="wrapper row3_news">
-					  <main class="hoc container clear"> 
+					  <main class="hoc_all hoc container clear"> 
 						  <div class="group demo">
 								<div class="group btmspace-50 demo">
 																
