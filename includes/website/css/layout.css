@@ -475,7 +475,7 @@ html[xmlns] .flexslider .slides {
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
 #footer{padding:80px 0;}
-.form_ers {padding:175px 0 60px;}
+.form_ers {padding:50px 0 60px;}
 
 #footer .heading{margin-bottom:50px; font-size:1.2rem;}
 #footer .title{margin-bottom:50px; font-size:1.2rem;}
@@ -1080,9 +1080,9 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 .row1{color:#474747; background-color:#FFFFFF;}
 .row2{color:#474747; background-color:#EFEFEF; border-color:#D7D7D7;}
 .row3{color:#474747; background-color:#FFFFFF;}
-.row3_news{color:#474747; background-color:white;}
+.row3_news{color:#474747; background-color:#FFFFFF;}
 .row4{color:black; background-color:#FFFFFF;border-top:1px solid; border-top-color: #cccccc;}
-.row4_ers{color:black; background-color:#f2f2f2;}
+.row4_ers{color:black; background-color:#FFFFFF;}
 .row4_org{color:black; background-color:white;}
 .row5, .row5 a{color:#CBCBCB; background-color:#222222}
 .row5{border-color:rgba(255,255,255,.1);}
@@ -1192,7 +1192,7 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	#breadcrumb{}
 	.form_ers {padding:30px 0 -10px 0;}
 	.date {padding-right:none;}
-	.container_more_news{padding-left:30px;}
+	.container_more_news{padding-left:30px;}\
 
 	.container{}
 	#comments input[type="reset"]{margin-top:10px;}
@@ -1207,14 +1207,14 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	.fl_left, .fl_right{display:block; float:none;}
 	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 50px 0; padding:0;}
-	.form_ers {margin-top:-180px;}
+	.form_ers {margin-top:-20px;}
 	
 	#topbar{padding-top:15px; text-align:center;}
 	#topbar ul{margin:0 0 15px 0; line-height:normal;}
 
 	#header{text-align:center;}
 	#header #logo{margin-bottom:15px;}
-
+	.ers{font-size:24px; margin-left:-240px;}
 
 	.sectiontitle{max-width:none; text-align:left;}
 }
