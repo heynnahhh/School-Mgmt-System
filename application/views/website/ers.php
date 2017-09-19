@@ -1,32 +1,45 @@
 <?php include 'templates/header.php';?>
+
+<div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url();?>includes/website/images/demo/backgrounds/ers.jpg');">
+  <article class="hoc container clear">
+    <!-- ################################################################################################ -->
+   <h6 class="nospace"
+	style=" 
+	font-size:35px;
+	position: absolute;
+    top: 100px;
+    left: 270px;
+    height: 100px;"><div class = "ers">Enrollment and Registration System</div></h6>
+    <!-- ################################################################################################ -->
+  </article>
+</div>
+
 <div class="wrapper row4_ers">
   <footer id="footer" class="hoc clear">
     <!-- ################################################################################################ -->
-    <div class="one_half first">
-      <h6 class="title">Enrollment & Registration System</h6>
-		 <p class="nospace">Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum 
-		 Metus mauris luctus lacinia posuere aenean nec cursus mi nunc ornare interdum </p>
-    </div>
+	<div class="article_underline"><h6 class="news_heading"><i class="fa fa-user" style="font-size:30px;color:maroon;"></i> Login</h6></div>
+	
+	<p class="nospace btmspace-15">Please fill in your login details below.</p>
+
+	<p class = "fl_left"> * indicates required fields</p>
+	
 <div class="form_ers">
     <div class="one_third second>  
       <form method="post" action="#">
+	  
         <fieldset>
-			<input class="btmspace-15" type="text" value="" placeholder="Username">
-			<input class="btmspace-15" type="text" value="" placeholder="Password">
-          <button type="submit" value="login">Login</button>
+		<p style="margin-bottom:10px;">Username: * </p><input class="btmspace-15" type="text" value="" placeholder="Enter Username">
+		<p style="margin-bottom:10px;">Password: * </p><input class="btmspace-15" type="text" value="" placeholder="Enter Password">
+			
+			<button type="submit" value="login">Sign In</button>
         </fieldset>
+		
       </form>
     </div>
 </div>
+
     <!-- ################################################################################################ -->
   </footer>
 </div>
+
 <?php include 'templates/footer.php';?>
