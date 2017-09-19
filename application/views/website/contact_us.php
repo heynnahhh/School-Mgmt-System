@@ -2,7 +2,7 @@
 
 <div class="col-twelve">
 	<div class="wrapper row3">
-		<main class="hoc container clear"> 
+		<main class="hoc hoc_all container clear"> 
 			<div class="group demo">
 				<div class="group btmspace-50 demo">
 																
@@ -14,7 +14,7 @@
 							<h6 style="margin-top:30px;">Departments</h6>
 									
 								 <div class="table-responsive">          
-								  <table class="table">
+								  <table class="table table-hover">
 									<thead>
 									  <tr>
 										<th>Name</th>
@@ -45,7 +45,7 @@
 								 <h6 style="margin-top:30px;">Departments</h6>
 									
 								 <div class="table-responsive">          
-								  <table class="table">
+								  <table class="table table-hover">
 									<thead>
 									  <tr>
 										<th>Name</th>

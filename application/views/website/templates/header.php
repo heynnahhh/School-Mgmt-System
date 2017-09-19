@@ -47,8 +47,9 @@
           <a class="drop" href="#">About</a>
           <ul class="sub-menu">
             <li><a href="#">History</a></li>
+			<li><a href="#">Araullo High School Hymn</a></li>
             <li><a href="#">Mission, Vision, Goals & Objectives</a></li>
-            <li><a href="#">Organizational Chart</a></li>
+            <li><a href="org_chart">Organizational Chart</a></li>
           </ul>
         </li>
         <li><a class="drop" href="#">Admission</a>
