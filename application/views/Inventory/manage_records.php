@@ -16,9 +16,11 @@
   <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.min.css">
+  <!-- TEMPORARY -->
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/temp.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-blue.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -323,7 +325,53 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
-        <li><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i> <span>SHS APPLICATION</span></a></li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-globe"></i> <span>LEARNING RESOURCE</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Search</a></li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> LRMDS
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> Assessment and Evaluation</a></li>
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> Storage and Maintenance</a></li>
+                <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Publication and Delivery</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Manage Portal Content
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> Home</a></li>
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> Resources</a></li>
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> Media Gallery</a></li>
+                <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Preview</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Settings
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url();?>/LIBRARY/home/book_users"><i class="fa fa-circle-o"></i> User Management</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-book"></i> <span>LIBRARY</span>
@@ -630,7 +678,7 @@
           <fieldset>
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-4 control-label">Item Name</label>  
+              <label class="col-md-4 control-label">Item Name</label>
               <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-shopping-cart"></i></span>
@@ -640,7 +688,7 @@
             </div>
 
             <div class="form-group">
-              <label class="col-md-4 control-label" >Item Description</label> 
+              <label class="col-md-4 control-label" >Item Description</label>
               <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
@@ -650,7 +698,7 @@
             </div>
 
             <div class="form-group">
-              <label class="col-md-4 control-label" >Item Quantity</label> 
+              <label class="col-md-4 control-label" >Item Quantity</label>
               <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

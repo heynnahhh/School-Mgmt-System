@@ -6,6 +6,7 @@ class Upload extends CI_Controller {
       parent::__construct();
 
     $this->load->model('website/news_upload_model');
+    $this->load->model('SMS/user');
     $this->load->library('form_validation');
 
   }
