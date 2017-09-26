@@ -18,11 +18,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-        page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect.
-  -->
-  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-blue.min.css">
+  <!-- TEMPORARY -->
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/temp.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-blue.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -316,7 +316,7 @@ desired effect
       </h1>
       <ol class="breadcrumb">
         <li>MAIN NAVIGATION</a></li>
-        <li class="active"><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i>SHS APPLICATION</a></li>  
+        <li class="active"><a href="<?php echo site_url();?>/APPLICATION/application"><i class="fa fa-user-plus"></i>SHS APPLICATION</a></li>
       </ol>
     </section>
     <!-- /.content-wrapper -->
@@ -361,7 +361,7 @@ desired effect
                   <div class="form-group">
                     <div class="col-xs-4">
                       <input type="text" class="form-control" placeholder="Surname" style="text-transform: capitalize;">
-                    </div>  
+                    </div>
                     <div class="col-xs-4">
                       <input type="text" class="form-control" placeholder="First Name" style="text-transform: capitalize;">
                     </div>
@@ -441,7 +441,7 @@ desired effect
                         <option>Roman Catholic</option>
                         <option>Islam</option>
                         <option>Born Again Christian</option>
-                        <option>Iglesia Ni Kristo</option>  
+                        <option>Iglesia Ni Kristo</option>
                       </datalist>
                     </div>
                   </div>
@@ -544,7 +544,7 @@ desired effect
     </section>
   </div>
 
-  <!-- Main Footer -->  
+  <!-- Main Footer -->
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">

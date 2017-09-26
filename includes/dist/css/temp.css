@@ -1,0 +1,15 @@
+.skin-blue .main-header .navbar {
+    background-color: #800000;
+}
+
+  .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+      background-color: #111b1f;
+  }
+
+  .skin-blue .main-header .logo {
+    background-color: rgba(128, 0, 0, 0.78);
+  }
+
+  .skin-blue .main-header .logo:hover {
+    background-color: rgba(104, 6, 7, 0.8);
+  }
