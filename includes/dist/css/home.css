@@ -1,3 +1,6 @@
+/***********************/
+/***** TEMPORARY ******/
+/*********************/
 
 
 body{
@@ -53,8 +56,18 @@ pre {
   color: #fff;
 }
 
+.modal-input{
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+/* LOG-IN PAGE */
+
 input[type="email"],input[type="password"]{
   height:45px;
+  width:80%;
 	padding: 15px 45px 15px 10px;
 	background: rgba(255, 255, 255, 0.15);
 	background:#fff;
@@ -69,11 +82,11 @@ input{
 }
 
 input[type="email"]{
-	background: rgb(255, 255, 255) url("../images/user.png") no-repeat 412px 11px;
+	background: rgb(242, 242, 242) url("../img/login/user.png") no-repeat 97% 50%;
 }
 
 input[type="password"]{
-	background: rgb(255, 255, 255) url("../images/password.png") no-repeat 412px 11px;
+	background: rgb(242, 242, 242) url("../img/login/password.png") no-repeat 97% 50%;
 }
 
 
@@ -89,9 +102,9 @@ input[type="submit"],[type="button"]{
 	-moz-transition: 0.5s all;
 	-o-transition: 0.5s all;
 	-ms-transition: 0.5s all;
-	width:100%;
+	width:80%;
 	border:none;
-	margin-top:25px;
+	margin-top:15px;
 }
 
 input[type="submit"]:hover{
@@ -130,17 +143,12 @@ input[type="submit"]:hover{
   position: relative;
 }
 
-
 .container{
   overflow: hidden;
-  width: 500px;
+  background-color: #800000;
   vertical-align: middle;
   white-space: nowrap;
-}
-
-.container{
-  background-color: #929292;
-  width: 30%;
+  width: 40%;
   height: 662px;
   float: left;
 }
@@ -190,6 +198,22 @@ input[type="submit"]:hover{
 .container:hover button.icon:hover{
   cursor: pointer;
   background: white;
+}
+
+.main-agileinfo{
+  margin-top: -50px;
+}
+
+/*log-in background*/
+
+.login-page{
+  background-color: #fdfdfd;
+}
+
+/*login box*/
+
+.input-info{
+  margin-top: 100px;
 }
 
 /*featurette*/
@@ -353,3 +377,6 @@ img {
 .ecosystem-highlight__cards {
     margin: 0 auto;
 }
+
+
+/* Header $ Nav */

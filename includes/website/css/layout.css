@@ -12,106 +12,6 @@ File: Layout CSS
 @import url("custom.flexslider.css");
 @import url("framework.css");
 
-
-/* ------------------------------------------------------------------- 
- * pace.js styles - minimal  - (_document-setup.scss)
- * ------------------------------------------------------------------- */
-.pace {
-	-webkit-pointer-events: none;
-	pointer-events: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-}
-
-.pace-inactive {
-	display: none;
-}
-
-.pace .pace-progress {
-	background: #000000;
-	position: fixed;
-	z-index: 900;
-	top: 0;
-	right: 100%;
-	width: 100%;
-	height: 5px;
-	background-color:maroon;
-}
-
-/* ===================================================================
- *  04. preloader - (_preloader-1.scss)
- *
- * ------------------------------------------------------------------- */
-#preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #FFFFFF;
-	z-index: 800;
-	height: 100%;
-	width: 100%;
-}
-
-.no-js #preloader,
-.oldie #preloader {
-	display: none;
-}
-
-#loader {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 60px;
-	height: 60px;
-	margin: -30px 0 0 -30px;
-	padding: 0;
-}
-
-#loader:before {
-	content: "";
-	border-top: 8px solid rgba(0, 0, 0, 0.2);
-	border-right: 8px solid rgba(0, 0, 0, 0.2);
-	border-bottom: 8px solid rgba(0, 0, 0, 0.2);
-	border-left: 8px solid maroon;
-	-webkit-animation: load 1.1s infinite linear;
-	animation: load 1.1s infinite linear;
-	display: block;
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-
-}
-
-@-webkit-keyframes load {
-	0% {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-
-}
-
-@keyframes load {
-	0% {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-
-}
-
-
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0, .row0 a{}
@@ -139,6 +39,28 @@ File: Layout CSS
 #header #logo{margin:15px 0 0 0;}
 #header #logo h1{margin:0; padding:0; font-size:33px; text-transform:uppercase;}
 #header #logo #title{margin-top:-110px; padding:10px 200px; font-size:33px; text-transform:uppercase;}
+
+/* Side Bar
+--------------------------------------------------------------------------------------------------------------- */
+.right_sidebar{
+	background: #f2f3f3;
+	padding: 0px 0px 25px;
+	border-radius: 0px 0px 7px 7px;
+	margin-bottom: 20px;
+}
+.sidebar_title{
+	font-size:25px;
+	color:white;
+	padding: 10px;
+	background: rgba(128, 0, 0, 0.87);
+	margin-bottom:10px;
+	border-radius: 7px 7px 0px 0px;
+}
+.sidebar_container{
+	padding:10px;
+}
+
+
 
 
 /* Search
@@ -176,6 +98,20 @@ File: Layout CSS
 .container_more_news{padding:30px 0;}
 .container_contact{margin-left:100px;padding:80px 0;}
 
+/*ers form*/
+
+.callout.callout-info {
+	border-color: #520000;
+	color: #fff !important;
+	background-color: #8e1a1a !important;
+}
+
+.callout {
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+}
 
 /* Content */
 .container .content{}
@@ -574,11 +510,12 @@ html[xmlns] .flexslider .slides {
 
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
-#footer{padding:80px 0;}
+#footer_button{padding:80px 0;}
+#footer{padding:40px 0;}
 .form_ers {padding:50px 0 60px;}
 
 #footer .heading{margin-bottom:50px; font-size:1.2rem;}
-#footer .title{margin-bottom:50px; font-size:1.2rem;}
+#footer .title{margin-bottom:5 y0px; font-size:1.2rem;}
 
 #footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid; }
 #footer .linklist li:last-child{margin:0; padding:0; border:none;}
@@ -698,7 +635,7 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
-  
+
   table {
   background-color: transparent;
 }
@@ -1144,7 +1081,7 @@ ul.first li.first::after {
   margin-right: -30px;
   background-size: cover;
   background-color: #fff;
-  background-image: url("temp.jpg");
+  background-image: url("../../dist/img/login/user1.png");
   float: left;
   border: .5px solid #94a0b4;
   border-radius: 50%;
@@ -1259,15 +1196,14 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 }
 
 @media screen and (max-width:1150px){
-	
+
 	.hoc{max-width:90%;}
-	
+
 	#header{max-width:90%;}
 
 	#header #title{display:none;}
 
 	#mainav{margin-top:70px;}
-
 
 }
 
@@ -1289,6 +1225,8 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	#mainav form{display:block; margin:25px;}
 	#mainav form option:hover{background-color:red;}
 
+	.more_news{margin-top:20px;}
+
 	#breadcrumb{}
 	.form_ers {padding:30px 0 -10px 0;}
 	.date {padding-right:none;}
@@ -1308,13 +1246,13 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 50px 0; padding:0;}
 	.form_ers {margin-top:-20px;}
-	
+
 	#topbar{padding-top:15px; text-align:center;}
 	#topbar ul{margin:0 0 15px 0; line-height:normal;}
 
 	#header{text-align:center;}
 	#header #logo{margin-bottom:15px;}
-	.ers{font-size:24px; margin-left:-240px;}
+	.ers{font-size:26px;position}
 
 	.sectiontitle{max-width:none; text-align:left;}
 }
@@ -1578,5 +1516,3 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	}
 
 }
-
-

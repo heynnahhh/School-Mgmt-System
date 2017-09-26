@@ -50,17 +50,26 @@
   </div>
 </div>
 
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
-
-
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 </body>
 
-<script src="<?php echo base_url();?>includes/website/js/pace.min.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/jquery.min.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/jquery.backtotop.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/jquery.mobilemenu.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/jquery.flexslider-min.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
+<script src="<?php echo base_url();?>includes/website/js/jquery.orgchart.js"></script>
+<script src="<?php echo base_url();?>includes/website/js/jquery-ui.js"></script>
+
+<script>
+$(function() {
+    $("#organization").orgChart({
+      container: $("#main"),
+      interactive: true,
+      fade: true,
+      speed: 'slow'
+    });
+
+    $( "#draggable" ).draggable();
+});
+</script>

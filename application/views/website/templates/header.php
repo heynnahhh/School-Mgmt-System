@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <link href="<?php echo base_url();?>includes/website/css/layout.css" rel="stylesheet" type="text/css" media="all">
-<link href="<?php echo base_url();?>includes/website/css/vendor.css" rel="stylesheet" type="text/css" media="all">
+<!-- <link href="<?php echo base_url();?>includes/website/css/jquery.orgchart.css" rel="stylesheet" type="text/css" media="all"> -->
+<!-- <link href="<?php echo base_url();?>includes/website/css/demo.css" rel="stylesheet" type="text/css" media="all"> -->
 
 </head>
 <!-- ################################################################################################ -->
@@ -48,8 +49,8 @@
           <a class="drop" href="#">About</a>
           <ul class="sub-menu">
             <li><a href="#">History</a></li>
-			<li><a href="ahs_hymn">Araullo High School Hymn</a></li>
-            <li><a href="#">Mission, Vision, Goals & Objectives</a></li>
+			      <li><a href="ahs_hymn">Araullo High School Hymn</a></li>
+            <li><a href="mvgo">Mission, Vision, Core Values & Mandate</a></li>
             <li><a href="org_chart">Organizational Chart</a></li>
           </ul>
         </li>
