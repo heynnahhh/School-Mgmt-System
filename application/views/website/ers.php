@@ -15,8 +15,7 @@
 <div class="wrapper row4_ers">
   <footer id="footer" class="hoc clear">
     <!-- ################################################################################################ -->
-  	<div class="article_underline"><h6 class="news_heading"><i class="fa fa-user" style="font-size:30px;color:maroon;"></i> Login</h6></div>
-    <div class = "one_half   first">
+    <div class = "one_half first">
       <div class="callout callout-info">
           <h4>Talk about ERS module</h4>
           <p>ERS stands for Elect-Ronic Shit</p>
