@@ -133,18 +133,73 @@
 
                   <div class="one_third">
                     <div class = "right_sidebar">
-                      <div class="article_underline"><h6 class="sidebar_title"><i class="fa fa-calendar-check-o"></i> Upcoming Events</h6></div>
-                      <div class="sidebar_container">DASDASDASDAS</div>
+                      <h6 class="sidebar_title"><i class="fa fa-calendar-check-o"></i> Upcoming Events</h6>
+                      <div class="sidebar_container">
+					  
+					  			<div class="table-responsive">
+								  <table class="table table-hover">
+									<thead>
+									  <tr>
+										<th>Date</th>
+										<th>Position</th>
+									  </tr>
+									</thead>
+									<tbody>
+
+									  <tr>
+										<td>Hannah Patricia Liao </td>
+										<td>Executive Personal Assistant</td>
+									  </tr>
+
+									  <tr>
+										<td>Anna</td>
+										<td>Pitt</td>
+									  </tr>
+				<!-- ################################################################################################ -->
+									</tbody>
+								  </table>
+								 </div>
+								
+					  </div>
                     </div>
 
                     <div class="right_sidebar">
-                      <div class="article_underline"><h6 class="sidebar_title"><i class="fa fa-calendar"></i> School Calendar</h6></div>
+						<h6 class="sidebar_title"><i class="fa fa-calendar"></i> School Calendar</h6>
                       <div class = "sidebar_container">
-                              DASDASDASDAS
-                              DASDASDASDASDASDASDASDAS
-                              DASDASDASDAS
+                            
+								 <div class="table-responsive">
+								  <table class="table table-hover">
+									<thead>
+									  <tr>
+										<th>Date</th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+
+									  <tr>
+										<td>Hannah Patricia Liao </td>
+										<td>Executive Personal Assistant</td>
+									  </tr>
+
+									  <tr>
+										<td>Anna</td>
+										<td>Pitt</td>
+									  </tr>
+									  
+									  <tr>
+										<td>Anna</td>
+										<td>Pitt</td>
+									  </tr>
+				<!-- ################################################################################################ -->
+									</tbody>
+								  </table>
+								 </div>
+								 
                       </div>
-                      <div id="footer_button" style="margin:-50px -1px;" class="fl_right"><a class="btn" href="#">View calendar</a></div>
+						<p class="view-calendar">
+							<a href="#" class="link">View Full Calendar &raquo;</a>
+						</p>
                     </div>
 
                   </div>
