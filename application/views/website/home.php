@@ -132,54 +132,17 @@
 									</div>
 
                   <div class="one_third">
-                    <div class = "right_sidebar">
-                      <h6 class="sidebar_title"><i class="fa fa-calendar-check-o"></i> Upcoming Events</h6>
-                      <div class="sidebar_container">
-					  
-					  			<div class="table-responsive">
-								  <table class="table table-hover">
-									<thead>
-									  <tr>
-										<th>Date</th>
-										<th>Position</th>
-									  </tr>
-									</thead>
-									<tbody>
-
-									  <tr>
-										<td>Hannah Patricia Liao </td>
-										<td>Executive Personal Assistant</td>
-									  </tr>
-
-									  <tr>
-										<td>Anna</td>
-										<td>Pitt</td>
-									  </tr>
-				<!-- ################################################################################################ -->
-									</tbody>
-								  </table>
-								 </div>
-								
-					  </div>
-                    </div>
-
                     <div class="right_sidebar">
-						<h6 class="sidebar_title"><i class="fa fa-calendar"></i> School Calendar</h6>
+						<h6 class="sidebar_title"><i class="fa fa-calendar-check-o"></i> Upcoming Events</h6>
                       <div class = "sidebar_container">
                             
 								 <div class="table-responsive">
-								  <table class="table table-hover">
-									<thead>
-									  <tr>
-										<th>Date</th>
-										<th></th>
-									  </tr>
-									</thead>
+								  <table class="table table-hover">							 
 									<tbody>
 
 									  <tr>
-										<td>Hannah Patricia Liao </td>
-										<td>Executive Personal Assistant</td>
+										<td>September 20</td>
+										<td>sadasdas</td>
 									  </tr>
 
 									  <tr>
@@ -200,6 +163,36 @@
 						<p class="view-calendar">
 							<a href="#" class="link">View Full Calendar &raquo;</a>
 						</p>
+                    </div>
+					
+					 <div class = "right_sidebar">
+                      <h6 class="sidebar_title"><i class="fa fa-external-link"></i> Links</h6>
+						<div class="sidebar_container">
+					  
+					  			<div class="table-responsive">
+								  <table class="table">
+									<tbody>
+									  <tr>
+										<td><a href="#" class="link">Application for Junior High School</a></td>
+									  </tr>
+
+									  <tr>
+										<td><a href="#" class="link">Application for Senior High School</a></td>
+									  </tr>
+
+									  <tr>
+										<td><a href="#" class="link">Course Offered for Senior High School</a></td>
+									  </tr>
+									  
+									  <tr>
+										<td></td>
+									  </tr>
+				<!-- ################################################################################################ -->
+									</tbody>
+								  </table>
+								 </div>
+								
+						</div>
                     </div>
 
                   </div>
