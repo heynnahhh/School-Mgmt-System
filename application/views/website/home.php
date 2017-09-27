@@ -161,7 +161,7 @@
 								 
                       </div>
 						<p class="view-calendar">
-							<a href="#" class="link">View Full Calendar &raquo;</a>
+							<a href="#" class="link-text">View Full Calendar &raquo;</a>
 						</p>
                     </div>
 					
@@ -173,15 +173,15 @@
 								  <table class="table">
 									<tbody>
 									  <tr>
-										<td><a href="#" class="link">Application for Junior High School</a></td>
+										<td><a href="#" class="link-text">Application for Junior High School</a></td>
 									  </tr>
 
 									  <tr>
-										<td><a href="#" class="link">Application for Senior High School</a></td>
+										<td><a href="#" class="link-text">Application for Senior High School</a></td>
 									  </tr>
 
 									  <tr>
-										<td><a href="#" class="link">Course Offered for Senior High School</a></td>
+										<td><a href="#" class="link-text">Course Offered for Senior High School</a></td>
 									  </tr>
 									  
 									  <tr>

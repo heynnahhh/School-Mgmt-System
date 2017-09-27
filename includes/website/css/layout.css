@@ -97,16 +97,55 @@ File: Layout CSS
 .container_contact{margin-left:100px;padding:80px 0;}
 .view-calendar{font-size:14px; font-style: italic; padding-left:20px;}
 
+.node {
+	cursor: pointer;
+}
+
+.node circle {
+	/*fill: #fff;
+	stroke: steelblue;*/
+	stroke-width: 3px;
+}
+
+.node text {
+	font: 15px sans-serif;
+	fill: #black;
+}
+
+.link {
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+
+}
+
+.tree {
+	margin-bottom: 10px;
+	overflow: auto;
+
+}
+
+.row_org{border-bottom:none;}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tree-org {
+  text-align: center;
+  margin:50px 0 100px auto;
+}
+
 a{
   color: #fff;
 }
 
-.link{
+.link-text{
   position: relative;
   color:#4d4d4d;
 }
 
-.link:after{
+.link-text:after{
   content: '';
   position: absolute;
   width: 0; height: 3px;
@@ -118,7 +157,7 @@ a{
   -webkit-transition: width .2s ease;
 }
  
-.link:hover:after{
+.link-text:hover:after{
   width: 100%;
   left: 0;
   background: rgba(128, 0, 0, 0.87);
@@ -960,175 +999,6 @@ table th[class*="col-"] {
 
 /* -------------------------------------------TREE----------------------------------------------------------------- */
 
-.row_org{border-bottom:none;}
-* {
-  margin: 0;
-  padding: 0;
-
-}
-
-.tree {
-  text-align: center;
-  margin:50px 0 100px auto;
-}
-
-.tree ul {
-  display: block;
-  white-space: nowrap;
-  margin-left: -40px;
-  padding-top: 15px;
-  position: relative;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-.tree li {
-  vertical-align:top;
-  display: inline-block;
-  white-space: normal;
-  text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 15px 0px 0px 40px;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-
-/*We will use ::before and ::after to draw the connectors*/
-
-.tree li::before,
-.tree li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 50%;
-  border-top: 1px solid #ccc;
-  width: 50%;
-  height: 15px;
-}
-
-.tree li::after {
-  right: auto;
-  left: 50%;
-  border-left: 1px solid #ccc;
-}
-
-
-/*Remove left-right connectors from elements without any siblings*/
-
-.tree li:only-child::after,
-.tree li:only-child::before {
-  display: none;
-}
-
-
-/*Remove space from the top of single children*/
-
-.tree li:only-child {
-  padding-top: 0;
-}
-
-
-/*Remove left connector from first child and right connector from last child*/
-
-ul.first li.first::before,
-ul.first li.first::after {
-  border: 0 none;
-}
-
-.tree li:first-child::before,
-.tree li:last-child::after {
-  border: 0 none;
-}
-
-
-/*Adding back the vertical connector to the last nodes*/
-
-.tree li:last-child::before {
-  border-right: 1px solid #ccc;
-  border-radius: 0 5px 0 0;
-  -webkit-border-radius: 0 5px 0 0;
-  -moz-border-radius: 0 5px 0 0;
-}
-
-.tree li:first-child::after {
-  border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
-  -moz-border-radius: 5px 0 0 0;
-}
-
-
-/*Time to add downward connectors from parents*/
-
-.tree ul ul::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 1px solid #ccc;
-  width: 0;
-  height: 15px;
-}
-
-.tree li .box {
-  border: 1px solid #ccc;
-  padding: 5px 10px 5px 0px;
-  text-decoration: none;
-  color: #666;
-  font-family: arial, verdana, tahoma;
-  font-size: 12px;
-  display: inline-block;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  transition: all .5s;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-}
-
-
-/*Hover effects*/
-
-.tree li .box:hover,
-.tree li .box:hover+ul li .box {
-  background: #c8e4f8;
-  color: #000;
-  border: 1px solid #94a0b4;
-}
-
-
-/*Connector styles on hover*/
-
-.tree li .box:hover+ul li::after,
-.tree li .box:hover+ul li::before,
-.tree li .box:hover+ul::before,
-.tree li .box:hover+ul ul::before,
-.avatar {
-  border-color: #94a0b4;
-}
-
-
-/*Avatar bubbles*/
-
-.avatar {
-  position: relative;
-  top: 0px;
-  left: -35px;
-  width: 75px;
-  height: 75px;
-  margin-right: -30px;
-  background-size: cover;
-  background-color: #fff;
-  background-image: url("../../dist/img/login/user1.png");
-  float: left;
-  border: .5px solid #94a0b4;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
