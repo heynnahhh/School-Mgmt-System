@@ -20,12 +20,23 @@
     </div>
     <div class="one_third">
       <h6 class="heading">Popular Links</h6>
-      <ul class="nospace linklist">
-        <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-        <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-      </ul>
+	  
+	  <p class="nospace">
+		<a href="#" class="link-footer">Admission Procedure</a>
+      </p>
+	  <p class="nospace">
+		<a href="#" class="link-footer">Academic Calendar</a>
+      </p>
+      <p class="nospace">
+		<a href="#" class="link-footer">Enrollment & Registration System</a>
+      </p>
+	  <p class="nospace">
+		<a href="#" class="link-footer">Application for Junior High School</a>
+      </p>
+	  <p class="nospace">
+		<a href="#" class="link-footer">Application for Senior High School</a>
+      </p>
+	  
     </div>
     <div class="one_third">
       <h6 class="heading">External Links</h6>
@@ -66,10 +77,11 @@ $(function() {
     $("#organization").orgChart({
       container: $("#main"),
       interactive: true,
-      fade: true,
+      fade: false,
       speed: 'slow'
     });
 
     $( "#draggable" ).draggable();
 });
 </script>
+
