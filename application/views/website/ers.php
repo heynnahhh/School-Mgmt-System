@@ -28,8 +28,8 @@
         <form method="post" action="#">
           <fieldset>
             <div class = "two_third">
-    		        <p style="margin-bottom:10px;">Username* </p><input class="btmspace-15" type="text" value="" placeholder="Enter Username">
-    		        <p style="margin-bottom:10px;">Password* </p><input class="btmspace-15" type="text" value="" placeholder="Enter Password">
+    		        <p style="margin-bottom:10px;">Username* </p><input class="btmspace-15" type="text" value="" placeholder="e.g. (123-123-123)">
+    		        <p style="margin-bottom:10px;">Password* </p><input class="btmspace-15" type="text" value="" placeholder="xxxxxxxxxxxx">
     			      <button type="submit" value="login">Sign In</button>
             </div>
           </fieldset>
