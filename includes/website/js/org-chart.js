@@ -55,17 +55,17 @@
 					
 					  nodeEnter.append("svg:image")
 							.attr("xlink:href",  function(d) { return d.img;})
-							.attr("x", function(d) { return -25;})
-							.attr("y", function(d) { return -25;})
-							.attr("height", 50)
-							.attr("width", 50);
+							.attr("x", function(d) { return -35;})
+							.attr("y", function(d) { return -35;})
+							.attr("height", 70)
+							.attr("width", 70);
 		
                     var nodeUpdate = node.transition()
                         .duration(duration)
                         .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
                     nodeUpdate.select("circle")
                         .attr("r", 40)
-                        .style("fill", function (d) { return d._children ? "lightsteelblue" : "#fff"; });
+                        .style("fill", function (d) { return d._children ? "#ff6666" : "#fff"; });
                     nodeUpdate.select("text")
                         .style("fill-opacity", 1);
 
