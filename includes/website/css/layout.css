@@ -54,13 +54,11 @@ File: Layout CSS
 	padding: 10px;
 	background: rgba(128, 0, 0, 0.87);
 	margin-bottom:10px;
-	border-radius: 7px 7px 0px 0px;
+	border-radius: 3px;
 }
 .sidebar_container{
 	padding:10px;
 }
-
-
 
 
 /* Search
@@ -97,6 +95,34 @@ File: Layout CSS
 .container{padding:80px 0;}
 .container_more_news{padding:30px 0;}
 .container_contact{margin-left:100px;padding:80px 0;}
+.view-calendar{font-size:14px; font-style: italic; padding-left:20px;}
+
+a{
+  color: #fff;
+}
+
+.link{
+  position: relative;
+  color:#4d4d4d;
+}
+
+.link:after{
+  content: '';
+  position: absolute;
+  width: 0; height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: rgba(128, 0, 0, 0.87);
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+ 
+.link:hover:after{
+  width: 100%;
+  left: 0;
+  background: rgba(128, 0, 0, 0.87);
+}
 
 /*ers form*/
 
