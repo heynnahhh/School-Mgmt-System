@@ -10,11 +10,14 @@
 						Organizational Chart</h6>
 			</div>
 		</div> 
+		
+			<div class = "container_org">
+				<div id="draggable" style = "cursor:move;">
 
-		<div id="draggable" style = "cursor:move;">
-			<div id="tree">
-			</div>
-		</div>
+					<div id="tree">
+					</div>
+				</div>
+		</div>		
 		
 	</div>
 </main>	
