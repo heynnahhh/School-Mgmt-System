@@ -6,45 +6,35 @@
       <ul class="nospace btmspace-30 linklist contact">
         <li><i class="fa fa-map-marker"></i>
           <address>
-          Street Name &amp; Number, Town, Postcode/Zip
+          Taft Corner U.N. Avenue Ermita, Manila
           </address>
         </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        <li><i class="fa fa-phone"></i> 524-65765</li>
+        <li><i class="fa fa-envelope-o"></i> araullo.highschool06@gmail.com</li>
       </ul>
       <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-facebook" href="https://facebook.com/Araullo-High-School-277251475165/"><i class="fa fa-facebook"></i></a></li>
         <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
         <li><a class="faicon-google-plus" href="#"><i class="fa fa-google"></i></a></li>
       </ul>
     </div>
     <div class="one_third">
       <h6 class="heading">Popular Links</h6>
-	  
-	  <p class="nospace">
-		<a href="#" class="link-footer">Admission Procedure</a>
-      </p>
-	  <p class="nospace">
-		<a href="#" class="link-footer">Academic Calendar</a>
-      </p>
-      <p class="nospace">
-		<a href="#" class="link-footer">Enrollment & Registration System</a>
-      </p>
-	  <p class="nospace">
-		<a href="#" class="link-footer">Application for Junior High School</a>
-      </p>
-	  <p class="nospace">
-		<a href="#" class="link-footer">Application for Senior High School</a>
-      </p>
-	  
+      <ul class="nospace linklist">
+      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Admission Procedure</a></li>
+      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Academic Calendar</a></li>
+      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Enrollment & Registration System</a></li>
+      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Junior High School</a></li>
+      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Senior High School</a></li>
+      </ul>
     </div>
     <div class="one_third">
       <h6 class="heading">External Links</h6>
-       <ul class="nospace linklist">
+      <ul class="nospace linklist">
         <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
         <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
+    		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
+    		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
       </ul>
     </div>
     <!-- ################################################################################################ -->
