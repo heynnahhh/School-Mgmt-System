@@ -9,17 +9,14 @@
 					<i class="fa fa-sitemap"></i>
 						Organizational Chart</h6>
 			</div>
-		</div> 
-		
-			<div class = "container_org">
-				<div id="draggable" style = "cursor:move;">
+		</div>
 
-					<div id="tree">
+				<div style = "cursor:move;">
+					<div id="tree" class="tree">
 					</div>
 				</div>
-		</div>		
-		
+
 	</div>
-</main>	
+</main>
 
 <?php include 'templates/footer.php';?>
