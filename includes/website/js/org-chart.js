@@ -1,7 +1,7 @@
   $(document).ready(function () {
             //build tree
             function BuildVerticaLTree(treeData, treeContainerDom) {
-                var margin = { top: 100, right: 120, bottom: -300, left: 80 };
+                var margin = { top: 100, right: 120, bottom: -300, left: -50 };
                 var width = 1400 - margin.right - margin.left;
                 var height = 1000 - margin.top - margin.bottom;
 
@@ -36,7 +36,7 @@
 						
                     nodeEnter.append("circle")
                      .attr("r", 10)
-                        .attr("stroke", function (d) { return d.children || d._children ? "maroon" : "maroon"; })
+                        .attr("stroke", function (d) { return d.children || d._children ? "white" : "white"; })
                         .style("fill", function (d) { return d.children || d._children ? "lightsteelblue" : "#fff"; });
 
 						  d3.select(this)        
@@ -50,10 +50,20 @@
                         .attr("text-anchor", "middle")
                         .text(function (d) { return d.name; })
                         .style("fill-opacity", 1e-6);
+						
+						 nodeEnter.append("text")
+                        .attr("y", function (d) {
+                            return d.children || d._children ? -1 : 1;
+                        })
+                        .attr("dy", ".35em")
+                        .attr("text-anchor", "middle")
+                        .text(function (d) { return d.pos; })
+                        .style("fill-opacity", 1e-6);
+						
                     // Transition nodes to their new position.
                     //horizontal tree
 					
-					  nodeEnter.append("svg:image")
+						nodeEnter.append("svg:image")
 							.attr("xlink:href",  function(d) { return d.img;})
 							.attr("x", function(d) { return -35;})
 							.attr("y", function(d) { return -35;})
@@ -65,7 +75,7 @@
                         .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
                     nodeUpdate.select("circle")
                         .attr("r", 40)
-                        .style("fill", function (d) { return d._children ? "#ff6666" : "#fff"; });
+                        .style("fill", function (d) { return d._children ? "white" : "#fff"; });
                     nodeUpdate.select("text")
                         .style("fill-opacity", 1);
 
@@ -130,6 +140,7 @@
         {					  
 			"img": imgUrl + "featured-1.jpg",
             "name": "BU Head",
+			"pos": "Principal",
             "children": [
               {
 
@@ -141,6 +152,10 @@
                          "children": []
                     },
                     {	
+                        "name": "Team Lead",
+                        "children": []
+                    },
+					{	
                         "name": "Team Lead",
                         "children": []
                     }

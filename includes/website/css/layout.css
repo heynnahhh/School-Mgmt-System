@@ -82,6 +82,7 @@ File: Layout CSS
 .row_news_page{border-bottom:1px solid; padding-bottom:40px;}
 .date{font-size:15px; color:maroon; padding-right:5px;}
 .news_heading{font-size:30px; color:maroon; margin-bottom:10px;}
+.org_heading{font-size:30px; color:maroon; margin-top:-50px;}
 .org_heading{font-size:30px; color:maroon; margin-bottom:10px;}
 .more_news_heading{font-size:30px; color:maroon;margin-bottom:10px;}
 .news_container{padding:10px; background-color:#e6e6e6; box-shadow: 8px 8px 3px #888888;}
@@ -1135,7 +1136,7 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	#mainav ul{display:none;}
 	#mainav form{display:block; margin:25px;}
 	#mainav form option:hover{background-color:red;}
-
+	#tree {margin-left:-350px;}
 	.more_news{margin-top:20px;}
 	
 	#breadcrumb{}
