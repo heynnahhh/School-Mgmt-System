@@ -1,16 +1,16 @@
 <?php include 'templates/header.php';?>
 
-<div class="tree-org">
-
-    <h6 class="news_heading">
-      <i class="fa fa-sitemap"></i>
-      Organizational Chart</h6>
-
+<main class="hoc_all hoc container clear">
+	<div class="tree-org">
+		<div class="one_third">
+			<h6 class="org_heading">
+			  <i class="fa fa-sitemap"></i>
+				Organizational Chart</h6>
+		</div> 
 	
 	<div id="tree">
     </div>
-    </ul>
-
+</main>
     <div id="draggable">
       <div id="main"></div>
     </div>
