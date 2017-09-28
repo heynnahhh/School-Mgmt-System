@@ -97,12 +97,6 @@ File: Layout CSS
 .container_contact{margin-left:100px;padding:80px 0;}
 .view-calendar{font-size:14px; font-style: italic; padding-left:20px;}
 
-.container_org {
-    height:100px;
-    width:1000px;
-
-}
-
 .node {
 	cursor: pointer;
 }

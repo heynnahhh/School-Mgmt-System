@@ -69,7 +69,9 @@
 <script src="<?php echo base_url();?>includes/website/js/jquery.mobilemenu.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/jquery.flexslider-min.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
-<script src="<?php echo base_url();?>includes/website/js/jquery-ui.js"></script>
+<script src="<?php echo base_url();?>includes/website/js/common.js"></script>
+<script src="<?php echo base_url();?>includes/website/js/draggable.js"></script>
+<script src="<?php echo base_url();?>includes/website/js/bounded.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/org-chart.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
@@ -77,12 +79,6 @@
 <script>
 
 	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>"
-	
-	$( function() {
-		$( "#draggable" ).draggable()
-	  });
-	  
-
 
 </script>
 
