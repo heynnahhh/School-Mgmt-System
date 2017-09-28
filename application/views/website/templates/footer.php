@@ -76,17 +76,13 @@
 
 <script>
 
-var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>"
+	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>"
+	
+	$( function() {
+		$( "#draggable" ).draggable()
+	  });
+	  
 
-$(function() {
-    $("#tree").orgChart({
-      container: $("#main"),
-      interactive: true,
-      fade: false,
-      speed: 'slow'
-    });
 
-    $( "#draggable" ).draggable();
-});
 </script>
 
