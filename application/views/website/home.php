@@ -147,7 +147,7 @@
 								 </div>
                </div>
                <p class="view-calendar">
-                 <a href="#" class="link-text">View Full Calendar &raquo;</a>
+                 <a href="<?php echo site_url();?>/website/Calendar" class="link-text">View Full Calendar &raquo;</a>
                </p>
              </div>
 
