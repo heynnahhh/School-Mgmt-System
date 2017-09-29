@@ -75,7 +75,7 @@ File: Layout CSS
 #pageintro li .heading{margin-bottom:30px; font-size:3rem; word-wrap:break-word;}
 #pageintro li p:nth-of-type(2){line-height:1.5rem;}
 #pageintro li footer{margin-top:40px;}
-    
+
 /* News
 --------------------------------------------------------------------------------------------------------------- */
 .row_news_page{border-bottom:1px solid; padding-bottom:40px;}
@@ -84,11 +84,12 @@ File: Layout CSS
 .org_heading{font-size:30px; color:maroon; margin-top:-50px; margin-bottom:10px;}
 .org_heading{font-size:30px; color:maroon; margin-bottom:10px;}
 .more_news_heading{font-size:30px; color:maroon;margin-bottom:10px;}
-.news_container{padding:10px; background-color:#e6e6e6; box-shadow: 8px 8px 3px #888888;}
+.news_container{padding:10px;}
 .calendar_container{padding-top:30px;}
 .more_news{margin-top:130px;}
 .headline_underline{border-bottom:2px solid #cccccc;}
 .article_underline{border-bottom:2px solid #cccccc; margin-bottom:20px;}
+.headline_container{background: #f2f3f3; padding: 15px;}
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
@@ -154,7 +155,7 @@ a{
   transition: width .2s ease;
   -webkit-transition: width .2s ease;
 }
- 
+
 .link-text:hover:after{
   width: 100%;
   left: 0;
@@ -1135,7 +1136,7 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	#mainav form option:hover{background-color:red;}
 	#tree {margin-left:-350px;}
 	.more_news{margin-top:20px;}
-	
+
 	#breadcrumb{}
 	.form_ers {padding:30px 0 -10px 0;}
 	.date {padding-right:none;}
