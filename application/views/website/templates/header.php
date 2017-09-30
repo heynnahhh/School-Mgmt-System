@@ -56,7 +56,7 @@
           <ul>
             <li><a href="#">Admission Procedures</a></li>
             <li><a href="#">Programs</a></li>
-            <li><a href="#">Courses Offered (SHS)</a></li>
+            <li><a href="courses">Courses Offered (SHS)</a></li>
           </ul>
         </li>
         <li><a class="drop" href="#">Students</a>
