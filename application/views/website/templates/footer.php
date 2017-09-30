@@ -40,12 +40,20 @@
     </div>
     <div class="one_third">
       <h6 class="heading">External Links</h6>
-       <ul class="nospace linklist">
-        <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-        <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-      </ul>
+	  
+      <p class="nospace">
+		<a href="#" class="link-footer">Department of Education</a>
+      </p>
+	   <p class="nospace">
+		<a href="#" class="link-footer">DepEd LRMDS</a>
+      </p>
+	   <p class="nospace">
+		<a href="#" class="link-footer">Manila City Hall</a>
+      </p>
+	   <p class="nospace">
+		<a href="#" class="link-footer">Araullo High School</a>
+      </p>
+	  
     </div>
     <!-- ################################################################################################ -->
   </footer>

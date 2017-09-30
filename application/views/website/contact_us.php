@@ -75,20 +75,8 @@
 							</div>
 
 							<div class="one_third">
-								<div class = "right_sidebar">
-									<div class="article_underline"><h6 class="sidebar_title"><i class="fa fa-calendar-check-o"></i> Upcoming Events</h6></div>
-									<div class="sidebar_container">DASDASDASDAS</div>
-								</div>
-
-								<div class="right_sidebar">
-									<div class="article_underline"><h6 class="sidebar_title"><i class="fa fa-calendar"></i> School Calendar</h6></div>
-									<div class = "sidebar_container">
-													DASDASDASDAS
-													DASDASDASDASDASDASDASDAS
-													DASDASDASDAS
-									</div>
-									<div id="footer_button" style="margin:-50px -1px;" class="fl_right"><a class="btn" href="#">View calendar</a></div>
-								</div>
+								
+								<?php include 'sidebar.php' ;?>
 
 							</div>
 
