@@ -20,7 +20,7 @@
     </div>
     <div class="one_third">
       <h6 class="heading">Popular Links</h6>
-	  
+
 	  <p class="nospace">
 		<a href="#" class="link-footer">Admission Procedure</a>
       </p>
@@ -36,7 +36,7 @@
 	  <p class="nospace">
 		<a href="#" class="link-footer">Application for Senior High School</a>
       </p>
-	  
+
     </div>
     <div class="one_third">
       <h6 class="heading">External Links</h6>
@@ -73,7 +73,7 @@
 <script src="<?php echo base_url();?>includes/website/js/draggable.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/bounded.js"></script>
 <script src="<?php echo base_url();?>includes/website/js/org-chart.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="<?php echo base_url();?>includes/website/js/d3.v3.min.js"></script>
 
 
 <script>
@@ -81,4 +81,3 @@
 	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>"
 
 </script>
-
