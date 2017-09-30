@@ -21,13 +21,11 @@ File: Layout CSS
   width:280px;
 }
 
-.img-container p{margin-top:10px; font-size:14px;}
+.img-container h6{margin-top:10px; font-size:14px;line-height:22px;}
 
 .history{margin-top:40px;}
 
-.history h6 {font-size:14px;line-height:25px;}
-
-.history h6::first-letter{
+.history p::first-letter{
 	color: rgba(128, 0, 0, 0.87);
 	float: left;
 	font-family: Georgia;
