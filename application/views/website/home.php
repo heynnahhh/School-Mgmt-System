@@ -126,21 +126,26 @@
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <tbody>
+						<thead>
+						  <tr>
+							<th>DATE</th>
+							<th>ACTIVITIES</th>
+						  </tr>
+						</thead>
+						  <tr>
+							<td>September 20</td>
+							<td>sadasdas</td>
+						  </tr>
 
-                      <tr>
-                        <td>September 20</td>
-                        <td>sadasdas</td>
-                      </tr>
+						  <tr>
+							<td>Anna</td>
+							<td>Pitt</td>
+						  </tr>
 
-                      <tr>
-                        <td>Anna</td>
-                        <td>Pitt</td>
-                      </tr>
-
-                      <tr>
-                        <td>Anna</td>
-                        <td>Pitt</td>
-                      </tr>
+						  <tr>
+							<td>Anna</td>
+							<td>Pitt</td>
+						  </tr>
                       <!-- ################################################################################################ -->
                     </tbody>
 								  </table>
