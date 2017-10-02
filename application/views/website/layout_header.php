@@ -196,18 +196,6 @@ desired effect
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="<?php echo base_url();?>includes/dist/img/login/user1.png" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p><?php echo $user['first_name']." ".$user['last_name']?></p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Admin</a>
-        </div>
-      </div>
-
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
