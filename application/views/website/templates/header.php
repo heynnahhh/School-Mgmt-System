@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <link href="<?php echo base_url();?>includes/website/css/layout.css" rel="stylesheet" type="text/css" media="all">
-<link href="<?php echo base_url();?>includes/website/css/style.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 <!-- ################################################################################################ -->
@@ -56,7 +55,7 @@
         <li><a class="drop" href="#">Admission</a>
           <ul>
             <li><a href="admission">Admission Procedures</a></li>
-			<li><a href="#">Application for Senior High School</a></li>
+			      <li><a href="application">Application for Senior High School</a></li>
             <li><a href="#">Programs</a></li>
             <li><a href="courses">Courses Offered (SHS)</a></li>
           </ul>

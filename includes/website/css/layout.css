@@ -16,125 +16,298 @@ File: Layout CSS
 /* Accordion
 ------------------------------------------------------ */
 
-.callout.callout-info.accordion-info {
-	margin-top:40px;
-	background:rgba(128, 0, 0, 0.82);
-	color:#fff;
-	border-color:rgba(128, 0, 0, 0.87);
+.transition, .p_accordion, .s_list, .i_accordion:before, .i_accordion:after {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-.accordion dl,
-.accordion-list {
-   border:1px solid #ddd;
-   &:after {
-       content: "";
-       display:block;
-       height:1em;
-       width:100%;
-       background-color:darken(#38cc70, 10%);
-     }
+.flipIn, .li_accordion {
+  -webkit-animation: flipdown 0.5s ease both;
+          animation: flipdown 0.5s ease both;
 }
 
-.accordion dd,
-.accordion__panel {
-   background-color:#eee;
-   font-size:1em;
-   line-height:1.5em; 
-}
-.accordion p {
-  padding:1em 2em 1em 2em;
-}
-
-.accordion {
-    position:relative;
-    background-color:#ddd;
-	margin-top:50px;
+.no-select, .h3_accordion {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.accordionTitle,
-.accordion__Heading {
-	background-color:rgba(128, 0, 0, 0.82); 
-	text-align:center;
-	font-weight:700; 
-	padding:2em;
-	display:block;
-	text-decoration:none;
-	color:#fff;
-    transition:background-color 0.5s ease-in-out;
-  border-bottom:1px solid darken(#38cc70, 5%);
-  &:before {
-   content: "+";
-   font-size:1.5em;
-   line-height:0.5em;
-   float:left; 
-   transition: transform 0.3s ease-in-out;
-  }
-  &:hover {
-    background-color:darken(#38cc70, 10%);
-  }
+.h3_accordion {
+  color: #800000;
 }
-.accordionTitleActive, 
-.accordionTitle.is-expanded {
-   background-color:darken(#38cc70, 10%);
-    &:before {
-     
-      transform:rotate(-225deg);
-    }
+
+.h3_accordion {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  background-color: #fefffa;
+  margin: 0;
+  cursor: pointer;
 }
-.accordionItem {
-    height:auto;
-    overflow:hidden; 
-    //SHAME: magic number to allow the accordion to animate
-    
-     max-height:50em;
-    transition:max-height 1s;   
- 
-    
-    @media screen and (min-width:48em) {
-         max-height:15em;
-        transition:max-height 0.5s
-        
-    }
+
+.indent {
+  margin-left: 16px;
 }
- 
-.accordionItem.is-collapsed {
-    max-height:0;
+
+.p_accordion {
+  color: #000;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  margin-top: 0;
+  z-index: 2;
 }
-.no-js .accordionItem.is-collapsed {
-  max-height: auto;
+
+.ul_accordion {
+  list-style: none;
+  -webkit-perspective: 900;
+          perspective: 900;
+  padding: 0;
+  margin: 0;
 }
-.animateIn {
-     animation: accordionIn 0.45s normal ease-in-out both 1; 
+
+.li_accordion {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 1px dotted #dce7eb;
 }
-.animateOut {
-     animation: accordionOut 0.45s alternate ease-in-out both 1;
+
+.li_accordion:nth-of-type(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
-@keyframes accordionIn {
+
+.li_accordion:nth-of-type(2) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.li_accordion:nth-of-type(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.li_accordion:nth-of-type(4) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.li_accordion:nth-of-type(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.li_accordion:last-of-type {
+  padding-bottom: 0;
+}
+
+.i_accordion {
+  position: absolute;
+  -webkit-transform: translate(-6px, 0);
+          transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+
+.i_accordion:before, .i_accordion:after {
+  content: "";
+  position: absolute;
+  background-color: #800000;
+  width: 3px;
+  height: 9px;
+}
+
+.i_accordion:before {
+  -webkit-transform: translate(2px, 0) rotate(45deg);
+          transform: translate(2px, 0) rotate(45deg);
+}
+
+.i_accordion:after {
+  -webkit-transform: translate(-2px, 0) rotate(-45deg);
+          transform: translate(-2px, 0) rotate(-45deg);
+}
+ul li input[type=radio] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+ul li input[type=radio]:checked ~ p {
+  margin-top: 14px;
+  max-height: 800px;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+ul li input[type=radio]:checked ~ i:before {
+  -webkit-transform: translate(-2px, 0) rotate(45deg);
+          transform: translate(-2px, 0) rotate(45deg);
+}
+ul li input[type=radio]:checked ~ i:after {
+  -webkit-transform: translate(2px, 0) rotate(-45deg);
+          transform: translate(2px, 0) rotate(-45deg);
+}
+
+@-webkit-keyframes flipdown {
   0% {
     opacity: 0;
-    transform:scale(0.9) rotateX(-60deg);
-    transform-origin: 50% 0;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+  }
+  83% {
+    -webkit-transform: rotateX(6deg);
+            transform: rotateX(6deg);
+  }
+  92% {
+    -webkit-transform: rotateX(-3deg);
+            transform: rotateX(-3deg);
   }
   100% {
-    opacity:1;
-    transform:scale(1);
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
 }
 
-@keyframes accordionOut {
-    0% {
-       opacity: 1;
-       transform:scale(1);
-     }
-     100% {
-          opacity:0;
-           transform:scale(0.9) rotateX(-60deg);
-       }
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+  }
+  83% {
+    -webkit-transform: rotateX(6deg);
+            transform: rotateX(6deg);
+  }
+  92% {
+    -webkit-transform: rotateX(-3deg);
+            transform: rotateX(-3deg);
+  }
+  100% {
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
 }
 
-.s_list{
-	padding-left:30px;
+
+/* Application  Form
+------------------------------------------------------ */
+.cd-form legend {
+    width: 100%;
+    font-size: 2.3rem;
+    line-height: 1.2;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e5e5e5;
 }
+
+.cd-form .half-width {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+.cd-form .half-width:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.cd-form input[type="text"], .cd-form input[type="email"], .cd-form input[type="password"] {
+    width: 100%;
+    margin-top: 6px;
+    padding: 0 16px;
+}
+.cd-form input[type="text"]:focus,
+.cd-form input[type="email"]:focus,
+.cd-form input[type="password"]:focus,
+.cd-form select:focus {
+  outline: none;
+  border-color: #95ac5f;
+}
+
+.cd-form input[type="text"],
+.cd-form input[type="email"],
+.cd-form input[type="password"],
+.cd-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 45px;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cd-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #b2b2b2;
+}
+
+.cd-form input[type="submit"] {
+  float: right;
+  margin-top: 20px;
+}
+
+.cd-form input[type="submit"] {
+  display: inline-block;
+  padding: 1em 1.8em;
+  border-radius: 50em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cd-form input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #df4f71;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
 
 
 /* History
@@ -142,7 +315,7 @@ File: Layout CSS
 .img-container {
   text-align: center;
   padding: 10px 15px;
-  float:left; 
+  float:left;
   width:280px;
 }
 
