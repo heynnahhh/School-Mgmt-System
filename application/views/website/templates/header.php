@@ -25,7 +25,7 @@
     <div class="fl_right">
       <ul class="nospace">
 	    <li><a href="home">Home</a></li>
-      <li><a href="ers">ERS</a></li>
+      <li><a href="login">ERS</a></li>
 		  <li><a href="#">AHS-LRMDS</a></li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
           <a class="drop" href="#">About</a>
           <ul class="sub-menu">
             <li><a href="history">History</a></li>
-			      <li><a href="ahs_hymn">Araullo High School Hymn</a></li>
+			<li><a href="ahs_hymn">Araullo High School Hymn</a></li>
             <li><a href="mvgo">Mission, Vision, Core Values & Mandate</a></li>
             <li><a href="org_chart">Organizational Chart</a></li>
           </ul>
@@ -61,8 +61,8 @@
         </li>
         <li><a class="drop" href="#">Students</a>
               <ul>
-                <li><a href="ers">ERS</a></li>
-                <li><a href="<?php echo site_url();?>/website/Calendar">Academic Calendar</a></li>
+                <li><a href="login">ERS</a></li>
+                <li><a href="calendar">Academic Calendar</a></li>
                 <li><a href="#">Enrollment Procedures</a></li>
               </ul>
         </li>
