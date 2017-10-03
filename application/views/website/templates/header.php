@@ -55,8 +55,7 @@
         <li><a class="drop" href="#">Admission</a>
           <ul>
             <li><a href="admission">Admission Procedures</a></li>
-			      <li><a href="application">Application for Senior High School</a></li>
-            <li><a href="#">Programs</a></li>
+            <li><a href="application">Online Application for SHS</a></li>
             <li><a href="courses">Courses Offered (SHS)</a></li>
           </ul>
         </li>

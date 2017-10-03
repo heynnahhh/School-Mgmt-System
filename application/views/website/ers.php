@@ -24,16 +24,30 @@
     <div class = "one_half">
 	     <p class="nospace btmspace-15">Please fill in your login details below.</p>
 	     <p class = "fl_left"> * indicates required fields.</p>
-      <div class="form_ers">
-        <form method="post" action="#">
-          <fieldset>
-            <div class = "two_third">
-    		        <p style="margin-bottom:10px;">Username* </p><input class="btmspace-15" type="text" value="" placeholder="e.g. (123-123-123)">
-    		        <p style="margin-bottom:10px;">Password* </p><input class="btmspace-15" type="text" value="" placeholder="xxxxxxxxxxxx">
-    			      <button type="submit" value="login">Sign In</button>
-            </div>
-          </fieldset>
-        </form>
+        <div class="cd-form">
+            <form action="" class="ers_form">
+                <fieldset>
+
+                    <div class="ers-width btmspace-10">
+                        <label for="userName">Name*</label>
+                        <input type="text" id="userName" name="userName" placeholder="e.g. (123-123-123)">
+                    </div>
+
+                    <div class="ers-width btmspace-15">
+                        <label for="userPassword">Password*</label>
+                        <input type="password" id="userPassword" name="userPassword" placeholder="xxxxxxxxxxxx">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <div>
+                        <button type="submit" value="login">Sign In</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
       </div>
     </div>
     <!-- ################################################################################################ -->
