@@ -111,6 +111,16 @@ File: Layout CSS
           animation-delay: 1.5s;
 }
 
+.li_accordion:nth-of-type(6) {
+    -webkit-animation-delay: 1.75s;
+    animation-delay: 1.75s;
+}
+
+.li_accordion:nth-of-type(7) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
 .li_accordion:last-of-type {
   padding-bottom: 0;
 }
@@ -229,6 +239,14 @@ ul li input[type=radio]:checked ~ i:after {
 
 /* Application  Form
 ------------------------------------------------------ */
+.ers_form{
+    margin-top: 60px;
+}
+
+.cd-form{
+    margin-top: 40px;
+}
+
 .cd-form legend {
     width: 100%;
     font-size: 2.3rem;
@@ -240,8 +258,22 @@ ul li input[type=radio]:checked ~ i:after {
 .cd-form .half-width {
   width: 48%;
   float: left;
-  margin-right: 4%;
+  margin-right: 0%;
 }
+
+.cd-form .half-width2 {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.cd-form .ers-width {
+    width: 78%;
+    float: left;
+    margin-right: 4%;
+}
+
+
 .cd-form .half-width:nth-of-type(2n) {
   margin-right: 0;
 }
@@ -256,7 +288,7 @@ ul li input[type=radio]:checked ~ i:after {
 .cd-form input[type="password"]:focus,
 .cd-form select:focus {
   outline: none;
-  border-color: #95ac5f;
+  border-color: #800000;
 }
 
 .cd-form input[type="text"],
@@ -279,7 +311,7 @@ ul li input[type=radio]:checked ~ i:after {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #b2b2b2;
+    color: #800000;
 }
 
 .cd-form input[type="submit"] {
@@ -302,7 +334,7 @@ ul li input[type=radio]:checked ~ i:after {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background-color: #df4f71;
+  background-color: #800000;
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -1423,8 +1455,6 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	.hoc{max-width:978px;}
 	.hoc_all{max-width:1200px;}
 
-
-
 }
 
 @media screen and (max-width:1150px){
@@ -1470,6 +1500,8 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
+
+
 }
 
 @media screen and (max-width:750px){
