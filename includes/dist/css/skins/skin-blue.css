@@ -75,12 +75,12 @@
 .skin-blue .sidebar-menu > li:hover > a,
 .skin-blue .sidebar-menu > li.active > a {
   color: #ffffff;
-  background: #1e282c;
+  background: #34495e;
   border-left-color: #800000;
 }
 .skin-blue .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
-  background: rgba(128, 0, 0, 0.5);
+  background: rgba(128, 0, 0, 0.58);
 }
 .skin-blue .sidebar a {
   color: #d2d6de;

@@ -1,21 +1,22 @@
 <?php include 'templates/header.php';?>
 
-<div class="tree-org">
+<main class="hoc_all hoc container clear" style="height:120%;">
+	<div class="tree-org">
+		
+		<div class="headline_underline">
+			<div class="fl_left">
+				<h6 class="org_heading">
+					<i class="fa fa-sitemap"></i>
+						Organizational Chart</h6>
+			</div>
+		</div>
 
-    <h6 class="news_heading">
-      <i class="fa fa-sitemap"></i>
-      Organizational Chart</h6>
+				<div style = "cursor:move;">
+					<div id="tree" class="tree">
+					</div>
+				</div>
 
-	
-	<div id="tree">
-    </div>
-    </ul>
-
-    <div id="draggable">
-      <div id="main"></div>
-    </div>
-</div>
-
-
+	</div>
+</main>
 
 <?php include 'templates/footer.php';?>

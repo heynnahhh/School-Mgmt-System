@@ -12,6 +12,359 @@ File: Layout CSS
 @import url("custom.flexslider.css");
 @import url("framework.css");
 
+
+/* Accordion
+------------------------------------------------------ */
+
+.transition, .p_accordion, .s_list, .i_accordion:before, .i_accordion:after {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.flipIn, .li_accordion {
+  -webkit-animation: flipdown 0.5s ease both;
+          animation: flipdown 0.5s ease both;
+}
+
+.no-select, .h3_accordion {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.h3_accordion {
+  color: #800000;
+}
+
+.h3_accordion {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  background-color: #fefffa;
+  margin: 0;
+  cursor: pointer;
+}
+
+.indent {
+  margin-left: 16px;
+}
+
+.p_accordion {
+  color: #000;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  margin-top: 0;
+  z-index: 2;
+}
+
+.ul_accordion {
+  list-style: none;
+  -webkit-perspective: 900;
+          perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+
+.li_accordion {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 1px dotted #dce7eb;
+}
+
+.li_accordion:nth-of-type(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.li_accordion:nth-of-type(2) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.li_accordion:nth-of-type(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.li_accordion:nth-of-type(4) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.li_accordion:nth-of-type(5) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.li_accordion:nth-of-type(6) {
+    -webkit-animation-delay: 1.75s;
+    animation-delay: 1.75s;
+}
+
+.li_accordion:nth-of-type(7) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.li_accordion:last-of-type {
+  padding-bottom: 0;
+}
+
+.i_accordion {
+  position: absolute;
+  -webkit-transform: translate(-6px, 0);
+          transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+
+.i_accordion:before, .i_accordion:after {
+  content: "";
+  position: absolute;
+  background-color: #800000;
+  width: 3px;
+  height: 9px;
+}
+
+.i_accordion:before {
+  -webkit-transform: translate(2px, 0) rotate(45deg);
+          transform: translate(2px, 0) rotate(45deg);
+}
+
+.i_accordion:after {
+  -webkit-transform: translate(-2px, 0) rotate(-45deg);
+          transform: translate(-2px, 0) rotate(-45deg);
+}
+ul li input[type=radio] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+ul li input[type=radio]:checked ~ p {
+  margin-top: 14px;
+  max-height: 800px;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+ul li input[type=radio]:checked ~ i:before {
+  -webkit-transform: translate(-2px, 0) rotate(45deg);
+          transform: translate(-2px, 0) rotate(45deg);
+}
+ul li input[type=radio]:checked ~ i:after {
+  -webkit-transform: translate(2px, 0) rotate(-45deg);
+          transform: translate(2px, 0) rotate(-45deg);
+}
+
+@-webkit-keyframes flipdown {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+  }
+  83% {
+    -webkit-transform: rotateX(6deg);
+            transform: rotateX(6deg);
+  }
+  92% {
+    -webkit-transform: rotateX(-3deg);
+            transform: rotateX(-3deg);
+  }
+  100% {
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+  }
+  83% {
+    -webkit-transform: rotateX(6deg);
+            transform: rotateX(6deg);
+  }
+  92% {
+    -webkit-transform: rotateX(-3deg);
+            transform: rotateX(-3deg);
+  }
+  100% {
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+/* Application  Form
+------------------------------------------------------ */
+.ers_form{
+    margin-top: 60px;
+}
+
+.cd-form{
+    margin-top: 40px;
+}
+
+.cd-form legend {
+    width: 100%;
+    font-size: 2.3rem;
+    line-height: 1.2;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cd-form .half-width {
+  width: 48%;
+  float: left;
+  margin-right: 0%;
+}
+
+.cd-form .half-width2 {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.cd-form .ers-width {
+    width: 78%;
+    float: left;
+    margin-right: 4%;
+}
+
+
+.cd-form .half-width:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.cd-form input[type="text"], .cd-form input[type="email"], .cd-form input[type="password"] {
+    width: 100%;
+    margin-top: 6px;
+    padding: 0 16px;
+}
+.cd-form input[type="text"]:focus,
+.cd-form input[type="email"]:focus,
+.cd-form input[type="password"]:focus,
+.cd-form select:focus {
+  outline: none;
+  border-color: #800000;
+}
+
+.cd-form input[type="text"],
+.cd-form input[type="email"],
+.cd-form input[type="password"],
+.cd-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 45px;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cd-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #800000;
+}
+
+.cd-form input[type="submit"] {
+  float: right;
+  margin-top: 20px;
+}
+
+.cd-form input[type="submit"] {
+  display: inline-block;
+  padding: 1em 1.8em;
+  border-radius: 50em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cd-form input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #800000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* History
+------------------------------------------------------ */
+.img-container {
+  text-align: center;
+  padding: 10px 15px;
+  float:left;
+  width:280px;
+}
+
+.img-container h6{margin-top:10px; font-size:14px;line-height:22px;}
+
+.history{margin-top:40px;}
+
+.history p::first-letter{
+	color: rgba(128, 0, 0, 0.87);
+	float: left;
+	font-family: Georgia;
+	font-size: 75px;
+	line-height: 60px;
+	padding-top: 4px;
+	padding-right: 5px;
+	padding-left: 3px;
+  }
+
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0, .row0 a{}
@@ -76,19 +429,20 @@ File: Layout CSS
 #pageintro li p:nth-of-type(2){line-height:1.5rem;}
 #pageintro li footer{margin-top:40px;}
 
-
 /* News
 --------------------------------------------------------------------------------------------------------------- */
 .row_news_page{border-bottom:1px solid; padding-bottom:40px;}
 .date{font-size:15px; color:maroon; padding-right:5px;}
 .news_heading{font-size:30px; color:maroon; margin-bottom:10px;}
+.org_heading{font-size:30px; color:maroon; margin-top:-50px; margin-bottom:10px;}
 .org_heading{font-size:30px; color:maroon; margin-bottom:10px;}
 .more_news_heading{font-size:30px; color:maroon;margin-bottom:10px;}
-.news_container{padding:10px; background-color:#e6e6e6; box-shadow: 8px 8px 3px #888888;}
+.news_container{padding:10px;}
 .calendar_container{padding-top:30px;}
 .more_news{margin-top:130px;}
 .headline_underline{border-bottom:2px solid #cccccc;}
 .article_underline{border-bottom:2px solid #cccccc; margin-bottom:20px;}
+.headline_container{background: #f2f3f3; padding: 15px;}
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
@@ -116,13 +470,11 @@ File: Layout CSS
 	fill: none;
 	stroke: #ccc;
 	stroke-width: 2px;
-
 }
 
 .tree {
 	margin-bottom: 10px;
 	overflow: auto;
-
 }
 
 .row_org{border-bottom:none;}
@@ -156,7 +508,7 @@ a{
   transition: width .2s ease;
   -webkit-transition: width .2s ease;
 }
- 
+
 .link-text:hover:after{
   width: 100%;
   left: 0;
@@ -182,8 +534,8 @@ color:maroon;
 
 .callout.callout-info {
 	border-color: #520000;
-	color: #fff !important;
-	background-color: #8e1a1a !important;
+	color: #fff;
+	background-color: #8e1a1a;
 }
 
 .callout {
@@ -736,6 +1088,7 @@ td {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
+	margin-top: 20px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -1003,8 +1356,7 @@ table th[class*="col-"] {
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{background-color:white;}
-a{color:black;}
-a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+
 hr, .borderedbox{border-color:#999999;}
 label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:maroon;}
@@ -1102,8 +1454,6 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	.hoc{max-width:978px;}
 	.hoc_all{max-width:1200px;}
 
-
-
 }
 
 @media screen and (max-width:1150px){
@@ -1135,9 +1485,9 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 	#mainav ul{display:none;}
 	#mainav form{display:block; margin:25px;}
 	#mainav form option:hover{background-color:red;}
-
+	#tree {margin-left:-350px;}
 	.more_news{margin-top:20px;}
-	
+
 	#breadcrumb{}
 	.form_ers {padding:30px 0 -10px 0;}
 	.date {padding-right:none;}
@@ -1149,6 +1499,8 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
+
+
 }
 
 @media screen and (max-width:750px){

@@ -145,12 +145,12 @@ input[type="submit"]:hover{
 
 .container{
   overflow: hidden;
-  background-color: #800000;
+  position: fixed;
+  background-color: #e74c3c;
   vertical-align: middle;
   white-space: nowrap;
-  width: 40%;
-  height: 662px;
-  float: left;
+  width: 100%;
+  height: 100%;
 }
 
 .container-marketing{
@@ -201,7 +201,17 @@ input[type="submit"]:hover{
 }
 
 .main-agileinfo{
-  margin-top: -50px;
+  float: right;
+  position: fixed;
+  background: #fff;
+  height: 100%;
+  width: 600px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
 }
 
 /*log-in background*/
