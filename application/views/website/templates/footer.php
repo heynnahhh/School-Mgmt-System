@@ -15,7 +15,7 @@
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="https://facebook.com/Araullo-High-School-277251475165/"><i class="fa fa-facebook"></i></a></li>
         <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google"></i></a></li>
+        <li><a class="faicon-google-plus" href="https://plus.google.com/u/1/111865928133362355721"><i class="fa fa-google"></i></a></li>
       </ul>
     </div>
     <div class="one_third">
