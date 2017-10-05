@@ -20,23 +20,17 @@
     </div>
     <div class="one_third">
       <h6 class="heading">Popular Links</h6>
-      <ul class="nospace linklist">
-      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Admission Procedure</a></li>
-      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Academic Calendar</a></li>
-      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Enrollment & Registration System</a></li>
-      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Junior High School</a></li>
-      	<li><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Senior High School</a></li>
-      </ul>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Admission Procedure</a></p>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Academic Calendar</a></p>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Enrollment & Registration System</a></p>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Junior High School</a></p>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Senior High School</a></p>
     </div>
     <div class="one_third">
       <h6 class="heading">External Links</h6>
-      <ul class="nospace linklist">
-        <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-        <li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-    		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-    		<li><a href = "#">&#x25CF; +00 (123) 456 7890</a></li>
-      </ul>
-
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Department Of Education</a></p>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> LRMDS</a></p>
+        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Manila City Hall</a></p>
     </div>
     <!-- ################################################################################################ -->
   </footer>
