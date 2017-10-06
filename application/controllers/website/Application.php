@@ -6,7 +6,7 @@ class Application extends CI_Controller {
 	public function __construct() {
 			parent::__construct();
 
-		// $this->load->model('');
+		// $this->load->model('application_form_model');
 		$this->load->library('form_validation');
 
 	}
