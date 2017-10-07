@@ -18,8 +18,8 @@
     <div class="fl_left">
       <ul class="nospace">
 		<li><div id = "clockDisplay"></div></li>
-        <li><i class="fa fa-phone"></i> +63 915 933 5058</li>
-        <li><i class="fa fa-envelope-o"></i> araullo@araullo@email.com</li>
+        <li><i class="fa fa-phone-square"></i> 524-65765</li>
+        <li><i class="fa fa-envelope-o"></i> araullo.highschool06@gmail.com</li>
       </ul>
     </div>
     <div class="fl_right">
@@ -47,7 +47,7 @@
           <a class="drop" href="#">About</a>
           <ul class="sub-menu">
             <li><a href="history">History</a></li>
-			<li><a href="ahs_hymn">Araullo High School Hymn</a></li>
+			      <li><a href="ahs_hymn">Araullo High School Hymn</a></li>
             <li><a href="mvgo">Mission, Vision, Core Values & Mandate</a></li>
             <li><a href="org_chart">Organizational Chart</a></li>
           </ul>
