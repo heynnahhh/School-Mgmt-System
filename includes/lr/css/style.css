@@ -225,7 +225,7 @@ nav {
 .sidebar { 
   width: 200px;
   margin: 0 0 16px 0;
-  background: #DFE7CB; /* Show a solid color for older browsers */
+  background: #b5e7a0; /* Show a solid color for older browsers */
   border: 1px solid #CCC;
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;

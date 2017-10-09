@@ -3,10 +3,10 @@
     <div id="site_content">
       <div id="sidebar_container">
         <div class="sidebar">
-          <h3>Latest News</h3>
+          <h3><i class="el el-bullhorn"></i> Advisory</h3>
           <h4>New Website Launched</h4>
-          <h5>January 1st, 2013</h5>
-          <p>2013 sees the redesign of our website. <a href="#">Read more</a></p>
+          <h5>October 13, 2017</h5>
+          <p>See Araullo High School Website. <a href="../website/home">See more</a></p>
         </div>
         <div class="sidebar">
           <h3>Useful Links</h3>

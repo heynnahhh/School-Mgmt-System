@@ -7,6 +7,8 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/css/elusive-icons.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/css/elusive-icons.min.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/modernizr-1.5.min.js"></script>
 </head>
