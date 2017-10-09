@@ -13,7 +13,7 @@
                        </tr>
 
                        <tr>
-                         <td><a href="#" class="link-text">Course Offered for Senior High School</a></td>
+                         <td><a href="courses" class="link-text">Course Offered for Senior High School</a></td>
                        </tr>
 
                        <!-- ################################################################################################ -->
@@ -33,11 +33,11 @@
                          <td><a href="#" class="link-text">Application for Junior High School</a></td>
                        </tr>
                        <tr>
-                         <td><a href="#" class="link-text">Application for Senior High School</a></td>
+                         <td><a href="Application" class="link-text">Application for Senior High School</a></td>
                        </tr>
 
                        <tr>
-                         <td><a href="#" class="link-text">Course Offered for Senior High School</a></td>
+                         <td><a href="courses" class="link-text">Course Offered for Senior High School</a></td>
                        </tr>
 
                        <!-- ################################################################################################ -->

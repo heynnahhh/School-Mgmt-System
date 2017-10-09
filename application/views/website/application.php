@@ -8,7 +8,11 @@
 					<div class="two_third first">
 
 						<div class="headline_underline"><h6 class="news_heading">Online Application for Senior High School</h6></div>
-
+              <br>
+              <div class="callout callout-info">
+                <p>Please fill up the form below.</p>
+              </div>
+      
               <div class="cd-form">
                 <form action="<?php echo site_url('website/Application/submit_form')?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                   <fieldset>
