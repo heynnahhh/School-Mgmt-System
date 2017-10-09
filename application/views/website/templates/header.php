@@ -66,7 +66,7 @@
                 <li><a href="#">Enrollment Procedures</a></li>
               </ul>
         </li>
-        <li><a href="#">AHS-LRMDS</a></li>
+        <li><a href="../lr/home">AHS-LR Portal</a></li>
         <li><a href="contacts">Contact Us</a></li>
       </ul>
     </nav>
