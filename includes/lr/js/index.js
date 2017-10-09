@@ -1,50 +1,26 @@
-$('body')
-  .on('click', 'div.three button.btn-search', function(event) {
-    event.preventDefault();
-    var $input = $('div.three input');
-    $input.focus();
-    if ($input.val().length() > 0) {
-      // submit form
-    }
-  })
-  .on('click', 'div.four button.btn-search', function(event) {
-    event.preventDefault();
-    var $input = $('div.four input');
-    $input.focus();
-    if ($input.val().length() > 0) {
-      // submit form
-    }
-  })
-  .on('click', 'div.five button.btn-search', function(event) {
-    event.preventDefault();
-    var $input = $('div.five input');
-    $input.focus();
-    if ($input.val().length() > 0) {
-      // submit form
-    }
-  })
-  .on('click', 'div.six button.btn-search', function(event) {
-    event.preventDefault();
-    var $input = $('div.six input');
-    $input.focus();
-    if ($input.val().length() > 0) {
-      // submit form
-    }
-  })
-  .on('click', 'div.thirteen button.btn-search', function(event) {
-    event.preventDefault();
-    var $input = $('div.thirteen input');
-    $input.focus();
-    if ($input.val().length() > 0) {
-      // submit form
-    }
-  })
-  .on('click', 'div.fourteen button.btn-search', function(event) {
-    event.preventDefault();
-    var $input = $('div.fourteen input');
-    $input.focus();
-    if ($input.val().length() > 0) {
-      // submit form
-    }
-  })
-;
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}

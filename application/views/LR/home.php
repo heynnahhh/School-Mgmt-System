@@ -27,12 +27,53 @@
           </ul>
         </div>
       </div>
-      <div class="content">
-        <h1>Welcome to the CSS3_trees template</h1>
-        <p>This simple, fixed width website template is released under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>. This means you are free to download and use it for personal and commercial projects. However, you <strong>must leave the 'design from css3templates.co.uk' link in the footer of the template</strong>.</p>
-        <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS3</strong>.</p>
-        <p>You can view more free CSS3 web templates <a href="http://www.css3templates.co.uk">here</a>.</p>
-        <p>This template is a fully documented 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design. There is also a working PHP contact form on the contact page.</p>     
+	<div class="content">
+	
+		<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 3</div>
+		  <img src="<?php echo base_url();?>includes/lr/images/slides/1.jpg" style="width:100%;">
+		    <div class="carousel-caption">
+				<h1 class="carousel-caption-header">Slide 1</h1>
+				<p class="carousel-caption-text hidden-sm hidden-xs">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+				</p>
+			</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 3</div>
+		  <img src="<?php echo base_url();?>includes/lr/images/slides/2.jpg" style="width:100%;">
+		  <div class="carousel-caption">
+				<h1 class="carousel-caption-header">Slide 2</h1>
+				<p class="carousel-caption-text hidden-sm hidden-xs">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+				</p>
+		  </div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 3</div>
+		  <img src="<?php echo base_url();?>includes/lr/images/slides/3.jpg" style="width:100%;">
+		    <div class="carousel-caption">
+				<h1 class="carousel-caption-header">Slide 3</h1>
+				<p class="carousel-caption-text hidden-sm hidden-xs">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+				</p>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>  
       </div>
     </div>
 	
