@@ -268,7 +268,8 @@ desired effect
               </a>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Stocks</a></li>
+                <li><a href="<?php echo site_url();?>/INVENTORY/home/stocks"><i class="fa fa-circle-o"></i> Stocks</a></li>
+                <li><a href="<?php echo site_url();?>/INVENTORY/home/products"><i class="fa fa-circle-o"></i> Product List</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> Expenses</a></li>
               </ul>
             </li>

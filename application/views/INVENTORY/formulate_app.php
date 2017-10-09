@@ -8,7 +8,7 @@
       </h1>
       <ol class="breadcrumb">
         <li>GHawTech&trade;</li>
-        <li><a href="<?php echo site_url();?>/LRMDS/home"><i class="fa fa-book"></i>INVENTORY</a></li>
+        <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-database"></i>INVENTORY</a></li>
         <li class="active">Formulate APP</li>
       </ol>
     </section>
@@ -23,23 +23,45 @@
         </div>
       </div>
 
-      
-
 
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->
-        <section class="col-lg-7 connectedSortable">
+        <div class="col-md-8">
+          <object data="<?php echo base_url();?>uploads/news/HannahLiao.docx" type="document">
+            <a href="<?php echo base_url();?>uploads/news/HannahLiao.docx" target="_blank" class="file_link">HannahLiao.docx</a>
+            <!-- <iframe src="http://docs.google.com/gview?url=<?php echo base_url('uploads/news/HannahLiao.docx')?>&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+          </object>
 
-        </section>
-        <!-- /.Left col -->
-        <!-- right col (We are only adding the ID to make the widgets sortable)-->
-        <section class="col-lg-5 connectedSortable">
+          <object data="<?php echo base_url();?>uploads/news/HannahLiao.docx" type="document">
+            <a href="<?php echo base_url();?>uploads/news/HannahLiao.docx" target="_blank" class="file_link">HannahLiao.docx</a>
+            <!-- <iframe src="http://docs.google.com/gview?url=<?php echo base_url('uploads/news/HannahLiao.docx')?>&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+          </object>
 
-        </section>
-        <!-- right col -->
+          <object data="<?php echo base_url();?>uploads/news/HannahLiao.docx" type="document">
+            <a href="<?php echo base_url();?>uploads/news/HannahLiao.docx" target="_blank" class="file_link">HannahLiao.docx</a>
+            <!-- <iframe src="http://docs.google.com/gview?url=<?php echo base_url('uploads/news/HannahLiao.docx')?>&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+          </object>
+
+          <object data="<?php echo base_url();?>uploads/news/HannahLiao.docx" type="document">
+            <a href="<?php echo base_url();?>uploads/news/HannahLiao.docx" target="_blank" class="file_link">HannahLiao.docx</a>
+            <!-- <iframe src="http://docs.google.com/gview?url=<?php echo base_url('uploads/news/HannahLiao.docx')?>&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+          </object>
+          <object data="<?php echo base_url();?>uploads/news/HannahLiao.docx" type="document">
+            <a href="<?php echo base_url();?>uploads/news/HannahLiao.docx" target="_blank" class="file_link">HannahLiao.docx</a>
+            <!-- <iframe src="http://docs.google.com/gview?url=<?php echo base_url('uploads/news/HannahLiao.docx')?>&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+          </object>
+        </div>
+        <!-- /.col -->
+
+        <div class="col-md-4">
+          <div class="side-nav">
+            <input type="file" >
+          </div>
+        </div>
+        <!-- /.col -->
       </div>
-      <!-- /.row (main row) -->
+      <!-- /.row -->
 
     </section>
     <!-- /.content -->
