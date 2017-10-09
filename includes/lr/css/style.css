@@ -341,9 +341,9 @@ footer a:hover {
   width: 99px; 
   margin: 0 0 0 212px; 
   height: 33px;
-  padding: 2px 0 3px 0;
+  padding: 2px 0 0 0;
   cursor: pointer; 
-  background: #555747; 
+  background: #c94c4c; 
   color: #FFF;
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;

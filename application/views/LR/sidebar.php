@@ -7,7 +7,7 @@
           <p>See Araullo High School Website. <a href="../website/home">See more</a></p>
         </div>
         <div class="sidebar">
-          <h3>Useful Links</h3>
+          <h3><i class="el el-ok"></i></i> Popular Links</h3>
           <ul>
             <li><a href="#">First Link</a></li>
             <li><a href="#">Another Link</a></li>
@@ -16,12 +16,11 @@
           </ul>
         </div>
         <div class="sidebar">
-          <h3>More Useful Links</h3>
+          <h3><i class="el el-link"></i> Related Links</h3>
           <ul>
-            <li><a href="#">First Link</a></li>
-            <li><a href="#">Another Link</a></li>
-            <li><a href="#">And Another</a></li>
-            <li><a href="#">Last One</a></li>
+            <li><a href="#">Araullo High Schoo Website</a></li>
+            <li><a href="#">Deped - Learning Portal</a></li>
+            <li><a href="#">Department of Education</a></li>
           </ul>
         </div>
       </div>
