@@ -672,7 +672,7 @@ ul#nav li a:hover,ul#nav li a:focus {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -777,3 +777,4 @@ ul#nav li a:hover,ul#nav li a:focus {
 		font-size: 26px;
 	}
 }
+
