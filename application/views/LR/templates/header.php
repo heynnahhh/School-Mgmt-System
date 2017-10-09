@@ -19,13 +19,13 @@
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-         <a href="index.html"><img src = "<?php echo base_url();?>includes/lr/images/logo1.png" class="logo_image"><h1>Araullo High School<span class="logo_colour"> Learning Resource Portal</span></a></h1>
+         <a href="home"><img src = "<?php echo base_url();?>includes/lr/images/logo1.png" class="logo_image"><h1>Araullo High School<span class="logo_colour"> Learning Resource Portal</span></a></h1>
         </div>
       </div>
       <nav>
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home">Home</a></li>
             <li><a href="#">Junior High School</a>
               <ul>
                 <li><a href="#">Drop Down One</a></li>
@@ -43,7 +43,7 @@
                 <li><a href="#">Drop Down Five</a></li>
               </ul>
             </li>
-            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="contact">Contact Us</a></li>
 			<li>
 				<form class="form-wrapper cf">
 				<input type="text" placeholder="Search here..." required>
