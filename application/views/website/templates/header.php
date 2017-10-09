@@ -18,7 +18,7 @@
     <div class="fl_left">
       <ul class="nospace">
 		<li><div id = "clockDisplay"></div></li>
-        <li><i class="fa fa-phone-square"></i> 524-65765</li>
+        <li><i class="fa fa-phone"></i> 524-65765</li>
         <li><i class="fa fa-envelope-o"></i> araullo.highschool06@gmail.com</li>
       </ul>
     </div>
