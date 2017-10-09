@@ -10,7 +10,7 @@
 						<div class="headline_underline"><h6 class="news_heading">Online Application for Senior High School</h6></div>
               <br>
               <div class="callout callout-info">
-                <p>Please fill up the form the below.</p>
+                <p>Please fill up the form below.</p>
               </div>
       
               <div class="cd-form">
