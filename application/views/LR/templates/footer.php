@@ -7,6 +7,7 @@
     </footer>
   </div>
   <!-- javascript at the bottom for fast page loading -->
+    <script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/index.js"></script>
   <script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/jquery.js"></script>
   <script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/jquery.easing-sooper.js"></script>
   <script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/jquery.sooperfish.js"></script>
