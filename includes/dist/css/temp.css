@@ -13,3 +13,265 @@
   .skin-blue .main-header .logo:hover {
     background-color: rgba(192, 57, 43, 0.9);
   }
+
+.box-maroon{
+    border-top: 3px solid #800000;
+  }
+
+.modal-content{
+  border-radius: .25em;
+}
+
+.file_link{
+   width: 300px;
+   height: 200px;
+   background: #2B2D42;
+   padding: 16px;
+   border-radius: 4px;
+   color: #fff;
+   cursor: pointer;
+}
+
+.file_link:hover{
+  color: #ecf0f1;
+}
+
+/************ Products *************/
+
+.centerMe {
+  position: absolute;
+  left: 11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-30%, -80%);
+}
+
+button .icon {
+  position: relative;
+  background: #1D242B;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: .2s color;
+  transition: .2s color;
+  border-radius: 2px;
+}
+
+button .icon .fa {
+  width: 30px;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+button .icon:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #1D242B;
+  top: 12.5px;
+  right: 1px;
+  -webkit-transition: .2s right;
+  transition: .2s right;
+  z-index: 1;
+}
+
+button .text {
+  position: relative;
+  width: 0;
+  height: 30px;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  background: #F34541;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 300;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+button .text span {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+button:hover .icon {
+  color: #F34541;
+  border-radius: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+button:hover .icon:after {
+  right: -2px;
+}
+
+button:hover .text {
+  width: 120px;
+}
+
+button:hover .text span {
+  opacity: 1;
+  top: 0;
+}
+
+.cd-form {
+    margin-top: 20px;
+}
+
+.cd-form legend {
+    width: 100%;
+    font-size: 2.3rem;
+    line-height: 1.2;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*.cd-form .half-width {
+  width: 48%;
+  float: left;
+  margin-right: 0%;
+}
+
+.cd-form .half-width:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.half-left{
+  width: 47%;
+  float: left;
+  margin-right: 3%;
+}
+
+
+.half-right{
+
+  float: left;
+  position: relative;
+  margin-right: 3%;
+}*/
+
+.cd-form input[type="text"], .cd-form input[type="email"], .cd-form input[type="date"], .textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 0 16px;
+    margin-bottom: 10px;
+}
+.cd-form input[type="text"]:focus,
+.cd-form input[type="email"]:focus,
+.cd-form input[type="date"]:focus,
+.cd-form select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #800000;
+}
+
+.cd-form input[type="text"],
+.cd-form input[type="email"],
+.cd-form input[type="date"],
+.cd-form select
+ {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 45px;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  background: transparent;
+}
+
+.textarea
+ {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 100px;
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cd-form .cd-select {
+  display: inline-block;
+  position: relative;
+  margin-top: 1px;
+}
+
+.cd-form .cd-select::after {
+  /* arrow icons */
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 10px;
+  height: 6px;
+  width: 10px;
+  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+  pointer-events: none;
+}
+
+.cd-form select {
+  padding: 0 25px 0 15px;
+  font-size: 1.4rem;
+}
+
+.cd-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #800000;
+    line-height: 1.5em;
+}
+
+.cd-form input[type="submit"] {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #800000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 1em 1.8em;
+  border-radius: 50em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  float: right;
+  margin-top: 20px;
+}

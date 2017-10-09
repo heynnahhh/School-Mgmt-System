@@ -17,8 +17,8 @@
     <!-- ################################################################################################ -->
     <div class = "one_half first">
       <div class="callout callout-info">
-          <h4>Talk about ERS module</h4>
-          <p>ERS stands for Elect-Ronic Shit</p>
+          <h4>About ERS module</h4>
+          <p>The Enrollment and Registration System (ERS) is a system developed to computerize the enrollment processes and allows students to verify their grades and the faculty members to preview their grading sheets through the AHS Website.</p>
       </div>
     </div>
     <div class = "one_half">

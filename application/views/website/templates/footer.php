@@ -21,16 +21,16 @@
     <div class="one_third">
       <h6 class="heading">Popular Links</h6>
         <p><a href="#" class="link-footer" style="text-decoration: underline;"> Admission Procedure</a></p>
-        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Academic Calendar</a></p>
-        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Enrollment & Registration System</a></p>
+        <p><a href="Calendar" class="link-footer" style="text-decoration: underline;"> Academic Calendar</a></p>
+        <p><a href="login" class="link-footer" style="text-decoration: underline;"> Enrollment & Registration System</a></p>
         <p><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Junior High School</a></p>
-        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Application for Senior High School</a></p>
+        <p><a href="Application" class="link-footer" style="text-decoration: underline;"> Application for Senior High School</a></p>
     </div>
     <div class="one_third">
       <h6 class="heading">External Links</h6>
-        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Department Of Education</a></p>
-        <p><a href="#" class="link-footer" style="text-decoration: underline;"> LRMDS</a></p>
-        <p><a href="#" class="link-footer" style="text-decoration: underline;"> Manila City Hall</a></p>
+        <p><a href="http://www.deped.gov.ph/" class="link-footer" style="text-decoration: underline;"> Department Of Education</a></p>
+        <p><a href="https://lrmds.deped.gov.ph/" class="link-footer" style="text-decoration: underline;"> LRMDS</a></p>
+        <p><a href="http://manila.gov.ph/" class="link-footer" style="text-decoration: underline;"> Manila City Hall</a></p>
     </div>
     <!-- ################################################################################################ -->
   </footer>

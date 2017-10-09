@@ -32,11 +32,12 @@ class Upload extends CI_Controller {
 	     }
 
 	     else {
-	       $data = array('upload_data' => $this->upload->data());
+
+         $upload_data = explode("/", $this->upload->data('full_path'));
 
 	       $data=array(
-	           'file_name' => $this->upload->data('file_name'),
-             'file_path' => $this->upload->data('file_path'),
+	           'file_name' => $upload_data[6],
+             'file_path' => $upload_data[4]."/".$upload_data[5]."/",
 	           'full_path' => $this->upload->data('full_path')
 	         );
 
