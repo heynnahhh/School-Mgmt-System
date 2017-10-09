@@ -242,7 +242,7 @@ ul li input[type=radio]:checked ~ i:after {
     margin-top: 60px;
 }
 
-.cd-form{
+.cd-form {
     margin-top: 40px;
 }
 
@@ -272,19 +272,31 @@ ul li input[type=radio]:checked ~ i:after {
     margin-right: 4%;
 }
 
+.half-left{
+  width: 47%;
+  float: left;
+  margin-right: 3%;
+}
+
+.half-right{
+
+  float: left;
+  position: relative;
+  margin-right: 3%;
+}
 
 .cd-form .half-width:nth-of-type(2n) {
   margin-right: 0;
 }
 
-.cd-form input[type="text"], .cd-form input[type="email"], .cd-form input[type="password"] {
+.cd-form input[type="text"], .cd-form input[type="email"], .cd-form input[type="date"] {
     width: 100%;
     margin-top: 6px;
     padding: 0 16px;
 }
 .cd-form input[type="text"]:focus,
 .cd-form input[type="email"]:focus,
-.cd-form input[type="password"]:focus,
+.cd-form input[type="date"]:focus,
 .cd-form select:focus {
   outline: none;
   border-color: #800000;
@@ -292,7 +304,7 @@ ul li input[type=radio]:checked ~ i:after {
 
 .cd-form input[type="text"],
 .cd-form input[type="email"],
-.cd-form input[type="password"],
+.cd-form input[type="date"],
 .cd-form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -305,29 +317,46 @@ ul li input[type=radio]:checked ~ i:after {
   background: transparent;
 }
 
+.cd-form .cd-select {
+  display: inline-block;
+  position: relative;
+  margin-top: 1px;
+}
+
+.cd-form .cd-select::after {
+  /* arrow icons */
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 10px;
+  height: 6px;
+  width: 10px;
+  background: url(../images/cd-icon-arrow.svg) no-repeat center center;
+  pointer-events: none;
+}
+
+.cd-form select {
+  padding: 0 25px 0 15px;
+  font-size: 1.4rem;
+}
+
 .cd-form label {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #800000;
-}
-
-.cd-form input[type="submit"] {
-  float: right;
-  margin-top: 20px;
+    line-height: 1.5em;
 }
 
 .cd-form input[type="submit"] {
   display: inline-block;
-  padding: 1em 1.8em;
-  border-radius: 50em;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.cd-form input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -337,6 +366,13 @@ ul li input[type=radio]:checked ~ i:after {
   color: #ffffff;
   border: none;
   cursor: pointer;
+  padding: 1em 1.8em;
+  border-radius: 50em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  float: right;
+  margin-top: 20px;
 }
 
 

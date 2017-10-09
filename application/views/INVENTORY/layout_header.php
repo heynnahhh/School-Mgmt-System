@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.min.css">
   <!-- TEMPORARY -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/temp.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/modal.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -374,7 +376,8 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Stocks</a></li>
+                <li><a href="<?php echo site_url();?>/INVENTORY/home/stocks"><i class="fa fa-circle-o"></i> Stocks</a></li>
+                <li><a href="<?php echo site_url();?>/INVENTORY/home/products"><i class="fa fa-circle-o"></i> Product List</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> Expenses</a></li>
               </ul>
             </li>

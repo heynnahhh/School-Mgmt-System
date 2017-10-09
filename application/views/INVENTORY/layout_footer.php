@@ -212,9 +212,24 @@
 <script src="<?php echo base_url();?>includes/dist/js/demo.js"></script>
 <!-- ChartJS 1.0.1 -->
 <script src="<?php echo base_url();?>includes/plugins/chartjs/Chart.min.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="<?php echo base_url();?>includes/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <script>
+
+  $(function () {
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+
   $(function () {
     //Add text editor
     $("#compose-textarea").wysihtml5();
