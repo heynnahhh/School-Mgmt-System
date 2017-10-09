@@ -1,8 +1,8 @@
 <div id="scroll">
-      <a title="Scroll to the top" class="top" href="#"><img src="<?php echo base_url();?>images/top.png" alt="top" /></a>
+      <a title="Scroll to the top" class="top" href="#"><img src="<?php echo base_url();?>includes/lr/images/top.png" alt="top" /></a>
     </div>
     <footer>
-      <p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="page.html">A Page</a> | <a href="another_page.html">Another Page</a> | <a href="contact.php">Contact Us</a></p>
+      <p><a href="index.html">Home</a> | <a href="examples.html">Junior High School</a> | <a href="examples.html">Senior High School</a> | <a href="contact.php">Contact Us</a></p> 
       <p>Copyright &copy; Araullo High School Learning Resource Portal| <a href="http://www.heartinternet.co.uk/web-hosting/">Araullo High School Website</a></p>
     </footer>
   </div>

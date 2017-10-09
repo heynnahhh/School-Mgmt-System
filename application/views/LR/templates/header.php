@@ -24,19 +24,18 @@
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="examples.html">Examples</a></li>
-            <li><a href="#">Example Drop Down</a>
+            <li><a href="#">Junior High School</a>
               <ul>
                 <li><a href="#">Drop Down One</a></li>
-                <li><a href="#">Drop Down Two</a>
-                  <ul>
-                    <li><a href="#">Sub Drop Down One</a></li>
-                    <li><a href="#">Sub Drop Down Two</a></li>
-                    <li><a href="#">Sub Drop Down Three</a></li>
-                    <li><a href="#">Sub Drop Down Four</a></li>
-                    <li><a href="#">Sub Drop Down Five</a></li>
-                  </ul>
-                </li>
+                <li><a href="#">Drop Down Three</a></li>
+                <li><a href="#">Drop Down Four</a></li>
+                <li><a href="#">Drop Down Five</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Senior High School</a>
+              <ul>
+                <li><a href="#">Drop Down One</a></li>
+                <li><a href="#">Drop Down Two</a></li>
                 <li><a href="#">Drop Down Three</a></li>
                 <li><a href="#">Drop Down Four</a></li>
                 <li><a href="#">Drop Down Five</a></li>
