@@ -2,7 +2,7 @@
       <a title="Scroll to the top" class="top" href="#"><img src="<?php echo base_url();?>includes/lr/images/top.png" alt="top" /></a>
     </div>
     <footer>
-      <p><a href="home">Home</a> | <a href="examples.html">Junior High School</a> | <a href="examples.html">Senior High School</a> | <a href="contact">Contact Us</a></p> 
+      <p><a href="home">Home</a> | <a href="examples.html">Resources</a> | <a href="examples.html">Media Resources</a> | <a href="contact">Contact Us</a></p> 
       <p>Copyright &copy; Araullo High School Learning Resource Portal| <a href="../website/home">Araullo High School Website</a></p>
     </footer>
   </div>

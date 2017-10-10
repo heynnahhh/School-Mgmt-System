@@ -9,10 +9,10 @@
         <div class="sidebar">
           <h3><i class="el el-ok"></i></i> Popular Links</h3>
           <ul>
-            <li><a href="#">First Link</a></li>
-            <li><a href="#">Another Link</a></li>
-            <li><a href="#">And Another</a></li>
-            <li><a href="#">Last One</a></li>
+            <li><a href="#">Science and Technology</a></li>
+            <li><a href="#">Junior High School</a></li>
+            <li><a href="#">Chemistry</a></li>
+            <li><a href="#">Filipino</a></li>
           </ul>
         </div>
         <div class="sidebar">
