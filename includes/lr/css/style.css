@@ -10,6 +10,8 @@
     src: local("News Cycle"), url('../fonts/NewsCycle-Regular.ttf'); 
 } 
 
+@import "compass/css3";
+
 html { 
   height: 100%;
 }
@@ -203,7 +205,7 @@ nav {
 } 
 
 #menu_container { 
-  width: 1100px;
+  width: 1000px;
   margin: 0 auto 0 auto;
   float:left;
 }
@@ -220,6 +222,29 @@ nav {
   float: right;
   width: 234px;
   margin-top: 20px;
+}
+
+.trivia_container { 
+  width: 96%;
+  margin: 0 0 16px 0;
+  background: transparent; /* Show a solid color for older browsers */
+  border: 1px solid #c5d5c5;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  padding: 10px 15px 5px 13px;
+  text-align:center;
+}
+  
+.trivia_container h3, .content h1 { 
+  padding: 0 15px 20px 0;
+  font: 150% 'News Cycle', arial, sans-serif;
+  text-shadow:  #FFF 0 1px;
+  margin: 0 1px;
+}
+
+.trivia_container h3 { 
+  padding: 4px 15px 9px 0;
+  font: 150% 'News Cycle', arial, sans-serif;
 }
 
 .sidebar { 
@@ -462,7 +487,7 @@ ul.sf-menu a {
 ul.sf-menu ul { 
   position: absolute;
   left: 0;
-  width: 150px; 
+  width: 150px;
   top: auto;
   left: -999999px;
 }
@@ -777,4 +802,33 @@ ul#nav li a:hover,ul#nav li a:focus {
 		font-size: 26px;
 	}
 }
+
+.title {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+  font-size:40px;
+}
+
+.title:before,
+.title:after {
+  background: #c94c4c;
+  content: "";
+  display: block;
+  height:2px;
+  position: absolute;
+    top: 50%;
+  width: 400%;
+}
+.title:before {
+  right: 100%;
+}
+.title:after {
+  left: 100%;
+}
+.container {
+  overflow: hidden;
+  text-align: center;
+}
+
 
