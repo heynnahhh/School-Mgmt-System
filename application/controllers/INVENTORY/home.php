@@ -55,6 +55,7 @@ class Home extends CI_Controller {
 	public function products(){
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
 		$data['products'] = $this->view_products();
+		$data['category'] = $this->get_category();
 		// print_r($data);
 		$this->load->view('INVENTORY/products',$data);
 	}
@@ -68,6 +69,11 @@ class Home extends CI_Controller {
 		$data = $this->inventory_model->get_Products();
 		return $data;
 	}
+
+	public function get_category(){
+	    $data = $this->inventory_model->get_category();
+	    return $data;
+    }
 
 	public function add_product(){
 		if($data = $this->input->post()){

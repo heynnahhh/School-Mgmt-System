@@ -30,4 +30,10 @@ class Inventory_model extends CI_Model{
     public function insert_stocks($m_data){
       $this->db->insert('tbl_inv_stocks', $m_data);
     }
+
+    public function get_category(){
+        $this->db->select('*');
+        $query = $this->db->get('tbl_inv_pcategory');
+        return $query->result();
+    }
 }
