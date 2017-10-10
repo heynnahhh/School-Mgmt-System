@@ -231,6 +231,22 @@
   });
 
   $(function () {
+
+      $('#view_details').on('click', function (){
+          $('#view').removeAttr('style', 'display:none;');
+          $('#edit').attr('style', 'display:none;');
+          $('#input_info').attr("disabled", true);
+          $('#view_edit').attr('style', 'display:none;');
+      });
+
+      $('.centerMe').on('click', function (){
+          $('#view').attr('style', 'display:none;');
+          $('#edit').removeAttr('style', 'display:none;');
+          $('#input_info').removeAttr("disabled", true);
+          $('#view_edit').attr('style', 'display:none;');
+      });
+
+
     //Add text editor
     $("#compose-textarea").wysihtml5();
 

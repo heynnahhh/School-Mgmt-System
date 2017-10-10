@@ -59,7 +59,7 @@
                           <?php endif;?>
                         <td><?php echo $data->product_amount;?></td>
                         <td>
-                          <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#product_info" value="<?php echo $data->ipr_id;?>"><i class="fa fa-eye"></i> View full details</button>
+                          <button type="button" id="view_details" class="btn btn-sm btn-info" data-toggle="modal" data-target="#product_info" value="<?php echo $data->ipr_id;?>"><i class="fa fa-eye"></i> View full details</button>
                         </td>
                       </tr>
                       <!-- Create Item Modal -->
@@ -75,7 +75,7 @@
                                 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 <!-- change action to edit controller -->
                                 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <form action="<?php echo site_url('INVENTORY/home/add_product');?>" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+                                <form action="<?php echo site_url('INVENTORY/home/add_product');?>" method="post" enctype="multipart/form-data" accept-charset="utf-8" class = "input-info">
                                   <fieldset>
                                     <legend>Product Info</legend>
 
@@ -87,12 +87,12 @@
                                       <label for="userEmail">Item Name</label>
                                       <input type="text" id="input_info" name="product_name" placeholder="">
                                     </div>
-<!--                                     <div class="col-md-3" id="view_edit">
+                                   <div class="col-md-2">
                                       <label for="userName">Product Status</label>
-                                      <?php if($data->products_status == 'Active'):?>
-                                        <span id="view" class="label label-success">$data->products_status</span>
-                                      <?php elseif($data->products_status == 'Inactive'):?>
-                                        <span id="view" class="label label-danger">$data->products_status</span>
+                                      <?php if($data->product_status == 'Active'):?>
+                                        <span id="view" class="label label-success" style="display:none;"><?php echo $data->product_status;?></span>
+                                      <?php elseif($data->product_status == 'Inactive'):?>
+                                        <span id="view" class="label label-danger" style="display:none;"><?php echo $data->product_status;?></span>
                                       <?php endif;?>
                                       <span class="cd-select" id="edit">
                                         <select name="product_status" required="">
@@ -101,7 +101,7 @@
                                           <option>Inactive</option>
                                         </select>
                                       </span>
-                                    </div> -->
+                                    </div>
                                   </fieldset>
                                   <fieldset>
                                     <div class="col-md-8">
@@ -116,18 +116,15 @@
                                       <input type="text" maxlength="10" id="input_info" name="product_amount" placeholder="">
                                     </div>
                                     <div class="col-md-3">
-                                     <!--  <label for="userEmail">Category</label>
-                                      <span class="cd-select" id="add_edit"> -->
-                                      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                      <!--       create category table      -->
-                                      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<!--                                         <select name="product_category" required="">
-                                        <?php foreach($var as $var):?>
-                                          <option><?php echo $var->var;?></option>
+                                     <label for="userEmail">Category</label>
+                                      <span class="cd-select" id="add_edit">
+                                       <select name="product_category" required="">
+                                        <?php foreach($category as $option):?>
+                                          <option><?php echo $option->category;?></option>
                                         <?php endforeach;?>
                                         </select>
                                       </span>
-                                      </div> -->
+                                      </div>
 
                                   </fieldset>
 
