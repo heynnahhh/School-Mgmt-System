@@ -26,15 +26,15 @@
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
             <li><a href="home">Home</a></li>
-            <li><a href="#">Junior High School</a>
+            <li><a href="#">Resources</a>
               <ul>
-                <li><a href="#">Drop Down One</a></li>
-                <li><a href="#">Drop Down Three</a></li>
-                <li><a href="#">Drop Down Four</a></li>
-                <li><a href="#">Drop Down Five</a></li>
+                <li><a href="#">Junior High School</a></li>
+                <li><a href="#">Senior High School</a></li>
+                <li><a href="#">Alternative Learning System Resources</a></li>
+                <li><a href="#">Professional Development Resources</a></li>
               </ul>
             </li>
-            <li><a href="#">Senior High School</a>
+            <li><a href="#">Media Resources</a>
               <ul>
                 <li><a href="#">Drop Down One</a></li>
                 <li><a href="#">Drop Down Two</a></li>
@@ -52,5 +52,5 @@
 			</li>
           </ul>
         </div>
-      </nav> 
+      </nav>
     </header>

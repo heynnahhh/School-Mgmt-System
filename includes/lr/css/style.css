@@ -203,7 +203,7 @@ nav {
 } 
 
 #menu_container { 
-  width: 1100px;
+  width: 1000px;
   margin: 0 auto 0 auto;
   float:left;
 }
@@ -462,7 +462,7 @@ ul.sf-menu a {
 ul.sf-menu ul { 
   position: absolute;
   left: 0;
-  width: 150px; 
+  width: 150px;
   top: auto;
   left: -999999px;
 }
