@@ -23,7 +23,7 @@
             <div class="box box-maroon">
               <div class="box-header">
                 <h2 class="box-title">Product List</h2> &nbsp;
-                <button class='centerMe' type="button" data-toggle="modal" data-target="#add_item">
+                <button class='centerMe' type="button" data-toggle="modal" data-target="#product_info">
                 <div class='icon'>
                   <i class='fa fa-plus'></i>
                 </div>
@@ -59,31 +59,91 @@
                           <?php endif;?>
                         <td><?php echo $data->product_amount;?></td>
                         <td>
-                          <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#<?php echo $data->ipr_id;?>" value="<?php echo $data->ipr_id;?>"><i class="fa fa-eye"></i> View full details</button>
+                          <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#product_info" value="<?php echo $data->ipr_id;?>"><i class="fa fa-eye"></i> View full details</button>
                         </td>
                       </tr>
-                      <!-- <div class="modal fade" id="<?php echo $book->book_id;?>" role="dialog">
-                        <div class="modal-dialog" role="document">
+                      <!-- Create Item Modal -->
+                      <div class="modal fade" id="product_info" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                          <!-- Create Item Modal Content -->
                           <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title" id="myModalLabel">Book Info</h4>
-                            </div>
-                            <div class="modal-body"><center />
-                              <div class="book-info">
-                                <img src="<?php echo base_url();?>/uploads/books/<?php echo $book->imageName;?>" width="200px" height="250px">
-                                  <p><b>ISBN: </b><?php echo $book->book_isbn;?></p>
-                                  <p><b>Name: </b><?php echo $book->book_title;?></p>
-                                  <p><b>Email: </b><?php echo $book->book_authors;?></p>
-                                  <p><b>Category: </b><?php echo $book->book_categories;?></p>
-                                  <p><b>Date Added: </b><?php echo $book->book_dateadded;?></p>
-                                  <p><b>Quantity: </b><?php echo $book->book_totalquantity;?></p>
-                                  <p><b>Publisher: </b><?php echo $book->book_publisher;?></p>
-                              </div>
+
+                            <div class="modal-body">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                              <div class="cd-form">
+                                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                <!-- change action to edit controller -->
+                                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                <form action="<?php echo site_url('INVENTORY/home/add_product');?>" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+                                  <fieldset>
+                                    <legend>Product Info</legend>
+
+                                    <div class="col-md-3">
+                                      <label for="userName">Product Code</label>
+                                      <input type="text" id="input_info" name="product_code" placeholder="#12345">
+                                    </div>
+                                    <div class="col-md-5">
+                                      <label for="userEmail">Item Name</label>
+                                      <input type="text" id="input_info" name="product_name" placeholder="">
+                                    </div>
+<!--                                     <div class="col-md-3" id="view_edit">
+                                      <label for="userName">Product Status</label>
+                                      <?php if($data->products_status == 'Active'):?>
+                                        <span id="view" class="label label-success">$data->products_status</span>
+                                      <?php elseif($data->products_status == 'Inactive'):?>
+                                        <span id="view" class="label label-danger">$data->products_status</span>
+                                      <?php endif;?>
+                                      <span class="cd-select" id="edit">
+                                        <select name="product_status" required="">
+                                          <option>-- please select --</option>
+                                          <option>Active</option>
+                                          <option>Inactive</option>
+                                        </select>
+                                      </span>
+                                    </div> -->
+                                  </fieldset>
+                                  <fieldset>
+                                    <div class="col-md-8">
+                                      <label for="userEmail">Product Description</label>
+                                      <textarea class="textarea" id="input_info" name="product_desc" placeholder=""></textarea>
+                                    </div>
+
+                                  </fieldset>
+                                  <fieldset>
+                                    <div class="col-md-3">
+                                      <label for="userEmail">Amount</label>
+                                      <input type="text" maxlength="10" id="input_info" name="product_amount" placeholder="">
+                                    </div>
+                                    <div class="col-md-3">
+                                     <!--  <label for="userEmail">Category</label>
+                                      <span class="cd-select" id="add_edit"> -->
+                                      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                      <!--       create category table      -->
+                                      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!--                                         <select name="product_category" required="">
+                                        <?php foreach($var as $var):?>
+                                          <option><?php echo $var->var;?></option>
+                                        <?php endforeach;?>
+                                        </select>
+                                      </span>
+                                      </div> -->
+
+                                  </fieldset>
+
+                                  <fieldset>
+                                    <div>
+                                      <button type="button" id="view_edit" class="btn btn-sm btn-success" value="<?php echo $data->ipr_id;?>"><i class="fa fa-edit"></i> Edit details</button>
+                                      <input type="submit" name="submit" id="add_edit" value="Save">
+                                    </div>
+                                  </fieldset>
+                                </form>
+                              </div> <!-- .cd-form -->
                             </div>
                           </div>
                         </div>
-                      </div> -->
+                      </div>
+                      <!-- End of Modal -->
                     <?php }?>
                     </tbody>
                   <tfoot>
@@ -110,57 +170,6 @@
 
     </section>
     <!-- /.content -->
-
-    <!-- Create Item Modal -->
-    <div class="modal fade" id="add_item" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <!-- Create Item Modal Content -->
-        <div class="modal-content">
-
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-            <div class="cd-form">
-          		<form action="<?php echo site_url('INVENTORY/home/add_product');?>" method="post" enctype="multipart/form-data" accept-charset="utf-8">
-          			<fieldset>
-          				<legend>Product Info</legend>
-
-          				<div class="col-md-3">
-          					<label for="userName">Product Code</label>
-          					<input type="text" name="product_code" placeholder="#12345">
-          				</div>
-                  <div class="col-md-5">
-                    <label for="userEmail">Item Name</label>
-                    <input type="text" name="product_name" placeholder="">
-                  </div>
-          			</fieldset>
-          			<fieldset>
-                  <div class="col-md-8">
-                    <label for="userEmail">Product Description</label>
-                    <textarea class="textarea" name="product_desc" placeholder=""></textarea>
-                  </div>
-
-          			</fieldset>
-                <fieldset>
-                  <div class="col-md-3">
-                    <label for="userEmail">Amount</label>
-                    <input type="text" maxlength="10" name="product_amount" placeholder="">
-                  </div>
-
-                </fieldset>
-
-          			<fieldset>
-          				<div>
-          					<input type="submit" name="submit" value="Get started">
-          				</div>
-          			</fieldset>
-          		</form>
-          	</div> <!-- .cd-form -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End of Modal -->
     </div>
   <!-- /.content-wrapper -->
 
