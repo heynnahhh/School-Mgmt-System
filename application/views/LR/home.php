@@ -55,7 +55,7 @@
 			<div class="container"><div class="title">Trivia</div></div>
 				<div class="trivia_container">
 					<h1>Did You Know!!!</h1>
-					<p>That the first letter of English Alphabhet is letter A</p>
+					<p>That the first letter of English Alphabet is letter A</p>
 			</div>
 		</div>
 		
