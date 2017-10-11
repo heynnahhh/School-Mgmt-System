@@ -255,13 +255,13 @@ var gradients = (function() {
 
   // using colors from IBM Design Colors this time
   var colors = [ // 14 colors - use 3-5 span
-    '#3c6df0', // ultramarine50
-    '#12a3b4', // aqua40
+    '#f44336', // ultramarine50
+    '#0D47A1', // aqua40
     '#00a78f', // teal40
-    '#00aa5e', // green40
-    '#81b532', // lime30
-    '#e3bc13', // yellow20
-    '#ffb000', // gold20
+    '#b71c1c', // green40
+    '#F50057', // lime30
+    '#FF5722', // yellow20
+    '#FFC107', // gold20
     '#fe8500', // orange30
     '#fe6100', // peach40
     '#e62325', // red50
