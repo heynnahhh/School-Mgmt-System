@@ -58,8 +58,10 @@ class Application extends CI_Controller {
 			$m_data = array($info_data, $addr_data, $guar_data, $par_data);
 			// print_r($m_data);
 			$this->application_form_model->insert_form($m_data);
+
+			echo json_encode($data);
 		}
-			$this->load->view('website/application');
+
 	}
 
 }

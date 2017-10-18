@@ -62,7 +62,44 @@
 
 
 <script>
+    $(function () {
+	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>";
+    var appSubmit = "<?php echo base_url('index.php/website/Application/submit_form');?>";
 
-	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>"
+    $('.cd-submit').on('click', function () {
+        $(".popup1").show();
+        var data = {
+            lrn: $( "#lrn" ).val(),
+            first_name: $( "#first_name" ).val(),
+            last_name: $( "#last_name" ).val(),
+            middle_name: $( "#middle_name" ).val(),
+            sex: $( "#sex" ).val(),
+            age: $( "#age" ).val(),
+            birth_date: $( "#birth_date" ).val(),
+            birth_place: $( "#birth_place" ).val(),
+            mother_tongue: $( "#mother_tongue" ).val(),
+            religion: $( "#religion" ).val(),
+            contact_number: $( "#contact_number" ).val(),
+            barangay: $( "#barangay" ).val(),
+            street: $( "#street" ).val(),
+            city: $( "#city" ).val(),
+            province: $( "#province" ).val(),
+            mother_name: $( "#mother_name" ).val(),
+            father_name: $( "#father_name" ).val(),
+            parent_contact: $( "#parent_contact" ).val(),
+            guardian_name: $( "#guardian_name" ).val(),
+            relationship: $( "#relationship" ).val(),
+            guardian_contact: $( "#guardian_contact" ).val()
+        };
+        $.ajax({
+                url: appSubmit,
+                data: data,
+                type: 'POST',
+                success: function (result) {
+                }
+            })
 
+        });
+
+    });
 </script>
