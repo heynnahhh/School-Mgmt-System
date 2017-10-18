@@ -32,7 +32,7 @@ class Application extends CI_Controller {
 				'age' => $data['age'],
 				'mother_tongue' => $data['mother_tongue'],
 				'religion' => $data['religion'],
-				'online_applicant' => '1'
+				'online_applicant' => '12'
 			);
 
 			$addr_data = array(

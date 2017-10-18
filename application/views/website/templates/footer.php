@@ -66,8 +66,53 @@
 	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>";
     var appSubmit = "<?php echo base_url('index.php/website/Application/submit_form');?>";
 
+    $('.cd-submit').prop('disabled', true).css("cursor", "not-allowed");
+    $( '#lrn' ).on('keyup', checkStatus);
+    $( '#last_name' ).on('keyup', checkStatus);
+    $( '#first_name' ).on('keyup', checkStatus);
+    $( '#middle_name' ).on('keyup', checkStatus);
+    $( '#sex' ).on('keyup', checkStatus);
+    $( '#age' ).on('keyup', checkStatus);
+    $( '#birth_date' ).on('keyup', checkStatus);
+    $( '#birth_place' ).on('keyup', checkStatus);
+    $( '#mother_tongue' ).on('keyup', checkStatus);
+    $( '#religion' ).on('keyup', checkStatus);
+    $( '#contact_number' ).on('keyup', checkStatus);
+    $( '#mother_name' ).on('keyup', checkStatus);
+    $( '#father_name' ).on('keyup', checkStatus);
+    $( '#parent_contact' ).on('keyup', checkStatus);
+    $( '#guardian_name' ).on('keyup', checkStatus);
+    $( '#relationship' ).on('keyup', checkStatus);
+    $( '#guardian_contact' ).on('keyup', checkStatus);
+
+    function checkStatus() {
+        var status = (
+            $.trim($( '#lrn' ).val()) === '' ||
+            $.trim($( '#last_name' ).val()) === '' ||
+            $.trim($( '#first_name' ).val()) === '' ||
+            $.trim($( '#middle_name' ).val()) === '' ||
+            $.trim($( '#sex' ).val()) === '' ||
+            $.trim($( '#age' ).val()) === '' ||
+            $.trim($( '#birth_date' ).val()) === '' ||
+            $.trim($( '#birth_place' ).val()) === '' ||
+            $.trim($( '#mother_tongue' ).val()) === '' ||
+            $.trim($( '#religion' ).val()) === '' ||
+            $.trim($( '#mother_name' ).val()) === '' ||
+            $.trim($( '#contact_number' ).val()) === '' ||
+            $.trim($( '#father_name' ).val()) === '' ||
+            $.trim($( '#parent_contact' ).val()) === '' ||
+            $.trim($( '#guardian_name' ).val()) === '' ||
+            $.trim($( '#relationship' ).val()) === '' ||
+            $.trim($( '#guardian_contact' ).val()) === '');
+        $('.cd-submit').prop('disabled', status).css("cursor", "pointer");
+    }
+
     $('.cd-submit').on('click', function () {
-        $(".popup1").show();
+
+        var url = "<?php echo base_url('index.php/website/application#success');?>";
+
+        window.location = url;
+
         var data = {
             lrn: $( "#lrn" ).val(),
             first_name: $( "#first_name" ).val(),
@@ -91,6 +136,7 @@
             relationship: $( "#relationship" ).val(),
             guardian_contact: $( "#guardian_contact" ).val()
         };
+
         $.ajax({
                 url: appSubmit,
                 data: data,
