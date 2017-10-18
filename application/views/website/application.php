@@ -12,36 +12,34 @@
               <div class="callout callout-info">
                 <p>Please fill up the form below.</p>
               </div>
-      
               <div class="cd-form">
-                <form action="<?php echo site_url('website/Application/submit_form')?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                   <fieldset>
 
                       <div class="half-width2 full-width btmspace-10">
 												<label>Learner Reference Number (LRN)</label>
-												<input type="text" name="lrn" placeholder="14-038-000" required>
+												<input type="text" id="lrn" placeholder="14-038-000" required>
                       </div>
 
                       <div class="half-width full-width btmspace-10">
 												<label>Last Name</label>
-												<input type="text" name="last_name" required>
+												<input type="text" id="last_name" >
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
 												<label>First Name</label>
-												<input type="text" name="first_name" required>
+												<input type="text" id="first_name" >
                       </div>
 
                       <div class="half-width full-width btmspace-10">
 												<label>Middle Name</label>
-												<input type="text" name="middle_name">
+												<input type="text" id="middle_name">
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
 												<b class="half-right">
                           <label>Sex</label>
 													<span class="cd-select">
-														<select name="sex" required>
+														<select id="sex" required>
 															<option value="Male">Male</option>
 															<option value="Female">Female</option>
 														</select>
@@ -49,99 +47,104 @@
 												</b>
 												<b class="half-right">
 													<label>Age<small>(As of last birthday)</small></label>
-													<input type="text" name="age" required>
+													<input type="text" id="age" >
 												</b>
                       </div>
 
                       <div class="half-width full-width btmspace-10">
 												<label>Birthdate</label>
-												<input type="date" name="birth_date" required>
+												<input type="date" id="birth_date" >
 											</div>
 
                       <div class="half-width2 full-width btmspace-10">
 												<label>Birthplace</label>
-												<input type="text" name="birth_place" required>
+												<input type="text" id="birth_place" >
                       </div>
 
                       <div class="half-width full-width btmspace-10">
 												<label>Mother Tongue</label>
-												<input type="text" name="mother_tongue" placeholder="Ex. Tagalog, Swedish" required>
+												<input type="text" id="mother_tongue" placeholder="Ex. Tagalog, Swedish" >
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
 												<label>Religion</label>
-												<input type="text" name="religion" required>
+												<input type="text" id="religion" >
                       </div>
 
                       <div class="half-width full-width btmspace-10">
 												<label>Contact #</label>
-												<input type="text" name="contact_number" required>
+												<input type="text" id="contact_number" >
                       </div>
 
                       <div class="full-width full-width btmspace-10">
                           <label>Address</label>
-                          <input type="text" name="street" placeholder="Home #  Street" required>
+                          <input type="text" id="street" placeholder="Home #  Street" >
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
 												<b class="half-left">
                           <label>Barangay</label>
-                          <input type="text" name="barangay" required>
+                          <input type="text" id="barangay" >
 												</b>
 												<b class="half-left">
 													<label>City</label>
-													<input type="text" name="city" required>
+													<input type="text" id="city">
 												</b>
                       </div>
 
                       <div class="half-width full-width btmspace-10">
 												<label>Province</label>
-												<input type="text" name="province" required>
+												<input type="text" id="province">
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
                           <label>Mother's Name</label>
-                          <input type="text" name="mother_name" required>
+                          <input type="text" id="mother_name">
                       </div>
 
                       <div class="half-width full-width btmspace-10">
                           <label>Father's Name</label>
-                          <input type="text" name="father_name" required>
+                          <input type="text" id="father_name" >
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
                           <label>Parent's Contact Number</label>
-                          <input type="text" name="parent_contact" required>
+                          <input type="text" id="parent_contact">
                       </div>
 
                       <div class="half-width full-width btmspace-10">
                           <label>Guardian Name</label>
-                          <input type="text" name="guardian_name" required>
+                          <input type="text" id="guardian_name">
                       </div>
 
                       <div class="half-width2 full-width btmspace-10">
                           <label>Relationship to the Guardian</label>
-                          <input type="text" name="relationship" required>
+                          <input type="text" id="relationship" >
                       </div>
 
                       <div class="half-width full-width btmspace-10">
                           <label>Guardian's Contact Number</label>
-                          <input type="text" name="guardian_contact" required>
+                          <input type="text" id="guardian_contact">
                       </div>
 
                   </fieldset>
 
                   <fieldset>
                     <div>
-                      <input type="submit" value="Submit">
+                        <a href="#success"><button class="cd-submit">Submit</button></a>
                     </div>
                   </fieldset>
 
-                </form>
               </div> <!-- .cd-form -->
 
-            </div>
+                <div id="success" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="">&times;</a>
+                        <p class = "modal-content">Success</p>
+                    </div>
+                </div>
 
+            </div>
                 <div class="one_third">
                     <?php include 'sidebar.php' ;?>
                 </div>
