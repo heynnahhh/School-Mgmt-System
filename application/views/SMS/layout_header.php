@@ -58,7 +58,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="<?php echo site_url();?>/starter" class="logo">
+    <a href="<?php echo site_url();?>/SMS/Home/Account" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">GHT&trade;</span>
       <!-- logo for regular state and mobile devices -->
@@ -280,6 +280,7 @@ desired effect
             </li>
           </ul>
         </li>
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-database"></i> <span>INVENTORY</span>
@@ -322,6 +323,7 @@ desired effect
             <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-globe"></i> <span>WEBSITE</span>
@@ -356,6 +358,52 @@ desired effect
             </li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Preview</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo site_url('MEDICAL/home');?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Patients Record
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-plus-square"></i> <span>DENTAL</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo site_url('DENTAL/home');?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li>
+              <a href=""><i class="fa fa-circle-o"></i> Patients Record
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
