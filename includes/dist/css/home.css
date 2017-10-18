@@ -1,0 +1,392 @@
+/***********************/
+/***** TEMPORARY ******/
+/*********************/
+
+
+body{
+  background-color: rgba(212, 63, 58, 1);
+  color: #fff;
+
+}
+
+.text-muted {
+    color: rgba(255, 255, 0, 0.9);
+    font-family: 'The Bold Font';
+}
+
+
+
+.btn-default {
+    color: #ffffff;
+    background-color: #FF5722;
+    border-color: #FF9800;
+}
+
+pre {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 0;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+
+.modal-content {
+    position: relative;
+    margin-top: 100px;
+    background-color: rgba(255, 221, 0, 0.83);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.modal-body{
+  background-color: rgba(45, 44, 44, 0.96);
+  color: #fff;
+}
+
+.modal-input{
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+/* LOG-IN PAGE */
+
+input[type="email"],input[type="password"]{
+  height:45px;
+  width:80%;
+	padding: 15px 45px 15px 10px;
+	background: rgba(255, 255, 255, 0.15);
+	background:#fff;
+	border:none;
+	outline:none;
+	font-size:14px;
+	margin-bottom:20px;
+	}
+
+input{
+  color: black;
+}
+
+input[type="email"]{
+	background: rgb(242, 242, 242) url("../img/login/user.png") no-repeat 97% 50%;
+}
+
+input[type="password"]{
+	background: rgb(242, 242, 242) url("../img/login/password.png") no-repeat 97% 50%;
+}
+
+
+input[type="submit"],[type="button"]{
+	background:#d02424;
+	padding:13px 0;
+	font-size:16px;
+	color:#fff;
+	cursor:pointer;
+	outline:none;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	width:80%;
+	border:none;
+	margin-top:15px;
+}
+
+input[type="submit"]:hover{
+	background:#f97424;
+}
+
+#searchbox{
+  margin: 50px auto;
+  width: 500px;
+  height: 60px;
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.navbar {
+  height:100px;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: rgba(0,0,0,0);
+  padding: 20px 40px 0px 30px;
+}
+
+.navbar-inverse {
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+}
+
+
+.carousel{
+  position: relative;
+}
+
+.container{
+  overflow: hidden;
+  position: fixed;
+  background-color: #e74c3c;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+.container-marketing{
+  width: 95%;
+  padding-right: 55px;
+  padding-left: 55px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+}
+
+.container input[type=search]{
+  width: 400px;
+  height: 60px;
+  background: #2b303b;
+  border: none;
+  font-size: 16pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container input[type=search]::-webkit-input-placeholder {
+   color: #65737e;
+}
+
+.container button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border: none;
+  background: #232833;
+  height: 60px;
+  width: 60px;
+  color: #4f5b66;
+  opacity: 1;
+  font-size: 10pt;
+  -webkit-transition: all .55s ease;
+
+}
+
+.container:hover button.icon:hover{
+  cursor: pointer;
+  background: white;
+}
+
+.main-agileinfo{
+  float: right;
+  position: fixed;
+  background: #fff;
+  height: 100%;
+  width: 600px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/*log-in background*/
+
+.login-page{
+  background-color: #fdfdfd;
+}
+
+/*login box*/
+
+.input-info{
+  margin-top: 100px;
+}
+
+/*featurette*/
+
+.featurette-divider {
+    margin: 80px 0;
+
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1.5px solid #eee;
+}
+
+
+.row {
+
+    margin-right: -15px;
+    margin-left: -15px;
+
+
+}
+
+.col-md-7{
+  padding-top: 60px;
+}
+
+.col-md-7, .col-md-5{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+.lead {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/*end*/
+
+footer {
+
+  background-color: rgba(0,0,0,0.9);
+  padding: 25px;
+
+
+}
+/*backtotopbtn*/
+.cd-top.cd-is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top {
+    border-radius: 20px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.55) url(../images/up-arrow.svg) no-repeat center 50%;
+    background-size: 70%;
+    border: 1px solid #fff;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+
+/*backtotopbtn*/
+
+
+
+
+.h1, h1 {
+    font-size: 70px;
+    font-family:'Harry P';
+    color: rgba(255, 220, 22, 1);
+}
+
+
+
+.carousel-inner img {
+  width: 100%;
+  margin: auto;
+  min-height:200px;
+}
+
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 200px;
+}
+
+
+@media (max-width: 600px) {
+.carousel-caption {
+  display: none;
+}
+
+}
+
+
+/*section*/
+
+.img-circle {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+@media (max-width: 1023px) and (min-width: 680px)
+.ecosystem-highlight {
+    height: auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.ecosystem-highlight {
+    background-color: rgba(118, 28, 25, 1);
+    width: 100%;
+    height: 550px;
+    padding: 50px;
+    text-align: center;
+}
+
+
+
+.ecosystem-highlight__cards {
+    max-width: 1400px;
+}
+
+
+.ecosystem-highlight__cards {
+    margin: 0 auto;
+}
+
+
+/* Header $ Nav */

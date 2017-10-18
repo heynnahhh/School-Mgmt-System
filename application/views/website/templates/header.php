@@ -18,14 +18,14 @@
     <div class="fl_left">
       <ul class="nospace">
 		<li><div id = "clockDisplay"></div></li>
-        <li><i class="fa fa-phone"></i> +63 915 933 5058</li>
-        <li><i class="fa fa-envelope-o"></i> araullo@araullo@email.com</li>
+        <li><i class="fa fa-phone"></i> 524-65765</li>
+        <li><i class="fa fa-envelope-o"></i> araullo.highschool06@gmail.com</li>
       </ul>
     </div>
     <div class="fl_right">
       <ul class="nospace">
 	    <li><a href="home">Home</a></li>
-      <li><a href="ers">ERS</a></li>
+      <li><a href="login">ERS</a></li>
 		  <li><a href="#">AHS-LRMDS</a></li>
       </ul>
     </div>
@@ -46,26 +46,27 @@
         <li class="has-children">
           <a class="drop" href="#">About</a>
           <ul class="sub-menu">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Mission, Vision, Goals & Objectives</a></li>
-            <li><a href="#">Organizational Chart</a></li>
+            <li><a href="history">History</a></li>
+			      <li><a href="ahs_hymn">Araullo High School Hymn</a></li>
+            <li><a href="mvgo">Mission, Vision, Core Values & Mandate</a></li>
+            <li><a href="org_chart">Organizational Chart</a></li>
           </ul>
         </li>
         <li><a class="drop" href="#">Admission</a>
           <ul>
-            <li><a href="#">Admission Procedures</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Courses Offered (SHS)</a></li>
+            <li><a href="admission">Admission Procedures</a></li>
+            <li><a href="application">Online Application for SHS</a></li>
+            <li><a href="courses">Courses Offered (SHS)</a></li>
           </ul>
         </li>
         <li><a class="drop" href="#">Students</a>
               <ul>
-                <li><a href="ers">ERS</a></li>
-                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="login">ERS</a></li>
+                <li><a href="calendar">Academic Calendar</a></li>
                 <li><a href="#">Enrollment Procedures</a></li>
               </ul>
         </li>
-        <li><a href="#">AHS-LRMDS</a></li>
+        <li><a href="../lr/home">AHS-LR Portal</a></li>
         <li><a href="contacts">Contact Us</a></li>
       </ul>
     </nav>
