@@ -131,7 +131,7 @@
         window.location = url;
 
         var data = {
-            lrn: $( "#lrn" ).val(),
+            email: $( "#email" ).val(),
             first_name: $( "#first_name" ).val(),
             last_name: $( "#last_name" ).val(),
             middle_name: $( "#middle_name" ).val(),
