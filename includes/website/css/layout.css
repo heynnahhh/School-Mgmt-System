@@ -449,7 +449,15 @@ ul li input[type=radio]:checked ~ i:after {
   margin-top: 20px;
 }
 
+.cd-submit:disabled{
+    cursor:not-allowed;
+    background-color: #ddd;
+    color: #555656;
+}
 
+.email-validation{
+    display:none;
+}
 
 /* History
 ------------------------------------------------------ */
