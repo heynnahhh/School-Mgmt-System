@@ -109,7 +109,7 @@
             $('.cd-submit').prop('disabled', status);
         }
 
-        $('.cd-submit').on('click', function () {
+        $('#cd-submit_form').submit(function () {
 
         var data = {
             email: $( "#email" ).val(),
