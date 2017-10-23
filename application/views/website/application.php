@@ -11,130 +11,132 @@
               <div class="callout callout-info">
                 <p>Please fill up the form below.</p>
               </div>
-              <div class="cd-form">
-              <fieldset>
-                      <div class="half-width2 full-width btmspace-10">
-                        <label>Learner Reference Number (LRN)</label>
-                        <input type="text" id="lrn" placeholder="14-038-000">
-                      </div>
+            <div class="cd-form">
+                <form class="form2">
+                    <fieldset>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Last Name</label>
+                            <input type="text" id="last_name" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                        <label>Last Name</label>
-                        <input type="text" id="last_name" >
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>First Name</label>
+                            <input type="text" id="first_name" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                        <label>First Name</label>
-                        <input type="text" id="first_name" >
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Middle Name</label>
+                            <input type="text" id="middle_name" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                        <label>Middle Name</label>
-                        <input type="text" id="middle_name">
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <b class="half-right">
+                                <label>Sex</label>
+                                 <span class="cd-select">
+                                    <select id="sex" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                 </span>
+                            </b>
 
-                      <div class="half-width2 full-width btmspace-10">
-                        <b class="half-right">
-                          <label>Sex</label>
-                            <span class="cd-select">
-                                <select id="sex">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </span>
-                        </b>
+                            <b class="half-right">
+                                <label>Age<small>(As of last birthday)</small></label>
+                                <input type="number" id="age" required>
+                            </b>
+                        </div>
 
-                        <b class="half-right">
-                            <label>Age<small>(As of last birthday)</small></label>
-                            <input type="text" id="age" >
-                        </b>
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Birth Place</label>
+                            <input type="text" id="birth_place" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                        <label>Birthdate</label>
-                        <input type="date" id="birth_date">
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Birthdate</label>
+                            <input type="date" id="birth_date" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                        <label>Birthplace</label>
-                        <input type="text" id="birth_place">
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Religion</label>
+                            <input type="text" id="religion" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                        <label>Mother Tongue</label>
-                        <input type="text" id="mother_tongue" placeholder="Ex. Tagalog, Swedish">
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Mother Tongue</label>
+                            <input type="text" id="mother_tongue" placeholder="Ex. Tagalog, Swedish" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                        <label>Religion</label>
-                        <input type="text" id="religion">
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                        <label>Contact #</label>
-                        <input type="text" id="contact_number">
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Contact #</label>
+                            <input type="number" id="contact_number" required>
+                        </div>
 
-                      <div class="full-width full-width btmspace-10">
-                          <label>Address</label>
-                          <input type="text" id="street" placeholder="Home #  Street">
-                      </div>
+                        <div class="full-width full-width btmspace-10">
+                            <label>Address</label>
+                            <input type="text" id="street" placeholder="Home #  Street" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                        <b class="half-left">
-                          <label>Barangay</label>
-                          <input type="text" id="barangay" >
-                        </b>
+                        <div class="half-width2 full-width btmspace-10">
+                            <b class="half-left">
+                                <label>Barangay</label>
+                                <input type="text" id="barangay" required>
+                            </b>
 
-                        <b class="half-left">
-                            <label>City</label>
-                            <input type="text" id="city">
-                        </b>
-                      </div>
+                            <b class="half-left">
+                                <label>City</label>
+                                <input type="text" id="city" required>
+                            </b>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                        <label>Province</label>
-                        <input type="text" id="province">
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Province</label>
+                            <input type="text" id="province" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                          <label>Mother's Name</label>
-                          <input type="text" id="mother_name">
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Mother's Name</label>
+                            <input type="text" id="mother_name" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                          <label>Father's Name</label>
-                          <input type="text" id="father_name" >
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Father's Name</label>
+                            <input type="text" id="father_name" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                          <label>Parent's Contact Number</label>
-                          <input type="text" id="parent_contact">
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Parent's Contact Number</label>
+                            <input type="number" id="parent_contact" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                          <label>Guardian Name</label>
-                          <input type="text" id="guardian_name">
-                      </div>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Guardian Name</label>
+                            <input type="text" id="guardian_name" required>
+                        </div>
 
-                      <div class="half-width2 full-width btmspace-10">
-                          <label>Relationship to the Guardian</label>
-                          <input type="text" id="relationship" >
-                      </div>
+                        <div class="half-width2 full-width btmspace-10">
+                            <label>Relationship to the Guardian</label>
+                            <input type="text" id="relationship" required>
+                        </div>
 
-                      <div class="half-width full-width btmspace-10">
-                          <label>Guardian's Contact Number</label>
-                          <input type="text" id="guardian_contact">
-                      </div>
-                  </fieldset>
+                        <div class="half-width full-width btmspace-10">
+                            <label>Guardian's Contact Number</label>
+                            <input type="number" id="guardian_contact" required>
+                        </div>
+                    </fieldset>
 
-                  <fieldset>
-                    <div>
-                        <button class="cd-submit">Submit</button>
-                    </div>
-                  </fieldset>
+                    <fieldset>
+                        <div>
+                            <button class="cd-submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
 
-              </div> <!-- .cd-form -->
+            </div> <!-- .cd-form -->
 
                 <div id="success" class="overlay">
                     <div class="popup">

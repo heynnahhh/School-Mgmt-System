@@ -377,7 +377,7 @@ desired effect
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
+                <li><a href="<?php echo site_url('MEDICAL/Students');?>"><i class="fa fa-circle-o"></i> Students</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
               </ul>
             </li>
@@ -402,6 +402,7 @@ desired effect
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Visitors</a></li>
               </ul>
             </li>
           </ul>
