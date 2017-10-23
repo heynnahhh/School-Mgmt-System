@@ -12,7 +12,7 @@
                 <p>Please fill up the form below.</p>
               </div>
             <div class="cd-form">
-                <form class="form2">
+                <form action="<?php echo base_url();?>index.php/website/application#success">
                     <fieldset>
                         <div class="half-width2 full-width btmspace-10">
                             <label>Last Name</label>
