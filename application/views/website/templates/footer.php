@@ -109,26 +109,8 @@
             $('.cd-submit').prop('disabled', status);
         }
 
-        $('#email').blur(function() {
-            var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-            if (testEmail.test(this.value))
-            {
-                $(".email_validation").remove();
-            }
-
-            else
-            {
-                $(".email_validation").text(" (Invalid Email Format)");
-            }
-        });
-
-
 
         $('.cd-submit').on('click', function () {
-
-        var url = "<?php echo base_url('index.php/website/application#success');?>";
-
-        window.location = url;
 
         var data = {
             email: $( "#email" ).val(),
@@ -158,7 +140,7 @@
                 url: appSubmit,
                 data: data,
                 type: 'POST',
-                success: function (result) {
+                success: function(result) {
                 }
             })
 
