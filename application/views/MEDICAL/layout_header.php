@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GHawTech&trade; | Learning Resource</title>
+  <title>GHawTech&trade; | MEDICAL</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -233,7 +233,7 @@ desired effect
         <li class="header">MAIN NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
         <li><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-globe"></i> <span>LEARNING RESOURCE</span>
             <span class="pull-right-container">
@@ -280,6 +280,7 @@ desired effect
             </li>
           </ul>
         </li>
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-database"></i> <span>INVENTORY</span>
@@ -322,6 +323,7 @@ desired effect
             <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-globe"></i> <span>WEBSITE</span>
@@ -358,7 +360,8 @@ desired effect
             <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
-        <li class="treeview">
+
+        <li class="treeview active">
           <a href="#">
             <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
             <span class="pull-right-container">
