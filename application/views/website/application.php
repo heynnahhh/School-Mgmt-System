@@ -140,7 +140,7 @@
 
                 <div id="success" class="overlay">
                     <div class="popup">
-                        <a class="close" href="">&times;</a>
+                        <a class="close" href="<?php echo base_url();?>index.php/website/application">&times;</a>
                         <p class = "modal-content">Success</p>
                     </div>
                 </div>

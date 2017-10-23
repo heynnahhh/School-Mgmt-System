@@ -109,7 +109,6 @@
             $('.cd-submit').prop('disabled', status);
         }
 
-
         $('.cd-submit').on('click', function () {
 
         var data = {
@@ -141,7 +140,8 @@
                 data: data,
                 type: 'POST',
                 success: function(result) {
-                }
+
+                    }
             })
 
         });
