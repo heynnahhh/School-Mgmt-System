@@ -12,7 +12,7 @@
                 <p>Please fill up the form below.</p>
               </div>
             <div class="cd-form">
-                <form class="form2">
+                <form action="<?php echo base_url();?>index.php/website/application#success" id="cd-submit_form">
                     <fieldset>
                         <div class="half-width2 full-width btmspace-10">
                             <label>Last Name</label>
@@ -140,7 +140,7 @@
 
                 <div id="success" class="overlay">
                     <div class="popup">
-                        <a class="close" href="">&times;</a>
+                        <a class="close" href="<?php echo base_url();?>index.php/website/application">&times;</a>
                         <p class = "modal-content">Success</p>
                     </div>
                 </div>
