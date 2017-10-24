@@ -7,6 +7,7 @@ class Home extends CI_Controller {
     parent::__construct();
     $this->load->model('SMS/user');
     $this->load->library('form_validation');
+    $this->sms_session->checkSession();
 
   }
 
