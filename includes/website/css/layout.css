@@ -153,11 +153,9 @@ File: Layout CSS
 
 .li_accordion {
   position: relative;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 4px;
-  padding-top: 18px;
-  border-top: 1px dotted #dce7eb;
+    margin: 0;
+    padding: 18px 0 4px;
+    border-top: 1px dotted #dce7eb;
 }
 
 .li_accordion:nth-of-type(1) {
@@ -331,7 +329,7 @@ ul li input[type=radio]:checked ~ i:after {
 .cd-form .half-width {
   width: 48%;
   float: left;
-  margin-right: 0%;
+  margin-right: 0;
 }
 
 .cd-form .half-width2 {
@@ -485,7 +483,7 @@ ul li input[type=radio]:checked ~ i:after {
 .history p::first-letter{
 	color: rgba(128, 0, 0, 0.87);
 	float: left;
-	font-family: Georgia;
+    font-family: Georgia, serif;
 	font-size: 75px;
 	line-height: 60px;
 	padding-top: 4px;
@@ -525,8 +523,8 @@ ul li input[type=radio]:checked ~ i:after {
 --------------------------------------------------------------------------------------------------------------- */
 .right_sidebar{
 	background: #f2f3f3;
-	padding: 0px 0px 15px;
-	border-radius: 0px 0px 7px 7px;
+	padding: 0 0 15px;
+	border-radius: 0 0 7px 7px;
 	margin-bottom: 30px;
 }
 .sidebar_title{
@@ -749,8 +747,8 @@ color:maroon;
 	width: 100%;
 	height: 100%;
 	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .featured-post-slide .overlay {
@@ -837,11 +835,11 @@ color:maroon;
 	color: transparent;
 	display: block;
 	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 20px 16px;
-	background-color: black;
-	opacity: .7;
+    background-size: 20px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    opacity: .7;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -1075,7 +1073,7 @@ html[xmlns] .flexslider .slides {
 .form_ers {padding:50px 0 60px;}
 
 #footer .heading{margin-bottom:50px; font-size:1.2rem;}
-#footer .title{margin-bottom:5 y0px; font-size:1.2rem;}
+#footer .title{margin-bottom:50px; font-size:1.2rem;}
 
 #footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid; }
 #footer .linklist li:last-child{margin:0; padding:0; border:none;}
@@ -1142,7 +1140,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav form{display:none; margin:0; padding:0;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
 #mainav form select{width:100%; padding:5px; border:none;}
-#mainav form select option{margin:5px; padding: ing:0; border:none;}
+#mainav form select option{margin:5px; padding:0; border:none;}
 
 /* Breadcrumb */
 #breadcrumb{padding:120px 0 15px;}
@@ -1403,7 +1401,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 0px solid #ddd;
+    border: 0 solid #ddd;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -1618,12 +1616,12 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 
 	#breadcrumb{}
 	.form_ers {padding:30px 0 -10px 0;}
-	.date {padding-right:none;}
-	.container_more_news{padding-left:30px;}\
+	.date {padding-right:0;}
+	.container_more_news{padding-left:30px;}
 
 	.container{}
 	#comments input[type="reset"]{margin-top:10px;}
-	.pagination li{display:inline-block; margin:0 5px 5px 0;topooter{}
+	.pagination li{display:inline-block; margin:0 5px 5px 0;}
 
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
@@ -1643,7 +1641,7 @@ a > .icon:hover, .services article:hover .icon{color:#FFFFFF; background-color:#
 
 	#header{text-align:center;}
 	#header #logo{margin-bottom:15px;}
-	.ers{font-size:26px;position}
+	.ers{font-size:26px;}
 
 	.sectiontitle{max-width:none; text-align:left;}
 }
