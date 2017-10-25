@@ -377,8 +377,10 @@ desired effect
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="<?php echo site_url('MEDICAL/Students');?>"><i class="fa fa-circle-o"></i> Students</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
+                <li><a href="<?php echo site_url('MEDICAL/Add_Patient');?>"><i class="fa fa-circle-o"></i> Add Patient</a></li>
+                <li><a href="<?php echo site_url('MEDICAL/Students');?>"><i class="fa fa-circle-o"></i> Student</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Visitor</a></li>
               </ul>
             </li>
           </ul>
@@ -391,7 +393,7 @@ desired effect
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
+          <ul class="treeview-menu active">
             <li><a href="<?php echo site_url('DENTAL/home');?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
             <li>
               <a href=""><i class="fa fa-circle-o"></i> Patients Record
@@ -400,9 +402,9 @@ desired effect
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Visitors</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Add Patient</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Student</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
               </ul>
             </li>
           </ul>
