@@ -358,6 +358,7 @@ desired effect
             <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
+        
         <li class="treeview">
           <a href="#">
             <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
