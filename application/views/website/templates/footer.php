@@ -109,8 +109,12 @@
             $('.cd-submit').prop('disabled', status);
         }
 
+<<<<<<< HEAD
 
         $('.cd-submit').on('click', function () {
+=======
+        $('#cd-submit_form').submit(function () {
+>>>>>>> 86cb96400c79ab56718a6362a9fd3f941571df5b
 
         var data = {
             email: $( "#email" ).val(),
@@ -141,7 +145,12 @@
                 data: data,
                 type: 'POST',
                 success: function(result) {
+<<<<<<< HEAD
                 }
+=======
+
+                    }
+>>>>>>> 86cb96400c79ab56718a6362a9fd3f941571df5b
             })
 
         });
