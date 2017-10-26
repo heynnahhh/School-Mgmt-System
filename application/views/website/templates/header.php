@@ -67,7 +67,7 @@
               </ul>
         </li>
         <li><a href="../lr/home">AHS-LR Portal</a></li>
-        <li><a href="contacts">Contact Us</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->
