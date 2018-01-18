@@ -13,16 +13,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/fonts/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/fonts/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. We have chosen the skin-maroon for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.
   -->
-  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@ BODY TAG OPTIONS:
 Apply one or more of the following classes to get the
 desired effect
 |---------------------------------------------------------|
-| SKINS         | skin-blue                               |
+| SKINS         | skin-maroon                               |
 |               | skin-black                              |
 |               | skin-purple                             |
 |               | skin-yellow                             |
@@ -51,7 +51,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-maroon sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -316,7 +316,7 @@ desired effect
       </h1>
       <ol class="breadcrumb">
         <li>MAIN NAVIGATION</a></li>
-        <li class="active"><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i>DASHBOARD</a></li>  
+        <li class="active"><a href="<?php echo site_url();?>/starter"><i class="fa fa-dashboard"></i>DASHBOARD</a></li>
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -371,7 +371,7 @@ desired effect
       </div>
     </section>
   </div>
-  <!-- Main Footer -->  
+  <!-- Main Footer -->
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">

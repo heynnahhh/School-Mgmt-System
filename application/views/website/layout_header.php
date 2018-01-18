@@ -5,7 +5,7 @@ BODY TAG OPTIONS:
 Apply one or more of the following classes to get the
 desired effect
 |---------------------------------------------------------|
-| SKINS         | skin-blue                               |
+| SKINS         | skin-maroon                               |
 |               | skin-black                              |
 |               | skin-purple                             |
 |               | skin-yellow                             |
@@ -19,7 +19,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-maroon sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->

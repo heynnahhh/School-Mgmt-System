@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 		$this->load->model('SMS/user');
 		$this->load->library('form_validation');
 		$this->load->model('INVENTORY/inventory_model');
+		$this->sms_session->checkSession();
 
 	}
 
@@ -15,6 +16,24 @@ class Home extends CI_Controller {
 	{
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
 		$this->load->view('INVENTORY/index2',$data);
+	}
+
+	public function transactions()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('INVENTORY/transactions', $data);
+	}
+
+	public function stock_register()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('INVENTORY/stock_register', $data);
+	}
+
+	public function inventory_items()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('INVENTORY/inventory_items', $data);
 	}
 
 	public function manage_records()

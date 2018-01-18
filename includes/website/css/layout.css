@@ -8,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Layout CSS
 */
 
-@import url("font-awesome.min.css");
+@import url("../../fonts/css/font-awesome.min.css");
 @import url("custom.flexslider.css");
 @import url("framework.css");
 

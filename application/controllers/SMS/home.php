@@ -8,6 +8,7 @@ class Home extends CI_Controller {
       $this->load->library('form_validation');
       $this->load->model('SMS/user');
 
+
   }
 
 	public function index()
@@ -18,8 +19,7 @@ class Home extends CI_Controller {
   public function account(){
 
           $data = array();
-
-          if($this->session->userdata('isUserLoggedIn')){
+          if($this->session->userdata('logged_in')){
               $data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
               $uemail = $this->session->userdata('userId');
               $user = $data['user']['status'];
@@ -45,6 +45,7 @@ class Home extends CI_Controller {
   public function login(){
 
     $data = array();
+
             if($this->session->userdata('success_msg')){
                 $data['success_msg'] = $this->session->userdata('success_msg');
                 $this->session->unset_userdata('success_msg');
@@ -60,12 +61,11 @@ class Home extends CI_Controller {
                     $con['returnType'] = 'single';
                     $con['conditions'] = array(
                         'email'=>$this->input->post('email'),
-                        'password' => md5($this->input->post('password')),
-
+                        'password' => md5($this->input->post('password'))
                     );
                     $checkLogin = $this->user->getRows($con);
                     if($checkLogin){
-                        $this->session->set_userdata('isUserLoggedIn',TRUE);
+                        $this->session->set_userdata('logged_in',TRUE);
                         $this->session->set_userdata('uemail',$checkLogin['email']);
                         $this->session->set_userdata('userId',$checkLogin['sus_id']);
                         redirect('SMS/home/account');
@@ -81,7 +81,7 @@ class Home extends CI_Controller {
 
   public function logout(){
 
-            $this->session->unset_userdata('isUserLoggedIn');
+            $this->session->unset_userdata('logged_in');
             $this->session->unset_userdata('userId');
             $this->session->sess_destroy();
             redirect('SMS/home');
