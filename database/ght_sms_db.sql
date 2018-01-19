@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2017 at 05:26 PM
+-- Generation Time: Jan 19, 2018 at 10:30 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -33,7 +33,7 @@ CREATE TABLE `addresses` (
   `barangay` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
   `province` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `addresses`
@@ -46,7 +46,8 @@ INSERT INTO `addresses` (`id`, `students_info_lrn`, `street`, `barangay`, `city`
 (4, 44444, 'Golden st.', 'Barangay Golden', 'Dasma', 'Cavite'),
 (5, 55555, 'Citta st,', 'Barangay Italia', 'Imus', 'Cavite'),
 (6, 66666, 'LA street', 'Baranggay LA', 'LA city', 'LA province'),
-(7, 14, '226-b', 'Talaba I', 'Bacoor City', 'Cavity');
+(7, 14, '226-b', 'Talaba I', 'Bacoor City', 'Cavity'),
+(13, 0, 'wqeqweqw', 'qw', 'qweqweq', 'wqeqeqw');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,7 @@ CREATE TABLE `guardians` (
   `name` varchar(70) NOT NULL,
   `contact` varchar(15) NOT NULL,
   `relationship` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guardians`
@@ -73,7 +74,8 @@ INSERT INTO `guardians` (`id`, `students_info_lrn`, `name`, `contact`, `relation
 (4, 44444, 'Mother Salva', 'MotherSalva con', 'Mother'),
 (5, 55555, 'Roman Ferrer', 'FatherFerrer co', 'Father'),
 (6, 66666, 'Father Urie', '092222', 'Father'),
-(7, 14, 'Marissa Tomei', '0955-887-4822', 'Mother');
+(7, 14, 'Marissa Tomei', '0955-887-4822', 'Mother'),
+(13, 0, 'wqeqweqw', '21312312312', 'qweqeq');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,7 @@ CREATE TABLE `parents` (
   `mother_contact` varchar(15) NOT NULL,
   `father_name` varchar(70) NOT NULL,
   `father_contact` varchar(15) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `parents`
@@ -101,7 +103,8 @@ INSERT INTO `parents` (`id`, `students_info_lrn`, `mother_name`, `mother_contact
 (4, 44444, 'Mother Salva', 'MotherSalva con', 'Father Salva', 'FatherSalva con'),
 (5, 55555, 'fukIforgot Ferrer', 'MotherFerrer co', 'Roman Ferrer', 'FatherFerrer co'),
 (6, 66666, 'Mother Urie', '0944444', 'Father Urie', '092222'),
-(7, 14, 'Marissa Tomei', '0955-887-4822', 'Tom Cruise', '0955-887-4822');
+(7, 14, 'Marissa Tomei', '0955-887-4822', 'Tom Cruise', '0955-887-4822'),
+(13, 0, 'qwewqeqw', '12312312', 'weqweqw', '12312312');
 
 -- --------------------------------------------------------
 
@@ -138,7 +141,8 @@ INSERT INTO `students_info` (`id`, `lrn`, `first_name`, `middle_name`, `last_nam
 (4, 44444, 'Jasver', 'Anlouis', 'Salva', 'Female', '09444444444', '2017-09-22', 'Hospital Bed', 0, 'Tagalog', 'Catholic', b'0', '2017-09-19 17:35:08', '2017-09-19 17:35:08'),
 (5, 55555, 'Journacel', 'Urgel', 'Ferrer', 'Female', '09555555555', '1997-10-10', 'Hospital Bed', 19, 'Tagalog', 'Catholic', b'0', '2017-09-19 17:37:59', '2017-09-19 17:37:59'),
 (6, 66666, 'Brendon', 'Pogi', 'Urie', 'Male', '09666666666', '1998-07-29', 'Los Angeles', 19, 'English', 'no one knows', b'0', '2017-10-01 19:16:21', '2017-10-01 19:16:21'),
-(7, 14, 'Hakeem', 'Andaya', 'Polistico', 'Male', '0955-887-4822', '1994-07-22', 'Mandaluyong City', 23, 'Filipino', 'Roman Catholic', b'0', '2017-10-01 23:03:03', '2017-10-01 23:03:03');
+(7, 14, 'Hakeem', 'Andaya', 'Polistico', 'Male', '0955-887-4822', '1994-07-22', 'Mandaluyong City', 23, 'Filipino', 'Roman Catholic', b'0', '2017-10-01 23:03:03', '2017-10-01 23:03:03'),
+(8, 13123, 'ewqe', 'ewqe', 'wqeqwe', 'Male', '123123', '2016-11-30', 'wqeqwe', 112, 'wqeqwewq', 'ewqeqw', b'1', '2017-10-12 04:50:13', '2017-10-12 04:50:13');
 
 -- --------------------------------------------------------
 
@@ -163,27 +167,72 @@ INSERT INTO `tbl_inv_attachments` (`wat_id`, `file_name`, `file_path`, `full_pat
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_inv_departments`
+--
+
+CREATE TABLE `tbl_inv_departments` (
+  `ide_id` int(11) NOT NULL,
+  `department` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_inv_departments`
+--
+
+INSERT INTO `tbl_inv_departments` (`ide_id`, `department`) VALUES
+(1, 'SHS'),
+(2, 'English'),
+(3, 'Math'),
+(4, 'Science'),
+(5, 'Filipino');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inv_pcategory`
+--
+
+CREATE TABLE `tbl_inv_pcategory` (
+  `ipcat_id` int(11) NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_inv_pcategory`
+--
+
+INSERT INTO `tbl_inv_pcategory` (`ipcat_id`, `category`) VALUES
+(6, 'Common Computer Supplies'),
+(1, 'Common Electrical Supplies'),
+(4, 'Common Janitorial Supplies'),
+(3, 'Common Office Devices'),
+(5, 'Common Office Equipment'),
+(2, 'Common Office Supplies'),
+(7, 'Consumables');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_inv_products`
 --
 
 CREATE TABLE `tbl_inv_products` (
   `ipr_id` int(11) NOT NULL,
-  `product_code` int(11) NOT NULL,
-  `product_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `product_desc` text COLLATE utf8_unicode_ci NOT NULL,
+  `item_code` int(11) NOT NULL,
+  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `item_desc` text COLLATE utf8_unicode_ci NOT NULL,
+  `item_category` varchar(255) CHARACTER SET latin1 NOT NULL,
   `product_status` enum('Active','Inactive') COLLATE utf8_unicode_ci NOT NULL,
-  `product_amount` float NOT NULL
+  `unit_cost` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tbl_inv_products`
 --
 
-INSERT INTO `tbl_inv_products` (`ipr_id`, `product_code`, `product_name`, `product_desc`, `product_status`, `product_amount`) VALUES
-(1, 123, 'prod', 'desc', 'Active', 12),
-(2, 113, 'wala', 'ako', 'Inactive', 12),
-(3, 980, 'shit', 'life', 'Inactive', 0),
-(4, 991, 'no', 'value', 'Inactive', 0);
+INSERT INTO `tbl_inv_products` (`ipr_id`, `item_code`, `item_name`, `item_desc`, `item_category`, `product_status`, `unit_cost`) VALUES
+(7, 1234, 'asdas', 'assadasdsadasdasdasass', 'Common Office Equipment', 'Inactive', 12),
+(9, 21212, 'asd', 'asas', 'Common Computer Supplies', 'Inactive', 12);
 
 -- --------------------------------------------------------
 
@@ -193,7 +242,7 @@ INSERT INTO `tbl_inv_products` (`ipr_id`, `product_code`, `product_name`, `produ
 
 CREATE TABLE `tbl_inv_stocks` (
   `ist_id` int(11) NOT NULL,
-  `ist_product_code` int(11) NOT NULL,
+  `ist_item_code` int(11) NOT NULL,
   `product_qty` int(11) NOT NULL,
   `import_date` timestamp NOT NULL,
   `product_qty_left` int(11) NOT NULL,
@@ -204,10 +253,39 @@ CREATE TABLE `tbl_inv_stocks` (
 -- Dumping data for table `tbl_inv_stocks`
 --
 
-INSERT INTO `tbl_inv_stocks` (`ist_id`, `ist_product_code`, `product_qty`, `import_date`, `product_qty_left`, `as_of_date`) VALUES
-(8, 980, 1, '0000-00-00 00:00:00', 1, '0000-00-00 00:00:00'),
-(9, 980, 1, '2017-10-08 09:18:49', 1, '2017-10-08 09:18:49'),
-(10, 113, 12, '2017-10-08 09:22:30', 12, '2017-10-08 09:22:30');
+INSERT INTO `tbl_inv_stocks` (`ist_id`, `ist_item_code`, `product_qty`, `import_date`, `product_qty_left`, `as_of_date`) VALUES
+(12, 1234, 12, '2017-10-12 02:23:02', 12, '2017-10-12 02:23:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inv_stocks_per_department`
+--
+
+CREATE TABLE `tbl_inv_stocks_per_department` (
+  `ispd_id` int(11) NOT NULL,
+  `ispd_ide_id` int(11) NOT NULL,
+  `item_code` int(11) NOT NULL,
+  `distributed_qty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_inv_transactions`
+--
+
+CREATE TABLE `tbl_inv_transactions` (
+  `itr_id` int(11) NOT NULL,
+  `itr_item_code` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `unit_cost` decimal(11,0) NOT NULL,
+  `total_cost` decimal(11,0) NOT NULL,
+  `received_by` varchar(40) NOT NULL,
+  `received_fr` varchar(40) NOT NULL,
+  `date_received` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -360,18 +438,48 @@ ALTER TABLE `tbl_inv_attachments`
   ADD PRIMARY KEY (`wat_id`);
 
 --
+-- Indexes for table `tbl_inv_departments`
+--
+ALTER TABLE `tbl_inv_departments`
+  ADD PRIMARY KEY (`ide_id`),
+  ADD KEY `department` (`department`);
+
+--
+-- Indexes for table `tbl_inv_pcategory`
+--
+ALTER TABLE `tbl_inv_pcategory`
+  ADD PRIMARY KEY (`ipcat_id`),
+  ADD KEY `category` (`category`);
+
+--
 -- Indexes for table `tbl_inv_products`
 --
 ALTER TABLE `tbl_inv_products`
   ADD PRIMARY KEY (`ipr_id`),
-  ADD UNIQUE KEY `product_code` (`product_code`);
+  ADD UNIQUE KEY `product_code` (`item_code`),
+  ADD KEY `product_category` (`item_category`);
 
 --
 -- Indexes for table `tbl_inv_stocks`
 --
 ALTER TABLE `tbl_inv_stocks`
   ADD PRIMARY KEY (`ist_id`),
-  ADD KEY `ist_product_code` (`ist_product_code`);
+  ADD KEY `ist_product_code` (`ist_item_code`);
+
+--
+-- Indexes for table `tbl_inv_stocks_per_department`
+--
+ALTER TABLE `tbl_inv_stocks_per_department`
+  ADD PRIMARY KEY (`ispd_id`),
+  ADD KEY `ispd_ide_id` (`ispd_ide_id`),
+  ADD KEY `item_code` (`item_code`);
+
+--
+-- Indexes for table `tbl_inv_transactions`
+--
+ALTER TABLE `tbl_inv_transactions`
+  ADD PRIMARY KEY (`itr_id`),
+  ADD KEY `itr_SN` (`itr_item_code`);
 
 --
 -- Indexes for table `tbl_inv_users`
@@ -426,37 +534,52 @@ ALTER TABLE `tb_lrmds_attachments`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `guardians`
 --
 ALTER TABLE `guardians`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `parents`
 --
 ALTER TABLE `parents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `students_info`
 --
 ALTER TABLE `students_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_inv_attachments`
 --
 ALTER TABLE `tbl_inv_attachments`
   MODIFY `wat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `tbl_inv_departments`
+--
+ALTER TABLE `tbl_inv_departments`
+  MODIFY `ide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `tbl_inv_pcategory`
+--
+ALTER TABLE `tbl_inv_pcategory`
+  MODIFY `ipcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT for table `tbl_inv_products`
 --
 ALTER TABLE `tbl_inv_products`
-  MODIFY `ipr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ipr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_inv_stocks`
 --
 ALTER TABLE `tbl_inv_stocks`
-  MODIFY `ist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `tbl_inv_stocks_per_department`
+--
+ALTER TABLE `tbl_inv_stocks_per_department`
+  MODIFY `ispd_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_inv_users`
 --
@@ -497,10 +620,22 @@ ALTER TABLE `tb_lrmds_attachments`
 --
 
 --
+-- Constraints for table `tbl_inv_products`
+--
+ALTER TABLE `tbl_inv_products`
+  ADD CONSTRAINT `tbl_inv_products_ibfk_1` FOREIGN KEY (`item_category`) REFERENCES `tbl_inv_pcategory` (`category`);
+
+--
 -- Constraints for table `tbl_inv_stocks`
 --
 ALTER TABLE `tbl_inv_stocks`
-  ADD CONSTRAINT `tbl_inv_stocks_ibfk_1` FOREIGN KEY (`ist_product_code`) REFERENCES `tbl_inv_products` (`product_code`);
+  ADD CONSTRAINT `tbl_inv_stocks_ibfk_1` FOREIGN KEY (`ist_item_code`) REFERENCES `tbl_inv_products` (`item_code`);
+
+--
+-- Constraints for table `tbl_inv_transactions`
+--
+ALTER TABLE `tbl_inv_transactions`
+  ADD CONSTRAINT `tbl_inv_transactions_ibfk_1` FOREIGN KEY (`itr_item_code`) REFERENCES `tbl_inv_products` (`item_code`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

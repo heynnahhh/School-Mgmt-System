@@ -95,14 +95,33 @@
 <!-- dateTime -->
 <script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
 <!-- Select2 -->
-<script src="<?php echo base_url();?>includes/plugins/select2/select2.full.min.js"></script>
+<script src="<?php echo base_url();?>includes/plugins/select2/select2.min.js"></script>
 <!-- DataTables -->
 <script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 
 <script>
 $(document).ready(function() {
+
+    $('.sel_category').select2();
+
     $('#example').DataTable(
+      {
+      	"dom": '<"dt-buttons"Bf><"clear">lrtip',
+      	"paging": true,
+      	"autoWidth": true,
+      	"buttons": [
+      		'colvis',
+      		'copyHtml5',
+          'csvHtml5',
+      		'excelHtml5',
+          'pdfHtml5',
+      		'print'
+      	]
+		  }
+    );
+
+    $('#example1').DataTable(
       {
       	"dom": '<"dt-buttons"Bf><"clear">lrtip',
       	"paging": true,
@@ -122,13 +141,46 @@ $(document).ready(function() {
         $("#myModal").modal();
     });
 
-    $(function () {
-      //Initialize Select2 Elements
-      $(".select2").select2();
-    });
-
-
 } );
+
+function showDepartments(){
+  $('#departments_stock').show();
+  $('#all_stock').hide();
+}
+
+function showAll(){
+  $('#departments_stock').hide();
+  $('#all_stock').show();
+  cancel2();
+}
+
+function add(){
+  $('#table2').hide();
+  $('#form2').show();
+}
+
+function edit(){
+  $('#table').removeClass('col-xs-12');
+  $('#table').addClass('col-xs-8');
+  $('#form').show();
+}
+
+function edit2(){
+  $('#table2').hide();
+  $('#form2').show();
+}
+
+
+function cancel(){
+  $('#table').removeClass('col-xs-8');
+  $('#table').addClass('col-xs-12');
+  $('#form').hide();
+}
+
+function cancel2(){
+  $('#table2').show();
+  $('#form2').hide();
+}
 
 
 

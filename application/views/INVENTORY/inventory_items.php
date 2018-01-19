@@ -27,7 +27,67 @@
           </p>
         </div>
         <br><br>
-        <div class="col-xs-12">
+        <div class="col-xs-4" id="form" style="display:none;">
+          <div class="box box-primary">
+            <div class="box-header">
+              <h4 class="box-title"><i class="fa fa-edit"> Edit</i></h4>
+            </div>
+            <div class="box-body">
+              <form>
+                <div class="row">
+                  <div class="form-group">
+                  	<label for="field-1" class="col-sm-2 control-label">Item Code</label>
+        						<div class="col-sm-6">
+        							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        						</div>
+        					</div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                  	<label for="field-1" class="col-sm-2 control-label">Ctgry</label>
+        						<div class="col-sm-8">
+                      <select class="sel_category" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+                        <option>California</option>
+                        <option>Delaware</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Washington</option>
+                      </select>
+                    </div>
+                  </div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                  	<label for="field-1" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
+        						<div class="col-sm-8">
+        							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        						</div>
+        					</div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Desc</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
+                    </div>
+                  </div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Unit Cost</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+                  </div>
+                </div><hr>
+                <button type="button" class="btn btn-sm bg-gray" onclick="cancel()">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12" id="table">
           <div class="box box-solid">
             <div class="box-body">
               <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -62,7 +122,7 @@
                       <td>2012/06/01</td>
                       <td>$115,000</td>
                       <td>
-                        <button type="button" class="btn bg-blue" id="myBtn"><i class="fa fa-edit"></i></button>
+                        <button type="button" class="btn bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
                         <button type="button" class="btn bg-red" id="myBtn"><i class="fa fa-trash-o"></i></button>
                       </td>                  </tr>
               </tbody>
@@ -74,7 +134,7 @@
     </section>
 
   <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header gray">
@@ -95,7 +155,7 @@
                 <div class="form-group">
                 	<label for="field-1" class="col-sm-2 control-label">Category</label>
       						<div class="col-sm-7">
-                    <select class="form-control select2" style="width: 100%;">
+                    <select class="sel_category" style="width: 100%;">
                       <option selected="selected">Alabama</option>
                       <option>Alaska</option>
                       <option>California</option>

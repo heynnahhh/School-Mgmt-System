@@ -19,11 +19,82 @@
   <!-- Main Content -->
     <section class="content">
       <div class="row">
-        <div class="col-xs-2">
-          <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"> New Transaction</i></button>
+        <div class="col-xs-12">
+          <p>
+            <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"> New Transaction</i></button>
+            <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"> Import Data From Excel</i></button>
+          </p>
         </div>
         <br><br>
-        <div class="col-xs-12">
+        <div class="col-xs-4" id="form" style="display:none;">
+          <div class="box box-primary">
+            <div class="box-header">
+              <h4 class="box-title"><i class="fa fa-edit"> Edit</i></h4>
+            </div>
+            <div class="box-body">
+              <form>
+                <div class="row">
+                  <div class="form-group">
+                  	<label for="field-1" class="col-sm-2 control-label">Receipt #</label>
+        						<div class="col-sm-5">
+        							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        						</div>
+                    <label for="field-1" class="col-sm-1 control-label">Qty</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+        					</div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                  	<label for="field-1" class="col-sm-2 control-label">Unit</label>
+        						<div class="col-sm-9">
+        							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        						</div>
+        					</div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Unit Cost</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+                    <label for="field-1" class="col-sm-2 control-label">Total Cost</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+                  </div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Desc</label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
+                    </div>
+                  </div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Receiver</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+                  </div>
+                </div><hr>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Supplier</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+                  </div>
+                </div><hr>
+                <button type="button" class="btn btn-sm bg-gray" onclick="cancel()">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12" id="table">
           <div class="box box-solid">
             <div class="box-body">
               <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -35,8 +106,8 @@
                       <th>Unit Cost</th>
                       <th>Total Cost</th>
                       <th>Receiver</th>
+                      <th>Suplier</th>
                       <th>Manage</th>
-
                   </tr>
               </thead>
               <tfoot>
@@ -47,6 +118,7 @@
                       <th>Unit Cost</th>
                       <th>Total Cost</th>
                       <th>Receiver</th>
+                      <th>Suplier</th>
                       <th>Manage</th>
                   </tr>
               </tfoot>
@@ -58,8 +130,9 @@
                       <td>56</td>
                       <td>2012/06/01</td>
                       <td>$115,000</td>
+                      <td>$115,000</td>
                       <td>
-                        <button type="button" class="btn bg-blue" id="myBtn"><i class="fa fa-edit"></i></button>
+                        <button type="button" class="btn bg-blue" id="myBtn" onclick="edit()"><i class="fa fa-edit"></i></button>
                         <button type="button" class="btn bg-red" id="myBtn"><i class="fa fa-trash-o"></i></button>
                       </td>
                   </tr>

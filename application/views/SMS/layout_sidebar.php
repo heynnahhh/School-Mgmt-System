@@ -68,6 +68,8 @@
           <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/compose_email"><i class="fa fa-circle-o"></i> Compose E-mail</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/transactions"><i class="fa fa-circle-o"></i> Transactions</a></li>
+          <li><a href="<?php echo site_url();?>/INVENTORY/home/inventory_items"><i class="fa fa-circle-o"></i> Inventory Items</a></li>
+          <li><a href="<?php echo site_url();?>/INVENTORY/home/stock_register"><i class="fa fa-circle-o"></i> Stock Register</a></li>
           <li>
             <a href="<?php echo site_url();?>/INVENTORY/home/manage_records"><i class="fa fa-circle-o"></i> Manage Record(s)
               <span class="pull-right-container">

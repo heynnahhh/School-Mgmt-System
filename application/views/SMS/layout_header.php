@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GHawTech&trade; | Home</title>
+  <title>GHawTech | Home</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <?php include 'head_links.php';?>
 </head>
 
-<body class="hold-transition skin-maroon sidebar-mini">
+<body class="hold-transition skin-maroon fixed sidebar-collapse sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -17,9 +17,9 @@
     <!-- Logo -->
     <a href="<?php echo site_url();?>/SMS/Home/Account" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">GHT&trade;</span>
+      <span class="logo-mini">GHT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>GHawTech&trade;</b></span>
+      <span class="logo-lg"><b>GHawTech</b></span>
     </a>
 
     <!-- Header Navbar -->

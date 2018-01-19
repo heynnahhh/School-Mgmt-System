@@ -7,4 +7,9 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('LR/home');
 	}
+
+	public function gallery(){
+		$this->load->view('LR/gallery');
+	}
+
 }
