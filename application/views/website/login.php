@@ -30,7 +30,7 @@
 
                     <div class="ers-width btmspace-10">
                         <label for="userName">Name*</label>
-                        <input type="text" id="userName" name="userName" placeholder="e.g. (123-123-123)">
+                        <input type="text" id="userName" name="userName" placeholder="e.g. (13XXXXXXXXXX)">
                     </div>
 
                     <div class="ers-width btmspace-15">
