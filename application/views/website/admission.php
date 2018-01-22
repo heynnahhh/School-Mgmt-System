@@ -13,13 +13,13 @@
 							  <li class="li_accordion">
 							    	<input name="accordion" type="radio" checked>
 							    	<i class="i_accordion"></i>
-							    	<h3 class="h3_accordion">Application for Junior High School</h3>
+							    	<h3 class="h3_accordion">Junior High School</h3>
 							    	<p class="p_accordion">Elementary graduates are those who have completed their primary education and making them eligible to apply for Junior High. 
 							    		<p class="p_accordion">Students will undergo evaluation and must submit the following requirements as listed below:</p>
 
 							    		<p class="p_accordion indent"> 1. Transcript of Records (TOR) / Form 137</p>
 										<p class="p_accordion indent"> 2. NSO Birth Certificate</p>
-										<p class="p_accordion indent"> 2. Medical Record</p>
+										<p class="p_accordion indent"> 3. Medical Record</p>
 
 										<p class="p_accordion"><b>Note:</b> Compile your forms or credentials in a brown envelope (long)</p> 
 									</p>
@@ -28,7 +28,7 @@
 							  <li class="li_accordion">
 							    <input name="accordion" type="radio">
 							    <i class="i_accordion"></i>
-							    <h3 class="h3_accordion">Application for Senior High School</h3>
+							    <h3 class="h3_accordion">Senior High School</h3>
 							    <p class="p_accordion">Students who successfully graduated in Junior High are eligible to apply for Senior High.
 							    	<p class="p_accordion">They will undergo evaluation and must submit the following requirements as listed below:</p> 
 
