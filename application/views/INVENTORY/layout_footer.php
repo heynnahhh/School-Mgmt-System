@@ -99,27 +99,52 @@
 <!-- DataTables -->
 <script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url();?>includes/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.js"></script>
 
 <script>
 $(document).ready(function() {
 
     $('.sel_category').select2();
 
+    // $('#exampleajax').DataTable( {
+    //   dom: 'T<"clear">lfrtip',
+    //   "paging": true,
+    //   "autoWidth": true,
+    //   "tableTools": {
+    //    "aButtons": [ "copy", "print", {
+    //      "sExtends": "collection",
+    //      "sButtonText": "Save",
+    //       "aButtons": [
+    //          "csv", "xls", "pdf"
+    //        ]
+    //       }
+    //     ]
+    //   },
+    //   "ajax": "../../../includes/plugins/datatables/extensions/TableTools/objects.txt",
+    //   "columns": [
+    //     { "data": "Stock No." },
+    //     { "data": "Item Name" },
+    //     { "data": "Category" },
+    //     { "data": "Available Quantity" },
+    //     { "data": "Manage" }
+    //   ],
+    //   deferRender: true
+    // } );
+
     $('#example').DataTable(
       {
-      	"dom": '<"dt-buttons"Bf><"clear">lrtip',
+      	"dom": '<"dt-buttons"Bf>T<"clear">lrtip',
       	"paging": true,
       	"autoWidth": true,
-      	"buttons": [
-      		'colvis',
-      		'copyHtml5',
-          'csvHtml5',
-      		'excelHtml5',
-          'pdfHtml5',
-      		'print'
-      	]
-		  }
-    );
+        "tableTools": {
+           "aButtons": [ "copy", "print", {
+                 "sExtends": "collection",
+                   "sButtonText": "Save",
+                    "aButtons": [ "csv", "xls", "pdf" ]
+                  }
+                ]
+              }
+		  } );
 
     $('#example1').DataTable(
       {

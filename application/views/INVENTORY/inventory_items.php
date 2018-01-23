@@ -113,7 +113,7 @@
                       <th>Manage</th>
                   </tr>
               </tfoot>
-              <tbody>
+              <!-- <tbody>
                   <tr>
                       <td>Zorita Serrano</td>
                       <td>Software Engineer</td>
@@ -125,7 +125,7 @@
                         <button type="button" class="btn bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
                         <button type="button" class="btn bg-red" id="myBtn"><i class="fa fa-trash-o"></i></button>
                       </td>                  </tr>
-              </tbody>
+              </tbody> -->
               </table>
             </div>
           </div>
@@ -147,15 +147,15 @@
                 <div class="form-group">
                 	<label for="field-1" class="col-sm-2 control-label">Item Code</label>
       						<div class="col-sm-5">
-      							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+      							<input type="text" class="form-control input-sm" name="item_code" data-validate="required" data-message-required="Value Required" value="" autofocus="">
       						</div>
       					</div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                	<label for="field-1" class="col-sm-2 control-label">Category</label>
+                	<label for="field-2" class="col-sm-2 control-label">Category</label>
       						<div class="col-sm-7">
-                    <select class="sel_category" style="width: 100%;">
+                    <select class="sel_category" name="item_category" style="width: 100%;">
                       <option selected="selected">Alabama</option>
                       <option>Alaska</option>
                       <option>California</option>
@@ -172,17 +172,17 @@
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                	<label for="field-1" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
+                	<label for="field-3" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
       						<div class="col-sm-8">
-      							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+      							<input type="text" class="form-control input-sm" name="item_name" data-validate="required" data-message-required="Value Required" value="" autofocus="">
       						</div>
       					</div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Description</label>
+                  <label for="field-4" class="col-sm-2 control-label">Description</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
+                    <textarea class="form-control input-sm" name="item_desc" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
                   </div>
                 </div>
               </div><hr>
@@ -190,10 +190,10 @@
                 <div class="form-group">
                   <label for="field-1" class="col-sm-2 control-label">Unit Cost</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="unit_cost" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
-              </div><hr>
+              </div>
             </form>
           </div>
           <div class="modal-footer">

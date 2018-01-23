@@ -77,6 +77,7 @@
               <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
               <thead>
                   <tr>
+                      <th>Stock No.</th>
                       <th>Item Name</th>
                       <th>Category</th>
                       <th>Available Quantity</th>
@@ -85,13 +86,14 @@
               </thead>
               <tfoot>
                   <tr>
+                      <th>Stock No.</th>
                       <th>Item Name</th>
                       <th>Category</th>
                       <th>Available Quantity</th>
                       <th>Manage</th>
                   </tr>
               </tfoot>
-              <tbody>
+              <!-- <tbody>
                   <tr>
                       <td>Zorita Serrano</td>
                       <td>Software Engineer</td>
@@ -102,7 +104,7 @@
                         <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>
                       </td>
                   </tr>
-              </tbody>
+              </tbody> -->
               </table>
             </div>
           </div>
