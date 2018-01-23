@@ -13,31 +13,14 @@
 							  <li class="li_accordion">
 							    	<input name="accordion" type="radio" checked>
 							    	<i class="i_accordion"></i>
-							    	<h3 class="h3_accordion">Junior High School</h3>
-							    	<p class="p_accordion">Elementary graduates are those who have completed their primary education and making them eligible to apply for Junior High. 
-							    		<p class="p_accordion">Students will undergo evaluation and must submit the following requirements as listed below:</p>
+							    	<h3 class="h3_accordion">Junior High & Senior High</h3>
 
-							    		<p class="p_accordion indent"> 1. Transcript of Records (TOR) / Form 137</p>
-										<p class="p_accordion indent"> 2. NSO Birth Certificate</p>
-										<p class="p_accordion indent"> 2. Medical Record</p>
+							    		<p class="p_accordion"> 1. The schedule of enrollment for both Junior High and Senior High will be posted in the gate, outside the school. </p>
+										<p class="p_accordion"> 2. During enrollment, credentials such as Report Card (Form 138), Transcript of Records (Form 137) will be given back and will be given the Class schedule for this school year.</p> 
 
-										<p class="p_accordion"><b>Note:</b> Compile your forms or credentials in a brown envelope (long)</p> 
+										<p class="p_accordion"><b>Note:</b> Bring brown envelope (long) for the compilation of credentials.</p> 
 									</p>
 								</li>
-
-							  <li class="li_accordion">
-							    <input name="accordion" type="radio">
-							    <i class="i_accordion"></i>
-							    <h3 class="h3_accordion">Senior High School</h3>
-							    <p class="p_accordion">Students who successfully graduated in Junior High are eligible to apply for Senior High.
-							    	<p class="p_accordion">They will undergo evaluation and must submit the following requirements as listed below:</p> 
-
-							    	<p class="p_accordion indent"> 1. Report Card / Form 138</p>
-									<p class="p_accordion indent"> 2. Application Form</p>
-
-									<p class="p_accordion"><b>Note:</b> Compile your forms or credentials in a brown envelope (long)</p> 
-							  </li>
-
 							</ul>
 
 					</div>
