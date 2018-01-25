@@ -32,48 +32,35 @@
                 
                 <div class="tab-content">
                   <div class="tab-pane active" id="tab_1">
-
-                    <div class="box">
-                      <div class="box-body">
-                        <table id="example1" class="table table-bordered table-striped">
-                          <thead>
-                          <tr>
-                            <th>Name:</th>
-                            <th>Section:</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td>Hannah Patricia Liao</td>
-                            <td>6-Acacia
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Marc Inzon</td>
-                            <td>6-Acacia
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Hakeem Polistico</td>
-                            <td>6-Narra
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Jasver Anlouise Salva</td>
-                            <td>6-Acacia
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Shiela May Morales</td>
-                            <td>6-Balete
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- /.box-body -->
-                    </div>
-                    <!-- /.box -->
+                    <table id="table1" class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Name:</th>
+                          <th>Section:</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Hannah Patricia Liao</td>
+                          <td>6-Acacia</td>
+                        </tr>
+                        <tr>
+                          <td>Marc Inzon</td>
+                          <td>6-Acacia</tr>
+                        <tr>
+                          <td>Hakeem Polistico</td>
+                          <td>6-Narra</td>
+                        </tr>
+                        <tr>
+                          <td>Jasver Anlouise Salva</td>
+                          <td>6-Acacia</td>
+                        </tr>
+                        <tr>
+                          <td>Shiela May Morales</td>
+                          <td>6-Balete</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   <!-- /.tab-pane -->
                 </div>
@@ -82,6 +69,58 @@
               <!-- nav-tabs-custom -->
             </div>
             <!-- /.col -->
+            
+            <div class="col-md-6">
+              <div class="box">
+                <div class="box-body">
+                  <table id="table2" class="table table-bordered table-striped">
+
+                    <thead>
+                      <tr>
+                        <th>Date:</th>
+                        <th>Complaint/Ailments:</th>
+                        <th>Treatment</th>
+                        <th>Remarks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>12/18/17</td>
+                        <td>Heart burn</td>
+                        <td>Biogesic</td>
+                        <td>N.A</td>
+                      </tr>
+                      <tr>
+                        <td>1/18/2018</td>
+                        <td>Fungi</td>
+                        <td>Lotion</td>
+                        <td>N.A</td>
+                      </tr>
+                      <tr>
+                        <td>1/18/2018</td>
+                        <td>Fungi</td>
+                        <td>Lotion</td>
+                        <td>N.A</td>
+                      </tr>
+                      <tr>
+                        <td>1/18/2018</td>
+                        <td>Fungi</td>
+                        <td>Lotion</td>
+                        <td>N.A</td>
+                      </tr>
+                      <tr>
+                        <td>1/18/2018</td>
+                        <td>Fungi</td>
+                        <td>Lotion</td>
+                        <td>N.A</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+            </div>
           </div>
           <!-- row -->
       </div>

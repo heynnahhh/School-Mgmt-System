@@ -102,7 +102,8 @@
 
 <script>
   $(function () {
-    $('#example1').DataTable()
+    $('#list').DataTable()
+    $('#recordsBox').DataTable()
   })
 </script>
 

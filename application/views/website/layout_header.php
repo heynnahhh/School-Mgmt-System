@@ -327,6 +327,51 @@ desired effect
             <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
           </ul>
         </li>
+         <li class="treeview">
+        <a href="#">
+          <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="<?php echo site_url('MEDICAL/home');?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+          <li>
+            <a href=""><i class="fa fa-circle-o"></i> Patients Record
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="<?php echo site_url('MEDICAL/home/Student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
+              <li><a href="<?php echo site_url('MEDICAL/home/Employees');?>"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-plus-square"></i> <span>DENTAL</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="<?php echo site_url('DENTAL/home');?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+          <li>
+            <a href=""><i class="fa fa-circle-o"></i> Patients Record
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
