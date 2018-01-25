@@ -7,7 +7,7 @@
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
       <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+      <li><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
       <li class="treeview">
         <a href="#">
           <i class="fa fa-globe"></i> <span>LEARNING RESOURCE</span>
@@ -138,7 +138,7 @@
         </ul>
       </li>
 
-      <li class="treeview">
+      <li class="treeview active">
         <a href="#">
           <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
           <span class="pull-right-container">
@@ -154,7 +154,7 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?php echo site_url('MEDICAL/home/Student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
+              <li><a href="<?php echo site_url('MEDICAL/home/student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
             </ul>
           </li>
