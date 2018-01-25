@@ -138,7 +138,7 @@
         </ul>
       </li>
 
-      <li class="treeview active">
+      <li class="treeview">
         <a href="#">
           <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
           <span class="pull-right-container">
@@ -161,7 +161,7 @@
         </ul>
       </li>
 
-      <li class="treeview">
+      <li class="treeview active">
         <a href="#">
           <i class="fa fa-plus-square"></i> <span>DENTAL</span>
           <span class="pull-right-container">

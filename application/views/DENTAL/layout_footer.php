@@ -100,10 +100,6 @@
 <script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 
-<script>
-  $(function () {
-    $('#example1').DataTable()
-  })
 </script>
 
 </body>

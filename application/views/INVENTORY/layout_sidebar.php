@@ -154,7 +154,7 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
+              <li><a href="<?php echo site_url('MEDICAL/home/student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
             </ul>
           </li>
@@ -177,7 +177,7 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
+              <li><a href="<?php echo site_url('DENTAL/home/student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
             </ul>
           </li>

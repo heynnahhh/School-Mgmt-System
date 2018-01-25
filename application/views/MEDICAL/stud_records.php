@@ -6,7 +6,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1><i class="fa fa-plus-square"></i>
-        Patient Records
+        Patient Records (Medical)
       </h1>
       <hr>
       <ol class="breadcrumb">
@@ -29,59 +29,51 @@
                   <li><a href="#tab_6" data-toggle="tab">Grade 12</a></li>
                   <li><a href="#"><i class="fa fa-cog"></i></a>
                 </ul>
+                
                 <div class="tab-content">
                   <div class="tab-pane active" id="tab_1">
+
                     <div class="box">
-            
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Name:</th>
-                  <th>Section:</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Hannah Patricia Liao</td>
-                  <td>6-Acacia
-                  </td>
-                </tr>
-                <tr>
-                  <td>Marc Inzon</td>
-                  <td>6-Acacia
-                  </td>
-                </tr>
-                <tr>
-                  <td>Hakeem Polistico</td>
-                  <td>6-Narra
-                  </td>
-                </tr>
-                <tr>
-                  <td>Jasver Anlouise Salva</td>
-                  <td>6-Acacia
-                  </td>
-                </tr>
-                <tr>
-                  <td>Shiela May Morales</td>
-                  <td>6-Balete
-                  </td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-                  </div>
-                  <!-- /.tab-pane -->
-                  <div class="tab-pane" id="tab_2">
-
-                  </div>
-                  <!-- /.tab-pane -->
-                  <div class="tab-pane" id="tab_3">
-
+                      <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                          <thead>
+                          <tr>
+                            <th>Name:</th>
+                            <th>Section:</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>Hannah Patricia Liao</td>
+                            <td>6-Acacia
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Marc Inzon</td>
+                            <td>6-Acacia
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Hakeem Polistico</td>
+                            <td>6-Narra
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Jasver Anlouise Salva</td>
+                            <td>6-Acacia
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Shiela May Morales</td>
+                            <td>6-Balete
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
                   </div>
                   <!-- /.tab-pane -->
                 </div>

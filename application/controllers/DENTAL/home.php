@@ -14,13 +14,13 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('MEDICAL/index', $data);
+		$this->load->view('LRMDS/index', $data);
 	}
 
 	public function Student()
 	{
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('MEDICAL/stud_records', $data);
+		$this->load->view('DENTAL/stud_records', $data);
 	}
 
 }
