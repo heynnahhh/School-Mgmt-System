@@ -162,15 +162,21 @@
                  <div class="table-responsive">
                    <table class="table">
                      <tbody>
+
                        <tr>
-                         <td><a href="#" class="link-text">Application for Junior High School</a></td>
-                       </tr>
-                       <tr>
-                         <td><a href="#" class="link-text">Application for Senior High School</a></td>
+                         <td><a href="Admission" class="link-text">Admission Procedures</a></td>
                        </tr>
 
                        <tr>
-                         <td><a href="#" class="link-text">Course Offered for Senior High School</a></td>
+                         <td><a href="login" class="link-text">Enrollment and Registration System (ERS)</a></td>
+                       </tr>
+                       
+                       <tr>
+                         <td><a href="Application" class="link-text">Application for Senior High School</a></td>
+                       </tr>
+
+                       <tr>
+                         <td><a href="Course" class="link-text">Course Offered for Senior High School</a></td>
                        </tr>
 
                        <!-- ################################################################################################ -->

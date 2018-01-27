@@ -54,21 +54,6 @@
 													Makabansa</br>
 												</p>
 											</p>
-
-										<p style = "margin-top:40px;">
-												<h6 class="news_heading">Our Mandate</h6>
-
-												<p style = "margin-top:40px;">
-													The Department of Education was established through the Education Decree of 1863 as the Superior Commission of Primary Instruction under a Chairman.
-													The Education agency underwent many reorganization efforts in the 20th century in order to better define its purpose vis a vis the changing administrations and charters.
-													The present day Department of Education was eventually mandated through Republic Act 9155, otherwise known as the Governance of Basic Education act of 2001 which establishes the mandate of this agency.
-													</br></br>
-													The Department of Education (DepEd) formulates, implements, and coordinates policies, plans, programs and projects in the areas of formal and non-formal basic education.
-													It supervises all elementary and secondary education institutions, including alternative learning systems, both public and private; and provides for the establishment
-													and maintenance of a complete, adequate, and integrated system of basic education relevant to the goals of national development.
-
-												</p>
-											</p>
 							</div>
 
 					<div class="one_third">
