@@ -99,6 +99,8 @@
 <!-- DataTables -->
 <script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- date-range-picker -->
+<script src="<?php echo base_url();?>includes/plugins/datepicker/bootstrap-datepicker.js"></script>
 
 <script>
   $(function () {
@@ -107,5 +109,10 @@
   })
 </script>
 
+<script>
+  $('#datepicker').datepicker({
+      autoclose: true
+    })
+</script>
 </body>
 </html>

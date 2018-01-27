@@ -12,230 +12,81 @@
     <ol class="breadcrumb">
       <li><a><i class="fa fa-plus-square"></i></a>MEDICAL</li>
       <li><a>Patients Record</a></li>
-      <li><a>Students</a></li>
+      <li><a>Teacher/Staff</a></li>
     </ol>
   </section>
   <!-- /.content-wrapper -->
   <div class="row">
     <div class="col-md-12">
-      <div class="col-sm-6">
 
+      <div class="col-md-12">
         <div class="box">
           <div class="box-body">
+            <div class="col-md-4">
+              <div class="form-group">
+                <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddEmployee">
+                <i class="fa fa-plus-square"> Add Employee</i></a>
+              </div>
 
-            <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-orange">
-                  <div class="inner">
-                    <h3>English</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
+              <div class="form-group">
+                <label>Choose Department:</label>
+                <div class="box-body">
+                  <select class="form-control" style="width: 100%;">
+                    <option>Non-Teaching</option>
+                    <option>Science</option>
+                    <option>MAPEH</option>
+                    <option>Values Education</option>
+                    <option>Mathematics</option>
+                    <option>English</option>
+                    <option>Social Studies</option>
+                    <option>Filipino</option>
+                    <option>TLE-Vocational</option>
+                    <option>TLE-Home Economics</option>
+                    <option>Non-Teaching</option>
+                    <option>Library Science</option>
+                  </select>
                 </div>
               </div>
-              <!-- ./col -->
-
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-orange">
-                  <div class="inner">
-                    <h3>Filipino</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
             </div>
-            <!-- /.row -->
-
-            <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-orange">
-                  <div class="inner">
-                    <h3>Mathematics</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <table id="recordsBox" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Surname:</th>
+                      <th>Name:</th>
+                      <th>M.I:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Terrobias</td>
+                      <td>Marc Dominic</td>
+                      <td>I</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <!-- ./col -->
-
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-orange">
-                  <div class="inner">
-                    <h3>MAPEH</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
             </div>
-            <!-- /.row -->
-
-            <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-maroon">
-                  <div class="inner">
-                    <h3>Senior High</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-yellow">
-                  <div class="inner">
-                    <h3>Science</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-            </div>
-            <!-- /.row -->
-
-            <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-blue">
-                  <div class="inner">
-                    <h3>Social Studies</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-blue">
-                  <div class="inner">
-                    <h3>Values Ed.</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-            </div>
-            <!-- /.row -->
-
-            <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
-                  <div class="inner">
-                    <h3>TLE-Voc</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
-                  <div class="inner">
-                    <h3>TLE-HE</h3>
-
-                    <p>Department</p>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fa fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-
-              <table id="list" class="table table-bordered table-striped" style="display: none;">
-                <thead>
-                  <tr>
-                    <th>Name:</th>
-                    <th>Section:</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Hannah Patricia Liao</td>
-                    <td>6-Acacia</td>
-                  </tr>
-                  <tr>
-                    <td>Marc Inzon</td>
-                    <td>6-Acacia</tr>
-                  <tr>
-                    <td>Hakeem Polistico</td>
-                    <td>6-Narra</td>
-                  </tr>
-                  <tr>
-                    <td>Jasver Anlouise Salva</td>
-                    <td>6-Acacia</td>
-                  </tr>
-                  <tr>
-                    <td>Shiela May Morales</td>
-                    <td>6-Balete</td>
-                  </tr>
-                </tbody>
-              </table>
-
-            </div>
-            <!-- /.row -->
-
+            <!-- /.box-body -->
           </div>
-          <!-- box-body-->
+          <!-- /.box -->
         </div>
-        <!-- box -->
       </div>
-      <!-- /.col -->
+      <!-- col -->
 
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="box">
           <div class="box-body">
+            <label>RECORDS:</label>
+            <br>
             <table id="recordsBox" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Date:</th>
-                  <th>Complaint/Ailments:</th>
-                  <th>Treatment</th>
-                  <th>Remarks</th>
+                  <th>Complaint / Ailment:</th>
+                  <th>Treatment / Medicine:</th>
+                  <th>Remarks:</th>
                 </tr>
               </thead>
               <tbody>
@@ -279,6 +130,102 @@
       <!-- col -->
     </div>
     <!-- row -->
+  </div>
+
+  <div class="modal fade" id="AddEmployee" role="dialog" >
+    <div class="modal-dialog modal-md" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title"><i class="fa fa-plus-square"></i> Add Employee</h3>
+        </div>
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" placeholder="Surname">
+                      </div>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" placeholder="Name">
+                      </div>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" placeholder="M.I">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <label>AGE:</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-xs-5">
+                        <label>BIRTHDAY:</label>
+                        <div class="input-group date">
+                          <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                        <!-- /.input group -->
+                      </div>
+                      <div class="col-xs-4">
+                        <label>TELEPHONE:</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <label>MOTHER'S NAME:</label>
+                        <input type="text" class="form-control">
+                      </div>
+
+                      <div class="col-xs-6">
+                        <label>OCCUPATION:</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <label>FATHER'S NAME:</label>
+                        <input type="text" class="form-control">
+                      </div>
+
+                      <div class="col-xs-6">
+                        <label>OCCUPATION:</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary pull right" data-dismiss="modal">Save Changes</button>
+          </div>
+      </div>
+    </div>
   </div>
 </div>
 <?php include 'layout_footer.php';?>
