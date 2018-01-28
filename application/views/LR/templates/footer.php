@@ -77,8 +77,9 @@
 <!-- //footer -->
 
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>includes/lr/js//easing.js"></script>
+<!-- <script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/easing.js"></script> -->
+<script type="text/javascript" src="<?php echo base_url();?>includes/lr/js/slide.js"></script>
 <script src="<?php echo base_url();?>includes/lr/js/jquery-1.11.1.min.js"></script>
 <!--FlexSlider-->
 <script defer src="<?php echo base_url();?>includes/dist/js/jquery.flexslider-min.js"></script>
@@ -122,10 +123,10 @@
 		easingType: 'linear'
 		};
 		*/
-
-		$().UItoTop({
-			easingType: 'easeOutQuart'
-		});
+		// 
+		// $().UItoTop({
+		// 	easingType: 'easeOutQuart'
+		// });
 
 	});
 
