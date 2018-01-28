@@ -56,7 +56,7 @@
         </ul>
       </li>
 
-      <li class="treeview active">
+      <li class="treeview">
         <a href="#">
           <i class="fa fa-database"></i> <span>INVENTORY</span>
           <span class="pull-right-container">
@@ -138,7 +138,7 @@
         </ul>
       </li>
 
-      <li class="treeview">
+      <li class="treeview active">
         <a href="#">
           <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
           <span class="pull-right-container">
@@ -155,7 +155,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="<?php echo site_url('MEDICAL/home/student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
+              <li><a href="<?php echo site_url('MEDICAL/home/employees');?>"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
             </ul>
           </li>
         </ul>

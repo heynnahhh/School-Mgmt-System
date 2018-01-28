@@ -61,13 +61,12 @@
         </li>
         <li><a class="drop" href="#">Students</a>
               <ul>
-                <li><a href="login">ERS</a></li>
+                <li><a href="login">Enrollment and Registration System (ERS)</a></li>
                 <li><a href="calendar">Academic Calendar</a></li>
-                <li><a href="#">Enrollment Procedures</a></li>
+                <li><a href="procedures">Enrollment Procedures</a></li>
               </ul>
         </li>
         <li><a href="../lr/home">AHS-LR Portal</a></li>
-        <li><a href="contacts">Contact Us</a></li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->
