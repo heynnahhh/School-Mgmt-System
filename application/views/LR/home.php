@@ -3,97 +3,50 @@
 			<!-- banner -->
 				<div class="banner">
 					<div class="banner-grids">
-						<div class="banner-left">
-							<div class="banner-left1">
-								<div class="banner-left1-grid">
-									<img src="<?php echo base_url();?>includes/lr/images/1.jpg" alt=" " class="img-responsive" />
-									<div class="banner-info">
-										<a class="read-more" href="single.html"><i></i></a>
-										<h3>
-											<a href="single.html">
-												Kids Playing
-											</a>
-										</h3>
-										<div class="event-meta">
-											<h4>Description</h4>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-										</div>
-									</div>
-								</div>
-								<div class="banner-left1-grid">
-									<img src="<?php echo base_url();?>includes/lr/images/4.jpg" alt=" " class="img-responsive" />
-									<div class="banner-info">
-										<a class="read-more" href="single.html"><i></i></a>
-										<h3>
-											<a href="single.html">
-												Kids Playing
-											</a>
-										</h3>
-										<div class="event-meta">
-											<h4>Description</h4>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-										</div>
-									</div>
+						<div class="slideshow-container">
+							<div class="mySlides fade-slide">
+							  <div class="numbertext">1 / 3</div>
+							  <img src="<?php echo base_url();?>includes/lr/images/slides/1.jpg" style="width:100%;">
+								<div class="text">
+									<h1 class="carousel-caption-header">Slide 1</h1>
+									<p class="carousel-caption-text hidden-sm hidden-xs">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+									</p>
 								</div>
 							</div>
-							<div class="banner-left2">
-								<div class="banner-left1-grid">
-									<img src="<?php echo base_url();?>includes/lr/images/3.jpg" alt=" " class="img-responsive" />
-									<div class="banner-info">
-										<a class="read-more" href="single.html"><i></i></a>
-										<h3>
-											<a href="single.html">
-												Kids Playing
-											</a>
-										</h3>
-										<div class="event-meta">
-											<h4>Description</h4>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-										</div>
-									</div>
-								</div>
-								<div class="banner-left1-grid">
-									<img src="<?php echo base_url();?>includes/lr/images/2.jpg" alt=" " class="img-responsive" />
-									<div class="banner-info">
-										<a class="read-more" href="single.html"><i></i></a>
-										<h3>
-											<a href="single.html">
-												Kids studying
-											</a>
-										</h3>
-										<div class="event-meta">
-											<h4>Description</h4>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-										</div>
-									</div>
+
+							<div class="mySlides fade-slide">
+							  <div class="numbertext">2 / 3</div>
+							  <img src="<?php echo base_url();?>includes/lr/images/slides/2.jpg" style="width:100%;">
+							  <div class="text">
+									<h1 class="carousel-caption-header">Slide 2</h1>
+									<p class="carousel-caption-text hidden-sm hidden-xs">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+									</p>
+							  </div>
+							</div>
+
+							<div class="mySlides fade-slide">
+							  <div class="numbertext">3 / 3</div>
+							  <img src="<?php echo base_url();?>includes/lr/images/slides/3.jpg" style="width:100%;">
+								<div class="text">
+									<h1 class="carousel-caption-header">Slide 3</h1>
+									<p class="carousel-caption-text hidden-sm hidden-xs">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+									</p>
 								</div>
 							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="banner-right">
-							<section class="slider">
-								<div class="flexslider">
-									<ul class="slides">
-										<li>
-											<div class="services-grid-right-grid1">
 
-											</div>
-										</li>
-										<li>
-											<div class="services-grid-right-grid2">
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-											</div>
-										</li>
-										<li>
-											<div class="services-grid-right-grid3">
-
-											</div>
-										</li>
-									</ul>
-								</div>
-							</section>
-
-						</div>
+							</div>
+							<br>
+							<div style="text-align:right">
+							  <span class="dot" onclick="currentSlide(1)"></span>
+							  <span class="dot" onclick="currentSlide(2)"></span>
+							  <span class="dot" onclick="currentSlide(3)"></span>
+							</div>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
