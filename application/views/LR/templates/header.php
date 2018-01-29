@@ -53,11 +53,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav class="stroke">
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="services.html" class="hvr-rectangle-out">Categories</a></li>
-									<li><a href="events.html" class="hvr-rectangle-out">News & Events</a></li>
-									<li><a href="short-codes.html" class="hvr-rectangle-out">Short Codes</a></li>
-									<li><a href="gallery.html" class="hvr-rectangle-out">Gallery</a></li>
+									<li><a href="<?php echo site_url();?>/LR/home">Home</a></li>
+									<li><a href="#" class="hvr-rectangle-out">Resources</a></li>
+									<li><a href="#" class="hvr-rectangle-out">News & Events</a></li>
+									<li><a href="<?php echo site_url();?>/LR/home/view_login" class="hvr-rectangle-out">Login</a></li>
+
 								</ul>
 							</nav>
 						</div>

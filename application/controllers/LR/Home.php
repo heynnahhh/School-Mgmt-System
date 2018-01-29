@@ -12,4 +12,20 @@ class Home extends CI_Controller {
 		$this->load->view('LR/gallery');
 	}
 
+	public function view_login(){
+		$this->load->view('LR/login');
+	}
+
+	public function preview(){
+		$this->load->view('LR/preview');
+	}
+
+	public function view_jhs(){
+		$this->load->view('LR/juniorhs');
+	}
+
+	public function view_shs(){
+		$this->load->view('LR/seniorhs');
+	}
+
 }
