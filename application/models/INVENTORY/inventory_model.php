@@ -18,8 +18,8 @@ class Inventory_model extends CI_Model{
     }
 
     public function get_Products(){
-          $this->db->select('*');
-          $query = $this->db->get('tbl_inv_products');
+          $this->db->select('item_code, item_name, item_desc, item_category, product_status, unit_cost');
+          $query = $this->db->get('tbl_inv_items');
           return $query->result();
     }
 

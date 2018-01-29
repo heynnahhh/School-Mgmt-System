@@ -20,7 +20,7 @@
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-          <p>
+          <p style="float:right;">
             <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"> New Item</i></button>
             <button type="button" class="btn bg-maroon" id="myBtn2"><i class="fa fa-plus-circle"> Add Category</i></button>
             <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"> Import Data From Excel</i></button>
@@ -89,8 +89,8 @@
         </div>
         <div class="col-xs-12" id="table">
           <div class="box box-solid">
-            <div class="box-body">
-              <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <div class="box-body table-responsive">
+              <table id="exampledata" class="table table-hover" cellspacing="0" width="100%">
               <thead>
                   <tr>
                       <th>Item Code</th>
@@ -113,19 +113,6 @@
                       <th>Manage</th>
                   </tr>
               </tfoot>
-              <!-- <tbody>
-                  <tr>
-                      <td>Zorita Serrano</td>
-                      <td>Software Engineer</td>
-                      <td>San Francisco</td>
-                      <td>56</td>
-                      <td>2012/06/01</td>
-                      <td>$115,000</td>
-                      <td>
-                        <button type="button" class="btn bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
-                        <button type="button" class="btn bg-red" id="myBtn"><i class="fa fa-trash-o"></i></button>
-                      </td>                  </tr>
-              </tbody> -->
               </table>
             </div>
           </div>

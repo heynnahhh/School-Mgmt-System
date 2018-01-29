@@ -106,34 +106,9 @@ $(document).ready(function() {
 
     $('.sel_category').select2();
 
-    // $('#exampleajax').DataTable( {
-    //   dom: 'T<"clear">lfrtip',
-    //   "paging": true,
-    //   "autoWidth": true,
-    //   "tableTools": {
-    //    "aButtons": [ "copy", "print", {
-    //      "sExtends": "collection",
-    //      "sButtonText": "Save",
-    //       "aButtons": [
-    //          "csv", "xls", "pdf"
-    //        ]
-    //       }
-    //     ]
-    //   },
-    //   "ajax": "../../../includes/plugins/datatables/extensions/TableTools/objects.txt",
-    //   "columns": [
-    //     { "data": "Stock No." },
-    //     { "data": "Item Name" },
-    //     { "data": "Category" },
-    //     { "data": "Available Quantity" },
-    //     { "data": "Manage" }
-    //   ],
-    //   deferRender: true
-    // } );
-
-    $('#example').DataTable(
+    $('#exampledata').DataTable(
       {
-      	"dom": '<"dt-buttons"Bf>T<"clear">lrtip',
+        "ajax": '<?=site_url()?>/INVENTORY/ajax/view_products',
       	"paging": true,
       	"autoWidth": true,
         "tableTools": {
@@ -146,9 +121,22 @@ $(document).ready(function() {
               }
 		  } );
 
+    $('#example').DataTable(
+      {
+        "paging": true,
+        "autoWidth": true,
+        "tableTools": {
+           "aButtons": [ "copy", "print", {
+                 "sExtends": "collection",
+                   "sButtonText": "Save",
+                    "aButtons": [ "csv", "xls", "pdf" ]
+                  }
+                ]
+              }
+      } );
+
     $('#example1').DataTable(
       {
-      	"dom": '<"dt-buttons"Bf><"clear">lrtip',
       	"paging": true,
       	"autoWidth": true,
       	"buttons": [
