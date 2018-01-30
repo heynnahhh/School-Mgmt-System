@@ -104,15 +104,24 @@
 
 <script>
   $(function () {
-    $('#list1').DataTable()
-    $('#recordsBox1').DataTable()
-    $('#list2').DataTable()
-    $('#recordsBox2').DataTable()
+    $('#emp_records').DataTable()
+    $('#stud_records').DataTable()
+    $('#emp_list').DataTable()
+    $('#stud_list').DataTable()
   })
 </script>
 
 <script>
-  $('#datepicker').datepicker({
+  $('#stud_date_consult').datepicker({
+      autoclose: true
+    })
+  $('#emp_date_consult').datepicker({
+      autoclose: true
+    })
+  $('#stud_birthdate').datepicker({
+      autoclose: true
+    })
+  $('#emp_birthdate').datepicker({
       autoclose: true
     })
 </script>

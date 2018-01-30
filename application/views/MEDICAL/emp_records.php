@@ -49,7 +49,7 @@
             </div>
             <div class="col-md-8">
               <div class="form-group">
-                <table id="list2" class="table table-bordered table-striped">
+                <table id="emp_list" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Surname:</th>
@@ -77,9 +77,13 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-body">
-            <label>RECORDS:</label>
-            <br>
-            <table id="recordsBox2" class="table table-bordered table-striped">
+            <div class="form-group">
+                <label> RECORDS:</label>&nbsp;&nbsp;
+                <a href="#" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#EmployeeConsultation">
+                <i class="fa fa-plus-square"> Add Consultation</i></a>
+            </div>
+            <hr>
+            <table id="emp_records" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Date:</th>
@@ -131,116 +135,171 @@
     <!-- row -->
   </div>
 
-  <div class="modal fade" id="AddEmployee" role="dialog" >
-    <div class="modal-dialog modal-lg" >
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title"><i class="fa fa-plus-square"></i> Add Employee</h3>
-        </div>
+  <!-- MODALS -->
+    <div class="modal fade" id="AddEmployee" role="dialog" >
+      <div class="modal-dialog modal-md" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title"><i class="fa fa-plus-square"></i> Add Employee</h3>
+          </div>
 
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
 
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-xs-4">
-                        <input type="text" class="form-control" placeholder="Surname">
-                      </div>
-                      <div class="col-xs-4">
-                        <input type="text" class="form-control" placeholder="Name">
-                      </div>
-                      <div class="col-xs-4">
-                        <input type="text" class="form-control" placeholder="M.I">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-xs-3">
-                        <label>DEPARTMENT:</label>
-                        <select class="form-control">
-                          <option>Non-Teaching</option>
-                          <option>Science</option>
-                          <option>MAPEH</option>
-                          <option>Values Education</option>
-                          <option>Mathematics</option>
-                          <option>English</option>
-                          <option>Social Studies</option>
-                          <option>Filipino</option>
-                          <option>TLE-Vocational</option>
-                          <option>TLE-Home Economics</option>
-                          <option>Library Science</option>
-                        </select>
-                      </div>
-                      <div class="col-xs-3">
-                        <label>AGE:</label>
-                        <input type="text" class="form-control">
-                      </div>
-                      <div class="col-xs-3">
-                        <label>BIRTHDAY:</label>
-                        <div class="input-group date">
-                          <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
-                          </div>
-                          <input type="text" class="form-control pull-right" id="datepicker">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <input type="text" class="form-control" placeholder="Surname">
                         </div>
-                        <!-- /.input group -->
-                      </div>
-                      <div class="col-xs-3">
-                        <label>TELEPHONE:</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-xs-6">
-                        <label>MOTHER'S NAME:</label>
-                        <input type="text" class="form-control">
-                      </div>
-
-                      <div class="col-xs-6">
-                        <label>OCCUPATION:</label>
-                        <input type="text" class="form-control">
+                        <div class="col-xs-4">
+                          <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-xs-4">
+                          <input type="text" class="form-control" placeholder="M.I">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-xs-6">
-                        <label>FATHER'S NAME:</label>
-                        <input type="text" class="form-control">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>DEPARTMENT:</label>
+                          <select class="form-control">
+                            <option>Non-Teaching</option>
+                            <option>Science</option>
+                            <option>MAPEH</option>
+                            <option>Values Education</option>
+                            <option>Mathematics</option>
+                            <option>English</option>
+                            <option>Social Studies</option>
+                            <option>Filipino</option>
+                            <option>TLE-Vocational</option>
+                            <option>TLE-Home Economics</option>
+                            <option>Library Science</option>
+                          </select>
+                        </div>
+                        <div class="col-xs-6">
+                          <label>AGE:</label>
+                          <input type="text" class="form-control">
+                        </div>
                       </div>
+                    </div>
+                  </div>
 
-                      <div class="col-xs-6">
-                        <label>OCCUPATION:</label>
-                        <input type="text" class="form-control">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>BIRTHDAY:</label>
+                          <div class="input-group date">
+                            <div class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" id="emp_birthdate">
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                        <div class="col-xs-6">
+                          <label>CONTACT NUMBER:</label>
+                          <input type="text" class="form-control">
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary pull right" data-dismiss="modal">Save Changes</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary pull-left"  data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Save Changes</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="modal fade" id="EmployeeConsultation" role="dialog" >
+      <div class="modal-dialog modal-md" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title"><i class="fa fa-plus-square"></i> Consultation</h3>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-1">
+                          <label style="margin-top: 40%">DATE:</label>
+                        </div>
+                        <div class="col-xs-11">
+                          <div class="input-group date">
+                            <div class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" id="emp_date_consult">
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>COMPLAINT / AILMENTS:</label>
+                          <textarea class="form-control" rows="3" style="width: 212%;"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>TREATMENT / MEDICINE:</label>
+                          <textarea class="form-control" rows="3" style="width: 212%;"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>REMARKS:</label>
+                          <textarea class="form-control" rows="3" style="width: 212%;"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-warning pull-right" data-dismiss="modal">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- /MODALS -->  `
 </div>
 <?php include 'layout_footer.php';?>
