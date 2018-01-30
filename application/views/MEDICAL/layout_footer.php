@@ -104,8 +104,10 @@
 
 <script>
   $(function () {
-    $('#list').DataTable()
-    $('#recordsBox').DataTable()
+    $('#list1').DataTable()
+    $('#recordsBox1').DataTable()
+    $('#list2').DataTable()
+    $('#recordsBox2').DataTable()
   })
 </script>
 
@@ -114,5 +116,6 @@
       autoclose: true
     })
 </script>
+
 </body>
 </html>

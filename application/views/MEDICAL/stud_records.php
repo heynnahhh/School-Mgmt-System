@@ -60,7 +60,7 @@
 
             <div class="col-md-8">
               <div class="form-group">
-                <table id="recordsBox" class="table table-bordered table-striped">
+                <table id="list1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Surname:</th>
@@ -90,7 +90,7 @@
           <div class="box-body">
             <label>RECORDS:</label>
             <br>
-            <table id="recordsBox" class="table table-bordered table-striped">
+            <table id="recordsBox1" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Date:</th>
@@ -143,7 +143,7 @@
   </div>
 
   <div class="modal fade" id="AddStudent" role="dialog" >
-    <div class="modal-dialog modal-md" >
+    <div class="modal-dialog modal-lg" >
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -174,6 +174,33 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <div class="row">
+                      <div class="col-xs-6">
+                        <label>YEAR:</label>
+                        <select class="form-control">
+                          <option>Grade 7</option>
+                          <option>Grade 8</option>
+                          <option>Grade 9</option>
+                          <option>Grade 10</option>
+                          <option>Grade 11</option>
+                          <option>Grade 12</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6">
+                        <label>SECTION:</label>
+                        <select class="form-control">
+                          <option>Acacia</option>
+                          <option>Narra</option>
+                          <option>Balete</option>
+                          <option>Bamboo</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="row">
                       <div class="col-xs-3">
                         <label>AGE:</label>
                         <input type="text" class="form-control">
@@ -195,9 +222,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="col-md-12">
+                <div class="col-md-12">
                   <div class="form-group">
                     <div class="row">
                       <div class="col-xs-6">
@@ -234,6 +260,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-primary pull right" data-dismiss="modal">Save Changes</button>
           </div>
+        </div>
       </div>
     </div>
   </div>

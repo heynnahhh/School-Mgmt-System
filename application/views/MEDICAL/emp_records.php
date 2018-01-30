@@ -42,7 +42,6 @@
                     <option>Filipino</option>
                     <option>TLE-Vocational</option>
                     <option>TLE-Home Economics</option>
-                    <option>Non-Teaching</option>
                     <option>Library Science</option>
                   </select>
                 </div>
@@ -50,7 +49,7 @@
             </div>
             <div class="col-md-8">
               <div class="form-group">
-                <table id="recordsBox" class="table table-bordered table-striped">
+                <table id="list2" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Surname:</th>
@@ -80,7 +79,7 @@
           <div class="box-body">
             <label>RECORDS:</label>
             <br>
-            <table id="recordsBox" class="table table-bordered table-striped">
+            <table id="recordsBox2" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Date:</th>
@@ -133,7 +132,7 @@
   </div>
 
   <div class="modal fade" id="AddEmployee" role="dialog" >
-    <div class="modal-dialog modal-md" >
+    <div class="modal-dialog modal-lg" >
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -165,10 +164,26 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-xs-3">
+                        <label>DEPARTMENT:</label>
+                        <select class="form-control">
+                          <option>Non-Teaching</option>
+                          <option>Science</option>
+                          <option>MAPEH</option>
+                          <option>Values Education</option>
+                          <option>Mathematics</option>
+                          <option>English</option>
+                          <option>Social Studies</option>
+                          <option>Filipino</option>
+                          <option>TLE-Vocational</option>
+                          <option>TLE-Home Economics</option>
+                          <option>Library Science</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-3">
                         <label>AGE:</label>
                         <input type="text" class="form-control">
                       </div>
-                      <div class="col-xs-5">
+                      <div class="col-xs-3">
                         <label>BIRTHDAY:</label>
                         <div class="input-group date">
                           <div class="input-group-addon">
@@ -178,16 +193,15 @@
                         </div>
                         <!-- /.input group -->
                       </div>
-                      <div class="col-xs-4">
+                      <div class="col-xs-3">
                         <label>TELEPHONE:</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="col-md-12">
+                <div class="col-md-12">
                   <div class="form-group">
                     <div class="row">
                       <div class="col-xs-6">
@@ -224,6 +238,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-primary pull right" data-dismiss="modal">Save Changes</button>
           </div>
+        </div>
       </div>
     </div>
   </div>
