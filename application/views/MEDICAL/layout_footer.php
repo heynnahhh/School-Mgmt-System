@@ -99,12 +99,31 @@
 <!-- DataTables -->
 <script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- date-range-picker -->
+<script src="<?php echo base_url();?>includes/plugins/datepicker/bootstrap-datepicker.js"></script>
 
 <script>
   $(function () {
-    $('#list').DataTable()
-    $('#recordsBox').DataTable()
+    $('#emp_records').DataTable()
+    $('#stud_records').DataTable()
+    $('#emp_list').DataTable()
+    $('#stud_list').DataTable()
   })
+</script>
+
+<script>
+  $('#stud_date_consult').datepicker({
+      autoclose: true
+    })
+  $('#emp_date_consult').datepicker({
+      autoclose: true
+    })
+  $('#stud_birthdate').datepicker({
+      autoclose: true
+    })
+  $('#emp_birthdate').datepicker({
+      autoclose: true
+    })
 </script>
 
 </body>
