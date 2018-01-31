@@ -86,30 +86,14 @@
 
 <!-- jQuery 2.2.3 -->
 <script src="<?php echo base_url();?>includes/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="<?php echo base_url();?>includes/plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url();?>includes/bootstrap/js/bootstrap.min.js"></script>
-<!-- FastClick -->
-<script src="<?php echo base_url();?>includes/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>includes/dist/js/app.min.js"></script>
-<!-- SlimScroll 1.3.0 -->
+<!-- Slimscroll -->
 <script src="<?php echo base_url();?>includes/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url();?>includes/dist/js/demo.js"></script>
-<!-- InputMask -->
-<script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-   Both of these plugins are recommended to enhance the
-   user experience. Slimscroll is required when using the
-   fixed layout. -->
-<script>
-$(function () {
-  //Datemask2 mm/dd/yyyy
-  $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
-});
-</script>
+<!-- dateTime -->
+<script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
+
 </body>
 </html>

@@ -1,4 +1,8 @@
 @import url('../../fonts/css/font-google.css');
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../../fonts/CenturyGothicRegular.ttf');
+}
 /*!
  *   AdminLTE v2.3.8
  *   Author: Almsaeed Studio
@@ -19,7 +23,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Century Gothic';
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -162,7 +166,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Century Gothic';
 }
 /* General Links */
 a {
@@ -294,7 +298,7 @@ a:focus {
   line-height: 50px;
   text-align: center;
   width: 230px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Century Gothic';
   padding: 0 15px;
   font-weight: 300;
   overflow: hidden;
@@ -1744,6 +1748,7 @@ a:focus {
   display: block;
   padding: 10px;
   position: relative;
+  border-radius: 3px 3px 0px 0px;
 }
 .box-header.with-border {
   border-bottom: 1px solid #f4f4f4;
@@ -1756,7 +1761,7 @@ a:focus {
 .box-header > .ion,
 .box-header .box-title {
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   line-height: 1;
 }
@@ -2199,7 +2204,7 @@ a:focus {
  * -----------------
  */
 .btn {
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid transparent;
@@ -4475,6 +4480,10 @@ table.text-center th {
 .bg-maroon {
   background-color: #d81b60 !important;
 }
+.bg-lime-opaque {
+  background-color: rgba(1,255,112,0.63) !important;
+}
+
 .bg-gray-active {
   color: #000;
   background-color: #b5bbc8 !important;
