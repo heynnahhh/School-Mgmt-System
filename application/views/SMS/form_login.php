@@ -13,7 +13,10 @@
 <body>
     <div class="container">
       <div class="container-left">
-        <div class="header">Sign In</div>
+        <div class="header">
+          <img src="<?php echo base_url();?>includes/dist/img/login/ght-logo.png" style="margin-left:-65px;">
+          <h6 class="body-title">&middot; School Management System&middot;</h6>
+        </div>
         <div class="info">
             <p><?php
               if(!empty($success_msg)){
@@ -38,7 +41,10 @@
       </div>
       <div class="container-right">
         <div class="container-body">
-          <h3 class="body-title">GHawTech</h3>
+          <!-- <div class="body-head">
+            <h3 class="body-title">Welcome to</h3>
+            <img src="<?php echo base_url();?>includes/dist/img/login/ght-logo-white.png">
+          </div> -->
         </div>
       </div>
     </div>

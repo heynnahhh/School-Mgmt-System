@@ -20,12 +20,6 @@
     <section class="content">
     <!-- All stocks -->
       <div class="row" id="all_stock">
-        <div class="col-xs-12">
-          <p>
-            <button type="button" class="btn bg-purple" onclick="showDepartments()"><i class="fa fa-refresh"> Departamental Distributions</i></button>
-          </p>
-        </div>
-        <br><br>
         <div class="col-xs-4" id="form" style="display:none;">
           <div class="box box-success">
             <div class="box-header">
@@ -73,180 +67,61 @@
         </div>
         <div class="col-xs-12" id="table">
           <div class="box box-solid">
-            <div class="box-body">
-              <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-              <thead>
-                  <tr>
-                      <th>Stock No.</th>
-                      <th>Item Name</th>
-                      <th>Category</th>
-                      <th>Available Quantity</th>
-                      <th>Manage</th>
-                  </tr>
-              </thead>
-              <tfoot>
-                  <tr>
-                      <th>Stock No.</th>
-                      <th>Item Name</th>
-                      <th>Category</th>
-                      <th>Available Quantity</th>
-                      <th>Manage</th>
-                  </tr>
-              </tfoot>
-              <!-- <tbody>
-                  <tr>
-                      <td>Zorita Serrano</td>
-                      <td>Software Engineer</td>
-                      <td>San Francisco</td>
-                      <td>
-                        <button type="button" class="btn bg-green" id="myBtn">Distribute</button>
-                        <button type="button" class="btn bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
-                        <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>
-                      </td>
-                  </tr>
-              </tbody> -->
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    <!-- Departments Stock -->
-      <div class="row" id="departments_stock" style="display:none;">
-        <div class="col-xs-12">
-          <p>
-            <button type="button" class="btn btn-info" onclick="showAll()"><i class="fa fa-arrow-circle-left"> Back</i></button>
-          </p>
-        </div>
-        <br><br>
-        <div class="col-xs-4">
-          <div class="col-md-6">
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-blue" style="width:150px;" onclick="showDepartments()">Senior High</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-maroon" style="width:150px;" onclick="showDepartments()">Math</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-yellow" style="width:150px;" onclick="showDepartments()">English</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-purple" style="width:150px;" onclick="showDepartments()">MAPEH</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg btn-github" style="width:150px;" onclick="showDepartments()">TLE-HE</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg btn-twitter" style="width:150px;" onclick="showDepartments()">Non-Teachings</button>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-red" style="width:150px;" onclick="showDepartments()">Science</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-green" style="width:150px;" onclick="showDepartments()">Social Studies</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-orange" style="width:150px;" onclick="showDepartments()">Filipino</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-olive" style="width:150px;" onclick="showDepartments()">Values Ed</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg bg-navy" style="width:150px;" onclick="showDepartments()">TLE-Voc</button>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-lg btn-foursquare" style="width:150px;" onclick="showDepartments()">Library</button>
-              </div>
-          </div>
-        </div>
-        <div class="col-xs-8">
-          <div class="box box-solid" id="table2">
-            <div class="box-body">
-              <table id="example1" class="table table-striped table-bordered" cellspacing="0" width="100%">
-              <thead>
-                  <tr>
-                      <th>Item Name</th>
-                      <th>Category</th>
-                      <th>Available Quantity</th>
-                      <th>Manage</th>
-                  </tr>
-              </thead>
-              <tfoot>
-                  <tr>
-                      <th>Item Name</th>
-                      <th>Category</th>
-                      <th>Available Quantity</th>
-                      <th>Manage</th>
-                  </tr>
-              </tfoot>
-              <tbody>
-                  <tr>
-                      <td>Zorita Serrano</td>
-                      <td>Software Engineer</td>
-                      <td>San Francisco</td>
-                      <td>
-                        <button type="button" class="btn bg-green" id="add" onclick="add()"><i class="fa fa-plus-circle"></i></button>
-                        <button type="button" class="btn bg-blue" id="edit" onclick="edit2()"><i class="fa fa-edit"></i></button>
-                        <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>
-                      </td>
-                  </tr>
-              </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="box box-success" id="form2" style="display:none;">
             <div class="box-header">
-              <h4 class="box-title">Add Stock</h4>
+              <h4 class="box-title">Inventory</h4>
+              <div class="btn-group" style="margin-left:20px;">
+                <button type="button" class="btn bg-blue">Filter by Department</button>
+                <button type="button" class="btn bg-blue dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#" onclick="showDepartments()">Inventory</a><li>
+                  <li><a href="#" onclick="showDepartments()">Senior High</a><li>
+                  <li><a href="#" onclick="showDepartments()">Math</a><li>
+                  <li><a href="#" onclick="showDepartments()">English</a><li>
+                  <li><a href="#" onclick="showDepartments()">MAPEH</a><li>
+                  <li><a href="#" onclick="showDepartments()">TLE-HE</a><li>
+                  <li><a href="#" onclick="showDepartments()">Non-Teachings</a><li>
+                  <li><a href="#" onclick="showDepartments()">Science</a><li>
+                  <li><a href="#" onclick="showDepartments()">Social Studies</a><li>
+                  <li><a href="#" onclick="showDepartments()">Filipino</a><li>
+                  <li><a href="#" onclick="showDepartments()">Values Ed</a><li>
+                  <li><a href="#" onclick="showDepartments()">TLE-Voc</a><li>
+                  <li><a href="#" onclick="showDepartments()">Library</a><li>
+                </ul>
+              </div>
             </div>
             <div class="box-body">
-              <form>
-              <div class="row">
-                <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
-                  <div class="col-sm-7">
-                    <input type="search" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
-                  </div>
-                </div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Category</label>
-                  <div class="col-sm-7">
-                    <select class="form-control select2" data-placeholder="Select" style="width: 100%;">
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                </div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Quantity</label>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
-                  </div>
-                </div>
-              </div>
-              <div class="box-footer">
-                <button type="button" class="btn btn-sm bg-gray" onclick="cancel2()">Cancel</button>
-              </div>
-            </form>
+              <table id="stock_tbl" class="table table-striped table-bordered" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                      <th>Stock No.</th>
+                      <th>Item Name</th>
+                      <th>Category</th>
+                      <th>Available Quantity</th>
+                      <th>Manage</th>
+                  </tr>
+              </thead>
+              <tfoot>
+                  <tr>
+                      <th>Stock No.</th>
+                      <th>Item Name</th>
+                      <th>Category</th>
+                      <th>Available Quantity</th>
+                      <th>Manage</th>
+                  </tr>
+              </tfoot>
+              </table>
             </div>
           </div>
         </div>
+
       </div>
+
     </section>
 
   <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header gray">

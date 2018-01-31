@@ -19,13 +19,6 @@
   <!-- Main Content -->
     <section class="content">
       <div class="row">
-        <div class="col-xs-12">
-          <p>
-            <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"> New Transaction</i></button>
-            <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"> Import Data From Excel</i></button>
-          </p>
-        </div>
-        <br><br>
         <div class="col-xs-4" id="form" style="display:none;">
           <div class="box box-primary">
             <div class="box-header">
@@ -96,47 +89,34 @@
         </div>
         <div class="col-xs-12" id="table">
           <div class="box box-solid">
-            <div class="box-body">
-              <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <div class="box-header">
+              <h4 class="box-title"> Transact Records</h4>
+              <div class="btn-group pull-right">
+                <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Transaction</button>
+                <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>              </div>
+            </div>
+            <div class="box-body table-responsive">
+              <table id="transacts_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
               <thead>
                   <tr>
                       <th>Receipt #</th>
-                      <th>Item Code</th>
+                      <th>Item Name</th>
                       <th>Quantity</th>
-                      <th>Unit Cost</th>
                       <th>Total Cost</th>
-                      <th>Receiver</th>
-                      <th>Suplier</th>
+                      <th>Date Received</th>
                       <th>Manage</th>
                   </tr>
               </thead>
               <tfoot>
                   <tr>
                       <th>Receipt #</th>
-                      <th>Item Code</th>
+                      <th>Item Name</th>
                       <th>Quantity</th>
-                      <th>Unit Cost</th>
                       <th>Total Cost</th>
-                      <th>Receiver</th>
-                      <th>Suplier</th>
+                      <th>Date Received</th>
                       <th>Manage</th>
                   </tr>
               </tfoot>
-              <tbody>
-                  <tr>
-                      <td>Zorita Serrano</td>
-                      <td>Software Engineer</td>
-                      <td>San Francisco</td>
-                      <td>56</td>
-                      <td>2012/06/01</td>
-                      <td>$115,000</td>
-                      <td>$115,000</td>
-                      <td>
-                        <button type="button" class="btn bg-blue" id="myBtn" onclick="edit()"><i class="fa fa-edit"></i></button>
-                        <button type="button" class="btn bg-red" id="myBtn"><i class="fa fa-trash-o"></i></button>
-                      </td>
-                  </tr>
-              </tbody>
               </table>
             </div>
           </div>

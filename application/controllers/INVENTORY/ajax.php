@@ -13,8 +13,31 @@ class ajax extends CI_Controller {
 	}
 
 	public function view_stocks(){
-		$data = $this->inventory_model->get_Stocks();
-		return $data;
+		$m_data = $this->inventory_model->get_Stocks();
+		$data = array();
+
+			foreach ($m_data as $value) {
+				$row = array();
+				$row[] = '<a href="'.site_url().'/INVENTORY/home/stock_register'.$value->stock_no.'">'.$value->stock_no.'</a>';
+				$row[] = $value->item_name;
+				$row[] = $value->item_category;
+				if($value->quantity <= 0){
+					$row[] = '<span class="badge bg-red">Out of Stock</span>';
+				}
+				elseif($value->quantity > 0 ){
+					$row[] = $value->quantity;
+				}
+				$row[] = '<button type="button" class="btn bg-green" id="myBtn">Distribute</button>
+				          <button type="button" class="btn bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
+				          <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>';
+				$data[] = $row;
+			}
+
+			$result = array(
+				"data" => $data,
+			);
+
+		echo json_encode($result);
 	}
 
 	public function view_products(){
@@ -25,10 +48,36 @@ class ajax extends CI_Controller {
 				$row = array();
 				$row[] = '<a href="'.site_url().'/INVENTORY/home/stock_register'.$value->item_code.'">'.$value->item_code.'</a>';
 				$row[] = $value->item_name;
-				$row[] = $value->item_desc;
 				$row[] = $value->item_category;
-				$row[] = $value->product_status;
-				$row[] = $value->unit_cost;
+				if($value->product_status == 'Inactive'){
+					$row[] = '<span class="badge bg-red">Inactive</span>';
+				}
+				elseif($value->product_status == 'Active'){
+					$row[] = '<span class="badge bg-green">Active</span>';
+				}
+				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>';
+				$data[] = $row;
+			}
+
+			$result = array(
+				"data" => $data,
+			);
+
+		echo json_encode($result);
+
+	}
+
+	public function view_transacts(){
+		$m_data = $this->inventory_model->get_Transacts();
+		$data = array();
+
+			foreach ($m_data as $value) {
+				$row = array();
+				$row[] = '<a href="'.site_url().'/INVENTORY/home/stock_register'.$value->receipt_no.'">'.$value->receipt_no.'</a>';
+				$row[] = $value->item_name;
+				$row[] = $value->quantity;
+				$row[] = $value->total_cost;
+				$row[] = $value->date_received;
 				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}

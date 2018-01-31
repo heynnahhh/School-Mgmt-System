@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../../fonts/CenturyGothicRegular.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +44,7 @@ body {
   height: 520px;
   margin-left: auto;
   margin-right: auto;
-  background: #ecf0f1;
+  background: #fff;
   -webkit-box-shadow: 0px 0px 114px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 114px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
@@ -75,13 +80,25 @@ body {
   position: relative;
 }
 
+.body-head{
+  margin-top: 100px;
+  text-align: center;
+  padding: 5px;
+  width: 700px;
+  height: 85px;
+}
+
 .body-title{
-  color: #fff;
-  font-size: 42px;
-  font-family: 'Roboto', sans-serif;
+  color: #808080;
+  font-size: 16px;
+  font-family: 'Century Gothic';
   font-weight: lighter;
   text-align: center;
-  margin-top: 250px;
+  margin-top: -30px;
+  /*margin-left: -20px;*/
+  letter-spacing: 0.1em;
+  /*border-bottom: solid 1px;*/
+  width: 300px;
 }
 
 .svg_form {
@@ -150,7 +167,7 @@ input[type=submit] {
   width: 200px;
   height: 43px;
   border: 1px solid #fff;
-  background: #e67c80;
+  background: #7f0d8e;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 16px;
@@ -161,8 +178,8 @@ input[type=submit] {
   cursor: pointer;
 }
 input[type=submit]:hover {
-  color: #f3756a;
-  background: #fff;
+  color: #fff;
+  background: #53095d;
 }
 input[type=submit]:focus {
   outline-width: 0;
@@ -174,8 +191,8 @@ input[type=submit]:focus {
   font-family: 'Roboto', sans-serif;
   color: #f3756a;
   font-size: 48px;
-  margin-left: 75px;
-  margin-top: 50px;
+  /*margin-left: -65px;*/
+  margin-top: 60px;
 }
 
 .info {
@@ -226,7 +243,7 @@ input[type=submit]:focus {
     left: 5%;
     position: absolute;
   }
-  
+
   .form{
       width: 200px;
       margin-left: -60px;
