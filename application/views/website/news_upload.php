@@ -10,6 +10,7 @@
       <ol class="breadcrumb">
         <li>MAIN NAVIGATION</li>
         <li><a href="<?php echo site_url();?>/LRMDS/home"><i class="fa fa-book"></i>WEBSITE</a></li>
+        <li>Manage Content</li>
         <li>Pages</li>
         <li class="active">Home</li>
       </ol>

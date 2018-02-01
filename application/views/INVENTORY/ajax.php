@@ -1,4 +1,6 @@
 <script>
+var viewStocks = "<?php echo site_url()?>/INVENTORY/ajax/view_stocks";
+
 $(document).ready(function() {
 
     $('.sel_category').select2();
@@ -41,9 +43,14 @@ $(document).ready(function() {
               }
 		  } );
 
+    // $('#stock_tbl').find('tbody').append(
+
+    //   );
+
+
     $('#stock_tbl').DataTable(
       {
-        "ajax": '<?=site_url()?>/INVENTORY/ajax/view_stocks',
+        "ajax":viewStocks,
       	"paging": true,
       	"autoWidth": false,
         "columnDefs":[
@@ -89,7 +96,7 @@ $(document).ready(function() {
 		  }
     );
 
-    $("#myBtn").click(function(){
+    $("#myBtn").on("click", function(){
         $("#myModal").modal();
     });
 
