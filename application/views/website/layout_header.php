@@ -200,10 +200,10 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-globe"></i> <span>LEARNING RESOURCE</span>
+            <i class="fa fa-globe"></i> <span>Learning Resource</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -250,7 +250,7 @@ desired effect
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-database"></i> <span>INVENTORY</span>
+            <i class="fa fa-database"></i> <span>Inventory</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -259,7 +259,9 @@ desired effect
             <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
             <li><a href="<?php echo site_url();?>/INVENTORY/home/compose_email"><i class="fa fa-circle-o"></i> Compose E-mail</a></li>
-            <li><a href="<?php echo site_url();?>/INVENTORY/home/formulate_app"><i class="fa fa-circle-o"></i> Formulate APP</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home/transactions"><i class="fa fa-circle-o"></i> Transactions</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home/inventory_items"><i class="fa fa-circle-o"></i> Inventory Items</a></li>
+            <li><a href="<?php echo site_url();?>/INVENTORY/home/stock_register"><i class="fa fa-circle-o"></i> Stock Register</a></li>
             <li>
               <a href="<?php echo site_url();?>/INVENTORY/home/manage_records"><i class="fa fa-circle-o"></i> Manage Record(s)
                 <span class="pull-right-container">
@@ -292,7 +294,7 @@ desired effect
         </li>
         <li class="treeview active">
           <a href="#">
-            <i class="fa fa-globe"></i> <span>WEBSITE</span>
+            <i class="fa fa-globe"></i> <span>Website</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -329,7 +331,7 @@ desired effect
         </li>
          <li class="treeview">
         <a href="#">
-          <i class="fa fa-plus-square"></i> <span>MEDICAL</span>
+          <i class="fa fa-plus-square"></i> <span>Medical</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -352,7 +354,7 @@ desired effect
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-plus-square"></i> <span>DENTAL</span>
+          <i class="fa fa-plus-square"></i> <span>Dental</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -366,8 +368,8 @@ desired effect
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Students</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Teachers/Staff</a></li>
+              <li><a href="<?php echo site_url('MEDICAL/home/student');?>"><i class="fa fa-circle-o"></i> Students</a></li>
+              <li><a href="<?php echo site_url('MEDICAL/home/employees');?>"><i class="fa fa-circle-o"></i> Teacher/Staff</a></li>
             </ul>
           </li>
         </ul>

@@ -9,7 +9,7 @@
         Dashboard
       </h1>
       <ol class="breadcrumb">
-        <li>GHawTech&trade;</a></li>
+        <li>MAIN NAVIGATION</a></li>
         <li><a><i class="fa fa-dashboard"></i>DASHBOARD</a></li>
       </ol>
     </section>

@@ -10,6 +10,7 @@
     </h1>
     <hr>
     <ol class="breadcrumb">
+      <li>MAIN NAVIGATION</li>
       <li><a><i class="fa fa-plus-square"></i></a>MEDICAL</li>
       <li><a>Patients Record</a></li>
       <li><a>Students</a></li>
