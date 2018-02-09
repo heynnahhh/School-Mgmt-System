@@ -24,7 +24,7 @@
             <div class="box-header bg-lime-opaque">
               <div class="box-title text-green"><i class="fa fa-plus-circle"></i> Add Item</div>
               <div class="btn-group pull-right">
-                <button type="button" class="btn btn-sm bg-olive" id="myBtn">Add Category</button>
+                <a type="button" class="btn btn-sm bg-olive" id="myBtn" href="#add_category">Add Category</a>
               </div>
             </div>
             <div class="box-body">
@@ -41,14 +41,10 @@
                   <div class="form-group">
                   	<label for="field-1" class="col-sm-2 control-label">Category</label>
         						<div class="col-sm-8">
-                      <select class="sel_category" style="width: 100%;">
-                        <option selected="selected">Alabama</option>
-                        <option>Alaska</option>
-                        <option>California</option>
-                        <option>Delaware</option>
-                        <option>Tennessee</option>
-                        <option>Texas</option>
-                        <option>Washington</option>
+                      <select class="sel_category" id="sel_category" style="width: 100%;">
+                        <?php foreach ($categories as $category){?>
+                          <option><?php echo $category->category?></option>
+                        <?php };?>
                       </select>
                     </div>
                   </div>
@@ -77,7 +73,8 @@
                     </div>
                   </div>
                 </div><hr>
-                <button type="button" class="btn btn-sm bg-gray">Cancel</button>
+                <button type="submit" class="btn btn-sm btn-success submit">Save</button>
+                <button type="button" class="btn btn-sm bg-gray" href="<?php site_url()?>INVENTORY/ajax/add_category">Cancel</button>
               </form>
             </div>
           </div>
@@ -120,67 +117,24 @@
         <div class="modal-content">
           <div class="modal-header gray">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"> Add Item</i></h4>
+            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"> Add Category</i></h4>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="row">
-                <div class="form-group">
-                	<label for="field-1" class="col-sm-2 control-label">Item Code</label>
-      						<div class="col-sm-5">
-      							<input type="text" class="form-control input-sm" name="item_code" data-validate="required" data-message-required="Value Required" value="" autofocus="">
-      						</div>
-      					</div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                	<label for="field-2" class="col-sm-2 control-label">Category</label>
-      						<div class="col-sm-7">
-                    <select class="sel_category" name="item_category" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-2">
-                    <button type="button" class="btn bg-grey" id="myBtn">Add Category</button>
-      						</div>
+          <form method="post" enctype="multipart/form-data">
+            <div class="modal-body">
+                <div class="row">
+                  <div class="form-group">
+                  	<label for="category" class="col-sm-2 control-label">Category</label>
+        						<div class="col-sm-5">
+        							<input type="text" class="form-control input-sm" name="category" id="category" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        						</div>
+        					</div>
                 </div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                	<label for="field-3" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
-      						<div class="col-sm-8">
-      							<input type="text" class="form-control input-sm" name="item_name" data-validate="required" data-message-required="Value Required" value="" autofocus="">
-      						</div>
-      					</div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                  <label for="field-4" class="col-sm-2 control-label">Description</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control input-sm" name="item_desc" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
-                  </div>
-                </div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Unit Cost</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="unit_cost" data-validate="required" data-message-required="Value Required" value="" autofocus="">
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-success">Save</button>
-            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-sm btn-success submit">Save</button>
+              <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->

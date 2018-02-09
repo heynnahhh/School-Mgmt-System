@@ -90,10 +90,18 @@ class ajax extends CI_Controller {
 
 	}
 
-	public function get_category(){
-	    $data = $this->inventory_model->get_category();
-	    return $data;
-    }
+	public function add_category(){
+		if($data = $this->input->post()){
+
+				$m_data = array(
+					'category' => $data['category']
+				);
+
+				$this->inventory_model->insert_category($m_data);
+				print_r($m_data);
+			
+		}
+	}
 
 	public function add_product(){
 		if($data = $this->input->post()){

@@ -3004,6 +3004,7 @@ table.text-center th {
 }
 .modal-header {
   border-bottom-color: #f4f4f4;
+  border-radius: 4px 4px 0px 0px;
 }
 .modal-footer {
   border-top-color: #f4f4f4;

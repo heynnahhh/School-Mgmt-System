@@ -1,11 +1,32 @@
 <script>
+var stocksUrl = '<?=site_url()?>/INVENTORY/ajax/view_stocks';
+var itemsUrl = '<?=site_url()?>/INVENTORY/ajax/view_products';
+var transactsUrl = '<?=site_url()?>/INVENTORY/ajax/view_transacts';
+var addUrl = <?php $this->uri->segment(3); ?>
+
 $(document).ready(function() {
 
-    $('.sel_category').select2();
+  $(".submit").on('click', function (e) {
+    e.preventDefault();
+    var category = $("input#category").val();
+
+    $.ajax({
+      type: "POST",
+      url: '<?=site_url()?>/INVENTORY/ajax/add_' + addUrl[1],
+      data: {category: category},
+      success: function(data) {
+        $("#myModal").modal('hide');
+        alert("successfully saved!");
+        location.reload();
+          // $('.sel_category').append("<option>" + data.category + "</option>");
+      }
+    });
+
+  });
 
     $('#items_tbl').DataTable(
       {
-        "ajax": '<?=site_url()?>/INVENTORY/ajax/view_products',
+        "ajax": itemsUrl,
       	"paging": true,
       	"autoWidth": false,
         "columnDefs":[
@@ -24,7 +45,7 @@ $(document).ready(function() {
 
     $('#transacts_tbl').DataTable(
       {
-        "ajax": '<?=site_url()?>/INVENTORY/ajax/view_transacts',
+        "ajax": transactsUrl,
       	"paging": true,
       	"autoWidth": false,
         "columnDefs":[
@@ -43,7 +64,7 @@ $(document).ready(function() {
 
     $('#stock_tbl').DataTable(
       {
-        "ajax": '<?=site_url()?>/INVENTORY/ajax/view_stocks',
+        "ajax": stocksUrl,
       	"paging": true,
       	"autoWidth": false,
         "columnDefs":[
@@ -60,51 +81,17 @@ $(document).ready(function() {
               }
 		  } );
 
-    $('#example').DataTable(
-      {
-        "paging": true,
-        "autoWidth": true,
-        "tableTools": {
-           "aButtons": [ "copy", "print", {
-                 "sExtends": "collection",
-                   "sButtonText": "Save",
-                    "aButtons": [ "csv", "xls", "pdf" ]
-                  }
-                ]
-              }
-      } );
-
-    $('#example1').DataTable(
-      {
-      	"paging": true,
-      	"autoWidth": true,
-      	"buttons": [
-      		'colvis',
-      		'copyHtml5',
-          'csvHtml5',
-      		'excelHtml5',
-          'pdfHtml5',
-      		'print'
-      	]
-		  }
-    );
-
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
+    $(document).on('click', '#myBtn', function(){
+      $("#myModal").modal();
     });
 
+    $('#myModal').on('hidden.bs.modal', function () {
+      $(this).find('input,textarea,select').val('');
+    });
+
+    $('.sel_category').select2();
+
 } );
-
-function showDepartments(){
-  $('#departments_stock').show();
-  $('#all_stock').hide();
-}
-
-function showAll(){
-  $('#departments_stock').hide();
-  $('#all_stock').show();
-  cancel2();
-}
 
 function add(){
   $('#table2').hide();
@@ -117,24 +104,12 @@ function edit(){
   $('#form').show();
 }
 
-function edit2(){
-  $('#table2').hide();
-  $('#form2').show();
-}
-
 
 function cancel(){
   $('#table').removeClass('col-xs-8');
   $('#table').addClass('col-xs-12');
   $('#form').hide();
 }
-
-function cancel2(){
-  $('#table2').show();
-  $('#form2').hide();
-}
-
-
 
 
 </script>
