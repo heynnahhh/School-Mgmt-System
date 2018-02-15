@@ -62,6 +62,11 @@ $(document).ready(function() {
               }
 		  } );
 
+    // $('#stock_tbl').find('tbody').append(
+
+    //   );
+
+
     $('#stock_tbl').DataTable(
       {
         "ajax": stocksUrl,

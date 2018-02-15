@@ -93,7 +93,8 @@
               <h4 class="box-title"> Transact Records</h4>
               <div class="btn-group pull-right">
                 <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Transaction</button>
-                <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>              </div>
+                <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>              
+              </div>
             </div>
             <div class="box-body table-responsive">
               <table id="transacts_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">

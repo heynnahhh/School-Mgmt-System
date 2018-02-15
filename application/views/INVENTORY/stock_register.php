@@ -109,6 +109,8 @@
                       <th>Manage</th>
                   </tr>
               </tfoot>
+              <tbody>
+              </tbody>
               </table>
             </div>
           </div>

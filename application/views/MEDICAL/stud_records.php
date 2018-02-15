@@ -10,6 +10,7 @@
     </h1>
     <hr>
     <ol class="breadcrumb">
+      <li>MAIN NAVIGATION</li>
       <li><a><i class="fa fa-plus-square"></i></a>MEDICAL</li>
       <li><a>Patients Record</a></li>
       <li><a>Students</a></li>
@@ -90,7 +91,7 @@
           <div class="box-body">
             <div class="form-group">
                 <label> RECORDS:</label>&nbsp;&nbsp;
-                <a href="#" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#StudentConsultation">
+                <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#StudentConsultation">
                 <i class="fa fa-plus-square"> Add Consultation</i></a>
             </div>
             <hr>
@@ -263,7 +264,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary pull right" data-dismiss="modal">Save Changes</button>
+              <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Save Changes</button>
+              <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>
@@ -339,8 +341,8 @@
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-warning pull-right" data-dismiss="modal">Save Changes</button>
+              <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Save Changes</button>
             </div>
           </div>
         </div>
