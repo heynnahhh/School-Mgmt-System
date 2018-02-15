@@ -12,13 +12,12 @@ $(document).ready(function() {
 
     $.ajax({
       type: "POST",
-      url: '<?=site_url()?>/INVENTORY/ajax/add_' + addUrl[1],
-      data: {category: category},
+      url: '<?=site_url()?>/INVENTORY/ajax/add',
+      data: {category: category, 'add':'category'},
       success: function(data) {
         $("#myModal").modal('hide');
         alert("successfully saved!");
         location.reload();
-          // $('.sel_category').append("<option>" + data.category + "</option>");
       }
     });
 
@@ -61,10 +60,6 @@ $(document).ready(function() {
                 ]
               }
 		  } );
-
-    // $('#stock_tbl').find('tbody').append(
-
-    //   );
 
 
     $('#stock_tbl').DataTable(

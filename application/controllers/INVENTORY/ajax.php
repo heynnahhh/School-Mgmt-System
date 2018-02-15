@@ -90,8 +90,16 @@ class ajax extends CI_Controller {
 
 	}
 
-	public function add_category(){
-		if($data = $this->input->post()){
+	public function add(){
+		$data = $this->input->post();
+		if($data['add'] == 'category'){
+			unset($data['add']);
+			$this->add_category($data);
+		}
+	}
+
+	private function add_category($data){
+		if($data){
 
 				$m_data = array(
 					'category' => $data['category']
