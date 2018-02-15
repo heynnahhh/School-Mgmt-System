@@ -64,26 +64,6 @@
 								<span>No one rejects, dislikes, or avoids pleasure itself, because it is
 								pleasure, but because those who do not know how to pursue pleasure
 								rationally encounter consequences that are extremely painful.</span></p>
-
-							<div class="tags">
-								<h4>Tags</h4>
-								<ul>
-									<li><a href="single.html">Themes</a></li>
-									<li><a href="single.html">Art</a></li>
-									<li><a href="single.html">Music</a></li>
-									<li><a href="single.html">Entertainment</a></li>
-									<li><a href="single.html">New</a></li>
-									<li><a href="single.html">Design</a></li>
-									<li><a href="single.html">Books</a></li>
-									<li><a href="single.html">Themes</a></li>
-									<li><a href="single.html">Art</a></li>
-									<li><a href="single.html">Music</a></li>
-									<li><a href="single.html">Entertainment</a></li>
-									<li><a href="single.html">New</a></li>
-									<li><a href="single.html">Design</a></li>
-									<li><a href="single.html">Books</a></li>
-								</ul>
-							</div>
 						</div>
 						<div class="col-md-4 banner-bottom-grid">
 							<h3>Latest Projects For <span>Kids</span></h3>
@@ -179,11 +159,6 @@
 							<h3>What's <span>New</span></h3>
 							<div class="banner-bottom-grid-fig">
 								<div class="banner-bottom-grid-fig1">
-									<img src="<?php echo base_url();?>includes/lr/images/4.jpg" alt=" " class="img-responsive" />
-									<div class="banner-bottom-grid-fig1-pos">
-										<a href="single.html">At vero eos et accusamus et iusto odio dignissimos ducimus</a>
-										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 20, 2016 By <a href="single.html">Andrew Smith</a></p>
-									</div>
 								</div>
 								<div class="banner-bottom-grid-fig-grid">
 									<div class="banner-bottom-grid-fig-grid1">

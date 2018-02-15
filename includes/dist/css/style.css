@@ -21,7 +21,7 @@ body {
 }
 
 .statusMsg{
-  margin-left: -50px;
+  margin-left: 20px;
 }
 
 .svg_bg {
@@ -197,12 +197,11 @@ input[type=submit]:focus {
 
 .info {
   position: absolute;
-  email-align: center;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #7d8c7d;
   font-size: 14px;
-  margin-left: 75px;
-  margin-top: 140px;
+  margin-top: 150px;
 }
 
 /* responsive:

@@ -28,10 +28,10 @@
         </div>
         <div class="form">
           <form action="<?php echo site_url('SMS/home/login');?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-              <input id='username' autocomplete="off" class='email' onfocus="handle2()" class='inc2' type="email" name="email" placeholder='Username' data-error="That email address is invalid" required="" value="">
-              <?php echo form_error('email','<span class="help-block">','</span>'); ?>
+              <input id='username' autocomplete="off" class='email' onfocus="handle2()" class='inc2' type="email" name="email" placeholder='Email' data-error="That email address is invalid" required="" value="">
+              <?php echo form_error('email','<span class="info">','</span>'); ?>
               <input id='password' class='pass' onfocus="handle1()" class='inc1' type="password" name="password" placeholder='Password' required="" value="">
-              <?php echo form_error('password','<span class="help-block">','</span>'); ?>
+              <?php echo form_error('password','<span class="info">','</span>'); ?>
               <input type="submit" class="button" name="loginSubmit" value="Sign in">
             <svg class="svg_form" width="300" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                  <rect id='rect' class='rect1'   x="-5px"  y="250px"   rx="27" ry="27" width="300px" height="50px" style="stroke: #000; stroke-width: 1px; fill: rgba(0,0,0,0);" />
