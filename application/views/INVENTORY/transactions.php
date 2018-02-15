@@ -130,7 +130,7 @@
         <div class="modal-content">
           <div class="modal-header gray">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"> Add Transaction</i></h4>
+            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"></i> Add Transaction</h4>
           </div>
           <div class="modal-body">
             <form>

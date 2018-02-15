@@ -7,7 +7,7 @@
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
       <!-- Optionally, you can add icons to the links -->
-      <li><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+      <li class="active"><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
       <li class="treeview">
         <a href="#">
           <i class="fa fa-globe"></i> <span>Learning Resource</span>
@@ -56,7 +56,7 @@
         </ul>
       </li>
 
-      <li class="treeview active">
+      <li class="treeview">
         <a href="#">
           <i class="fa fa-database"></i> <span>Inventory</span>
           <span class="pull-right-container">

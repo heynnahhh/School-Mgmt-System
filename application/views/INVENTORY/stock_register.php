@@ -40,13 +40,9 @@
                   <label for="field-1" class="col-sm-3 control-label">Category</label>
                   <div class="col-sm-8">
                     <select class="form-control select2" data-placeholder="Select" style="width: 100%;">
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
+                      <?php foreach ($options as $option){?>
+                        <option><?php echo $option->department?></option>
+                      <?php };?>
                     </select>
                   </div>
                 </div>
@@ -88,6 +84,8 @@
                   <li><a href="#" onclick="showDepartments()">Values Ed</a><li>
                   <li><a href="#" onclick="showDepartments()">TLE-Voc</a><li>
                   <li><a href="#" onclick="showDepartments()">Library</a><li>
+                  <li><a href="#" onclick="showDepartments()">Medical</a><li>
+                  <li><a href="#" onclick="showDepartments()">Dental</a><li>
                 </ul>
               </div>
             </div>
@@ -121,12 +119,12 @@
     </section>
 
   <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header gray">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"> Distribute</i></h4>
+            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"></i> Distribute</h4>
           </div>
           <div class="modal-body">
             <form>
@@ -143,13 +141,9 @@
                   <label for="field-1" class="col-sm-2 control-label">Department</label>
                   <div class="col-sm-7">
                     <select class="form-control select2" data-placeholder="Select" style="width: 100%;">
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
+                      <?php foreach ($options as $option){?>
+                        <option><?php echo $option->department?></option>
+                      <?php };?>
                     </select>
                   </div>
                 </div>

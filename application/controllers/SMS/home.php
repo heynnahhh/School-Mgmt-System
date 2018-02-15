@@ -8,7 +8,6 @@ class Home extends CI_Controller {
       $this->load->library('form_validation');
       $this->load->model('SMS/user');
 
-
   }
 
 	public function index()

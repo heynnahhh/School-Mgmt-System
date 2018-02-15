@@ -173,6 +173,80 @@ span.color2{
 }
 /*-- //header --*/
 
+/*Accordion*/
+.half {
+  margin-left: -50px;
+  margin-right: 0;
+  width: 800px;
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab-accordion {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.label-accordion {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #fff;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab-content-accordion {
+  max-height: 0;
+  overflow: hidden;
+  background: #ecf0f1;
+  -webkit-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.tab-content-accordion p {
+  margin: 1em;
+}
+/* :checked */
+input:checked ~ .tab-content-accordion {
+  max-height: 10em;
+}
+/* Icon */
+.label-accordion::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + .label-accordion::after {
+  content: "+";
+}
+input[type=radio] + .label-accordion::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + .label-accordion::after {
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+input[type=radio]:checked + .label-accordion::after {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+
 /********Carousel*********/
 
 .mySlides {display:none}

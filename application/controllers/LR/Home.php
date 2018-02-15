@@ -20,12 +20,20 @@ class Home extends CI_Controller {
 		$this->load->view('LR/preview');
 	}
 
+	public function subjects(){
+		$this->load->view('LR/subjects');
+	}
+
 	public function view_jhs(){
 		$this->load->view('LR/juniorhs');
 	}
 
 	public function view_shs(){
 		$this->load->view('LR/seniorhs');
+	}
+
+	public function short(){
+		$this->load->view('LR/short-codes');
 	}
 
 }
