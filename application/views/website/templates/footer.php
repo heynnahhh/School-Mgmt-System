@@ -62,9 +62,11 @@
 
 
 <script>
+
+    var appSubmit = "<?php echo base_url('index.php/website/Application/submit_form');?>"; 
+    var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>";
+
     $(function () {
-	var imgUrl = "<?php echo base_url('includes/website/images/thumbs/featured/');?>";
-    var appSubmit = "<?php echo base_url('index.php/website/Application/submit_form');?>";
 
         $('.cd-submit').prop('disabled', true);
 
