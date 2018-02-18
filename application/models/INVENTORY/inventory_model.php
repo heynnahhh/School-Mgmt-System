@@ -16,7 +16,7 @@ class Inventory_model extends CI_Model{
           return $query->result();
     }
 
-    public function get_Products(){
+    public function get_Items(){
           $this->db->select('item_code, item_name, item_desc, item_category, product_status, unit_cost');
           $query = $this->db->get('tbl_inv_items');
           return $query->result();
@@ -53,6 +53,12 @@ class Inventory_model extends CI_Model{
     public function get_category(){
         $this->db->select('category');
         $query = $this->db->get('tbl_inv_item_category');
+        return $query->result();
+    }
+
+    public function get_item_options(){
+        $this->db->select('item_name, item_code');
+        $query = $this->db->get('tbl_inv_items');
         return $query->result();
     }
 

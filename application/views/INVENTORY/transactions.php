@@ -22,10 +22,10 @@
         <div class="col-xs-4" id="form" style="display:none;">
           <div class="box box-primary">
             <div class="box-header">
-              <h4 class="box-title"><i class="fa fa-edit"> Edit</i></h4>
+              <h4 class="box-title"><i class="fa fa-edit"></i> Edit</h4>
             </div>
             <div class="box-body">
-              <form>
+              <form method="post" enctype="multipart/form-data">
                 <div class="row">
                   <div class="form-group">
                   	<label for="field-1" class="col-sm-2 control-label">Receipt #</label>
@@ -133,21 +133,25 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"></i> Add Transaction</h4>
           </div>
-          <div class="modal-body">
-            <form>
+          <form method="post" enctype="multipart/form-data">
+            <div class="modal-body">
               <div class="row">
                 <div class="form-group">
-                	<label for="field-1" class="col-sm-2 control-label">Receipt #</label>
+                	<label for="receipt_no" class="col-sm-2 control-label">Receipt #</label>
       						<div class="col-sm-5">
-      							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+      							<input type="text" class="form-control input-sm" name="receipt_no" id="receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
       						</div>
       					</div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                	<label for="field-1" class="col-sm-2 control-label">Unit</label>
+                	<label for="itr_item_code" class="col-sm-2 control-label">Unit</label>
       						<div class="col-sm-7">
-      							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <select class="sel_category" name="itr_item_code" id="item_code" style="width: 100%;">
+                      <?php foreach ($items as $item){?>
+                        <option><?php echo $item->category?></option>
+                      <?php };?>
+                    </select>
       						</div>
                 	<label for="field-1" class="col-sm-1 control-label">Qty</label>
       						<div class="col-sm-2">
@@ -191,12 +195,12 @@
                   </div>
                 </div>
               </div><hr>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-success">Save changes</button>
-            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-sm btn-success submit">Save</button>
+              <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
