@@ -41,7 +41,7 @@ class ajax extends CI_Controller {
 	}
 
 	public function view_products(){
-		$m_data = $this->inventory_model->get_Products();
+		$m_data = $this->inventory_model->get_Items();
 		$data = array();
 
 			foreach ($m_data as $value) {
@@ -90,11 +90,23 @@ class ajax extends CI_Controller {
 
 	}
 
-	public function add_category(){
-		if($data = $this->input->post()){
+	public function add(){
+		$data = $this->input->post();
+		if($data['category']){
+			unset($data['items']);
+			$this->add_category($data['category']);
+		}
+		elseif($data['items']){
+			unset($data['category']);
+			$this->add_items($data['items']);
+		}
+	}
+
+	private function add_category($data){
+		if($data){
 
 				$m_data = array(
-					'category' => $data['category']
+					'category' => $data
 				);
 
 				$this->inventory_model->insert_category($m_data);
@@ -103,24 +115,24 @@ class ajax extends CI_Controller {
 		}
 	}
 
-	public function add_product(){
-		if($data = $this->input->post()){
+	private function add_items($data){
+		if($data){
 
 			$m_data = array(
-				'product_code' => $data['product_code'],
-				'product_name' => $data['product_name'],
-				'product_desc' => $data['product_desc'],
-				'product_amount' => $data['product_amount'],
+				'item_code' => $data['item_code'],
+				'item_category' => $data['item_category'],
+				'item_name' => $data['item_name'],
+				'item_desc' => $data['item_desc'],
+				'unit_cost' => $data['unit_cost'],
 				'product_status' => 'Inactive'
 			);
 
 			$this->inventory_model->insert_product($m_data);
 		}
 
-		$this->products();
 	}
 
-	public function add_stocks(){
+	private function add_stocks(){
 		if($data = $this->input->post()){
 
 			$m_data = array(

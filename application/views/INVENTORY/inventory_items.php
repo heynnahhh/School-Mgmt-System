@@ -28,20 +28,20 @@
               </div>
             </div>
             <div class="box-body">
-              <form>
+              <form method="post" enctype="multipart/form-data">
                 <div class="row">
                   <div class="form-group">
-                  	<label for="field-1" class="col-sm-2 control-label">ItemCode</label>
+                  	<label for="item_code" class="col-sm-2 control-label">ItemCode</label>
         						<div class="col-sm-6">
-        							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        							<input type="text" class="form-control input-sm" name="item_code" id="item_code" data-validate="required" data-message-required="Value Required">
         						</div>
         					</div>
                 </div><hr>
                 <div class="row">
                   <div class="form-group">
-                  	<label for="field-1" class="col-sm-2 control-label">Category</label>
+                  	<label for="item_category" class="col-sm-2 control-label">Category</label>
         						<div class="col-sm-8">
-                      <select class="sel_category" id="sel_category" style="width: 100%;">
+                      <select class="sel_category" name="item_category" id="item_category" style="width: 100%;">
                         <?php foreach ($categories as $category){?>
                           <option><?php echo $category->category?></option>
                         <?php };?>
@@ -51,30 +51,30 @@
                 </div><hr>
                 <div class="row">
                   <div class="form-group">
-                  	<label for="field-1" class="col-sm-2 control-label" style="padding-right:5px;">ItemName</label>
+                  	<label for="item_name" class="col-sm-2 control-label" style="padding-right:5px;">ItemName</label>
         						<div class="col-sm-8">
-        							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        							<input type="text" class="form-control input-sm" name="item_name" id="item_name" data-validate="required" data-message-required="Value Required">
         						</div>
         					</div>
                 </div><hr>
                 <div class="row">
                   <div class="form-group">
-                    <label for="field-1" class="col-sm-2 control-label">Description</label>
+                    <label for="item_desc" class="col-sm-2 control-label">Description</label>
                     <div class="col-sm-10">
-                      <textarea class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
+                      <textarea class="form-control input-sm" name="item_desc" id="item_desc" data-validate="required" data-message-required="Value Required"></textarea>
                     </div>
                   </div>
                 </div><hr>
                 <div class="row">
                   <div class="form-group">
-                    <label for="field-1" class="col-sm-2 control-label">UnitCost</label>
+                    <label for="unit_cost" class="col-sm-2 control-label">UnitCost</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                      <input type="text" class="form-control input-sm" name="unit_cost" id="unit_cost" data-validate="required" data-message-required="Value Required">
                     </div>
                   </div>
                 </div><hr>
                 <button type="submit" class="btn btn-sm btn-success submit">Save</button>
-                <button type="button" class="btn btn-sm bg-gray" href="<?php site_url()?>INVENTORY/ajax/add_category">Cancel</button>
+                <button type="button" class="btn btn-sm bg-gray" href="#">Cancel</button>
               </form>
             </div>
           </div>
@@ -117,7 +117,7 @@
         <div class="modal-content">
           <div class="modal-header gray">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"> Add Category</i></h4>
+            <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"></i> Add Category</h4>
           </div>
           <form method="post" enctype="multipart/form-data">
             <div class="modal-body">
@@ -125,7 +125,7 @@
                   <div class="form-group">
                   	<label for="category" class="col-sm-2 control-label">Category</label>
         						<div class="col-sm-5">
-        							<input type="text" class="form-control input-sm" name="category" id="category" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+        							<input type="text" class="form-control input-sm" name="category" id="category" data-validate="required" data-message-required="Value Required">
         						</div>
         					</div>
                 </div>

@@ -9,16 +9,23 @@ $(document).ready(function() {
   $(".submit").on('click', function (e) {
     e.preventDefault();
     var category = $("input#category").val();
+    var items = {
+        item_code: $("input#item_code").val(),
+        item_category: $("select#item_category").val(),
+        item_name: $("input#item_name").val(),
+        item_desc: $("textarea#item_desc").val(),
+        unit_cost: $("input#unit_cost").val()
+    };
 
     $.ajax({
       type: "POST",
-      url: '<?=site_url()?>/INVENTORY/ajax/add_' + addUrl[1],
-      data: {category: category},
+      url: '<?=site_url()?>/INVENTORY/ajax/add',
+      data: {category: category, items:items},
       success: function(data) {
         $("#myModal").modal('hide');
         alert("successfully saved!");
+        // console.log(data);
         location.reload();
-          // $('.sel_category').append("<option>" + data.category + "</option>");
       }
     });
 
@@ -61,10 +68,6 @@ $(document).ready(function() {
                 ]
               }
 		  } );
-
-    // $('#stock_tbl').find('tbody').append(
-
-    //   );
 
 
     $('#stock_tbl').DataTable(
