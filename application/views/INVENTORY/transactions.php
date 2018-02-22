@@ -93,7 +93,7 @@
               <h4 class="box-title"> Transact Records</h4>
               <div class="btn-group pull-right">
                 <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Transaction</button>
-                <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>              
+                <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>
               </div>
             </div>
             <div class="box-body table-responsive">
@@ -126,7 +126,7 @@
     </section>
 
   <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header gray">
@@ -148,9 +148,10 @@
                 	<label for="itr_item_code" class="col-sm-2 control-label">Unit</label>
       						<div class="col-sm-7">
                     <select class="sel_category" name="itr_item_code" id="item_code" style="width: 100%;">
-                      <?php foreach ($items as $item){?>
-                        <option><?php echo $item->category?></option>
-                      <?php };?>
+                      <?php foreach ($options as $option) { ?>
+                      			<?php $items = array($option->item_code,$option->item_name); ?>
+                            <option><?php echo implode(' - ', $items); ?></option>
+            		        <?php }; ?>
                     </select>
       						</div>
                 	<label for="field-1" class="col-sm-1 control-label">Qty</label>

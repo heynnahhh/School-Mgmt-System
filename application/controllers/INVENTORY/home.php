@@ -19,13 +19,11 @@ class Home extends CI_Controller {
 
 	public function transactions()
 	{
-		$options = array(json_encode($this->inventory_model->get_item_options()));
 
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		
-		$data['items'] = implode('-', $options);
-		// $this->load->view('INVENTORY/transactions', $data);
-		print_r($data['items']);
+		$data['options'] = $this->inventory_model->get_item_options();
+		$this->load->view('INVENTORY/transactions', $data);
+		// print_r($data['item']);
 	}
 
 	public function stock_register()
