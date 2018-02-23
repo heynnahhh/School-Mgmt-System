@@ -13,4 +13,7 @@
 <!-- DataTables -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.css">
+
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">
+<!-- bootstrap datepicker -->
+<link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datepicker/datepicker3.css">

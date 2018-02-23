@@ -154,45 +154,59 @@
             		        <?php }; ?>
                     </select>
       						</div>
-                	<label for="field-1" class="col-sm-1 control-label">Qty</label>
+                	<label for="quantity" class="col-sm-1 control-label">Qty</label>
       						<div class="col-sm-2">
-      							<input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+      							<input type="text" class="form-control input-sm" name="quantity" id="quantity" data-validate="required" data-message-required="Value Required" value="" autofocus="">
       						</div>
       					</div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Unit Cost</label>
+                  <label for="unit_cost" class="col-sm-2 control-label">Unit Cost</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="unit_cost" id="unit_cost" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
-                  <label for="field-1" class="col-sm-2 control-label">Total Cost</label>
+                  <label for="total_cost" class="col-sm-2 control-label">Total Cost</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="total_cost" id="total_cost" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Description</label>
+                  <label for="description" class="col-sm-2 control-label">Description</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
+                    <textarea class="form-control input-sm" name="description" id="description" data-validate="required" data-message-required="Value Required" value="" autofocus=""></textarea>
                   </div>
                 </div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Receiver</label>
+                  <label for="received_by" class="col-sm-2 control-label">Receiver</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="received_by" id="received_by" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
               <div class="row">
                 <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Supplier</label>
+                  <label for="received_fr" class="col-sm-2 control-label">Supplier</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="received_fr" id="received_fr" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="received_fr" class="col-sm-2 control-label">Date Received</label>
+                  <div class="col-sm-7">
+              
+                    <div class="input-group date">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <input type="text" class="form-control input-sm pull-right" name="date_received" id="date_received">
+                    </div>
                   </div>
                 </div>
               </div><hr>

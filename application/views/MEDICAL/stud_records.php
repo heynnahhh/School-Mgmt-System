@@ -28,7 +28,7 @@
 
               <div class="form-group">
                 <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddStudent">
-                <i class="fa fa-plus-square"> Add Student</i></a>
+                <i class="fa fa-plus-square"></i> Add Student</a>
               </div>
 
               <div class="form-group">
@@ -92,7 +92,7 @@
             <div class="form-group">
                 <label> RECORDS:</label>&nbsp;&nbsp;
                 <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#StudentConsultation">
-                <i class="fa fa-plus-square"> Add Consultation</i></a>
+                <i class="fa fa-plus-square"></i> Add Consultation</a>
             </div>
             <hr>
             <table id="stud_records" class="table table-bordered table-striped">
