@@ -38,18 +38,6 @@ class Inventory_model extends CI_Model{
           return $query->result();
     }
 
-    public function insert_product($m_data){
-      $this->db->insert('tbl_inv_items', $m_data);
-    }
-
-    public function insert_stocks($m_data){
-      $this->db->insert('tbl_inv_stocks', $m_data);
-    }
-
-    public function insert_category($m_data){
-      $this->db->insert('tbl_inv_item_category', $m_data);
-    }
-
     public function get_category(){
         $this->db->select('category');
         $query = $this->db->get('tbl_inv_item_category');
@@ -66,6 +54,22 @@ class Inventory_model extends CI_Model{
         $this->db->select('*');
         $query = $this->db->get('tbl_inv_departments');
         return $query->result();
+    }
+
+    public function insert_product($m_data){
+      $this->db->insert('tbl_inv_items', $m_data);
+    }
+
+    public function insert_stocks($m_data){
+      $this->db->insert('tbl_inv_stocks', $m_data);
+    }
+
+    public function insert_category($m_data){
+      $this->db->insert('tbl_inv_item_category', $m_data);
+    }
+
+    public function insert_transacts($m_data){
+      $this->db->insert('tbl_inv_transactions', $m_data);
     }
 
 }

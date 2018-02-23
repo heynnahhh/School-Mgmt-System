@@ -21,41 +21,41 @@
 						<div class="col-md-3 services-grids1-grid">
 							<img src="images/8.jpg" alt=" " class="img-responsive" />
 							<h4><span class="badge-count">42</span>
-								<a href="single.html">Grade 7</a></h4>
+								<a href="subjects">Grade 7</a></h4>
 							<p>But I must explain to you how all this mistaken idea of
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">View</a>
+								<a href="subjects" class="hvr-rectangle-out">View</a>
 							</div>
 						</div>
 						<div class="col-md-3 services-grids1-grid">
 							<img src="images/9.jpg" alt=" " class="img-responsive" />
 							<h4><span class="badge-count">42</span>
-								<a href="single.html">Grade 8</a></h4>
+								<a href="subjects">Grade 8</a></h4>
 							<p>But I must explain to you how all this mistaken idea of
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">View</a>
+								<a href="subjects" class="hvr-rectangle-out">View</a>
 							</div>
 						</div>
 						<div class="col-md-3 services-grids1-grid">
 							<img src="images/10.jpg" alt=" " class="img-responsive" />
 							<h4><span class="badge-count">42</span>
-								<a href="single.html">Grade 9</a></h4>
+								<a href="subjects">Grade 9</a></h4>
 							<p>But I must explain to you how all this mistaken idea of
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">View</a>
+								<a href="subjects" class="hvr-rectangle-out">View</a>
 							</div>
 						</div>
 						<div class="col-md-3 services-grids1-grid">
 							<img src="images/11.jpg" alt=" " class="img-responsive" />
 							<h4><span class="badge-count">42</span>
-								<a href="single.html">Grade 10</a></h4>
+								<a href="subjects">Grade 10</a></h4>
 							<p>But I must explain to you how all this mistaken idea of
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">View</a>
+								<a href="subjects" class="hvr-rectangle-out">View</a>
 							</div>
 						</div>
 						<div class="clearfix"> </div>

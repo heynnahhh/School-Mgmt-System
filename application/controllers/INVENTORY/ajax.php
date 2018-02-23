@@ -8,7 +8,6 @@ class ajax extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('INVENTORY/inventory_model');
 		$this->sms_session->checkSession();
-		$current_module = $this->uri->segment(1);
 
 	}
 
@@ -92,14 +91,25 @@ class ajax extends CI_Controller {
 
 	public function add(){
 		$data = $this->input->post();
-		if($data['category']){
-			unset($data['items']);
-			$this->add_category($data['category']);
+		// echo $current_view;
+
+		if ( $data['add'] == 'inventory_items'){
+			if($data['category']){
+				unset($data['items']);
+				$this->add_category($data['category']);
+			}
+			elseif($data['items']){
+				unset($data['category']);
+				$this->add_items($data['items']);
+			}
 		}
-		elseif($data['items']){
-			unset($data['category']);
-			$this->add_items($data['items']);
+
+		elseif ( $data['add'] == 'transactions'){
+			if($data['transacts']) {
+				$this->add_transacts($data['transacts']);
+			}
 		}
+
 	}
 
 	private function add_category($data){
@@ -130,6 +140,27 @@ class ajax extends CI_Controller {
 			$this->inventory_model->insert_product($m_data);
 		}
 
+	}
+
+	private function add_transacts($data){
+		if ($data) {
+			
+			$item_code = explode(' - ', $data['item_code']);
+
+			$m_data = array(
+				'receipt_no' => $data['receipt_no'],
+				'itr_item_code' => $item_code[0],
+				'quantity' => $data['quantity'],
+				'unit_cost' => $data['unit_cost'],
+				'total_cost' => $data['total_cost'],
+				'description' => $data['description'],
+				'received_by' => $data['received_by'],
+				'received_fr' => $data['received_fr'],
+				'date_received' => date("Y-m-d H:i:s")
+			);
+
+			$this->inventory_model->insert_transacts($m_data);
+		}
 	}
 
 	private function add_stocks(){
