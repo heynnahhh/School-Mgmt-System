@@ -1,11 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Register extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('LR/home');
+		$this->load->view('LR/register');
 	}
-
 }

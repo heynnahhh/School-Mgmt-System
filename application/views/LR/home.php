@@ -64,6 +64,10 @@
 								<span>No one rejects, dislikes, or avoids pleasure itself, because it is
 								pleasure, but because those who do not know how to pursue pleasure
 								rationally encounter consequences that are extremely painful.</span></p>
+
+								<div class="more">
+									<a href="register" class="hvr-rectangle-out">Register Now</a>
+								</div>
 						</div>
 						<div class="col-md-4 banner-bottom-grid">
 							<h3>Latest Projects For <span>Kids</span></h3>

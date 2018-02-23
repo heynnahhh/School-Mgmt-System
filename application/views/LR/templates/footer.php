@@ -10,23 +10,22 @@
 
 			<div class="footer-grids">
 				<div class="col-md-3 footer-grid">
-					<p>HALOVIETNAM LTD
-						66, Dang Van ngu, Dong Da
-						Hanoi, USA.
-					<a href="mailto:info@example.com">contact@example.com</a>
-					<p>Phone : +844 35149182</p>
+					<p>Taft cor. United Nations Avenue, Ermita
+						Manila, Philippines
+					<a href="mailto:araullo.highschool06@gmail.com">araullo.highschool06@gmail.com</a>
+					<p>Phone : 524-65765</p>
 				</div>
 				<div class="col-md-3 footer-grid">
 					<ul>
-						<li><a href="mail.html">Home</a></li>
-						<li><a href="gallery.html">Resources</a></li>
-						<li><a href="short-codes.html">Short Codes</a></li>
+						<li><a href="home">Home</a></li>
+						<li><a href="jhs">Junior High School</a></li>
+						<li><a href="shs">Senior High School</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-grid">
 					<ul>
-						<li><a href="events.html">Register</a></li>
-						<li><a href="services.html">Login</a></li>
+						<li><a href="register">Register</a></li>
+						<li><a href="login">Login</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>

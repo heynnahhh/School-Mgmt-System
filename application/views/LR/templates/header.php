@@ -25,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- header -->
 				<div class="logo-search">
 					<div class="logo">
-						<h1><a href="index.html">Araullo High School<i>Learning Resource Portal</i></a></h1>
+						<h1><a href="home">Araullo High School<i>Learning Resource Portal</i></a></h1>
 					</div>
 					<div class="search">
 						<form>
@@ -53,10 +53,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav class="stroke">
 								<ul class="nav navbar-nav">
-									<li><a href="<?php echo site_url();?>/LR/home">Home</a></li>
-									<li><a href="#" class="hvr-rectangle-out">Resources</a></li>
-									<li><a href="#" class="hvr-rectangle-out">News & Events</a></li>
-									<li><a href="<?php echo site_url();?>/LR/home/view_login" class="hvr-rectangle-out">Login</a></li>
+									<li><a href="<?php echo site_url();?>/LR/home" class="hvr-rectangle-out">Home</a></li>
+									<li><a href=" <?php echo site_url();?>/LR/jhs" class="hvr-rectangle-out">Junior High School</a></li>
+									<li><a href="<?php echo site_url();?>/LR/shs" class="hvr-rectangle-out">Senior High School</a></li>
+									<li><a href="<?php echo site_url();?>/LR/login" class="hvr-rectangle-out">Login</a></li>
 
 								</ul>
 							</nav>

@@ -172,13 +172,40 @@ span.color2{
     border-right: none;
 }
 /*-- //header --*/
+/*-- banner --*/
+.services-grid-right-grid1,.services-grid-right-grid2,.services-grid-right-grid3{
+	min-height:460px;
+}
+.services-grid-right-grid1{
+	background:url(../images/6.jpg) no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-ms-background-size:cover;
+}
+.services-grid-right-grid2{
+	background:url(../images/5.jpg) no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-ms-background-size:cover;
+}
+.services-grid-right-grid3{
+	background:url(../images/7.jpg) no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-ms-background-size:cover;
+}
 
-/*Accordion*/
 .half {
-  margin-left: -50px;
-  margin-right: 0;
-  width: 800px;
+  float: left;
+  width: 150%;
   padding: 0 1em;
+  margin-left: -50px;
 }
 /* Acordeon styles */
 .tab-accordion {
@@ -188,7 +215,7 @@ span.color2{
   color: #000;
   overflow: hidden;
 }
-input {
+.tab {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -1003,6 +1030,49 @@ input[type=radio]:checked + .label-accordion::after {
     width: 48.3%;
     padding: 10px;
 }
+#password{
+	float:right;
+	margin-right:20px;
+	margin-top:10px;
+}
+#address{
+	outline: none;
+    border: 1px solid maroon;
+    background: #F1F1F1;
+    color: maroon;
+    font-size: 14px;
+    width: 98%;
+    padding: 10px;
+}
+#area_expertise{
+	outline: none;
+    border: 1px solid maroon;
+    background: #F1F1F1;
+    color: maroon;
+    font-size: 14px;
+    width: 98%;
+    padding: 10px;
+}
+#email_address{
+	outline: none;
+    border: 1px solid maroon;
+    background: #F1F1F1;
+    color: maroon;
+    font-size: 14px;
+    width: 98%;
+    padding: 10px;
+	margin-left:0px;
+}
+.login-grid input[type="date"]{
+	height:42px;
+	outline: none;
+    border: 1px solid maroon;
+    background: #F1F1F1;
+    color: maroon;
+    font-size: 14px;
+    width: 48.3%;
+    padding: 10px;
+}
 .login-grid form{
 	padding: 3em 0 0;
 }
@@ -1176,7 +1246,7 @@ input[type=radio]:checked + .label-accordion::after {
 }
 .categories h3,.posts h3,.tags1 h3,.files h3,.leave-coment-form h3{
 	font-size: 1.5em;
-    color: #45A3D6;
+    color: maroon;
     margin: 0;
     text-align: left;
     position: relative;
@@ -1306,6 +1376,9 @@ nav.paging1{
 }
 .files-grid-left{
 	width:70%;
+}
+.view-grid-left{
+	width:80%;
 }
 .files-grid-left ul{
 	padding:1em 0;
@@ -1565,9 +1638,7 @@ section#tables  p {
   padding: 16px;
   background-color: #ffffff;
 }
-.table td, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-  padding: 15px!important;
-}
+
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   font-size: 0.9em;
   color: #999;
