@@ -17,3 +17,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">
 <!-- bootstrap datepicker -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datepicker/datepicker3.css">
+
+<link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">

@@ -56,7 +56,7 @@
         </ul>
       </li>
 
-      <li class="treeview active">
+      <li class="treeview">
         <a href="#">
           <i class="fa fa-database"></i> <span>Inventory</span>
           <span class="pull-right-container">
@@ -127,13 +127,14 @@
                 <ul class="treeview-menu">
                   <li><a href="<?php echo site_url();?>/website/Upload"><i class="fa fa-circle-o"></i> Home News</a></li>
                   <li><a href="<?php echo site_url();?>/website/pages/pages_home"><i class="fa fa-circle-o"></i> Home Banner</a></li>
+                  <li><a href="<?php echo site_url();?>/website/Calendar_Cont"><i class="fa fa-circle-o"></i> Academic Calendar</a></li>
                 </ul>
               </li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Widgets</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Forms</a></li>
             </ul>
           </li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Preview</a></li>
+          <li><a href="<?php echo site_url();?>/website/Home"><i class="fa fa-circle-o"></i> Preview</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
         </ul>
       </li>
@@ -161,7 +162,7 @@
         </ul>
       </li>
 
-      <li class="treeview">
+      <li class="treeview active">
         <a href="#">
           <i class="fa fa-plus-square"></i> <span>Dental</span>
           <span class="pull-right-container">
