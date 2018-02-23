@@ -128,7 +128,7 @@
 
         $('.cd-submit').on('click', function () {
 
-        var url = "<?php echo base_url('index.php/website/application#success');?>";
+        var url = "<?php echo base_url('index.php/website/home/application#success');?>";
 
         window.location = url;
 

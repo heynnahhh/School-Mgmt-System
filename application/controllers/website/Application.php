@@ -11,11 +11,6 @@ class Application extends CI_Controller {
 
 	}
 
-	public function index()
-	{
-		$this->load->view('website/application');
-	}
-
     public function submit_form(){
 
         if($data = $this->input->post()){
