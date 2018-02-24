@@ -6,7 +6,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1><i class="fa fa-plus-square"></i>
-        Patient Records (Medical)
+        Patient Records
     </h1>
     <hr>
     <ol class="breadcrumb">
@@ -21,11 +21,9 @@
     <div class="col-md-12">
 
       <div class="col-md-12">
-
         <div class="box">
           <div class="box-body">
             <div class="col-md-4">
-
               <div class="form-group">
                 <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddStudent">
                 <i class="fa fa-plus-square"></i> Add Student</a>
@@ -234,10 +232,9 @@
                             <input type="text" class="form-control" name="mother_name" id="mother_name">
                           </div>
 
-                          <div class="col-xs-6">
-                            <label>CONTACT #:</label>
+                        <div class="col-xs-6">
+                          <label>CONTACT NUMBER:</label>
                             <input type="text" class="form-control" name="mother_contact" id="mother_contact">
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -250,10 +247,25 @@
                             <input type="text" class="form-control" name="father_name" id="father_name">
                           </div>
 
-                          <div class="col-xs-6">
-                            <label>CONTACT #:</label>
+                        <div class="col-xs-6">
+                          <label>CONTACT NUMBER:</label>
                             <input type="text" class="form-control" name="father_contact" id="father_contact">
-                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>GUARDIAN: (Optional)</label>
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-xs-6">
+                          <label>CONTACT NUMBER:</label>
+                          <input type="text" class="form-control">
                         </div>
                       </div>
                     </div>
