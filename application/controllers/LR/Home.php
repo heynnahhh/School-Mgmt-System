@@ -88,4 +88,30 @@ class Home extends CI_Controller {
 		$this->load->view('LR/profile/view_file');
 	}
 
+	public function activity_log()
+	{
+		$this->load->view('LR/profile/activity_log');
+	}
+
+	public function log_history()
+	{
+		$this->load->view('LR/profile/log_history');
+	}
+
+	public function upload()
+	{
+		$this->load->view('LR/profile/upload');
+	}
+
+	public function change_pass()
+	{
+		$this->load->view('LR/profile/change_pass');
+	}
+
+	public function edit_profile()
+	{
+		$this->load->view('LR/profile/edit_profile');
+	}
+
+
 }

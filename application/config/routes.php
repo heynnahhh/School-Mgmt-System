@@ -68,6 +68,11 @@ $route['lr/profile/seniorhs_subjects'] = 'LR/home/p_seniorhs_subjects';
 $route['lr/profile/juniorhs_view_files'] = 'LR/home/p_juniorhs_view_file';
 $route['lr/profile/seniorhs_view_files'] = 'LR/home/p_seniorhs_view_file';
 $route['lr/profile/view_file'] = 'LR/home/p_view_file';
+$route['lr/profile/activity_log'] = 'LR/home/activity_log';
+$route['lr/profile/log_history'] = 'LR/home/log_history';
+$route['lr/profile/upload'] = 'LR/home/upload';
+$route['lr/profile/edit_profile'] = 'LR/home/edit_profile';
+$route['lr/profile/change_pass'] = 'LR/home/change_pass';
 
 
 $route['default_controller'] = 'SMS/home';
