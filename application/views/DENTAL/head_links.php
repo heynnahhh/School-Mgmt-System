@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.css">
 <!-- TEMPORARY -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/temp.css">
-
+<!-- bootstrap datepicker -->
+<link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datepicker/datepicker3.css">
 <!-- DataTables -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.css">
-
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">

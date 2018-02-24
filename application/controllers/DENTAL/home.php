@@ -24,4 +24,9 @@ class Home extends CI_Controller {
 		$this->load->view('DENTAL/stud_records', $data);
 	}
 
+	public function Employees()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('DENTAL/emp_records', $data);
+	}
 }
