@@ -47,39 +47,39 @@
                     <!-- settings start -->
                     <li class="dropdown">
                         <a href="<?php echo site_url();?>/lr/profile">
-														<span>Home</span>
-								     		</a>
-							      </li>
-							      <li id="header_inbox_bar" class="dropdown">
-			              	<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-												<span>Resources</span> <span class="caret"></span>
-							        </a>
-	                        <ul class="dropdown-menu extended inbox">
-	                            <li>
-	                                <a href="<?php echo site_url();?>/lr/profile/juniorhs">Junior High School</a>
-	                            </li>
-														<li>
+                        <span>Home</span>
+                        </a>
+                    </li>
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span>Resources</span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <li>
+                                <a href="<?php echo site_url();?>/lr/profile/juniorhs">Junior High School</a>
+                            </li>
+                            <li>
                                 <a href="<?php echo site_url();?>/lr/profile/seniorhs">Senior High School</a>
                             </li>
                         </ul>
                     </li>
-									<li>
-        						<div class="input-group col-xs-12 search">
-        							<div class="input-group">
-        								<div class="input-group-btn">
-        								  <button type="button" class="btn btn-theme dropdown-toggle btn-secondary" data-toggle="dropdown">
-        									Search by <span class="caret"></span>
-        								  </button>
-        								  <ul class="dropdown-menu" role="menu">
-        									<li><a href="#">Action</a></li>
-        									<li><a href="#">Another action</a></li>
-        									<li><a href="#">Something else here</a></li>
-        									<li><a href="#">Separated link</a></li>
-        								  </div>
-        								  <input type="search" class="form-control">
-        								</div>
-        							</div>
-        						</div>
+					<li>
+    					<div class="input-group col-xs-12 search">
+    						<div class="input-group">
+    							<div class="input-group-btn">
+    							  <button type="button" class="btn btn-theme dropdown-toggle btn-secondary" data-toggle="dropdown">
+    								Search by <span class="caret"></span>
+    							  </button>
+    							  <ul class="dropdown-menu" role="menu">
+    								<li><a href="#">Action</a></li>
+    								<li><a href="#">Another action</a></li>
+    								<li><a href="#">Something else here</a></li>
+    								<li><a href="#">Separated link</a></li>
+    							  </div>
+    							  <input type="search" class="form-control">
+    							</div>
+    						</div>
+    					</div>
                     </li>
                     <!-- inbox dropdown end -->
                 </ul>

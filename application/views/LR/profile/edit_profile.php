@@ -1,4 +1,6 @@
-<?php include '/../templates/header.php';?>
+<?php include '/../templates/header_profile.php';?>
+
+<?php include '/../templates/profile_nav.php';?>
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -10,88 +12,73 @@
           <section class="wrapper">
 
               <div class="row">
-                  <div class="col-lg-9 main-chart">
-					 <h3><i class="fa fa-angle-right"></i> Junior School Resources</h3>
-						<hr></i>
-						<div class="row mt">
-							<div class="col-md-12">
-								<div class="white-panel pn">
-									<div class="panel-heading">
-										<div class="pull-left"><h3></i>Topic Name</h3>
-											<span> File Type - Module type</span>
-										</div>
-										<br/>
-										<div class="pull-right hidden-phone">
-											<button type="button" class="btn btn-info btn-sm" disabled="">Preview</button>
-											<button type="button" class="btn btn-success btn-sm" disabled="">Download</button>
-										</div>
-										<br/><br/>
-										<div class="pull-right hidden-phone">
-											Date Published
-										</div>
-									</div>
-									<div class="custom-check goleft mt">
-										 <table id="todo" class="table">
-										  <tbody>
-											<tr>
-												<td>
-													<div class="details">
-														<br/>
-													    Desciption
-														<br/>
-													   <p>Desciption</p>
+                <div class="col-lg-9 main-chart">
+      						<div class="row mt">
+      							<div class="col-md-12">
+      								<div class="white-panel pn">
+      									<div class="panel-heading">
+      									</div>
+      									<div class="custom-check goleft mt">
+      									  <table class="table table-hover">
+                        <h3>Edit Profile</h3>
+                        <hr>
+                        <div class="row">
+                          <div class="col-lg-12 main-chart">
+                            <div class="row mt">
+                              <div class="col-md-12">
+                                  <div class="container">
+                                     <div class="col-lg-12">
+                                        <div class="row">
 
-													   <br/>
-													   Objectives
-														<br/>
-													   <p>Objectives</p>
-													</div>
-												</td>
-											</tr>
-										  </tbody>
-									  </table>
-
-									  <h4> Resource Information</h4>
-									  <table class="table table-bordered table-striped table-condensed">
-										  <tbody>
-										  <tr>
-											  <td>Eduction Type</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Grade Level</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Learning Area</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Intended Users</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  </tbody>
-									  </table>
-
-									  <h4> Copyright Information</h4>
-									  <table class="table table-bordered table-striped table-condensed">
-										  <tbody>
-										  <tr>
-											  <td>Copyright</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Copyrighy Owner	</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  </tbody>
-									  </table>
-									  <br/>
-									</div><!-- /table-responsive -->
-								</div><!--/ White-panel -->
-							</div><! --/col-md-12 -->
-						</div><! -- row -->
-                    </div>
+                                          <form>
+                                            <div class="col-sm-7">
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Barangay</label>
+                                                  <input type="text" placeholder="ex. Brgy. 27" class="form-control">
+                                                </div>
+                                                <div class="col-sm-6 form-group">
+                                                  <label>City</label>
+                                                  <input type="text" placeholder="ex. Manila City" class="form-control">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Date</label>
+                                                  <input type="date" class="form-control">
+                                                </div>
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Gender</label>
+                                                  <select class="form-control">
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label>Phone Number</label>
+                                                <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+                                              </div>
+                                              <div class="form-group">
+                                                <label>Profile Picture</label>
+                                                <input type="file" placeholder="Enter Phone Number Here.." class="form-control-file">
+                                              </div>
+                                            <button type="button" class="btn btn-info">Save</button>
+                                            </div>
+                                          </form>
+                                        </div>
+                                       </div>
+                                    </div><!-- /table-responsive -->
+                                  </div><!--/ White-panel -->
+                                </div><! --/col-md-12 -->
+                              </div><! -- row -->
+                            </table>
+        									  <br/>
+        									</div><!-- /table-responsive -->
+        								</div><!--/ White-panel -->
+        							</div><! --/col-md-12 -->
+        						</div><! -- row -->
+                  </div>
 
 
 
@@ -100,7 +87,7 @@
       *********************************************************************************************************************************************************** -->
                   <div class="col-lg-3 ds">
                     <!--JUNIOR HIGH SECTION-->
-						<h3>Junior High School Latest Addition</h3>
+					         	<h3>Junior High School Latest Addition</h3>
 
                       <!-- First Action -->
                       <div class="desc">
@@ -146,7 +133,7 @@
                       </div>
 
                        <!-- SENIOR HIGH SECTION -->
-						<h3>Senior High School Latest Addition</h3>
+						        <h3>Senior High School Latest Addition</h3>
                                             <!-- First Action -->
                       <div class="desc">
                       	<div class="details">

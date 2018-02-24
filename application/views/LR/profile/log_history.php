@@ -1,4 +1,6 @@
-<?php include '/../templates/header.php';?>
+<?php include '/../templates/header_profile.php';?>
+
+<?php include '/../templates/profile_nav.php';?>
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -11,86 +13,41 @@
 
               <div class="row">
                   <div class="col-lg-9 main-chart">
-					 <h3><i class="fa fa-angle-right"></i> Junior School Resources</h3>
-						<hr></i>
-						<div class="row mt">
-							<div class="col-md-12">
-								<div class="white-panel pn">
-									<div class="panel-heading">
-										<div class="pull-left"><h3></i>Topic Name</h3>
-											<span> File Type - Module type</span>
-										</div>
-										<br/>
-										<div class="pull-right hidden-phone">
-											<button type="button" class="btn btn-info btn-sm" disabled="">Preview</button>
-											<button type="button" class="btn btn-success btn-sm" disabled="">Download</button>
-										</div>
-										<br/><br/>
-										<div class="pull-right hidden-phone">
-											Date Published
-										</div>
-									</div>
-									<div class="custom-check goleft mt">
-										 <table id="todo" class="table">
-										  <tbody>
-											<tr>
-												<td>
-													<div class="details">
-														<br/>
-													    Desciption
-														<br/>
-													   <p>Desciption</p>
-
-													   <br/>
-													   Objectives
-														<br/>
-													   <p>Objectives</p>
-													</div>
-												</td>
-											</tr>
-										  </tbody>
-									  </table>
-
-									  <h4> Resource Information</h4>
-									  <table class="table table-bordered table-striped table-condensed">
-										  <tbody>
-										  <tr>
-											  <td>Eduction Type</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Grade Level</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Learning Area</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Intended Users</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  </tbody>
-									  </table>
-
-									  <h4> Copyright Information</h4>
-									  <table class="table table-bordered table-striped table-condensed">
-										  <tbody>
-										  <tr>
-											  <td>Copyright</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  <tr>
-											  <td>Copyrighy Owner	</td>
-											  <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-										  </tr>
-										  </tbody>
-									  </table>
-									  <br/>
-									</div><!-- /table-responsive -->
-								</div><!--/ White-panel -->
-							</div><! --/col-md-12 -->
-						</div><! -- row -->
+          						<div class="row mt">
+          							<div class="col-md-12">
+          								<div class="white-panel pn">
+          									<div class="panel-heading">
+          									</div>
+          									<div class="custom-check goleft mt">
+          									  <table class="table table-hover">
+                            <h3>Log History</h3>
+                            <hr>
+                                <thead>
+                                <tr>
+                                    <th>Logged-in</th>
+                                    <th>Logged-out</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>asdasdasdasdasdasdasdasdasdasdas</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Mosa</td>
+                                </tr>
+                                </tbody>
+                            </table>
+          									  <br/>
+          									</div><!-- /table-responsive -->
+          								</div><!--/ White-panel -->
+          							</div><! --/col-md-12 -->
+          						</div><! -- row -->
                     </div>
 
 
@@ -100,7 +57,7 @@
       *********************************************************************************************************************************************************** -->
                   <div class="col-lg-3 ds">
                     <!--JUNIOR HIGH SECTION-->
-						<h3>Junior High School Latest Addition</h3>
+					         	<h3>Junior High School Latest Addition</h3>
 
                       <!-- First Action -->
                       <div class="desc">
@@ -146,7 +103,7 @@
                       </div>
 
                        <!-- SENIOR HIGH SECTION -->
-						<h3>Senior High School Latest Addition</h3>
+						        <h3>Senior High School Latest Addition</h3>
                                             <!-- First Action -->
                       <div class="desc">
                       	<div class="details">
