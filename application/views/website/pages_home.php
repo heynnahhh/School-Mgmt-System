@@ -28,7 +28,7 @@
 
     <!-- Main row -->
     <div class="row">
-      <div class="row">
+      <div class="col-lg-12">
         <h3>Preview</h3>
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->

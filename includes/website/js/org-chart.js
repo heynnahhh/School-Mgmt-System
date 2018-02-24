@@ -1,8 +1,8 @@
   $(document).ready(function () {
             //build tree
             function BuildVerticaLTree(treeData, treeContainerDom) {
-                var margin = { top: 100, right: 120, bottom: -300, left: -50 };
-                var width = 1400 - margin.right - margin.left;
+                var margin = { top: 100, right: 500, bottom: -300, left: 30 };
+                var width = 3000 - margin.right - margin.left;
                 var height = 1000 - margin.top - margin.bottom;
 
                 var i = 0, duration = 750;
@@ -156,72 +156,75 @@
               "children": [
                 {
 
-                  "name": "Christian U. Rosete",
-                  "subname": "HEAD",
-                  "children": [
-                    {
-
-                      "name": "Team Lead",
-                      "subname": "HEAD",
-                      "children": []
-                    },
-
-                    {
-                      "name": "Team Lead",
-                      "subname": "HEAD",
-                      "children": []
-                    },
-
-                    {
-                      "name": "Team Lead",
-                      "subname": "HEAD  ",
-                      "children": []
-                    }
-
-                  ]
-                },
-
-                {
-                  "name": "Manager",
-                  "subname": "HEAD  ",
+                  "name": "Deocliciana Dabandan",
+                  "subname": "Guidance Councilor",
                   "children": []
                 },
 
                 {
-                  "name": "Manager",
-                  "subname": "HEAD  ",
+                  "name": "Cristian Rosete",
+                  "subname": "HEAD, Librarian",
+                  "children": []
+                },
+
+                {
+                  "name": "Efigenia Magallanes",
+                  "subname": "HEAD, SHS",
                   "children": []
                 },
 
         			  {
-                  "name": "Manager",
-                  "subname": "HEAD  ",
+                  "name": "Tessie Retuya",
+                  "subname": "HEAD, Values Ed.",
                   "children": []
                 },
 
                 {
-                  "name": "Manager",
-                  "subname": "HEAD  ",
+                  "name": "Vilma Perez",
+                  "subname": "HEAD, MAPEH",
                   "children": []
                 },
 
                 {
-                  "name": "Manager",
-                  "subname": "HEAD  ",
-                  "children": [
+                  "name": "Celia Soriano",
+                  "subname": "HEAD, Soc.Studies",
+                  "children": []
+                },
 
-                    {
-                      "name": "Team Lead",
-                      "subname": "HEAD  ",
-                      "children": []
-                    },
+                {
+                  "name": "Valeriana Frias",
+                  "subname": "HEAD, TLE-VOC",
+                  "children": []
+                },
 
-                    {
-                      "name": "Team Lead",
-                      "subname": "HEAD  ",
-                      "children": []
-                    }
-                  ]
+                {
+                  "name": "Elsa Roque",
+                  "subname": "HEAD, TLE-HE",
+                  "children": []
+                },
+
+                {
+                  "name": "Rosanna Nilo",
+                  "subname": "HEAD, Science",
+                  "children": []
+                },
+
+                {
+                  "name": "Maita Camilon",
+                  "subname": "HEAD, Mathematics",
+                  "children": []
+                },
+
+                {
+                  "name": "Sheila Vergara",
+                  "subname": "HEAD, English",
+                  "children": []
+                },
+
+                {
+                  "name": "Antipas Masalunga",
+                  "subname": "HEAD, Filipino",
+                  "children": []
                 }
               ]
             };

@@ -102,6 +102,8 @@
 <script src="<?php echo base_url();?>includes/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.js"></script>
 <!-- date-range-picker -->
 <script src="<?php echo base_url();?>includes/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="<?php echo base_url();?>includes/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 
 <?php include 'ajax.php';?>
 </body>
