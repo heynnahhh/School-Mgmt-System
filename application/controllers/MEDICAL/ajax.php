@@ -85,7 +85,7 @@ class ajax extends CI_Controller {
 				$row[] = $value->first_name;
 				$row[] = $value->middle_name;
 				$row[] = $value->status;
-				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button><button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()" style="margin-left: 1%;"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}
 
