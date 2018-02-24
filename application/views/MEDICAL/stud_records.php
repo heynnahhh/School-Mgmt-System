@@ -67,13 +67,12 @@
                       <th>Surname:</th>
                       <th>Name:</th>
                       <th>M.I:</th>
+                      <th>M.I:</th>
+                      <th>M.I:</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Terrobias</td>
-                      <td>Marc Dominic</td>
-                      <td>I</td>
+                    <tr onclick="view_records()">
                     </tr>
                   </tbody>
                 </table>
@@ -153,121 +152,120 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3 class="modal-title"><i class="fa fa-plus-square"></i> Add Student</h3>
+            <h3 class="modal-title"><i class="fa fa-plus-square"></i> Student Profile</h3>
           </div>
+          <form method="post" enctype="multipart/form-data">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
 
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-xs-4">
-                          <input type="text" class="form-control" placeholder="Surname">
-                        </div>
-                        <div class="col-xs-4">
-                          <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                        <div class="col-xs-4">
-                          <input type="text" class="form-control" placeholder="M.I">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-xs-6">
-                          <label>YEAR:</label>
-                          <select class="form-control">
-                            <option>Grade 7</option>
-                            <option>Grade 8</option>
-                            <option>Grade 9</option>
-                            <option>Grade 10</option>
-                            <option>Grade 11</option>
-                            <option>Grade 12</option>
-                          </select>
-                        </div>
-                        <div class="col-xs-6">
-                          <label>SECTION:</label>
-                          <select class="form-control">
-                            <option>Acacia</option>
-                            <option>Narra</option>
-                            <option>Balete</option>
-                            <option>Bamboo</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-xs-3">
-                          <label>AGE:</label>
-                          <input type="text" class="form-control">
-                        </div>
-                        <div class="col-xs-5">
-                          <label>BIRTHDAY:</label>
-                          <div class="input-group date">
-                            <div class="input-group-addon">
-                              <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control pull-right" id="stud_birthdate">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-4">
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Surname">
                           </div>
-                          <!-- /.input group -->
-                        </div>
-                        <div class="col-xs-4">
-                          <label>CONTACT NUMBER:</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-xs-6">
-                          <label>MOTHER'S NAME:</label>
-                          <input type="text" class="form-control">
-                        </div>
-
-                        <div class="col-xs-6">
-                          <label>OCCUPATION:</label>
-                          <input type="text" class="form-control">
+                          <div class="col-xs-4">
+                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Name">
+                          </div>
+                          <div class="col-xs-4">
+                            <input type="text" class="form-control" name="middle_name" id="middle_name" placeholder="Middle Name">
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-xs-6">
-                          <label>FATHER'S NAME:</label>
-                          <input type="text" class="form-control">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <label>YEAR:</label>
+                            <select class="form-control" id="grade_lvl" name="grade_lvl">
+                              <option selected="selected">Select Grade Level:</option>>
+                              <option>Grade 7</option>
+                              <option>Grade 8</option>
+                              <option>Grade 9</option>
+                              <option>Grade 10</option>
+                              <option>Grade 11</option>
+                              <option>Grade 12</option>
+                            </select>
+                          </div>
+                          <div class="col-xs-6">
+                            <label>SECTION:</label>
+                            <select class="form-control" id="section" name="section">
+
+                            </select>
+                          </div>
                         </div>
+                      </div>
+                    </div>
 
-                        <div class="col-xs-6">
-                          <label>OCCUPATION:</label>
-                          <input type="text" class="form-control">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <label>AGE:</label>
+                            <input type="text" class="form-control" name="age" id="age">
+                          </div>
+                          <div class="col-xs-5">
+                            <label>BIRTHDAY:</label>
+                            <div class="input-group date">
+                              <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                              </div>
+                              <input type="text" class="form-control pull-right" name="birthdate" id="birthdate">
+                            </div>
+                            <!-- /.input group -->
+                          </div>
+                          <div class="col-xs-4">
+                            <label>CONTACT NUMBER:</label>
+                            <input type="text" class="form-control" name="contact_no" id="contact_no">
+                          </div>
+                        </div>
+                      </div>
+                    </div><hr>
+                    <h4>Guardian Info</h4><br>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <label>MOTHER'S NAME:</label>
+                            <input type="text" class="form-control" name="mother_name" id="mother_name">
+                          </div>
+
+                          <div class="col-xs-6">
+                            <label>CONTACT #:</label>
+                            <input type="text" class="form-control" name="mother_contact" id="mother_contact">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <label>FATHER'S NAME:</label>
+                            <input type="text" class="form-control" name="father_name" id="father_name">
+                          </div>
+
+                          <div class="col-xs-6">
+                            <label>CONTACT #:</label>
+                            <input type="text" class="form-control" name="father_contact" id="father_contact">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary pull-right submit">Save Changes</button>
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancel</button>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Save Changes</button>
-              <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancel</button>
-            </div>
-          </div>
+        </form>
         </div>
       </div>
     </div>
