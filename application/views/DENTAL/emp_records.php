@@ -11,7 +11,7 @@
     <hr>
     <ol class="breadcrumb">
       <li>MAIN NAVIGATION</li>
-      <li><a><i class="fa fa-plus-square"></i></a>MEDICAL</li>
+      <li><a><i class="fa fa-plus-square"></i></a>DENTAL</li>
       <li><a>Patients Record</a></li>
       <li><a>Teacher/Staff</a></li>
     </ol>
@@ -72,64 +72,6 @@
           </div>
           <!-- /.box -->
         </div>
-      </div>
-      <!-- col -->
-
-      <div class="col-md-12">
-        <div class="box">
-          <div class="box-body">
-            <div class="form-group">
-                <label> RECORDS:</label>&nbsp;&nbsp;
-                <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EmployeeConsultation">
-                <i class="fa fa-plus-square"></i> Add Consultation</a>
-            </div>
-            <hr>
-            <table id="emp_records" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>Date:</th>
-                  <th>Complaint / Ailment:</th>
-                  <th>Treatment / Medicine:</th>
-                  <th>Remarks:</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>12/18/17</td>
-                  <td>Heart burn</td>
-                  <td>Biogesic</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
       </div>
       <!-- col -->
     </div>
@@ -196,7 +138,6 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
-
                         <div class="col-xs-6">
                           <label>BIRTHDAY:</label>
                           <div class="input-group date">
@@ -207,7 +148,6 @@
                           </div>
                           <!-- /.input group -->
                         </div>
-
                         <div class="col-xs-6">
                           <label>CONTACT NUMBER:</label>
                           <input type="text" class="form-control">

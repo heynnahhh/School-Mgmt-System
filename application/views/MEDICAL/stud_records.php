@@ -6,7 +6,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1><i class="fa fa-plus-square"></i>
-        Patient Records (Medical)
+        Patient Records
     </h1>
     <hr>
     <ol class="breadcrumb">
@@ -21,11 +21,9 @@
     <div class="col-md-12">
 
       <div class="col-md-12">
-
         <div class="box">
           <div class="box-body">
             <div class="col-md-4">
-
               <div class="form-group">
                 <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddStudent">
                 <i class="fa fa-plus-square"></i> Add Student</a>
@@ -238,7 +236,7 @@
                         </div>
 
                         <div class="col-xs-6">
-                          <label>OCCUPATION:</label>
+                          <label>CONTACT NUMBER:</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
@@ -254,7 +252,23 @@
                         </div>
 
                         <div class="col-xs-6">
-                          <label>OCCUPATION:</label>
+                          <label>CONTACT NUMBER:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label>GUARDIAN: (Optional)</label>
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-xs-6">
+                          <label>CONTACT NUMBER:</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
