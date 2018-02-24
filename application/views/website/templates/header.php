@@ -48,7 +48,7 @@
           <ul class="sub-menu">
             <li><a href="history">History</a></li>
 			      <li><a href="ahs_hymn">Araullo High School Hymn</a></li>
-            <li><a href="mvgo">Mission, Vision, Core Values & Mandate</a></li>
+            <li><a href="mvgo">Mission, Vision, & Core Values</a></li>
             <li><a href="org_chart">Organizational Chart</a></li>
           </ul>
         </li>

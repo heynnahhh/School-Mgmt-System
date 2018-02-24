@@ -94,6 +94,31 @@
 <script src="<?php echo base_url();?>includes/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- dateTime -->
 <script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
+<!-- datePicker -->
+<script src="<?php echo base_url();?>includes/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- daterangePicker -->
+<script src="<?php echo base_url();?>includes/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="<?php echo base_url();?>includes/plugins/daterangepicker/moment.min.js"></script>
+<!-- timePicker -->
+<script src="<?php echo base_url();?>includes/plugins/timepicker/bootstrap-timepicker.js"></script>
+
+
+<script>
+$('#calendar').datepicker();  
+</script>
+
+<script>
+  $('#cal_date').datepicker({
+      autoclose: true
+    })
+</script>
+
+<script>
+$('.timepicker').timepicker({
+      showInputs: false,
+      showMeridian: false
+    })
+</script>
 
 </body>
 </html>

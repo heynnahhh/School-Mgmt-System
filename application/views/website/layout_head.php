@@ -20,6 +20,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.css">
   <!-- TEMPORARY -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/temp.css">
+  <!-- DatePicker -->
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datepicker/datepicker3.css">
+  <!-- TimePicker -->
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/timepicker/bootstrap-timepicker.css">
+  <!-- DaterangePicker -->
+  <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/daterangepicker/daterangepicker.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">

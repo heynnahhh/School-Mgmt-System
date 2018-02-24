@@ -6,7 +6,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1><i class="fa fa-plus-square"></i>
-        Patient Records (Medical)
+        Patients Record
     </h1>
     <hr>
     <ol class="breadcrumb">
