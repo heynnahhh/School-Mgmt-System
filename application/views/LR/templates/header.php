@@ -13,15 +13,12 @@
     <link href="<?php echo base_url();?>includes/lr/website/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="<?php echo base_url();?>includes/lr/website/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/assets/lineicons/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/lineicons/style.css">
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url();?>includes/lr/website/css/style.css" rel="stylesheet">
     <link href="<?php echo base_url();?>includes/lr/website/css/style-responsive.css" rel="stylesheet">
-
-    <script src="<?php echo base_url();?>includes/lr/website/js/chart-master/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,14 +36,14 @@
       <!--header start-->
       <header class="header black-bg">
             <!--logo start-->
-            <a href="home" class="logo"><b>Araullo High School Learning Resource Portal</b></a>
+            <a href="<?php echo site_url();?>/lr/home" class="logo"><b>Araullo High School Learning Resource Portal</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a href="home">
+                        <a href="<?php echo site_url();?>/lr/home">
 														<span>Home</span>
 								     		</a>
 							      </li>
@@ -56,10 +53,10 @@
 							        </a>
 	                        <ul class="dropdown-menu extended inbox">
 	                            <li>
-	                                <a href="juniorhs">Junior High School</a>
+	                                <a href="<?php echo site_url();?>/lr/juniorhs">Junior High School</a>
 	                            </li>
 														<li>
-                                <a href="seniorhs">Senior High School</a>
+                                <a href="<?php echo site_url();?>/lr/seniorhs">Senior High School</a>
                             </li>
                         </ul>
                     </li>
@@ -87,7 +84,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                <li><a class="logout" href="register">Register</a></li>
+                <li><a class="logout" href="<?php echo site_url();?>/lr/register">Register</a></li>
                 <li><a class="logout" href="" data-toggle="modal" data-target="#myModal">Login</a></li>
             	</ul>
             </div>

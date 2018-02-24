@@ -18,7 +18,7 @@
 
                       				<form>
                                 <div class="pull-right">
-                                  <img class="register" src = "<?php echo base_url();?>includes/lr/website/img/logo.png">
+                                  <img class="register" src = "<?php echo base_url();?>includes/lr/img/logo.png">
                                   <h3 class="register-title">AHS - Learning Resource Portal</h3>
                                   <p class="register-info">
                                     This portal is designed to provide you with access to quality learning
@@ -85,11 +85,11 @@
                       								<input type="password" class="form-control">
                       							</div>
                       						</div>
-                      					<div class="form-group">
-                      						<label>Phone Number</label>
-                      						<input type="text" placeholder="Enter Phone Number Here.." class="form-control">
-                      					</div>
-                      					<button type="button" class="btn btn-info">Submit</button>
+                        					<div class="form-group">
+                        						<label>Phone Number</label>
+                        						<input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+                        					</div>
+                      					<button type="button" class="btn btn-info">Register</button>
                       					</div>
                       				</form>
                     				</div>
