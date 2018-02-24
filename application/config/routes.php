@@ -49,6 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+$route['lr/juniorhs'] = 'LR/home/juniorhs';
+$route['lr/seniorhs'] = 'LR/home/seniorhs';
+$route['lr/juniorhs_subjects'] = 'LR/home/juniorhs_subjects';
+$route['lr/seniorhs_subjects'] = 'LR/home/seniorhs_subjects';
+$route['lr/view_file'] = 'LR/home/view_file';
+$route['lr/register'] = 'LR/home/register';
+
 $route['default_controller'] = 'SMS/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -148,6 +148,7 @@
                 	<label for="itr_item_code" class="col-sm-2 control-label">Unit</label>
       						<div class="col-sm-7">
                     <select class="sel_category" name="itr_item_code" id="item_code" style="width: 100%;">
+                      <option selected="selected">Select Item:</option>
                       <?php foreach ($options as $option) { ?>
                       			<?php $items = array($option->item_code,$option->item_name); ?>
                             <option><?php echo implode(' - ', $items); ?></option>
@@ -164,11 +165,11 @@
                 <div class="form-group">
                   <label for="unit_cost" class="col-sm-2 control-label">Unit Cost</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="unit_cost" id="unit_cost" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="unit_cost" id="unit_cost" disabled="disabled" data-validate="required" data-message-required="Value Required" >
                   </div>
                   <label for="total_cost" class="col-sm-2 control-label">Total Cost</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="total_cost" id="total_cost" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="total_cost" id="total_cost" disabled="disabled" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
@@ -199,8 +200,7 @@
               <div class="row">
                 <div class="form-group">
                   <label for="received_fr" class="col-sm-2 control-label">Date Received</label>
-                  <div class="col-sm-7">
-              
+                  <div class="col-sm-7">              
                     <div class="input-group date">
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
@@ -209,7 +209,7 @@
                     </div>
                   </div>
                 </div>
-              </div><hr>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-sm btn-success submit">Save</button>

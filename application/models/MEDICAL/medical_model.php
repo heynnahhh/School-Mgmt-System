@@ -1,0 +1,27 @@
+<?php
+class Medical_model extends CI_Model{
+  public function __construct() {
+		parent::__construct();
+
+	}
+
+
+	public function get_grade_section($m_data){
+		$this->db->select('section');
+		$this->db->where('grade_lvl', $m_data);
+		$query = $this->db->get('tbl_md_grade_section');
+		return $query->result();
+	}
+
+	public function insert_student_info($m_data){
+		$this->db->insert('tbl_md_student_info', $m_data);
+
+	}
+
+	public function get_student_info(){
+		$this->db->select('*');
+		$query = $this->db->get('tbl_md_student_info');
+		return $query->result();
+	}
+
+}	

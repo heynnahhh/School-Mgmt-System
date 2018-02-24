@@ -86,7 +86,7 @@ class ajax extends CI_Controller {
 			);
 
 		echo json_encode($result);
-
+			// print_r($result);
 	}
 
 	public function add(){
@@ -156,7 +156,7 @@ class ajax extends CI_Controller {
 				'description' => $data['description'],
 				'received_by' => $data['received_by'],
 				'received_fr' => $data['received_fr'],
-				'date_received' => date("Y-m-d H:i:s")
+				'date_received' => $data['date_received']
 			);
 
 			$this->inventory_model->insert_transacts($m_data);
@@ -179,6 +179,33 @@ class ajax extends CI_Controller {
 		// needs to set url
 		$this->stocks();
 
+	}
+
+
+	public function get_item_details(){
+		$data = $this->input->post();
+
+		$item_code = explode(' - ', $data['item_code']);
+
+		$m_data = $item_code[0];
+
+		$values = $this->inventory_model->get_details($m_data);
+
+		if($values) {
+
+			foreach ($values as $value){
+				$option = array();
+				$option[] = $value->unit_cost;
+				$option_data[] = $option;
+			}
+
+		$result = array(
+			"data" => $option_data
+		);
+
+		echo json_encode($result);
+
+		}
 	}
 
 

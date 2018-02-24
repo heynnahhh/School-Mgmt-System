@@ -4,7 +4,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>includes/fonts/css/font-awesome.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/AdminLTE.css">
-<!-- TEMPORARY -->
-<link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/temp.css">
 
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">
