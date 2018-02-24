@@ -1,21 +1,5 @@
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery-1.8.3.min.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.scrollTo.min.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.sparkline.js"></script>
-
-
-    <!--common script for all pages-->
-    <script src="<?php echo base_url();?>includes/lr/website/js/common-scripts.js"></script>
-
-    <script type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/gritter-conf.js"></script>
-
-	<script type="text/javascript">
+	<script>
       var homeUrl = '<?php echo $this->uri->segment(2);?>';
       $(document).ready(function () {
         if( homeUrl == 'home'){
@@ -26,7 +10,7 @@
               // (string | mandatory) the text inside the notification
               text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Free version for <a href="http://blacktie.co" target="_blank" style="color:#ffd777">BlackTie.co</a>.',
               // (string | optional) the image to display on the left
-              image: '<?php echo base_url();?>includes/lr/website/img/ui-sam.jpg',
+              image: '<?php echo base_url();?>includes/lr/img/ui-sam.jpg',
               // (bool | optional) if you want it to fade out on its own or just sit there
               sticky: true,
               // (int | optional) the time you want it to be alive for before fading out
@@ -37,9 +21,7 @@
           return false;
         }
       });
-	</script>
 
-	<script type="application/javascript">
 		var slideIndex = 1;
 		showSlides(slideIndex);
 
@@ -67,7 +49,3 @@
 		  dots[slideIndex-1].className += " active";
 		}
     </script>
-
-
-  </body>
-</html>

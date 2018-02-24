@@ -1,68 +1,103 @@
-<?php include '/../templates/header.php';?>
+<?php include '/../templates/header_profile.php';?>
+
+<?php include '/../templates/profile_nav.php';?>
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
+
+	     <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
             <div class="row">
-                <div class="col-lg-9 main-chart">
-      					  <!-- banner -->
-        					<div class="slideshow-container">
-        						<div class="mySlides fade-slide">
-        						  <div class="numbertext">1 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%;">
-        							<div class="text">
-        								<h1 class="carousel-caption-header">Slide 1</h1>
-        								<p class="carousel-caption-text hidden-sm hidden-xs">
-        									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
-        								</p>
-        							</div>
-        						</div>
-
-        						<div class="mySlides fade-slide">
-        						  <div class="numbertext">2 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%;">
-        						  <div class="text">
-        								<h1 class="carousel-caption-header">Slide 2</h1>
-        								<p class="carousel-caption-text hidden-sm hidden-xs">
-        									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
-        								</p>
-        						  </div>
-        						</div>
-
-        						<div class="mySlides fade-slide">
-        						  <div class="numbertext">3 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%;">
-        							<div class="text">
-        								<h1 class="carousel-caption-header">Slide 3</h1>
-        								<p class="carousel-caption-text hidden-sm hidden-xs">
-        									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
-        								</p>
-        							</div>
-        						</div>
-
-        						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        						<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        						</div>
-        						<br>
-        						<div style="text-align:right">
-        						  <span class="dot" onclick="currentSlide(1)"></span>
-        						  <span class="dot" onclick="currentSlide(2)"></span>
-        						  <span class="dot" onclick="currentSlide(3)"></span>
-        						</div>
-        					<div class="clearfix"> </div>
-      				<!-- //banner -->
-                </div><!-- /col-lg-9 END SECTION MIDDLE -->
+              <div class="col-lg-9 main-chart">
+    					 <h3><i class="fa fa-angle-right"></i> Junior School Resources</h3>
+    						<hr></i>
+    						<div class="row mt">
+    							<div class="col-md-12">
+    								<div class="white-panel pn">
+    									<div class="panel-heading">
+    										<div class="pull-left"><h3></i> Subjects</h3></div>
+    										<br>
+    									</div>
+    									<div class="custom-check goleft mt">
+    										<div class="tab-accordion">
+    											<input class="tab" id="tab-one" type="radio" name="tabs2">
+    											<label class = "label-accordion" for="tab-one">Label Two
+    												<div class="pull-right hidden-phone">
+    													<span class="badge bg-important">35</span>
+    												</div>
+    											</label>
+    											<div class="tab-content-accordion">
+    											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+    											</div>
+    										</div>
+    										<div class="tab-accordion">
+    											<input class="tab" id="tab-two" type="radio" name="tabs2">
+    											<label class = "label-accordion" for="tab-two">Label Two
+    												<div class="pull-right hidden-phone">
+    													<span class="badge bg-important">35</span>
+    												</div>
+    											</label>
+    											<div class="tab-content-accordion">
+    											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+    											</div>
+    										</div>
+    										<div class="tab-accordion">
+    											<input class="tab" id="tab-three" type="radio" name="tabs2">
+    											<label class = "label-accordion" for="tab-three">Label Two
+    												<div class="pull-right hidden-phone">
+    													<span class="badge bg-important">35</span>
+    												</div>
+    											</label>
+    											<div class="tab-content-accordion">
+    											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+    											</div>
+    										</div>
+    										<div class="tab-accordion">
+    											<input class="tab" id="tab-four" type="radio" name="tabs2">
+    											<label class = "label-accordion" for="tab-four">Label Two
+    												<div class="pull-right hidden-phone">
+    													<span class="badge bg-important">35</span>
+    												</div>
+    											</label>
+    											<div class="tab-content-accordion">
+    											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+    											</div>
+    										</div>
+    										<div class="tab-accordion">
+    											<input class="tab" id="tab-five" type="radio" name="tabs2">
+    											<label class = "label-accordion" for="tab-five">Label Two
+    												<div class="pull-right hidden-phone">
+    													<span class="badge bg-important">35</span>
+    												</div>
+    											</label>
+    											<div class="tab-content-accordion">
+    											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+    											</div>
+    										</div>
+    										<div class="tab-accordion">
+    											<input class="tab" id="tab-six" type="radio" name="tabs2">
+    											<label class = "label-accordion" for="tab-six">Label Two
+    												<div class="pull-right hidden-phone">
+    													<span class="badge bg-important">35</span>
+    												</div>
+    											</label>
+    											<div class="tab-content-accordion">
+    											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+    											</div>
+    										</div>
+    									</div><!-- /table-responsive -->
+    								</div><!--/ White-panel -->
+    							</div><! --/col-md-12 -->
+    						</div><! -- row -->
+              </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
 
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
-
                   <div class="col-lg-3 ds">
                     <!--JUNIOR HIGH SECTION-->
 						<h3>Junior High School Latest Addition</h3>
@@ -157,8 +192,8 @@
               </div><! --/row -->
           </section>
       </section>
-
       <!--main content end-->
+
       <?php include '/../templates/footer.php';?>
 
       <?php include '/../templates/scripts.php';?>
