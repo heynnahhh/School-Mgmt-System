@@ -54,8 +54,21 @@ $route['lr/juniorhs'] = 'LR/home/juniorhs';
 $route['lr/seniorhs'] = 'LR/home/seniorhs';
 $route['lr/juniorhs_subjects'] = 'LR/home/juniorhs_subjects';
 $route['lr/seniorhs_subjects'] = 'LR/home/seniorhs_subjects';
+$route['lr/juniorhs_view_files'] = 'LR/home/juniorhs_view_file';
+$route['lr/seniorhs_view_files'] = 'LR/home/seniorhs_view_file';
 $route['lr/view_file'] = 'LR/home/view_file';
 $route['lr/register'] = 'LR/home/register';
+
+
+$route['lr/profile'] = 'LR/home/p_home';
+$route['lr/profile/juniorhs'] = 'LR/home/p_juniorhs';
+$route['lr/profile/seniorhs'] = 'LR/home/p_seniorhs';
+$route['lr/profile/juniorhs_subjects'] = 'LR/home/p_juniorhs_subjects';
+$route['lr/profile/seniorhs_subjects'] = 'LR/home/p_seniorhs_subjects';
+$route['lr/profile/juniorhs_view_files'] = 'LR/home/p_juniorhs_view_file';
+$route['lr/profile/seniorhs_view_files'] = 'LR/home/p_seniorhs_view_file';
+$route['lr/profile/view_file'] = 'LR/home/p_view_file';
+
 
 $route['default_controller'] = 'SMS/home';
 $route['404_override'] = '';

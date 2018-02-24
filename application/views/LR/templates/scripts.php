@@ -1,21 +1,5 @@
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery-1.8.3.min.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.scrollTo.min.js"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>includes/lr/website/js/jquery.sparkline.js"></script>
-
-
-    <!--common script for all pages-->
-    <script src="<?php echo base_url();?>includes/lr/website/js/common-scripts.js"></script>
-
-    <script type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/gritter-conf.js"></script>
-
-	<script type="text/javascript">
+	<script>
       var homeUrl = '<?php echo $this->uri->segment(2);?>';
       $(document).ready(function () {
         if( homeUrl == 'home'){
@@ -37,9 +21,7 @@
           return false;
         }
       });
-	</script>
 
-	<script type="application/javascript">
 		var slideIndex = 1;
 		showSlides(slideIndex);
 
@@ -67,7 +49,3 @@
 		  dots[slideIndex-1].className += " active";
 		}
     </script>
-
-
-  </body>
-</html>
