@@ -13,7 +13,7 @@
                        </tr>
 
                        <tr>
-                         <td><a href="courses" class="link-text">Course Offered for Senior High School</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/courses" class="link-text">Course Offered for Senior High School</a></td>
                        </tr>
 
                        <!-- ################################################################################################ -->
@@ -31,18 +31,18 @@
                      <tbody>
 
                        <tr>
-                        <td><a href="admission" class="link-text">Admission Procedures</a></td>
+                        <td><a href="<?php echo site_url();?>/website/home/admission" class="link-text">Admission Procedures</a></td>
                        </tr>
 
                        <tr>
-                         <td><a href="login" class="link-text">Enrollment and Registration System (ERS)</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/login" class="link-text">Enrollment and Registration System (ERS)</a></td>
                        </tr>
                        <tr>
-                         <td><a href="Application" class="link-text">Application for Senior High School</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/Application" class="link-text">Application for Senior High School</a></td>
                        </tr>
 
                        <tr>
-                         <td><a href="courses" class="link-text">Course Offered for Senior High School</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/courses" class="link-text">Course Offered for Senior High School</a></td>
                        </tr>
 
                        <!-- ################################################################################################ -->

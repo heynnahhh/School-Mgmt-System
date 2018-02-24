@@ -71,7 +71,7 @@
               ?>
             </div>
 
-            <div id="footer_button" style="margin-top:-40px;" class="fl_right"><a class="btn" href="news">See full details &raquo;</a></div>
+            <div id="footer_button" style="margin-top:-40px;" class="fl_right"><a class="btn" href="<?php echo site_url();?>/website/home/news">See full details &raquo;</a></div>
           </div>
           <div class ="more_news">
             <div class="headline_underline"><h6 class="more_news_heading "><i class="fa fa-newspaper-o" style="font-size:30px;color:maroon;"></i> More News</h6></div>
@@ -86,7 +86,7 @@
                             <li><i class="fa fa-calendar-o"></i> 06/01/45</li>
                           </ul>
                           <h6 class="heading font-x1">News Title</h6>
-                          <p><a class="btn" href="news">Read More &raquo;</a></p>
+                          <p><a class="btn" href="<?php echo site_url();?>/website/home/news">Read More &raquo;</a></p>
 											  </div>
                       </article>
                     </li>
@@ -97,7 +97,7 @@
                             <li><i class="fa fa-calendar-o"></i> 05/01/45</li>
                           </ul>
                           <h6 class="heading font-x1">News Title</h6>
-                          <p><a class="btn" href="news">Read More &raquo;</a></p>
+                          <p><a class="btn" href="<?php echo site_url();?>/website/home/news">Read More &raquo;</a></p>
 											  </div>
                       </article>
                     </li>
@@ -108,7 +108,7 @@
                             <li><i class="fa fa-calendar-o"></i> 04/01/45</li>
                           </ul>
                           <h6 class="heading font-x1">News Title</h6>
-                          <p><a class="btn" href="news">Read More &raquo;</a></p>
+                          <p><a class="btn" href="<?php echo site_url();?>/website/home/news">Read More &raquo;</a></p>
 											  </div>
                       </article>
                     </li>
@@ -152,7 +152,7 @@
 								 </div>
                </div>
                <p class="view-calendar">
-                 <a href="<?php echo site_url();?>/website/Calendar" class="link-text">View Full Calendar &raquo;</a>
+                 <a href="<?php echo site_url();?>/website/home/Calendar" class="link-text">View Full Calendar &raquo;</a>
                </p>
              </div>
 
@@ -164,19 +164,19 @@
                      <tbody>
 
                        <tr>
-                         <td><a href="Admission" class="link-text">Admission Procedures</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/admission" class="link-text">Admission Procedures</a></td>
                        </tr>
 
                        <tr>
-                         <td><a href="login" class="link-text">Enrollment and Registration System (ERS)</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/login" class="link-text">Enrollment and Registration System (ERS)</a></td>
                        </tr>
                        
                        <tr>
-                         <td><a href="Application" class="link-text">Application for Senior High School</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/application" class="link-text">Application for Senior High School</a></td>
                        </tr>
 
                        <tr>
-                         <td><a href="Course" class="link-text">Course Offered for Senior High School</a></td>
+                         <td><a href="<?php echo site_url();?>/website/home/courses" class="link-text">Course Offered for Senior High School</a></td>
                        </tr>
 
                        <!-- ################################################################################################ -->
