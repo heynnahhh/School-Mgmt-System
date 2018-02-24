@@ -1,67 +1,152 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Kids School a Education School Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Kids School Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-<!-- //for-mobile-apps -->
-<link rel="stylesheet" href="<?php echo base_url();?>includes/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url();?>includes/lr/css/style.css"  type="text/css" media="all" />
-<!-- js -->
-<link rel="stylesheet" href="<?php echo base_url();?>includes/lr/css/flexslider.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php echo base_url();?>includes/lr/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+    <title>AHS Learning Resource Portal</title>
 
-</head>
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo base_url();?>includes/lr/website/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="<?php echo base_url();?>includes/lr/website/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/assets/lineicons/style.css">
 
-<body>
-<!-- body -->
-	<div class="body-content">
-		<div class="container">
-			<div class="body-content1">
-			<!-- header -->
-				<div class="logo-search">
-					<div class="logo">
-						<h1><a href="home">Araullo High School<i>Learning Resource Portal</i></a></h1>
-					</div>
-					<div class="search">
-						<form>
-							<input type="text" value="Search Here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Here...';}" required="">
-							<input type="submit" value=" " >
-						</form>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			<!-- //header -->
-			<!-- nav -->
-				<div class="navigation">
-					<nav class="navbar navbar-default">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						  </button>
+    <!-- Custom styles for this template -->
+    <link href="<?php echo base_url();?>includes/lr/website/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>includes/lr/website/css/style-responsive.css" rel="stylesheet">
+
+    <script src="<?php echo base_url();?>includes/lr/website/js/chart-master/Chart.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+            <!--logo start-->
+            <a href="home" class="logo"><b>Araullo High School Learning Resource Portal</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    <li class="dropdown">
+                        <a href="home">
+														<span>Home</span>
+								     		</a>
+							      </li>
+							      <li id="header_inbox_bar" class="dropdown">
+			              	<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+												<span>Resources</span> <span class="caret"></span>
+							        </a>
+	                        <ul class="dropdown-menu extended inbox">
+	                            <li>
+	                                <a href="juniorhs">Junior High School</a>
+	                            </li>
+														<li>
+                                <a href="seniorhs">Senior High School</a>
+                            </li>
+                        </ul>
+                    </li>
+									<li>
+						<div class="input-group col-xs-12 search">
+							<div class="input-group">
+								<div class="input-group-btn">
+								  <button type="button" class="btn btn-theme dropdown-toggle btn-secondary" data-toggle="dropdown">
+									Search by <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" role="menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li><a href="#">Separated link</a></li>
+								  </div>
+								  <input type="search" class="form-control">
+								</div>
+							</div>
 						</div>
+                    </li>
+                    <!-- inbox dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                <li><a class="logout" href="register">Register</a></li>
+                <li><a class="logout" href="" data-toggle="modal" data-target="#myModal">Login</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-							<nav class="stroke">
-								<ul class="nav navbar-nav">
-									<li><a href="<?php echo site_url();?>/LR/home" class="hvr-rectangle-out">Home</a></li>
-									<li><a href=" <?php echo site_url();?>/LR/jhs" class="hvr-rectangle-out">Junior High School</a></li>
-									<li><a href="<?php echo site_url();?>/LR/shs" class="hvr-rectangle-out">Senior High School</a></li>
-									<li><a href="<?php echo site_url();?>/LR/login" class="hvr-rectangle-out">Login</a></li>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+				      </div>
+				      <div class="modal-body">
+				         <div id="login-page">
+						  <form class="form-login" action="index.html">
+							<div class="login-wrap">
+								<input type="text" class="form-control" placeholder="Username" autofocus>
+								<br>
+								<input type="password" class="form-control" placeholder="Password">
+								<label class="checkbox">
+									<span class="pull-right">
+										<a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
 
-								</ul>
-							</nav>
+									</span>
+								</label>
+								<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+								<hr>
+								<div class="registration">
+									Don't have an account yet?<br/>
+									<a class="" href="#">
+										Create an account
+									</a>
+								</div>
+							</div>
+							  <!-- Modal -->
+							  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+								  <div class="modal-dialog">
+									  <div class="modal-content">
+										  <div class="modal-header">
+											  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											  <h4 class="modal-title">Forgot Password ?</h4>
+										  </div>
+										  <div class="modal-body">
+											  <p>Enter your e-mail address below to reset your password.</p>
+											  <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+
+										  </div>
+										  <div class="modal-footer">
+											  <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+											  <button class="btn btn-theme" type="button">Submit</button>
+										  </div>
+									  </div>
+								  </div>
+							  </div>
+							  <!-- modal -->
+						  </form>
 						</div>
-						<!-- /.navbar-collapse -->
-					</nav>
+				      </div>
+				    </div>
+				  </div>
 				</div>
-			<!-- //nav -->
