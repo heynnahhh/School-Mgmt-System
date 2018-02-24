@@ -149,8 +149,8 @@
                     </select>
                   </div>
                 </div>
-                <button class="btn btn-sm bg-blue" id="add_clone"><i class="fa fa-plus-circle"></i></button>
-                <button class="btn btn-sm bg-red" id="del_clone"><i class="fa fa-minus-circle"></i></button>
+                <button class="btn btn-sm bg-blue add_clone"><i class="fa fa-plus-circle"></i></button>
+                <button class="btn btn-sm bg-red del_clone"><i class="fa fa-minus-circle"></i></button>
                 <div class="form-group">
                   <label for="field-1" class="col-sm-2 control-label">Quantity</label>
                   <div class="col-sm-3">
