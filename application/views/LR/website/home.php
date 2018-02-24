@@ -13,7 +13,7 @@
         					<div class="slideshow-container">
         						<div class="mySlides fade-slide">
         						  <div class="numbertext">1 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/website/img/product.jpg" style="width:100%;">
+        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%;">
         							<div class="text">
         								<h1 class="carousel-caption-header">Slide 1</h1>
         								<p class="carousel-caption-text hidden-sm hidden-xs">
@@ -24,7 +24,7 @@
 
         						<div class="mySlides fade-slide">
         						  <div class="numbertext">2 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/website/img/product.jpg" style="width:100%;">
+        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%;">
         						  <div class="text">
         								<h1 class="carousel-caption-header">Slide 2</h1>
         								<p class="carousel-caption-text hidden-sm hidden-xs">
@@ -35,7 +35,7 @@
 
         						<div class="mySlides fade-slide">
         						  <div class="numbertext">3 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/website/img/product.jpg" style="width:100%;">
+        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%;">
         							<div class="text">
         								<h1 class="carousel-caption-header">Slide 3</h1>
         								<p class="carousel-caption-text hidden-sm hidden-xs">
