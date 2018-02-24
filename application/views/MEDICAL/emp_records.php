@@ -144,23 +144,22 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h3 class="modal-title"><i class="fa fa-plus-square"></i> Add Employee</h3>
           </div>
-
+          <form method="post" enctype="multipart/form-data">
           <div class="modal-body">
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
                         <div class="col-xs-4">
-                          <input type="text" class="form-control" placeholder="Surname">
+                          <input type="text" class="form-control" placeholder="Surname" name="last_name" id="last_name">
                         </div>
                         <div class="col-xs-4">
-                          <input type="text" class="form-control" placeholder="Name">
+                          <input type="text" class="form-control" placeholder="Name" name="first_name" id="first_name">
                         </div>
                         <div class="col-xs-4">
-                          <input type="text" class="form-control" placeholder="M.I">
+                          <input type="text" class="form-control" placeholder="Middle Name" name="middle_name" id="middle_name">
                         </div>
                       </div>
                     </div>
@@ -171,7 +170,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <label>DEPARTMENT:</label>
-                          <select class="form-control">
+                          <select class="form-control" name="department" id="department">
                             <option>Non-Teaching</option>
                             <option>Science</option>
                             <option>MAPEH</option>
@@ -187,12 +186,11 @@
                         </div>
                         <div class="col-xs-6">
                           <label>AGE:</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="age" id="age">
                         </div>
                       </div>
                     </div>
                   </div>
-
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
@@ -203,42 +201,36 @@
                             <div class="input-group-addon">
                               <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="emp_birthdate">
+                            <input type="text" class="form-control pull-right" name="birthdate" id="emp_birthdate">
                           </div>
                           <!-- /.input group -->
                         </div>
-
                         <div class="col-xs-6">
                           <label>CONTACT NUMBER:</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="contact_no" id="contact_no">
                         </div>
                       </div>
                     </div>
                   </div>
-
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
-
                         <div class="col-xs-6">
                           <label>IN CASE OF EMERGENCY:</label>
                         </div>
                       </div>
                     </div>
                   </div>
-
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
-
                         <div class="col-xs-6">
                           <label>NAME:</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="contact_person" id="contact_person">
                         </div>
-
                         <div class="col-xs-6">
                           <label>RELATIONSHIP:</label>
-                          <select class="form-control">
+                          <select class="form-control" name="relationship" id="relationship">
                             <option>Father</option>
                             <option>Mother</option>
                             <option>Sibling</option>
@@ -250,19 +242,22 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
-
-                        <div class="col-xs-6">
+                        <div class="col-xs-12">
                           <label>ADDRESS:</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="address" id="address">
                         </div>
-
-                        <div class="col-xs-6">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-12">
                           <label>CONTACT NUMBER:</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="contact_person_no" id="contact_person_no">
                         </div>
                       </div>
                     </div>
@@ -272,9 +267,10 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary pull-left"  data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Save Changes</button>
+              <button type="button" class="btn btn-primary pull-right submit">Save Changes</button>
             </div>
           </div>
+        </form>
         </div>
       </div>
     </div>

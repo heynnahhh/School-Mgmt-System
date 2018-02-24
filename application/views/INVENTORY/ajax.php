@@ -48,7 +48,23 @@ $(document).ready(function() {
 
     $('.sel_category').select2();
 
+    $('.del_clone').hide();
+
 } );
+
+$('.add_clone').on('click', function(){
+  // $('.department').clone().appendTo('.distribute').after("<hr>");
+//   $('.department').last().clone().appendTo('.distribute').find("input").attr("name",function(i,oldVal) {
+//     return oldVal.replace(/\[(\d+)\]/,function(_,m){
+//         return "[" + (+m + 1) + "]";
+//     });
+// });
+// $('.del_clone').show();
+
+  return false;
+
+});
+
 
 $('#item_code').on('change', function(){
 

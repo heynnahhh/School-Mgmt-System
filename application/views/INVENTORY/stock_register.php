@@ -129,7 +129,7 @@
             <h4 class="modal-title tle-white"><i class="fa fa-plus-circle"></i> Distribute</h4>
           </div>
           <div class="modal-body">
-            <form>
+            <form class="distribute">
               <div class="row">
                 <div class="form-group">
                   <label for="field-1" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
@@ -138,7 +138,7 @@
                   </div>
                 </div>
               </div><hr>
-              <div class="row">
+              <div class="row department">
                 <div class="form-group">
                   <label for="field-1" class="col-sm-2 control-label">Department</label>
                   <div class="col-sm-7">
@@ -149,8 +149,8 @@
                     </select>
                   </div>
                 </div>
-                <button class="btn btn-sm bg-blue add_clone"><i class="fa fa-plus-circle"></i></button>
-                <button class="btn btn-sm bg-red del_clone"><i class="fa fa-minus-circle"></i></button>
+                <button type="button" class="btn btn-sm bg-blue add_clone"><i class="fa fa-plus-circle"></i></button>
+                <button type="button" class="btn btn-sm bg-red del_clone"><i class="fa fa-minus-circle"></i></button>
                 <div class="form-group">
                   <label for="field-1" class="col-sm-2 control-label">Quantity</label>
                   <div class="col-sm-3">

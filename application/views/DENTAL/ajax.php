@@ -1,42 +1,35 @@
 <script>
-var emp_recUrl = '<?=site_url()?>/MEDICAL/ajax/view_employee_records';
-var stud_recUrl = '<?=site_url()?>/MEDICAL/ajax/view_student_records';
-var emp_infoUrl = '<?=site_url()?>/MEDICAL/ajax/view_employee_info';
-var stud_infoUrl = '<?=site_url()?>/MEDICAL/ajax/view_student_info';
-var current_module = '<?php echo $this->uri->segment(1)?>';
-var current_method = '<?php echo $this->uri->segment(3);?>';
 
-$(document).ready(function() {
+$(document).ready(function(){
+  var emp_infoUrl = '<?=site_url()?>/DENTAL/ajax/view_employee_info';
+  var stud_infoUrl = '<?=site_url()?>/DENTAL/ajax/view_student_info';
+  var current_method = '<?php echo $this->uri->segment(3);?>';
 
-  var tableParams = {
-        "paging": true,
-        "autoWidth": false,
-        "tableTools": {
-           "aButtons": [ "copy", "print", {
-                 "sExtends": "collection",
-                   "sButtonText": "Save",
-                    "aButtons": [ "csv", "xls", "pdf" ]
-                  }
-                ]
-              }
+    var tableParams = {
+          "paging": true,
+          "autoWidth": false,
+          "tableTools": {
+             "aButtons": [ "copy", "print", {
+                   "sExtends": "collection",
+                     "sButtonText": "Save",
+                      "aButtons": [ "csv", "xls", "pdf" ]
+                    }
+                  ]
+                }
 
-  };
+    };
 
-  if (current_method == 'student'){
-    tableParams.ajax = stud_infoUrl;
-    tableParams.columnDefs = [{"width": "300px", "targets": 1},{"width": "100px", "targets": 2}];
-    $('#stud_list').DataTable(tableParams);
-  }
-  else if(current_method == 'employees'){
-    tableParams.ajax = emp_infoUrl;
-    tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
-    $('#emp_list').DataTable(tableParams);
+    if (current_method == 'student'){
+      tableParams.ajax = stud_infoUrl;
+      tableParams.columnDefs = [{"width": "300px", "targets": 1},{"width": "100px", "targets": 2}];
+      $('#denstud_list').DataTable(tableParams);
+    }
+    else if(current_method == 'employees'){
+      tableParams.ajax = emp_infoUrl;
+      tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
+      $('#emp_list').DataTable(tableParams);
 
-  }
-
-    $('#emp_records').DataTable();
-    $('#stud_records').DataTable();
-
+    }
 });
 
 $('#grade_lvl').on('change', function(){
@@ -61,6 +54,7 @@ $('#grade_lvl').on('change', function(){
   	});
 
 });
+
 
 $(".submit").on('click', function(){
 	var addUrl = '<?php echo $this->uri->segment(3); ?>';
@@ -94,7 +88,7 @@ $(".submit").on('click', function(){
 
 	var params = {
 		type: "POST",
-		url: '<?=site_url()?>/MEDICAL/ajax/add',
+		url: '<?=site_url()?>/DENTAL/ajax/add',
 	    success: function(data) {
         $("#myModal").modal('hide');
         alert("successfully saved!");

@@ -6,33 +6,9 @@ class ajax extends CI_Controller {
   		parent::__construct();
 
 		$this->load->library('form_validation');
-		$this->load->model('MEDICAL/medical_model');
+		$this->load->model('DENTAL/dental_model');
 		$this->sms_session->checkSession();
 
-	}
-
-	public function get_section_option(){
-		$data = $this->input->post();
-
-		$m_data = $data['grade_lvl'];
-
-		$values = $this->medical_model->get_grade_section($m_data);
-
-		if($values) {
-
-		foreach ($values as $value) {
-			$option = array();
-			$option[] = $value->section;
-			$option_data[] = $option;
-		}
-
-		$result = array(
-			"data" => $option_data
-		);
-
-		echo json_encode($result);
-
-		}
 	}
 
 	public function add(){
@@ -72,7 +48,7 @@ class ajax extends CI_Controller {
 				'status' => 'Inactive'
 			);
 
-			$this->medical_model->insert_student_info($m_data);
+			$this->dental_model->insert_student_info($m_data);
 		}
 	}
 
@@ -93,13 +69,13 @@ class ajax extends CI_Controller {
 				'contact_person_no' => $data['contact_person_no']
 			);
 
-			$this->medical_model->insert_employee_info($m_data);
-			print_r($m_data);
+			$this->dental_model->insert_employee_info($m_data);
 		}
 	}
 
+
 	public function view_student_info(){
-		$m_data = $this->medical_model->get_student_info();
+		$m_data = $this->dental_model->get_student_info();
 		$data = array();
 
 			foreach ($m_data as $value) {
@@ -121,7 +97,7 @@ class ajax extends CI_Controller {
 	}
 
 	public function view_employee_info(){
-		$m_data = $this->medical_model->get_employee_info();
+		$m_data = $this->dental_model->get_employee_info();
 		$data = array();
 
 			foreach ($m_data as $value) {
@@ -140,4 +116,5 @@ class ajax extends CI_Controller {
 
 			echo json_encode($result);
 	}
+
 }
