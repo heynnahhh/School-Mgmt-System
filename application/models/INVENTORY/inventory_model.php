@@ -56,6 +56,13 @@ class Inventory_model extends CI_Model{
         return $query->result();
     }
 
+    public function get_details($m_data){
+      $this->db->select('unit_cost');
+      $this->db->where('item_code', $m_data);
+      $query = $this->db->get('tbl_inv_items');
+      return $query->result();
+    }
+    
     public function insert_product($m_data){
       $this->db->insert('tbl_inv_items', $m_data);
     }

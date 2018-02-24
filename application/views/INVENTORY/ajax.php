@@ -6,50 +6,6 @@ var addUrl = '<?php echo $this->uri->segment(3); ?>';
 
 $(document).ready(function() {
 
-  $(".submit").on('click', function (e) {
-    e.preventDefault();
-    var category = $("input#category").val();
-    var items = {
-        item_code: $("input#item_code").val(),
-        item_category: $("select#item_category").val(),
-        item_name: $("input#item_name").val(),
-        item_desc: $("textarea#item_desc").val(),
-        unit_cost: $("input#unit_cost").val()
-    };
-    var transacts = {
-      receipt_no: $("input#receipt_no").val(),
-      item_code: $("select#item_code").val(),
-      quantity: $("input#quantity").val(),
-      unit_cost: $("input#unit_cost").val(),
-      total_cost: $("input#total_cost").val(),
-      description: $("textarea#description").val(),
-      received_by: $("input#received_by").val(),
-      received_fr: $("input#received_fr").val()
-    };
-
-    var params = {
-      type: "POST",
-      url: '<?=site_url()?>/INVENTORY/ajax/add',
-      success: function(data) {
-        $("#myModal").modal('hide');
-        alert("successfully saved!");
-        // console.log(data);
-        location.reload();
-      }
-    };
-
-    if(addUrl == 'inventory_items'){
-      params.data = {'category': category, 'items':items, 'add':'inventory_items'};
-    }
-
-    else if(addUrl == 'transactions'){
-      params.data = {'transacts':transacts, 'add':'transactions'};
-    }
-
-    $.ajax(params);
-
-  });
-
     $('#items_tbl').DataTable(
       {
         "ajax": itemsUrl,
@@ -120,10 +76,89 @@ $(document).ready(function() {
 
 } );
 
+$('#item_code').on('change', function(){
+
+    $.ajax({
+      type: "POST",
+      data: {'item_code':  $('#item_code').val()},
+      url: '<?=site_url()?>/INVENTORY/ajax/get_item_details',
+      success: function(data){
+          if(data){
+            $json = JSON.parse(data);
+
+              $.each($json,function(key,value){
+                $('#unit_cost').val(value);
+                var t_cost = value * $('#quantity').val();
+                $('#total_cost').val(t_cost);
+
+              });
+          }
+          else if(data == null){
+              $('#unit_cost').val('');
+              $('#total_cost').val(null);
+              $('#unit_cost').val(null);
+
+          }
+      }
+    });
+
+});
+
+$('#quantity').on('keyup', function(){
+  var total_cost = $('#unit_cost').val() * $('#quantity').val();
+  $('#total_cost').val(total_cost);
+});
+
+$(".submit").on('click', function (e) {
+  e.preventDefault();
+  var category = $("input#category").val();
+  var items = {
+      item_code: $("input#item_code").val(),
+      item_category: $("select#item_category").val(),
+      item_name: $("input#item_name").val(),
+      item_desc: $("textarea#item_desc").val(),
+      unit_cost: $("input#unit_cost").val()
+  };
+  var transacts = {
+    receipt_no: $("input#receipt_no").val(),
+    item_code: $("select#item_code").val(),
+    quantity: $("input#quantity").val(),
+    unit_cost: $("input#unit_cost").val(),
+    total_cost: $("input#total_cost").val(),
+    description: $("textarea#description").val(),
+    received_by: $("input#received_by").val(),
+    received_fr: $("input#received_fr").val(),
+    date_received: $("input#date_received").val()
+
+  };
+
+  var params = {
+    type: "POST",
+    url: '<?=site_url()?>/INVENTORY/ajax/add',
+    success: function(data) {
+      $("#myModal").modal('hide');
+      alert("successfully saved!");
+      // console.log(data);
+      location.reload();
+    }
+  };
+
+  if(addUrl == 'inventory_items'){
+    params.data = {'category': category, 'items':items, 'add':'inventory_items'};
+  }
+
+  else if(addUrl == 'transactions'){
+    params.data = {'transacts':transacts, 'add':'transactions'};
+  }
+
+  $.ajax(params);
+
+});
+
 $('#date_received').datepicker({
     autoclose: true,
-    dateFormat: "mm-dd-yy"
-})
+    format: 'yyyy-mm-dd'
+  })
 
 function add(){
   $('#table2').hide();

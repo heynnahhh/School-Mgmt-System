@@ -137,3 +137,28 @@
 .skin-maroon.layout-top-nav .main-header > .logo:hover {
   background-color: #3b8ab8;
 }
+
+.box-maroon{
+    border-top: 3px solid #800000;
+  }
+
+
+.modal-content{
+  border-radius: .25em;
+}
+
+/* Clock */
+
+.clock-tab{
+  float: left;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.gray {
+  background-color: #808080;
+}
+
+.tle-white{
+  color: #fff;
+}
