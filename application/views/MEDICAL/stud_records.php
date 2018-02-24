@@ -23,7 +23,7 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-body">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="form-group">
                 <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddStudent">
                 <i class="fa fa-plus-square"></i> Add Student</a>
@@ -57,19 +57,20 @@
               </div>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-9">
               <div class="form-group">
                 <table id="stud_list" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Surname:</th>
                       <th>Name:</th>
-                      <th>M.I:</th>
+                      <th>Middle Initial</th>
+                      <th>Status</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr onclick="view_records()">
-                    </tr>
+                    <tr></tr>
                   </tbody>
                 </table>
               </div>
