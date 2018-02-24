@@ -102,27 +102,24 @@
 <!-- date-range-picker -->
 <script src="<?php echo base_url();?>includes/plugins/datepicker/bootstrap-datepicker.js"></script>
 
-<script>
-  $(function () {
-    $('#emp_records').DataTable()
-    $('#stud_records').DataTable()
-    $('#emp_list').DataTable()
-    $('#stud_list').DataTable()
-  })
-</script>
+<?php include 'ajax.php'; ?>
 
 <script>
   $('#stud_date_consult').datepicker({
-      autoclose: true
+      autoclose: true,
+      format: 'yyyy-mm-dd'
     })
   $('#emp_date_consult').datepicker({
-      autoclose: true
+      autoclose: true,
+      format: 'yyyy-mm-dd'
     })
-  $('#stud_birthdate').datepicker({
-      autoclose: true
+  $('#birthdate').datepicker({
+      autoclose: true,
+      format: 'yyyy-mm-dd'
     })
   $('#emp_birthdate').datepicker({
-      autoclose: true
+      autoclose: true,
+      format: 'yyyy-mm-dd'
     })
 </script>
 
