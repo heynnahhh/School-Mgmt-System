@@ -32,32 +32,98 @@
 
                                           <form>
                                             <div class="col-sm-7">
+                                              <div class="form-group">
+                                                <label>Title of Learning Resource</label>
+                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control">
+                                              </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
-                                                  <label>Barangay</label>
-                                                  <input type="text" placeholder="ex. Brgy. 27" class="form-control">
+                                                  <label>Description</label>
+                                                  <textarea placeholder="Type Here..." class="form-control"></textarea>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
-                                                  <label>City</label>
-                                                  <input type="text" placeholder="ex. Manila City" class="form-control">
+                                                  <label>Objective</label>
+                                                  <textarea placeholder="Type Here..." class="form-control"></textarea>
                                                 </div>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
-                                                  <label>Date</label>
-                                                  <input type="date" class="form-control">
+                                                  <label>Learning Subject</label>
+                                                  <select class="form-control">
+                                                    <option selected disabled>Choose</option>
+                                                    <option>Araling Panlipunan</option>
+                                                    <option>Edukasyon sa Pagpapakatao</option>
+                                                    <option>Edukasyong Pantahanan at Pangkabuhayan</option>
+                                                    <option>English</option>
+                                                    <option>Filipino</option>
+                                                    <option>Mathematics</option>
+                                                    <option>Science</option>
+                                                    <option>Technology and Livelihood Education</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                  <label>Topic</label>
+                                                  <div class="input-group">
+                                                    <select class="form-control">
+                                                      <option selected disabled>Choose</option>
+                                                      <option>Learning Module</option>
+                                                      <option>Learning Material</option>
+                                                    </select>
+                                                    <div class="input-group-btn">
+                                                      <button type="button" class="btn btn-theme btn-secondary">Add Topic</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Education Type</label>
+                                                  <select class="form-control">
+                                                    <option selected disabled>Choose</option>
+                                                    <option>Junior High School</option>
+                                                    <option>Senior High School</option>
+                                                  </select>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
-                                                  <label>Gender</label>
+                                                  <label>Grade Level</label>
                                                   <select class="form-control">
-                                                    <option>Male</option>
-                                                    <option>Female</option>
+                                                    <option selected disabled>Choose</option>
+                                                    <option>Learning Module</option>
+                                                    <option>Learning Material</option>
                                                   </select>
                                                 </div>
                                               </div>
-                                              <div class="form-group">
-                                                <label>Phone Number</label>
-                                                <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Learning Resource Type</label>
+                                                  <select class="form-control">
+                                                    <option selected disabled>Choose</option>
+                                                    <option>Learning Module</option>
+                                                    <option>Learning Material</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Intended Users</label>
+                                                  <select class="form-control">
+                                                    <option selected disabled>Choose</option>
+                                                    <option>Students</option>
+                                                    <option>Teachers</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Copyright</label>
+                                                  <select class="form-control">
+                                                    <option selected disabled>Choose</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Copyright Owner</label>
+                                                   <input type="text" placeholder="ex. CSS 101" class="form-control">
+                                                </div>
                                               </div>
                                               <div class="form-group">
                                                 <label>Learning Resource</label>

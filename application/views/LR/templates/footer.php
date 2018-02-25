@@ -1,10 +1,7 @@
 <!--footer start-->
 <footer class="site-footer">
     <div class="text-center">
-        2014 - Alvarez.is
-        <a href="home" class="go-top">
-            <i class="fa fa-angle-up"></i>
-        </a>
+        2018 - Powered by Technological University of the Philippines
     </div>
 </footer>
 <!--footer end-->
@@ -21,9 +18,10 @@
   <script src="<?php echo base_url();?>includes/lr/website/js/jquery.scrollTo.min.js"></script>
   <script src="<?php echo base_url();?>includes/lr/website/js/jquery.nicescroll.js" type="text/javascript"></script>
 
-
   <!--common script for all pages-->
   <script src="<?php echo base_url();?>includes/lr/website/js/common-scripts.js"></script>
 
-  <script type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/gritter/js/jquery.gritter.js"></script>
-  <script type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/gritter-conf.js"></script>
+
+<script type="text/javascript">
+
+</script>

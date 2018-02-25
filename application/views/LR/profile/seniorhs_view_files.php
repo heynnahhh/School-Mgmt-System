@@ -12,7 +12,7 @@
           <section class="wrapper">
               <div class="row">
                   <div class="col-lg-9 main-chart">
-          					 <h3><i class="fa fa-angle-right"></i> Senior School Resources</h3>
+          					 <h3><i class="fa fa-angle-right"></i> Senior High School Resources</h3>
           						<hr></i>
           						<div class="row mt">
           							<div class="col-md-12">
@@ -22,7 +22,7 @@
           										<br>
           									</div>
           									<div class="custom-check goleft mt">
-          										 <table id="todo" class="table table-hover custom-check">
+          										 <table id="todo" class="table custom-check">
           										  <tbody>
           											<tr>
           												<td>
