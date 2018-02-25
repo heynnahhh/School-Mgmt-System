@@ -2,19 +2,13 @@
 var stocksUrl = '<?=site_url()?>/INVENTORY/ajax/view_stocks';
 var itemsUrl = '<?=site_url()?>/INVENTORY/ajax/view_products';
 var transactsUrl = '<?=site_url()?>/INVENTORY/ajax/view_transacts';
-var addUrl = '<?php echo $this->uri->segment(3); ?>';
+var current_method = '<?php echo $this->uri->segment(3); ?>';
 
 $(document).ready(function() {
 
-    $('#items_tbl').DataTable(
-      {
-        "ajax": itemsUrl,
-      	"paging": true,
-      	"autoWidth": false,
-        "columnDefs":[
-          {"width": "300px", "targets": 1},
-          {"width": "100px", "targets": 2}
-        ],
+  var tableParams = {
+        "paging": true,
+        "autoWidth": false,
         "tableTools": {
            "aButtons": [ "copy", "print", {
                  "sExtends": "collection",
@@ -23,46 +17,26 @@ $(document).ready(function() {
                   }
                 ]
               }
-		  } );
 
-    $('#transacts_tbl').DataTable(
-      {
-        "ajax": transactsUrl,
-      	"paging": true,
-      	"autoWidth": false,
-        "columnDefs":[
-          {"width": "150px", "targets": 0},
-          {"width": "400px", "targets": 1}
-        ],
-        "tableTools": {
-           "aButtons": [ "copy", "print", {
-                 "sExtends": "collection",
-                   "sButtonText": "Save",
-                    "aButtons": [ "csv", "xls", "pdf" ]
-                  }
-                ]
-              }
-		  } );
+  };
 
+  if (current_method == 'inventory_items'){
+    tableParams.ajax = itemsUrl;
+    tableParams.columnDefs = [{"width": "300px", "targets": 1},{"width": "100px", "targets": 2}];
+    $('#items_tbl').DataTable(tableParams);
+  }
+  else if(current_method == 'transactions'){
+    tableParams.ajax = transactsUrl;
+    tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
+    $('#transacts_tbl').DataTable(tableParams);
 
-    $('#stock_tbl').DataTable(
-      {
-        "ajax": stocksUrl,
-      	"paging": true,
-      	"autoWidth": false,
-        "columnDefs":[
-          {"width": "150px", "targets": 0},
-          {"width": "400px", "targets": 1}
-        ],
-        "tableTools": {
-           "aButtons": [ "copy", "print", {
-                 "sExtends": "collection",
-                   "sButtonText": "Save",
-                    "aButtons": [ "csv", "xls", "pdf" ]
-                  }
-                ]
-              }
-		  } );
+  }
+  else if(current_method == 'stock_register'){
+    tableParams.ajax = stocksUrl;
+    tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
+    $('#stock_tbl').DataTable(tableParams);
+
+  }
 
     $(document).on('click', '#myBtn', function(){
       $("#myModal").modal();
@@ -74,7 +48,23 @@ $(document).ready(function() {
 
     $('.sel_category').select2();
 
+    $('.del_clone').hide();
+
 } );
+
+$('.add_clone').on('click', function(){
+  // $('.department').clone().appendTo('.distribute').after("<hr>");
+//   $('.department').last().clone().appendTo('.distribute').find("input").attr("name",function(i,oldVal) {
+//     return oldVal.replace(/\[(\d+)\]/,function(_,m){
+//         return "[" + (+m + 1) + "]";
+//     });
+// });
+// $('.del_clone').show();
+
+  return false;
+
+});
+
 
 $('#item_code').on('change', function(){
 
@@ -143,11 +133,11 @@ $(".submit").on('click', function (e) {
     }
   };
 
-  if(addUrl == 'inventory_items'){
+  if(current_method == 'inventory_items'){
     params.data = {'category': category, 'items':items, 'add':'inventory_items'};
   }
 
-  else if(addUrl == 'transactions'){
+  else if(current_method == 'transactions'){
     params.data = {'transacts':transacts, 'add':'transactions'};
   }
 

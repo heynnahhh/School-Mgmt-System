@@ -35,9 +35,7 @@
     $('#emp_list').DataTable()
     $('#stud_list').DataTable()
   })
-</script>
 
-<script>
   $('#stud_date_consult').datepicker({
       autoclose: true
     })
@@ -50,7 +48,14 @@
   $('#emp_birthdate').datepicker({
       autoclose: true
     })
+
+  $('#birthdate').datepicker({
+        autoclose: true,
+        format: 'yyyy-mm-dd'
+      })
 </script>
+
+<?php include 'ajax.php';?>
 
 </body>
 </html>
