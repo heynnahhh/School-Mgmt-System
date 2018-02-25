@@ -66,7 +66,7 @@
                 <li><a href="<?php echo site_url();?>/website/home/procedures">Enrollment Procedures</a></li>
               </ul>
         </li>
-        <li><a href="../lr/home">AHS-LR Portal</a></li>
+        <li><a href="<?php echo site_url();?>/LR/Home">AHS-LR Portal</a></li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->
