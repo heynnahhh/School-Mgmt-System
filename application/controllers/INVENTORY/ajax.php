@@ -54,7 +54,7 @@ class ajax extends CI_Controller {
 				elseif($value->product_status == 'Active'){
 					$row[] = '<span class="badge bg-green">Active</span>';
 				}
-				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}
 
