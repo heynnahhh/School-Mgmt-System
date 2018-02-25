@@ -72,12 +72,12 @@ class ajax extends CI_Controller {
 
 			foreach ($m_data as $value) {
 				$row = array();
-				$row[] = '<a href="'.site_url().'/INVENTORY/home/stock_register'.$value->receipt_no.'">'.$value->receipt_no.'</a>';
+				$row[] = $value->receipt_no;
 				$row[] = $value->item_name;
 				$row[] = $value->quantity;
 				$row[] = $value->total_cost;
 				$row[] = $value->date_received;
-				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}
 
@@ -121,7 +121,7 @@ class ajax extends CI_Controller {
 
 				$this->inventory_model->insert_category($m_data);
 				print_r($m_data);
-			
+
 		}
 	}
 
@@ -144,7 +144,7 @@ class ajax extends CI_Controller {
 
 	private function add_transacts($data){
 		if ($data) {
-			
+
 			$item_code = explode(' - ', $data['item_code']);
 
 			$m_data = array(
@@ -181,6 +181,40 @@ class ajax extends CI_Controller {
 
 	}
 
+	public function edit(){
+		$data = $this->input->post();
+		// echo $current_view;
+
+		if ( $data['edit'] == 'transactions'){
+			if($data['transacts']){
+				unset($data['edit']);
+				$this->edit_transacts($data['transacts']);
+			}
+
+		}
+	}
+
+	private function edit_transacts($data){
+		if($data){
+
+			$item_code = explode(' - ', $data['item_code']);
+
+			$m_data = array(
+				'receipt_no' => $data['receipt_no'],
+				'itr_item_code' => $item_code[0],
+				'quantity' => $data['quantity'],
+				'unit_cost' => $data['unit_cost'],
+				'total_cost' => $data['total_cost'],
+				'description' => $data['description'],
+				'received_by' => $data['received_by'],
+				'received_fr' => $data['received_fr'],
+				'date_received' => $data['date_received']
+			);
+
+			$this->inventory_model->update_transact($m_data);
+		}
+	}
+
 
 	public function get_item_details(){
 		$data = $this->input->post();
@@ -206,6 +240,21 @@ class ajax extends CI_Controller {
 		echo json_encode($result);
 
 		}
+	}
+
+	public function get_transact_details(){
+		$data = $this->input->post();
+
+		$m_data = $data['receipt_no'];
+
+		$values = $this->inventory_model->get_transact_details($m_data);
+
+		$result = array(
+			"data" => $values
+		);
+
+		echo json_encode($result);
+
 	}
 
 

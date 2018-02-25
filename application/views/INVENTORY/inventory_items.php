@@ -21,10 +21,10 @@
       <div class="row">
         <div class="col-xs-5">
           <div class="box box-success">
-            <div class="box-header bg-lime-opaque">
-              <div class="box-title text-green"><i class="fa fa-plus-circle"></i> Add Item</div>
+            <div class="box-header bg-green">
+              <h4 class="box-title"><i class="fa fa-plus-circle"></i> Add Item</h4>
               <div class="btn-group pull-right">
-                <a type="button" class="btn btn-sm bg-olive" id="myBtn" href="#add_category">Add Category</a>
+                <a type="button" class="btn btn-sm bg-lime-opaque text-black" id="myBtn" href="#add_category">Add Category</a>
               </div>
             </div>
             <div class="box-body">
