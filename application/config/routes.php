@@ -58,6 +58,7 @@ $route['lr/juniorhs_view_files'] = 'LR/home/juniorhs_view_file';
 $route['lr/seniorhs_view_files'] = 'LR/home/seniorhs_view_file';
 $route['lr/view_file'] = 'LR/home/view_file';
 $route['lr/register'] = 'LR/home/register';
+$route['lr/search'] = 'LR/home/search';
 
 
 $route['lr/profile'] = 'LR/home/p_home';
@@ -68,6 +69,7 @@ $route['lr/profile/seniorhs_subjects'] = 'LR/home/p_seniorhs_subjects';
 $route['lr/profile/juniorhs_view_files'] = 'LR/home/p_juniorhs_view_file';
 $route['lr/profile/seniorhs_view_files'] = 'LR/home/p_seniorhs_view_file';
 $route['lr/profile/view_file'] = 'LR/home/p_view_file';
+$route['lr/profile/search'] = 'LR/home/p_search';
 $route['lr/profile/activity_log'] = 'LR/home/activity_log';
 $route['lr/profile/log_history'] = 'LR/home/log_history';
 $route['lr/profile/upload'] = 'LR/home/upload';

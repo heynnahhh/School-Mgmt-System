@@ -18,7 +18,7 @@
           							<div class="col-md-12">
           								<div class="white-panel pn">
           									<div class="panel-heading">
-          										<div class="pull-left"><h3></i> Topic Name - 1 Matched Result</h3></div>
+          										<div class="pull-left"><h3></i> Topic Name</h3></div>
           										<br>
           									</div>
           									<div class="custom-check goleft mt">
