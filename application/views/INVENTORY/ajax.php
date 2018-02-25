@@ -81,7 +81,36 @@ $(document).ready(function() {
 
     } );
 
+    $('#items_tbl tbody').on( 'click', '#edit', function () {
+    var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+        $('#table').removeClass('col-xs-12');
+        $('#table').addClass('col-xs-7');
+        $('#form').show();
+
+        console.log(data[0]);
+
+        $.ajax({
+          type: "POST",
+          data: {'item_code': data[0]},
+          url: '<?=site_url()?>/INVENTORY/ajax/get_item_details',
+          dataType: 'json',
+          success: function(data){
+              if(data){
+                var info = data.data[0];
+
+                $('#ed_item_code').val(info.item_code);
+                $('#ed_item_category').val(info.item_category);
+                $('#ed_item_desc').val(info.item_desc);
+                $('#ed_item_name').val(info.item_name);
+                $('#ed_unit_cost').val(info.unit_cost);
+              }
+          }
+        });
+       
+    } );
+
 } );
+
 
 $('.add_clone').on('click', function(){
   // $('.department').clone().appendTo('.distribute').after("<hr>");

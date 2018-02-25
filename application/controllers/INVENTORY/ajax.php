@@ -45,7 +45,7 @@ class ajax extends CI_Controller {
 
 			foreach ($m_data as $value) {
 				$row = array();
-				$row[] = '<a href="'.site_url().'/INVENTORY/home/stock_register'.$value->item_code.'">'.$value->item_code.'</a>';
+				$row[] = $value->item_code;
 				$row[] = $value->item_name;
 				$row[] = $value->item_category;
 				if($value->product_status == 'Inactive'){
@@ -54,7 +54,7 @@ class ajax extends CI_Controller {
 				elseif($value->product_status == 'Active'){
 					$row[] = '<span class="badge bg-green">Active</span>';
 				}
-				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}
 
