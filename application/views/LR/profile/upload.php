@@ -70,7 +70,7 @@
                                                       <option>Learning Material</option>
                                                     </select>
                                                     <div class="input-group-btn">
-                                                      <button type="button" class="btn btn-theme btn-secondary">Add Topic</button>
+                                                      <button type="button" class="btn btn-theme btn-secondary" href="" data-toggle="modal" data-target="#myModal">Add Topic</button>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -130,7 +130,7 @@
                                                 <input type="file" class="form-control-file">
                                               </div>
                                               <br />
-                                            <button type="button" class="btn btn-info">Upload</button>
+                                            <button type="button" class="btn btn-theme btn-secondary">Upload</button>
                                             </div>
                                           </form>
                                         </div>
@@ -146,6 +146,45 @@
         							</div><! --/col-md-12 -->
         						</div><! -- row -->
                   </div>
+
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Add Topic</h4>
+                        </div>
+                        <div class="modal-body">
+                           <div id="login-page">
+                            <form action="index.html">
+                              <div class="row">
+                                <div class="col-sm-6 form-group">
+                                  <label>Topic Name</label>
+                                   <input type="text" placeholder="Type Here..." class="form-control">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                  <label>Subject</label>
+                                  <select class="form-control">
+                                    <option selected disabled>Choose</option>
+                                    <option>Araling Panlipunan</option>
+                                    <option>Edukasyon sa Pagpapakatao</option>
+                                    <option>Edukasyong Pantahanan at Pangkabuhayan</option>
+                                    <option>English</option>
+                                    <option>Filipino</option>
+                                    <option>Mathematics</option>
+                                    <option>Science</option>
+                                    <option>Technology and Livelihood Education</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <button type="button" class="btn btn-theme btn-secondary">Save</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
 
 
 
