@@ -97,6 +97,7 @@ a, a:hover, a:focus {
   background: #ecf0f1;
   -webkit-transition: max-height .35s;
   transition: max-height .35s;
+  margin: 0 0 5px 0;
 }
 
 .tab-content-accordion p {
@@ -104,7 +105,7 @@ a, a:hover, a:focus {
 }
 /* :checked */
 input:checked ~ .tab-content-accordion {
-  max-height: 10em;
+  max-height: 20em;
 }
 /* Icon */
 .label-accordion::after {
@@ -1448,22 +1449,22 @@ PANELS CONFIGURATIONS
 }
 
 
-/*Twitter Panel*/
-.twitter-panel {
+/*Subject Panel*/
+.subject-panel {
 	background: #4fc1e9;
-	text-align: center;
+	text-align: left;
 }
-.twitter-panel i {
-	color: white;
-	margin-top: 40px;
-}
-.twitter-panel p {
+.subject-panel p {
 	color: #f5f5f5;
 	margin: 10px;
+  padding: 5px;
 }
-.twitter-panel .user {
+.subject-panel .user {
 	color: white;
 	font-weight: 900;
+}
+.subject-panel .subject-badge {
+  margin: 5px 10px;
 }
 
 
