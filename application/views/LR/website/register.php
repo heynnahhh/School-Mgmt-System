@@ -62,6 +62,7 @@
                       							<div class="col-sm-6 form-group">
                       								<label>Gender</label>
                                       <select class="form-control">
+                                        <option selected disabled>Choose</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                       </select>

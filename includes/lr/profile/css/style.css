@@ -97,6 +97,7 @@ a, a:hover, a:focus {
   background: #ecf0f1;
   -webkit-transition: max-height .35s;
   transition: max-height .35s;
+  margin: 0 0 5px 0;
 }
 
 .tab-content-accordion p {
@@ -104,7 +105,7 @@ a, a:hover, a:focus {
 }
 /* :checked */
 input:checked ~ .tab-content-accordion {
-  max-height: 10em;
+  max-height: 20em;
 }
 /* Icon */
 .label-accordion::after {
@@ -1446,25 +1447,23 @@ PANELS CONFIGURATIONS
 	font-weight: 700;
 }
 
-
-/*Twitter Panel*/
-.twitter-panel {
-	background: #4fc1e9;
-	text-align: center;
+/*Subject Panel*/
+.subject-panel {
+  background: #4fc1e9;
+  text-align: left;
 }
-.twitter-panel i {
-	color: white;
-	margin-top: 40px;
+.subject-panel p {
+  color: #f5f5f5;
+  margin: 10px;
+  padding: 5px;
 }
-.twitter-panel p {
-	color: #f5f5f5;
-	margin: 10px;
+.subject-panel .user {
+  color: white;
+  font-weight: 900;
 }
-.twitter-panel .user {
-	color: white;
-	font-weight: 900;
+.subject-panel .subject-badge {
+  margin: 5px 10px;
 }
-
 
 /* Instagram Panel*/
 .instagram-panel {

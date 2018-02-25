@@ -14,7 +14,6 @@
     <!--external css-->
     <link href="<?php echo base_url();?>includes/lr/website/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/lineicons/style.css">
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url();?>includes/lr/website/css/style.css" rel="stylesheet">
@@ -44,23 +43,23 @@
                     <!-- settings start -->
                     <li class="dropdown">
                         <a href="<?php echo site_url();?>/lr/home">
-														<span>Home</span>
-								     		</a>
-							      </li>
-							      <li id="header_inbox_bar" class="dropdown">
-			              	<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-												<span>Resources</span> <span class="caret"></span>
-							        </a>
-	                        <ul class="dropdown-menu extended inbox">
-	                            <li>
-	                                <a href="<?php echo site_url();?>/lr/juniorhs">Junior High School</a>
-	                            </li>
-														<li>
-                                <a href="<?php echo site_url();?>/lr/seniorhs">Senior High School</a>
-                            </li>
-                        </ul>
-                    </li>
-									<li>
+							<span>Home</span>
+						</a>
+					</li>
+					<li id="header_inbox_bar" class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<span>Resources</span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu extended inbox">
+							<li>
+								<a href="<?php echo site_url();?>/lr/juniorhs">Junior High School</a>
+							</li>
+							<li>
+								<a href="<?php echo site_url();?>/lr/seniorhs">Senior High School</a>
+							</li>
+						</ul>
+					</li>
+					<li>
 						<div class="input-group col-xs-12 search">
 							<div class="input-group">
 								<div class="input-group-btn">
@@ -72,6 +71,7 @@
 									<li><a href="#">Another action</a></li>
 									<li><a href="#">Something else here</a></li>
 									<li><a href="#">Separated link</a></li>
+									</ul>
 								  </div>
 								  <input type="search" class="form-control">
 								</div>
