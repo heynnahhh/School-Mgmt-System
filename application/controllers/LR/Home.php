@@ -48,6 +48,11 @@ class Home extends CI_Controller {
 		$this->load->view('LR/website/register');
 	}
 
+	public function search()
+	{
+		$this->load->view('LR/website/search');
+	}
+
 	public function p_home()
 	{
 		$this->load->view('LR/profile/home');
@@ -111,6 +116,11 @@ class Home extends CI_Controller {
 	public function edit_profile()
 	{
 		$this->load->view('LR/profile/edit_profile');
+	}
+
+	public function p_search()
+	{
+		$this->load->view('LR/profile/search');
 	}
 
 

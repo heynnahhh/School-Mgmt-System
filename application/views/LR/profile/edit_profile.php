@@ -33,18 +33,26 @@
                                           <form>
                                             <div class="col-sm-7">
                                               <div class="row">
-                                                <div class="col-sm-6 form-group">
-                                                  <label>Barangay</label>
-                                                  <input type="text" placeholder="ex. Brgy. 27" class="form-control">
+                                                <div class="col-sm-4 form-group">
+                                                  <label>Surname</label>
+                                                  <input type="text" class="form-control">
                                                 </div>
-                                                <div class="col-sm-6 form-group">
-                                                  <label>City</label>
-                                                  <input type="text" placeholder="ex. Manila City" class="form-control">
+                                                <div class="col-sm-4 form-group">
+                                                  <label>First Name</label>
+                                                  <input type="text" class="form-control">
                                                 </div>
+                                                <div class="col-sm-4 form-group">
+                                                  <label>Middle Name</label>
+                                                  <input type="text" class="form-control">
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label>Address</label>
+                                                <textarea placeholder="" rows="3" class="form-control"></textarea>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
-                                                  <label>Date</label>
+                                                  <label>Birthdate</label>
                                                   <input type="date" class="form-control">
                                                 </div>
                                                 <div class="col-sm-6 form-group">
@@ -55,14 +63,32 @@
                                                   </select>
                                                 </div>
                                               </div>
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Phone Number</label>
+                                                  <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Email Address</label>
+                                                  <input type="text" class="form-control">
+                                                </div>
+                                              </div>
                                               <div class="form-group">
-                                                <label>Phone Number</label>
-                                                <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+                                                <label>Username</label>
+                                                <input type="text" placeholder="" class="form-control">
+                                              </div>
+                                              <div class="form-group">
+                                                <label>Area of Expertise</label>
+                                                <select class="form-control">
+                                                    <option>Junior High School</option>
+                                                    <option>Senior High School</option>
+                                                </select>
                                               </div>
                                               <div class="form-group">
                                                 <label>Profile Picture</label>
-                                                <input type="file" placeholder="Enter Phone Number Here.." class="form-control-file">
+                                                <input type="file" class="form-control-file">
                                               </div>
+                                              <br />
                                             <button type="button" class="btn btn-info">Save</button>
                                             </div>
                                           </form>
