@@ -17,6 +17,8 @@
 <script src="<?php echo base_url();?>includes/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- dateTime -->
 <script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
+<!-- PACE -->
+<script src="<?php echo base_url();?>includes/plugins/pace/pace.min.js"></script>
 <!-- Select2 -->
 <script src="<?php echo base_url();?>includes/plugins/select2/select2.min.js"></script>
 <!-- DataTables -->
