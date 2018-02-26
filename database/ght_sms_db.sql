@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2018 at 04:29 PM
+-- Generation Time: Feb 26, 2018 at 05:04 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -173,18 +173,18 @@ INSERT INTO `tbl_inv_attachments` (`wat_id`, `file_name`, `file_path`, `full_pat
 CREATE TABLE `tbl_inv_departments` (
   `ide_id` int(11) NOT NULL,
   `department` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_inv_departments`
 --
 
 INSERT INTO `tbl_inv_departments` (`ide_id`, `department`) VALUES
-(1, 'SHS'),
 (2, 'English'),
+(5, 'Filipino'),
 (3, 'Math'),
 (4, 'Science'),
-(5, 'Filipino');
+(1, 'SHS');
 
 -- --------------------------------------------------------
 
@@ -207,7 +207,7 @@ CREATE TABLE `tbl_inv_items` (
 --
 
 INSERT INTO `tbl_inv_items` (`iit_id`, `item_code`, `item_name`, `item_desc`, `item_category`, `product_status`, `unit_cost`) VALUES
-(7, 1234, 'asdas', 'assadasdsadasdasdasass', 'Common Office Equipment', 'Inactive', 12),
+(7, 1234, 'asdashehek', 'assadasdsadasdasdasass', 'Common Office Equipment', 'Inactive', 12),
 (9, 21212, 'asd', 'asas', 'Common Computer Supplies', 'Inactive', 12),
 (10, 1312312, 'qwerqsd', 'pogi aljohn', 'warerwaw', 'Inactive', 123),
 (11, 12345, 'ulam', 'burger', 'take me', 'Inactive', 12),
@@ -333,7 +333,7 @@ CREATE TABLE `tbl_inv_transactions` (
 --
 
 INSERT INTO `tbl_inv_transactions` (`itr_id`, `receipt_no`, `itr_item_code`, `quantity`, `description`, `unit_cost`, `total_cost`, `received_by`, `received_fr`, `date_received`) VALUES
-(1, 654, 1234, 87, 'JHG', '786', '876', 'HJG', 'GH', '2018-02-22'),
+(1, 654, 1312312, 87, 'JHG', '123', '10701', 'HJG', 'GH', '2018-02-22'),
 (2, 9867, 1234, 9867, 'kjgh', '876', '876', 'lkgj', 'g', '0000-00-00'),
 (3, 876, 1234, 876, 'jhg', '876', '876', 'jhg', 'jhg', '2018-02-07');
 
@@ -389,10 +389,13 @@ CREATE TABLE `tbl_lr_attachments` (
 CREATE TABLE `tbl_lr_attachments_info` (
   `latin_id` int(11) NOT NULL,
   `lr_code` varchar(11) NOT NULL,
-  `lr_name` varchar(155) NOT NULL,
+  `lr_title` varchar(155) NOT NULL,
   `description` text NOT NULL,
   `objective` text NOT NULL,
   `learning_subj` varchar(155) NOT NULL,
+  `topic` text NOT NULL,
+  `resource_type` varchar(40) NOT NULL,
+  `intended_user` varchar(40) NOT NULL,
   `language` varchar(40) NOT NULL,
   `date_published` date NOT NULL,
   `copyright` enum('yes','no') NOT NULL,
@@ -404,21 +407,66 @@ CREATE TABLE `tbl_lr_attachments_info` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_lr_educ_type`
+--
+
+CREATE TABLE `tbl_lr_educ_type` (
+  `lre_id` int(11) NOT NULL,
+  `educ_type` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_educ_type`
+--
+
+INSERT INTO `tbl_lr_educ_type` (`lre_id`, `educ_type`) VALUES
+(1, 'Junior High School'),
+(2, 'Senior High School');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_lr_grade_lvl`
+--
+
+CREATE TABLE `tbl_lr_grade_lvl` (
+  `lro_id` int(11) NOT NULL,
+  `educ_type` varchar(40) NOT NULL,
+  `grade_lvl` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_grade_lvl`
+--
+
+INSERT INTO `tbl_lr_grade_lvl` (`lro_id`, `educ_type`, `grade_lvl`) VALUES
+(1, 'Junior High School', ''),
+(2, 'Junior High School', 'Grade 7'),
+(3, 'Junior High School', 'Grade 8'),
+(4, 'Senior High School', 'Grade 11'),
+(5, 'Senior High School', 'Grade 12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_lr_subjects`
 --
 
 CREATE TABLE `tbl_lr_subjects` (
-  `lsu_id` int(11) NOT NULL,
-  `subject_name` varchar(40) NOT NULL
+  `lres_id` int(11) NOT NULL,
+  `educ_type` varchar(40) NOT NULL,
+  `subject` varchar(155) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_subjects`
 --
 
-INSERT INTO `tbl_lr_subjects` (`lsu_id`, `subject_name`) VALUES
-(2, 'Engliish'),
-(1, 'Mathematics');
+INSERT INTO `tbl_lr_subjects` (`lres_id`, `educ_type`, `subject`) VALUES
+(1, 'Junior High School', 'Araling Panlipunan'),
+(2, 'Junior High School', 'English'),
+(3, 'Senior High School', 'Vocational'),
+(4, 'Senior High School', 'Technical');
 
 -- --------------------------------------------------------
 
@@ -427,9 +475,20 @@ INSERT INTO `tbl_lr_subjects` (`lsu_id`, `subject_name`) VALUES
 --
 
 CREATE TABLE `tbl_lr_topics` (
-  `subject` int(11) NOT NULL,
-  `topic` int(11) NOT NULL
+  `lto_id` int(11) NOT NULL,
+  `educ_type` varchar(40) NOT NULL,
+  `grade_lvl` varchar(40) NOT NULL,
+  `subject` varchar(155) NOT NULL,
+  `topic_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_topics`
+--
+
+INSERT INTO `tbl_lr_topics` (`lto_id`, `educ_type`, `grade_lvl`, `subject`, `topic_name`) VALUES
+(1, 'Junior High School', 'Grade 7', 'Araling Panlipunan', 'topicsss'),
+(2, 'Senior High School', 'Grade 11', 'Technical', 'topicsjygjgkjg');
 
 -- --------------------------------------------------------
 
@@ -445,6 +504,14 @@ CREATE TABLE `tbl_lr_users_account` (
   `status` varchar(11) NOT NULL,
   `account_type` enum('Member','Admin') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_users_account`
+--
+
+INSERT INTO `tbl_lr_users_account` (`lusa_lus_id`, `email`, `username`, `password`, `status`, `account_type`) VALUES
+(1, 'llh@gmail.com', 'lkjlj', 'hehe', '', 'Member'),
+(2, 'hannah@maganda.com', 'khkjh', '529ca8050a00180790cf88b63468826a', '', 'Member');
 
 -- --------------------------------------------------------
 
@@ -484,14 +551,19 @@ CREATE TABLE `tbl_lr_users_profile` (
   `first_name` varchar(40) NOT NULL,
   `middle_name` varchar(40) NOT NULL,
   `address` text NOT NULL,
-  `barangay` varchar(40) NOT NULL,
-  `city` varchar(40) NOT NULL,
   `birthdate` date NOT NULL,
   `gender` enum('Male','Female') NOT NULL,
   `contact_no` int(11) NOT NULL,
-  `position` varchar(40) NOT NULL,
-  `area_of_expertise` date NOT NULL
+  `area_of_expertise` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_users_profile`
+--
+
+INSERT INTO `tbl_lr_users_profile` (`lus_id`, `last_name`, `first_name`, `middle_name`, `address`, `birthdate`, `gender`, `contact_no`, `area_of_expertise`) VALUES
+(1, 'pangilinan', 'aljohn', 'olazo', 'kjhkjh', '2018-12-31', 'Male', 897897, 'Junior High School'),
+(2, 'hghjghj', 'jhghjg', 'jhgjhg', 'ghg', '2018-12-31', 'Male', 966, 'Junior High School');
 
 -- --------------------------------------------------------
 
@@ -533,7 +605,8 @@ INSERT INTO `tbl_md_grade_section` (`grade_lvl`, `section`) VALUES
 ('Grade 7', 'Affection'),
 ('Grade 9', 'Bondonel'),
 ('Grade 10', 'Confucius'),
-('Grade 8', 'Daniel');
+('Grade 8', 'Daniel'),
+('Grade 7', 'Kahit Ano?..');
 
 -- --------------------------------------------------------
 
@@ -745,15 +818,39 @@ ALTER TABLE `tbl_lr_attachments`
 --
 ALTER TABLE `tbl_lr_attachments_info`
   ADD PRIMARY KEY (`latin_id`),
-  ADD UNIQUE KEY `lr_code` (`lr_code`),
-  ADD KEY `learning_subj` (`learning_subj`);
+  ADD UNIQUE KEY `lr_code` (`lr_code`);
+
+--
+-- Indexes for table `tbl_lr_educ_type`
+--
+ALTER TABLE `tbl_lr_educ_type`
+  ADD PRIMARY KEY (`lre_id`),
+  ADD KEY `educ_type` (`educ_type`);
+
+--
+-- Indexes for table `tbl_lr_grade_lvl`
+--
+ALTER TABLE `tbl_lr_grade_lvl`
+  ADD PRIMARY KEY (`lro_id`),
+  ADD KEY `educ_type` (`educ_type`),
+  ADD KEY `grade_lvl` (`grade_lvl`);
 
 --
 -- Indexes for table `tbl_lr_subjects`
 --
 ALTER TABLE `tbl_lr_subjects`
-  ADD PRIMARY KEY (`lsu_id`),
-  ADD UNIQUE KEY `subject_name` (`subject_name`);
+  ADD PRIMARY KEY (`lres_id`),
+  ADD KEY `educ_type` (`educ_type`),
+  ADD KEY `subject` (`subject`);
+
+--
+-- Indexes for table `tbl_lr_topics`
+--
+ALTER TABLE `tbl_lr_topics`
+  ADD PRIMARY KEY (`lto_id`),
+  ADD KEY `educ_type` (`educ_type`),
+  ADD KEY `grade_lvl` (`grade_lvl`),
+  ADD KEY `subject` (`subject`);
 
 --
 -- Indexes for table `tbl_lr_users_account`
@@ -861,7 +958,7 @@ ALTER TABLE `tbl_inv_departments`
 -- AUTO_INCREMENT for table `tbl_inv_items`
 --
 ALTER TABLE `tbl_inv_items`
-  MODIFY `iit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `iit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tbl_inv_item_category`
 --
@@ -903,10 +1000,30 @@ ALTER TABLE `tbl_lr_attachments`
 ALTER TABLE `tbl_lr_attachments_info`
   MODIFY `latin_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `tbl_lr_educ_type`
+--
+ALTER TABLE `tbl_lr_educ_type`
+  MODIFY `lre_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tbl_lr_grade_lvl`
+--
+ALTER TABLE `tbl_lr_grade_lvl`
+  MODIFY `lro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT for table `tbl_lr_subjects`
 --
 ALTER TABLE `tbl_lr_subjects`
-  MODIFY `lsu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `lres_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tbl_lr_topics`
+--
+ALTER TABLE `tbl_lr_topics`
+  MODIFY `lto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tbl_lr_users_account`
+--
+ALTER TABLE `tbl_lr_users_account`
+  MODIFY `lusa_lus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_lr_users_activity`
 --
@@ -916,7 +1033,7 @@ ALTER TABLE `tbl_lr_users_activity`
 -- AUTO_INCREMENT for table `tbl_lr_users_profile`
 --
 ALTER TABLE `tbl_lr_users_profile`
-  MODIFY `lus_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `lus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_md_employee_info`
 --
@@ -958,10 +1075,24 @@ ALTER TABLE `tbl_inv_items`
   ADD CONSTRAINT `tbl_inv_items_ibfk_1` FOREIGN KEY (`item_category`) REFERENCES `tbl_inv_item_category` (`category`);
 
 --
--- Constraints for table `tbl_lr_attachments_info`
+-- Constraints for table `tbl_lr_grade_lvl`
 --
-ALTER TABLE `tbl_lr_attachments_info`
-  ADD CONSTRAINT `tbl_lr_attachments_info_ibfk_1` FOREIGN KEY (`learning_subj`) REFERENCES `tbl_lr_subjects` (`subject_name`);
+ALTER TABLE `tbl_lr_grade_lvl`
+  ADD CONSTRAINT `tbl_lr_grade_lvl_ibfk_1` FOREIGN KEY (`educ_type`) REFERENCES `tbl_lr_educ_type` (`educ_type`);
+
+--
+-- Constraints for table `tbl_lr_subjects`
+--
+ALTER TABLE `tbl_lr_subjects`
+  ADD CONSTRAINT `tbl_lr_subjects_ibfk_1` FOREIGN KEY (`educ_type`) REFERENCES `tbl_lr_educ_type` (`educ_type`);
+
+--
+-- Constraints for table `tbl_lr_topics`
+--
+ALTER TABLE `tbl_lr_topics`
+  ADD CONSTRAINT `tbl_lr_topics_ibfk_1` FOREIGN KEY (`educ_type`) REFERENCES `tbl_lr_educ_type` (`educ_type`),
+  ADD CONSTRAINT `tbl_lr_topics_ibfk_2` FOREIGN KEY (`grade_lvl`) REFERENCES `tbl_lr_grade_lvl` (`grade_lvl`),
+  ADD CONSTRAINT `tbl_lr_topics_ibfk_3` FOREIGN KEY (`subject`) REFERENCES `tbl_lr_subjects` (`subject`);
 
 --
 -- Constraints for table `tbl_lr_users_account`
