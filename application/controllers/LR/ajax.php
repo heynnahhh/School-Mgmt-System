@@ -51,7 +51,71 @@ class ajax extends CI_Controller {
     }
   }
 
-  private function upload_lrn($data){
+	public function get_grade_lvl(){
+		$data = $this->input->post();
+
+		$m_data = $data['educ_type'];
+
+		$values = $this->lr_model->get_grade_lvl($m_data);
+
+		if($values) {
+
+		foreach ($values as $value) {
+			$option = array();
+			$option[] = $value->grade_lvl;
+			$option_data[] = $option;
+		}
+
+		echo json_encode($option_data);
+
+		}
+	}
+
+	public function get_subject(){
+		$data = $this->input->post();
+
+		$m_data = $data['educ_type'];
+
+		$values = $this->lr_model->get_subject($m_data);
+
+		if($values) {
+
+		foreach ($values as $value) {
+			$option = array();
+			$option[] = $value->subject;
+			$option_data[] = $option;
+		}
+
+		echo json_encode($option_data);
+
+		}
+	}
+
+	public function get_topic(){
+		$data = $this->input->post();
+
+		$m_data = array(
+			'educ_type' => $data['educ_type'],
+			'grade_lvl' => $data['grade_lvl'],
+			'subject' => $data['subject']
+		);
+
+		$values = $this->lr_model->get_topic($m_data);
+
+		if($values) {
+
+		foreach ($values as $value) {
+			$option = array();
+			$option[] = $value->topic_name;
+			$option_data[] = $option;
+		}
+
+		echo json_encode($option_data);
+
+		}
+	}
+
+	private function upload_lrn($data){
     if($data){
 
       $lrn_info = array(
@@ -69,7 +133,7 @@ class ajax extends CI_Controller {
       $config['upload_path'] = './uploads/';
       $config['allowed_types'] = 'gif|jpg|png|txt';
       $config['max_size']     = '100';
-      
+
       $this->load->library('upload', $config);
 
       $upload_lrn = "upload_lrn";
@@ -107,5 +171,4 @@ class ajax extends CI_Controller {
 
     }
   }
-
 }

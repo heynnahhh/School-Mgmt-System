@@ -55,7 +55,7 @@ $('#grade_lvl').on('change', function(){
 		        $('#section').empty();
 
 		        $.each($json,function(key,value){
-		            $('#section').append('<option>'+value+'</option>');
+		            $('#section').append($('<option></option>').attr("value",key).text(value));
 		        });
 	    	}
 	    	else{

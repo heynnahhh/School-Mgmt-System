@@ -17,6 +17,8 @@
   <script class="include" type="text/javascript" src="<?php echo base_url();?>includes/lr/website/js/jquery.dcjqaccordion.2.7.js"></script>
   <script src="<?php echo base_url();?>includes/lr/website/js/jquery.scrollTo.min.js"></script>
   <script src="<?php echo base_url();?>includes/lr/website/js/jquery.nicescroll.js" type="text/javascript"></script>
+  <!-- Select2 -->
+  <script src="<?php echo base_url();?>includes/plugins/select2/select2.min.js"></script>
 
   <!--common script for all pages-->
   <script src="<?php echo base_url();?>includes/lr/website/js/common-scripts.js"></script>

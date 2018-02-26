@@ -231,7 +231,7 @@ $('#item_code').on('change', function(){
           if(data){
             $json = JSON.parse(data);
 
-              $.each($json,function(key,value){
+            $.each($json, function(i, value) {
                 $('#unit_cost').val(value);
                 var t_cost = value * $('#quantity').val();
                 $('#total_cost').val(t_cost);
