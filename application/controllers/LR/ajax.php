@@ -97,8 +97,10 @@ class ajax extends CI_Controller {
     if($data){
 
       $m_data = array(
+        'educ_type' => $data['educ_type'],
+        'grade_lvl' => $data['grade_lvl'],
         'subject' => $data['subject'],
-        'topic' => $data['topic']
+        'topic_name' => $data['topic_name']
       );
 
       $this->lr_model->add_topic($m_data);
