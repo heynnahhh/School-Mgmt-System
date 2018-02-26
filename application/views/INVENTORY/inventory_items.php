@@ -19,9 +19,28 @@
   <!-- Main Content -->
     <section class="content">
       <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-solid full_details" style="display:none;">
+            <div class="box-header">
+              <h4 class="box-title"> Full Details:</h4>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-default btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body table-responsive">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-xs-3 left"></div>
+                  <div class="col-xs-3 middle"></div>
+                  <div class="col-xs-3 right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-xs-5" id="form" style="display: none;">
-          <div class="box box-success">
-            <div class="box-header bg-green">
+          <div class="box box-primary">
+            <div class="box-header bg-blue">
               <h4 class="box-title"><i class="fa fa-plus-circle"></i> Edit</h4>
             </div>
             <div class="box-body">
@@ -70,7 +89,7 @@
                     </div>
                   </div>
                 </div><hr>
-                <button type="submit" class="btn btn-sm btn-success submit">Update</button>
+                <button type="submit" class="btn btn-sm bg-blue update">Update</button>
                 <button type="button" class="btn btn-sm bg-gray" onclick="cancel()">Cancel</button>
               </form>
             </div>
@@ -81,7 +100,7 @@
             <div class="box-header">
               <h4 class="box-title"> Inventory Items</h4>
               <div class="btn-group pull-right">
-                <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Transaction</button>
+                <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Item</button>
                 <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>
               </div>
             </div>

@@ -54,7 +54,8 @@ class ajax extends CI_Controller {
 				elseif($value->product_status == 'Active'){
 					$row[] = '<span class="badge bg-green">Active</span>';
 				}
-				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit"><i class="fa fa-edit"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+				<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>';
 				$data[] = $row;
 			}
 
@@ -77,7 +78,8 @@ class ajax extends CI_Controller {
 				$row[] = $value->quantity;
 				$row[] = $value->total_cost;
 				$row[] = $value->date_received;
-				$row[] = '<button type="button" class="btn btn-sm bg-blue" id="edit"><i class="fa fa-edit"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+				<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>';
 				$data[] = $row;
 			}
 
@@ -192,6 +194,13 @@ class ajax extends CI_Controller {
 			}
 
 		}
+		elseif ( $data['edit'] == 'inventory_items'){
+			if($data['items']){
+				unset($data['edit']);
+				$this->edit_item($data['items']);
+			}
+
+		}
 	}
 
 	private function edit_transacts($data){
@@ -215,6 +224,20 @@ class ajax extends CI_Controller {
 		}
 	}
 
+	private function edit_item($data){
+		if($data){
+
+			$m_data = array(
+				'item_code' => $data['item_code'],
+				'item_category' => $data['item_category'],
+				'item_name' => $data['item_name'],
+				'item_desc' => $data['item_desc'],
+				'unit_cost' => $data['unit_cost']
+			);
+
+			$this->inventory_model->update_item($m_data);
+		}
+	}
 
 	public function get_item_details(){
 		$data = $this->input->post();
@@ -257,5 +280,19 @@ class ajax extends CI_Controller {
 
 	}
 
+	public function get_item_info(){
+		$data = $this->input->post();
+
+		$m_data = $data['item_code'];
+
+		$values = $this->inventory_model->get_item_info($m_data);
+
+		$result = array(
+			"data" => $values
+		);
+
+		echo json_encode($result);
+
+	}
 
 }

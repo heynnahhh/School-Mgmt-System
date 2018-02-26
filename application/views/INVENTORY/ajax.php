@@ -7,6 +7,12 @@ var current_method = '<?php echo $this->uri->segment(3); ?>';
 $(document).ready(function() {
   $(document).ajaxStart(function() { Pace.restart(); });
 
+function hide_div(){
+  if($('edit_form').hasAttribute('style')){
+
+  }
+}
+
   var tableParams = {
         "paging": true,
         "autoWidth": false,
@@ -52,11 +58,100 @@ $(document).ready(function() {
 
     $('.del_clone').hide();
 
-    $('#transacts_tbl tbody').on( 'click', '#edit', function () {
+    $('#transacts_tbl tbody').on( 'click','.view', function () {
+      var data = $('#transacts_tbl').DataTable().row( $(this).parents('tr') ).data();
+
+        $.ajax({
+          type: "POST",
+          data: {'receipt_no': data[0]},
+          url: '<?=site_url()?>/INVENTORY/ajax/get_transact_details',
+          dataType: 'json',
+          success: function(data){
+              if(data){
+                var info = data.data[0];
+
+                $('.full_details').removeAttr('style', 'display:none');
+
+                if( $('.left,.middle,.right').is(':empty') ){
+
+                  $("<label>" + "Receipt #:" + "</label>" + "<p>" + info.receipt_no + "</p>").appendTo('.left').trigger('change');
+                  $("<label>" + "Item Code:" + "</label>" + "<p>" + info.itr_item_code + "</p>").appendTo('.middle');
+                  $("<label>" + "Item Name:" + "</label>" + "<p>" + info.item_name + "</p>").appendTo('.right');
+                  $("<label>" + "Description:" + "</label>" + "<p>" + info.description + "</p>").appendTo('.left');
+                  $("<label>" + "Quantity:" + "</label>" + "<p>" + info.quantity + "</p>").appendTo('.middle');
+                  $("<label>" + "Unit Cost:" + "</label>" + "<p>" + info.unit_cost + "</p>").appendTo('.right');
+                  $("<label>" + "Total Cost:" + "</label>" + "<p>" + info.total_cost + "</p>").appendTo('.left');
+                  $("<label>" + "Received By:" + "</label>" + "<p>" + info.received_by + "</p>").appendTo('.middle');
+                  $("<label>" + "Received From:" + "</label>" + "<p>" + info.received_fr + "</p>").appendTo('.right');
+                  $("<label>" + "Date Received:" + "</label>" + "<p>" + info.date_received + "</p>").appendTo('.left');
+                }
+                else {
+                  $('.left,.middle,.right').empty();
+                  $("<label>" + "Receipt #:" + "</label>" + "<p>" + info.receipt_no + "</p>").appendTo('.left').trigger('change');
+                  $("<label>" + "Item Code:" + "</label>" + "<p>" + info.itr_item_code + "</p>").appendTo('.middle');
+                  $("<label>" + "Item Name:" + "</label>" + "<p>" + info.item_name + "</p>").appendTo('.right');
+                  $("<label>" + "Description:" + "</label>" + "<p>" + info.description + "</p>").appendTo('.left');
+                  $("<label>" + "Quantity:" + "</label>" + "<p>" + info.quantity + "</p>").appendTo('.middle');
+                  $("<label>" + "Unit Cost:" + "</label>" + "<p>" + info.unit_cost + "</p>").appendTo('.right');
+                  $("<label>" + "Total Cost:" + "</label>" + "<p>" + info.total_cost + "</p>").appendTo('.left');
+                  $("<label>" + "Received By:" + "</label>" + "<p>" + info.received_by + "</p>").appendTo('.middle');
+                  $("<label>" + "Received From:" + "</label>" + "<p>" + info.received_fr + "</p>").appendTo('.right');
+                  $("<label>" + "Date Received:" + "</label>" + "<p>" + info.date_received + "</p>").appendTo('.left');
+                }
+
+              }
+
+          }
+        });
+
+    } );
+
+    $('#items_tbl tbody').on( 'click','.view', function () {
+      var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+
+        $.ajax({
+          type: "POST",
+          data: {'item_code': data[0]},
+          url: '<?=site_url()?>/INVENTORY/ajax/get_item_info',
+          dataType: 'json',
+          success: function(data){
+              if(data){
+                var info = data.data[0];
+
+                $('.full_details').removeAttr('style', 'display:none');
+
+                if( $('.left,.middle,.right').is(':empty') ){
+
+                  $("<label>" + "Item Code:" + "</label>" + "<p>" + info.item_code + "</p>").appendTo('.left').trigger('change');
+                  $("<label>" + "Category:" + "</label>" + "<p>" + info.item_category + "</p>").appendTo('.middle');
+                  $("<label>" + "Item Name:" + "</label>" + "<p>" + info.item_name + "</p>").appendTo('.right');
+                  $("<label>" + "Description:" + "</label>" + "<p>" + info.item_desc + "</p>").appendTo('.left')
+                  $("<label>" + "Unit Cost:" + "</label>" + "<p>" + info.unit_cost + "</p>").appendTo('.middle');
+                }
+                else {
+                  $('.left,.middle,.right').empty();
+                  $("<label>" + "Item Code:" + "</label>" + "<p>" + info.item_code + "</p>").appendTo('.left').trigger('change');
+                  $("<label>" + "Category:" + "</label>" + "<p>" + info.item_category + "</p>").appendTo('.middle');
+                  $("<label>" + "Item Name:" + "</label>" + "<p>" + info.item_name + "</p>").appendTo('.right');
+                  $("<label>" + "Description:" + "</label>" + "<p>" + info.item_desc + "</p>").appendTo('.left')
+                  $("<label>" + "Unit Cost:" + "</label>" + "<p>" + info.unit_cost + "</p>").appendTo('.middle');
+                }
+
+              }
+
+          }
+        });
+
+    } );
+
+    $('#transacts_tbl tbody').on( 'click', '.edit', function () {
         var data = $('#transacts_tbl').DataTable().row( $(this).parents('tr') ).data();
         $('#table').removeClass('col-xs-12');
         $('#table').addClass('col-xs-7');
         $('#form').show();
+
+        $('.full_details').attr('style', 'display:none');
+
 
         console.log(data[0]);
 
@@ -67,6 +162,7 @@ $(document).ready(function() {
           dataType: 'json',
           success: function(data){
               if(data){
+
                 var info = data.data[0];
 
                 $('#ed_receipt_no').val(info.receipt_no);
@@ -82,47 +178,45 @@ $(document).ready(function() {
 
     } );
 
-    $('#items_tbl tbody').on( 'click', '#edit', function () {
-    var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
-        $('#table').removeClass('col-xs-12');
-        $('#table').addClass('col-xs-7');
-        $('#form').show();
+    $('#items_tbl tbody').on( 'click', '.edit', function () {
+      var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+          $('#table').removeClass('col-xs-12');
+          $('#table').addClass('col-xs-7');
+          $('#form').show();
 
-        console.log(data[0]);
+          $.ajax({
+            type: "POST",
+            data: {'item_code': data[0]},
+            url: '<?=site_url()?>/INVENTORY/ajax/get_item_info',
+            dataType: 'json',
+            success: function(data){
+                if(data){
+                  var info = data.data[0];
 
-        $.ajax({
-          type: "POST",
-          data: {'item_code': data[0]},
-          url: '<?=site_url()?>/INVENTORY/ajax/get_item_details',
-          dataType: 'json',
-          success: function(data){
-              if(data){
-                var info = data.data[0];
+                  $('#ed_item_code').val(info.item_code);
+                  $('#ed_item_category').val(info.item_category);
+                  $('#ed_item_desc').val(info.item_desc);
+                  $('#ed_item_name').val(info.item_name);
+                  $('#ed_unit_cost').val(info.unit_cost);
+                }
+            }
+          });
 
-                $('#ed_item_code').val(info.item_code);
-                $('#ed_item_category').val(info.item_category);
-                $('#ed_item_desc').val(info.item_desc);
-                $('#ed_item_name').val(info.item_name);
-                $('#ed_unit_cost').val(info.unit_cost);
-              }
-          }
-        });
-       
     } );
 
 } );
 
 
 $('.add_clone').on('click', function(){
-  // $('.department').clone().appendTo('.distribute').after("<hr>");
+//   $('.department').clone().appendTo('.distribute').after("<hr>");
 //   $('.department').last().clone().appendTo('.distribute').find("input").attr("name",function(i,oldVal) {
 //     return oldVal.replace(/\[(\d+)\]/,function(_,m){
 //         return "[" + (+m + 1) + "]";
 //     });
 // });
 // $('.del_clone').show();
-
-  return false;
+//
+//   return false;
 
 });
 
@@ -247,13 +341,13 @@ $(".submit").on('click', function (e) {
 $(".update").on('click', function (e) {
   e.preventDefault();
   // var category = $("input#category").val();
-  // var items = {
-  //     item_code: $("input#item_code").val(),
-  //     item_category: $("select#item_category").val(),
-  //     item_name: $("input#item_name").val(),
-  //     item_desc: $("textarea#item_desc").val(),
-  //     unit_cost: $("input#unit_cost").val()
-  // };
+  var edit_items = {
+      item_code: $("input#ed_item_code").val(),
+      item_category: $("select#ed_item_category").val(),
+      item_name: $("input#ed_item_name").val(),
+      item_desc: $("textarea#ed_item_desc").val(),
+      unit_cost: $("input#ed_unit_cost").val()
+  };
 
   var edit_transacts = {
     receipt_no: $("input#ed_receipt_no").val(),
@@ -275,11 +369,13 @@ $(".update").on('click', function (e) {
       // console.log(data);
       // location.reload();
       $('#transacts_tbl').DataTable().ajax.reload();
+      $('#items_tbl').DataTable().ajax.reload();
+      cancel();
     }
   };
 
   if(current_method == 'inventory_items'){
-    params.data = {'category': category, 'items':edit_items, 'edit':'inventory_items'};
+    params.data = {'items':edit_items, 'edit':'inventory_items'};
   }
 
   else if(current_method == 'transactions'){

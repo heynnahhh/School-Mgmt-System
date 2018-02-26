@@ -224,7 +224,7 @@
                       </div>
                     </div>
                   </div>
-                    
+
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="row">
@@ -257,21 +257,6 @@
                     </div>
                   </div>
 
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-xs-6">
-                          <label>GUARDIAN: (Optional)</label>
-                          <input type="text" class="form-control">
-                        </div>
-
-                        <div class="col-xs-6">
-                          <label>CONTACT NUMBER:</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div class="modal-footer">
