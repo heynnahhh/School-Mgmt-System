@@ -100,19 +100,19 @@
           				      <div class="modal-body">
           				         <div id="login-page">
 
-          						  <form class="form-login" action="index.html">
+          						  <form class="form-login" action="<?php echo site_url('lr/home');?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                           <img src = "<?php echo base_url();?>includes/lr/img/logo.png">
                           <h2 class = 'form-login-heading'>AHS - Learning Resource Portal</h2>                       
             							<div class="login-wrap">
-            								<input type="text" class="form-control" placeholder="Username" autofocus>
+            								<input type="text" class="form-control" name="username" placeholder="Username" autofocus>
             								<br>
-            								<input type="password" class="form-control" placeholder="Password">
+            								<input type="password" class="form-control" name="" placeholder="Password">
             								<label class="checkbox">
             									<span class="pull-right">
             										<a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
             									</span>
             								</label>
-            								<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+            								<input type="submit" class="btn btn-theme btn-block" name="loginSubmit" value="Sign in" type="submit">
             								<hr>
             								<div class="registration">
             									Don't have an account yet?<br/>
