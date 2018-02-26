@@ -119,7 +119,7 @@
                                               </div>
                                               <div class="form-group">
                                                 <label>Learning Resource</label>
-                                                <input type="file" class="form-control-file">
+                                                <input type="file" name="upload_lrn" class="form-control-file">
                                               </div>
                                               <br />
                                             <button type="button" class="btn btn-theme btn-secondary">Upload</button>

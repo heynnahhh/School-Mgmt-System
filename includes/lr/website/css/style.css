@@ -2123,20 +2123,24 @@ label {
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
 	max-width: 330px;
-	margin: 100px auto 0;
+	margin: 20px auto 0;
 	background: #fff;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 
+.form-login img {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .form-login h2.form-login-heading {
-	margin: 0;
-	padding: 25px 20px;
 	text-align: center;
-	background: #68dff0;
-	border-radius: 5px 5px 0 0;
-	-webkit-border-radius: 5px 5px 0 0;
-	color: #fff;
+	background: #fff;
+	color: #b53737;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 300;

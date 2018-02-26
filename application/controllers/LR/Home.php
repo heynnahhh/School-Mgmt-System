@@ -3,10 +3,90 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
+	public function __construct(){
+    parent::__construct();
+      $this->load->library('form_validation');
+      $this->load->model('SMS/user');
+
+  	}
+
 	public function index()
 	{
 		$this->load->view('LR/website/home');
 	}
+
+
+    public function account(){
+
+      $data = array();
+      if($this->session->userdata('logged_in')){
+          $data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+          $uemail = $this->session->userdata('userId');
+          $user = $data['user']['status'];
+
+            if($user == 1){
+                $this->load->view('lr/profile', $data);
+            }
+
+            elseif($user == 0){
+              // $id = $data['user']['id'];
+              // $data['requests'] = $this->member->getRequested($id);
+              // $data['query'] = $this->books->getBooks();
+              $this->load->view('lr/profile',$data);
+            }
+      }
+
+      else{
+          redirect('lr/profile');
+      }
+
+    }
+
+	public function login(){
+
+	$data = array();
+
+	        if($this->session->userdata('success_msg')){
+	            $data['success_msg'] = $this->session->userdata('success_msg');
+	            $this->session->unset_userdata('success_msg');
+	        }
+	        if($this->session->userdata('error_msg')){
+	            $data['error_msg'] = $this->session->userdata('error_msg');
+	            $this->session->unset_userdata('error_msg');
+	        }
+	        if($this->input->post('loginSubmit')){
+	            $this->form_validation->set_rules('username', 'Username', 'required');
+	            $this->form_validation->set_rules('password', 'Password', 'required');
+	            if ($this->form_validation->run() == true) {
+	                $con['returnType'] = 'single';
+	                $con['conditions'] = array(
+	                    'username'=>$this->input->post('username'),
+	                    'password' => $this->input->post('password')
+	                );
+	                $checkLogin = $this->user->getRows($con);
+	                if($checkLogin){
+	                    $this->session->set_userdata('logged_in',TRUE);
+	                    $this->session->set_userdata('uemail',$checkLogin['usernam']);
+	                    $this->session->set_userdata('userId',$checkLogin['lusa_lus_id']);
+	                    redirect('lr/profile');
+	                }else{
+	                    $data['error_msg'] = 'Wrong email or password, please try again.';
+	                }
+	            }
+	        }
+
+	$this->load->view('lr/home', $data);
+
+	}
+
+    public function logout(){
+
+            $this->session->unset_userdata('logged_in');
+            $this->session->unset_userdata('userId');
+            $this->session->sess_destroy();
+            redirect('lr/profile');
+
+    }
 
 	public function juniorhs()
 	{
