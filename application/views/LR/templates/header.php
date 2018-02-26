@@ -43,107 +43,106 @@
                     <!-- settings start -->
                     <li class="dropdown">
                         <a href="<?php echo site_url();?>/lr/home">
-							<span>Home</span>
-						</a>
-					</li>
-					<li id="header_inbox_bar" class="dropdown">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-							<span>Resources</span> <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu extended inbox">
-							<li>
-								<a href="<?php echo site_url();?>/lr/juniorhs">Junior High School</a>
-							</li>
-							<li>
-								<a href="<?php echo site_url();?>/lr/seniorhs">Senior High School</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<div class="input-group col-xs-12 search">
-							<div class="input-group">
-								<div class="input-group-btn">
-								  <button type="button" class="btn btn-theme dropdown-toggle btn-secondary" data-toggle="dropdown">
-									Search by <span class="caret"></span>
-								  </button>
-								  <ul class="dropdown-menu" role="menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li><a href="#">Separated link</a></li>
-									</ul>
-								  </div>
-								  <input type="search" class="form-control">
-								</div>
-							</div>
-						</div>
-                    </li>
-                    <!-- inbox dropdown end -->
-                </ul>
-                <!--  notification end -->
-            </div>
-            <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                <li><a class="logout" href="<?php echo site_url();?>/lr/register">Register</a></li>
-                <li><a class="logout" href="" data-toggle="modal" data-target="#myModal">Login</a></li>
-            	</ul>
-            </div>
-        </header>
-      <!--header end-->
+    							<span>Home</span>
+          						</a>
+          					</li>
+          					<li id="header_inbox_bar" class="dropdown">
+          						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+          							<span>Resources</span> <span class="caret"></span>
+          						</a>
+          						<ul class="dropdown-menu extended inbox">
+          							<li>
+          								<a href="<?php echo site_url();?>/lr/juniorhs">Junior High School</a>
+          							</li>
+          							<li>
+          								<a href="<?php echo site_url();?>/lr/seniorhs">Senior High School</a>
+          							</li>
+          						</ul>
+          					</li>
+          					<li>
+          						<div class="input-group col-xs-12 search">
+          							<div class="input-group">
+          								<div class="input-group-btn">
+          								  <button type="button" class="btn btn-theme dropdown-toggle btn-secondary" data-toggle="dropdown">
+          									Search by <span class="caret"></span>
+          								  </button>
+          								  <ul class="dropdown-menu" role="menu">
+          									<li><a href="#">Action</a></li>
+          									<li><a href="#">Another action</a></li>
+          									<li><a href="#">Something else here</a></li>
+          									<li><a href="#">Separated link</a></li>
+          									</ul>
+          								  </div>
+          								  <input type="search" class="form-control">
+          								</div>
+          							</div>
+          						</li>
+                              <!-- inbox dropdown end -->
+                      </ul>
+                          <!--  notification end -->
+                      </div>
+                      <div class="top-menu">
+                      	<ul class="nav pull-right top-menu">
+                          <li><a class="logout" href="<?php echo site_url();?>/lr/register">Register</a></li>
+                          <li><a class="logout" href="" data-toggle="modal" data-target="#myModal">Login</a></li>
+                      	</ul>
+                      </div>
+                  </header>
+                <!--header end-->
 
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
-				      </div>
-				      <div class="modal-body">
-				         <div id="login-page">
-						  <form class="form-login" action="index.html">
-							<div class="login-wrap">
-								<input type="text" class="form-control" placeholder="Username" autofocus>
-								<br>
-								<input type="password" class="form-control" placeholder="Password">
-								<label class="checkbox">
-									<span class="pull-right">
-										<a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          				  <div class="modal-dialog">
+          				    <div class="modal-content">
+          				      <div class="modal-header">
+          				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          				        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+          				      </div>
+          				      <div class="modal-body">
+          				         <div id="login-page">
+          						  <form class="form-login" action="index.html">
+          							<div class="login-wrap">
+          								<input type="text" class="form-control" placeholder="Username" autofocus>
+          								<br>
+          								<input type="password" class="form-control" placeholder="Password">
+          								<label class="checkbox">
+          									<span class="pull-right">
+          										<a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
 
-									</span>
-								</label>
-								<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-								<hr>
-								<div class="registration">
-									Don't have an account yet?<br/>
-									<a class="" href="#">
-										Create an account
-									</a>
-								</div>
-							</div>
-							  <!-- Modal -->
-							  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-								  <div class="modal-dialog">
-									  <div class="modal-content">
-										  <div class="modal-header">
-											  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											  <h4 class="modal-title">Forgot Password ?</h4>
-										  </div>
-										  <div class="modal-body">
-											  <p>Enter your e-mail address below to reset your password.</p>
-											  <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+          									</span>
+          								</label>
+          								<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+          								<hr>
+          								<div class="registration">
+          									Don't have an account yet?<br/>
+          									<a class="" href="#">
+          										Create an account
+          									</a>
+          								</div>
+          							</div>
+          							  <!-- Modal -->
+          							  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+          								  <div class="modal-dialog">
+          									  <div class="modal-content">
+          										  <div class="modal-header">
+          											  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          											  <h4 class="modal-title">Forgot Password ?</h4>
+          										  </div>
+          										  <div class="modal-body">
+          											  <p>Enter your e-mail address below to reset your password.</p>
+          											  <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
-										  </div>
-										  <div class="modal-footer">
-											  <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-											  <button class="btn btn-theme" type="button">Submit</button>
-										  </div>
-									  </div>
-								  </div>
-							  </div>
-							  <!-- modal -->
-						  </form>
-						</div>
-				      </div>
-				    </div>
-				  </div>
-				</div>
+          										  </div>
+          										  <div class="modal-footer">
+          											  <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+          											  <button class="btn btn-theme" type="button">Submit</button>
+          										  </div>
+          									  </div>
+          								  </div>
+          							  </div>
+          							  <!-- modal -->
+          						  </form>
+          						</div>
+      				      </div>
+      				    </div>
+      				  </div>
+      				</div>
