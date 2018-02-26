@@ -6,7 +6,21 @@
 	        'Senior High School': ['Grade 11', 'Grade 12'],
 	    }
 
+	    var lrn_subject = {
+	        'Junior High School': ['Araling Panlipinan', 'English', 'Science', 'Filipino'],
+	        'Senior High School': ['Core Subjects', 'Subject Cores', 'Cores']
+	    }
+
+	    var topic = {
+	        'Araling Panlipinan': ['qweqweqw', 'Eewqeqwsh', 'Sciewqeqwe', 'ewqineqweqo'],
+	        'English': ['Coredasdasd', 'dsadsadasd', 'dasdasdasdas'],
+	        'Core Subjects': ['ddqwdqwdqwdqwdq', 'dsadasdsa']
+	    }
+
 	    var $gradeLevel = $('#grade_lvl');
+	    var $lrn_subject = $('#lrn_subject');
+	    var $topic = $('#topic');
+
 	    $('#educ_type').change(function () {
 	        var educType = $(this).val(), grdLvls = gradeLevel[educType] || [];
 
@@ -14,28 +28,28 @@
 	            return '<option value="' + grdLvl + '">' + grdLvl + '</option>'
 	        }).join('');
 	        $gradeLevel.html(html)
-	    });
+	        $('#grade_lvl').removeAttr('disabled', 'disabled');
+	  	});
 
-	    var topic = {
-	        'Araling Panlipunan': ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'],
-	        'Edukasyon sa Pagpapakatao': ['Grade 7', 'Grade 8', 'Grade 9', 'dsadasdas'],
-	        'Edukasyong Pantahanan at Pangkabuhayan': ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'],
-	        'English': ['Grade 11', 'Grade 12'],
-	        'Filipino': ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'],
-	        'Mathematics': ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'],
-	        'Science': ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'],
-	        'Technology and Livelihood Education': ['Grade 7', 'asdasdas']
-	    }
+	  	$('#educ_type').change(function () {
+	        var educType = $(this).val(), lrnSubjects = lrn_subject[educType] || [];
 
-	    var $topic = $('#topic');
-	    $('#lrn_subject').change(function () {
-	        var lrnSubject = $(this).val(), topics = topic[lrnSubject] || [];
+	        var html = $.map(lrnSubjects, function(lrnSubject){
+	            return '<option value="' + lrnSubject + '">' + lrnSubject + '</option>'
+	        }).join('');
+	        $lrn_subject.html(html)
+	        $('#lrn_subject').removeAttr('disabled', 'disabled');
+	  	});
+
+	  	$('#lrn_subject').change(function () {
+	        var lrn = $(this).val(), topics = topic[lrn] || [];
 
 	        var html = $.map(topics, function(tpc){
 	            return '<option value="' + tpc + '">' + tpc + '</option>'
 	        }).join('');
 	        $topic.html(html)
-	    });
+	        $('#topic').removeAttr('disabled', 'disabled');
+	  	});
 	});
 
 	var slideIndex = 1;

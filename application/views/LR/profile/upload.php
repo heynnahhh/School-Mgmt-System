@@ -10,7 +10,6 @@
 	     <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
               <div class="row">
                 <div class="col-lg-9 main-chart">
       						<div class="row mt">
@@ -57,29 +56,28 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Grade Level</label>
-                                                  <select class="form-control" id="grade_lvl" name="grade_lvl">
+                                                  <select class="form-control" id="grade_lvl" name="grade_lvl" disabled="">
                                                   </select>
                                                 </div>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Subject</label>
-                                                  <select class="form-control" id="lrn_subject" name="lrn_subject">
+                                                  <select class="form-control" id="lrn_subject" name="lrn_subject" disabled="">
                                                     <option></option>
                                                     <option>Araling Panlipunan</option>
-                                                    <option>Edukasyon sa Pagpapakatao</option>
-                                                    <option>Edukasyong Pantahanan at Pangkabuhayan</option>
                                                     <option>English</option>
                                                     <option>Filipino</option>
-                                                    <option>Mathematics</option>
                                                     <option>Science</option>
-                                                    <option>Technology and Livelihood Education</option>
+                                                    <option>Core Subjects</option>
+                                                    <option>Subject Cores</option>
+                                                    <option>Cores</option>
                                                   </select>
                                                 </div>
                                                 <div class="form-group col-sm-6">
                                                   <label>Topic</label>
                                                   <div class="input-group">
-                                                    <select class="form-control" id="topic" name="topic">
+                                                    <select class="form-control" id="topic" name="topic" disabled="">
                                                     </select>
                                                     <div class="input-group-btn">
                                                       <button type="button" class="btn btn-theme btn-secondary" href="" data-toggle="modal" data-target="#myModal">Add Topic</button>
@@ -178,29 +176,6 @@
                       </div>
                     </div>
                   </div>
-
-
-                  <label class="page1">Country</label>
-                  <div class="tooltips" title="Please select the country that the customer will primarily be served from">
-                      <select id="country" name="country" onchange="populate(this.id,'location')" placeholder="Phantasyland">
-                          <option></option>
-                          <option>Germany</option>
-                          <option>Spain</option>
-                          <option>Hungary</option>
-                          <option>USA</option>
-                          <option>Mexico</option>
-                          <option>South Africa</option>
-                          <option>China</option>
-                          <option>Russia</option>
-                      </select>
-                  </div>
-                  <br />
-                  <br />
-                  <label class="page1">Location</label>
-                  <div class="tooltips" title="Please select the city that the customer is primarily to be served from.">
-                      <select id="location" name="location" placeholder="Anycity"></select>
-                  </div>
-
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
