@@ -14,6 +14,8 @@
     <!--external css-->
     <link href="<?php echo base_url();?>includes/lr/website/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>includes/lr/website/js/gritter/css/jquery.gritter.css" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/select2/select2.min.css">
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url();?>includes/lr/website/css/style.css" rel="stylesheet">

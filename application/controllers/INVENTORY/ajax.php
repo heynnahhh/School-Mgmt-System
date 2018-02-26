@@ -27,7 +27,7 @@ class ajax extends CI_Controller {
 					$row[] = $value->quantity;
 				}
 				$row[] = '<button type="button" class="btn bg-green" id="myBtn">Distribute</button>
-				          <button type="button" class="btn bg-blue" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
+				          <button type="button" class="btn bg-blue edit" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
 				          <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;
 			}
@@ -256,11 +256,7 @@ class ajax extends CI_Controller {
 				$option_data[] = $option;
 			}
 
-		$result = array(
-			"data" => $option_data
-		);
-
-		echo json_encode($result);
+		echo json_encode($option_data);
 
 		}
 	}

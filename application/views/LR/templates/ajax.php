@@ -20,6 +20,132 @@
           });
           return false;
         }
+
+				// $('.sel_topic').select2();
+
+				$('.adeduc_type').on('change', function(){
+						$.ajax({
+						  type: "POST",
+						  data: {'educ_type':  $('.adeduc_type').val()},
+						  url: '<?=site_url()?>/LR/ajax/get_grade_lvl',
+							dataType:'json',
+						  success: function(data){
+						      if(data){
+						        $json = data;
+										$('.adgrade_lvl').empty();
+										$('.adlrn_subject').empty();
+										$('.adgrade_lvl').append('<option>' + '</option>');
+						          $.each($json,function(i,data){
+												$('.adgrade_lvl').append('<option value="'+i+'">'+data+'</option>');
+						          });
+						      }
+						      else if(data == null){
+										$('.adgrade_lvl').empty();
+										$('.adlrn_subject').empty();
+
+						      }
+						  }
+						});
+				});
+
+				$('.educ_type').on('change', function(){
+						$.ajax({
+							type: "POST",
+							data: {'educ_type':  $('.educ_type').val()},
+							url: '<?=site_url()?>/LR/ajax/get_grade_lvl',
+							dataType:'json',
+							success: function(data){
+									if(data){
+										$json = data;
+										$('.grade_lvl').empty();
+										$('.lrn_subject').empty();
+										$('.grade_lvl').append('<option>' + '</option>');
+											$.each($json,function(i,data){
+												$('.grade_lvl').append('<option value="'+i+'">'+data+'</option>');
+											});
+									}
+									else if(data == null){
+										$('.grade_lvl').empty();
+										$('.lrn_subject').empty();
+									}
+							}
+						});
+				});
+
+				$('.adgrade_lvl').on('change', function(){
+
+						$.ajax({
+						  type: "POST",
+						  data: {'educ_type':  $('.adeduc_type').val()},
+						  url: '<?=site_url()?>/LR/ajax/get_subject',
+							dataType:'json',
+						  success: function(data){
+						      if(data){
+						        $json = data;
+										$('.adlrn_subject').empty();
+										$('.adlrn_subject').append('<option>' + '</option>');
+
+						          $.each($json,function(i,data){
+												$('.adlrn_subject').append('<option value="'+i+'">'+data+'</option>');
+						          });
+						      }
+						      else if(data == null){
+										$('.adlrn_subject').empty();
+
+						      }
+						  }
+						});
+				});
+
+				$('.grade_lvl').on('change', function(){
+
+						$.ajax({
+						  type: "POST",
+						  data: {'educ_type':  $('.educ_type').val()},
+						  url: '<?=site_url()?>/LR/ajax/get_subject',
+							dataType:'json',
+						  success: function(data){
+						      if(data){
+						        $json = data;
+										$('.lrn_subject').empty();
+										$('.lrn_subject').append('<option>' + '</option>');
+
+						          $.each($json,function(i,data){
+												$('.lrn_subject').append('<option value="'+data+'">'+data+'</option>');
+						          });
+						      }
+						      else if(data == null){
+										$('.lrn_subject').empty();
+						      }
+						  }
+						});
+				});
+
+				$('.adlrn_subject').on('change', function(){
+						$.ajax({
+						  type: "POST",
+						  data: {'subject':  $('.adlrn_subject option:selected').text(), 'educ_type': $('.adeduc_type').val(), 'grade_lvl': $('.adgrade_lvl option:selected').text() },
+						  url: '<?=site_url()?>/LR/ajax/get_topic',
+							dataType:'json',
+						  success: function(data){
+						      if(data){
+						        $json = data;
+										// $('.grade_lvl').removeAttr('disabled','disabled');
+										$('.adtopic').empty();
+										$('.adtopic').append('<option>' + '</option>');
+
+						          $.each($json,function(i,data){
+												$('.adtopic').append('<option value="'+i+'">'+data+'</option>');
+						          });
+						      }
+						      else if(data == null){
+										$('.adtopic').empty();
+						      }
+						  }
+						});
+				});
+
+
       });
 
 			$(".submit").on('click', function (e) {
@@ -36,8 +162,9 @@
 			    username: $("input#username").val(),
 			    password: $("input#password").val(),
 					area_of_expertise: $("select#area_of_expertise").val()
-
 			  };
+
+
 
 			  var params = {
 			    type: "POST",

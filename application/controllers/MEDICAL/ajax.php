@@ -26,11 +26,7 @@ class ajax extends CI_Controller {
 			$option_data[] = $option;
 		}
 
-		$result = array(
-			"data" => $option_data
-		);
-
-		echo json_encode($result);
+		echo json_encode($option_data);
 
 		}
 	}
