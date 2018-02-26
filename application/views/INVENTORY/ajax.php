@@ -23,7 +23,8 @@ $(document).ready(function() {
 
   if (current_method == 'inventory_items'){
     tableParams.ajax = itemsUrl;
-    tableParams.columnDefs = [{"width": "300px", "targets": 1},{"width": "100px", "targets": 2}];
+    tableParams.columnDefs = [{"width": "100px", "targets": 0},{"width": "500px", "targets": 1},{"width": "300px", "targets": 2},
+      {"width": "40px", "targets": 3}];
     $('#items_tbl').DataTable(tableParams);
   }
   else if(current_method == 'transactions'){
