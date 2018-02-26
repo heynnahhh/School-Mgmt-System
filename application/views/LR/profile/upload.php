@@ -48,9 +48,24 @@
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
+                                                  <label>Education Type</label>
+                                                  <select class="form-control" id="educ_type" name="educ_type" onchange="populate(this.id,'grade_lvl')">
+                                                    <option></option>
+                                                    <option>Junior High School</option>
+                                                    <option>Senior High School</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Grade Level</label>
+                                                  <select class="form-control" id="grade_lvl" name="grade_lvl">
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
                                                   <label>Learning Subject</label>
-                                                  <select class="form-control">
-                                                    <option selected disabled>Choose</option>
+                                                  <select class="form-control" id="lrn_subject" name="lrn_subject">
+                                                    <option></option>
                                                     <option>Araling Panlipunan</option>
                                                     <option>Edukasyon sa Pagpapakatao</option>
                                                     <option>Edukasyong Pantahanan at Pangkabuhayan</option>
@@ -64,40 +79,19 @@
                                                 <div class="form-group col-sm-6">
                                                   <label>Topic</label>
                                                   <div class="input-group">
-                                                    <select class="form-control">
-                                                      <option selected disabled>Choose</option>
-                                                      <option>Learning Module</option>
-                                                      <option>Learning Material</option>
+                                                    <select class="form-control" id="topic" name="topic">
                                                     </select>
                                                     <div class="input-group-btn">
-                                                      <button type="button" class="btn btn-theme btn-secondary">Add Topic</button>
+                                                      <button type="button" class="btn btn-theme btn-secondary" href="" data-toggle="modal" data-target="#myModal">Add Topic</button>
                                                     </div>
                                                   </div>
                                                 </div>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
-                                                  <label>Education Type</label>
-                                                  <select class="form-control">
-                                                    <option selected disabled>Choose</option>
-                                                    <option>Junior High School</option>
-                                                    <option>Senior High School</option>
-                                                  </select>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                  <label>Grade Level</label>
-                                                  <select class="form-control">
-                                                    <option selected disabled>Choose</option>
-                                                    <option>Learning Module</option>
-                                                    <option>Learning Material</option>
-                                                  </select>
-                                                </div>
-                                              </div>
-                                              <div class="row">
-                                                <div class="col-sm-6 form-group">
                                                   <label>Learning Resource Type</label>
                                                   <select class="form-control">
-                                                    <option selected disabled>Choose</option>
+                                                    <option></option>
                                                     <option>Learning Module</option>
                                                     <option>Learning Material</option>
                                                   </select>
@@ -105,7 +99,7 @@
                                                 <div class="col-sm-6 form-group">
                                                   <label>Intended Users</label>
                                                   <select class="form-control">
-                                                    <option selected disabled>Choose</option>
+                                                    <option></option>
                                                     <option>Students</option>
                                                     <option>Teachers</option>
                                                   </select>
@@ -115,7 +109,7 @@
                                                 <div class="col-sm-6 form-group">
                                                   <label>Copyright</label>
                                                   <select class="form-control">
-                                                    <option selected disabled>Choose</option>
+                                                    <option></option>
                                                     <option>Yes</option>
                                                     <option>No</option>
                                                   </select>
@@ -130,7 +124,7 @@
                                                 <input type="file" class="form-control-file">
                                               </div>
                                               <br />
-                                            <button type="button" class="btn btn-info">Upload</button>
+                                            <button type="button" class="btn btn-theme btn-secondary">Upload</button>
                                             </div>
                                           </form>
                                         </div>
@@ -147,7 +141,65 @@
         						</div><! -- row -->
                   </div>
 
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Add Topic</h4>
+                        </div>
+                        <div class="modal-body">
+                           <div id="login-page">
+                            <form action="index.html">
+                              <div class="row">
+                                <div class="col-sm-6 form-group">
+                                  <label>Topic Name</label>
+                                   <input type="text" placeholder="Type Here..." class="form-control">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                  <label>Subject</label>
+                                  <select class="form-control" >
+                                    <option selected disabled>Choose</option>
+                                    <option>Araling Panlipunan</option>
+                                    <option>Edukasyon sa Pagpapakatao</option>
+                                    <option>Edukasyong Pantahanan at Pangkabuhayan</option>
+                                    <option>English</option>
+                                    <option>Filipino</option>
+                                    <option>Mathematics</option>
+                                    <option>Science</option>
+                                    <option>Technology and Livelihood Education</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <button type="button" class="btn btn-theme btn-secondary">Save</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
+
+                  <label class="page1">Country</label>
+                  <div class="tooltips" title="Please select the country that the customer will primarily be served from">
+                      <select id="country" name="country" onchange="populate(this.id,'location')" placeholder="Phantasyland">
+                          <option></option>
+                          <option>Germany</option>
+                          <option>Spain</option>
+                          <option>Hungary</option>
+                          <option>USA</option>
+                          <option>Mexico</option>
+                          <option>South Africa</option>
+                          <option>China</option>
+                          <option>Russia</option>
+                      </select>
+                  </div>
+                  <br />
+                  <br />
+                  <label class="page1">Location</label>
+                  <div class="tooltips" title="Please select the city that the customer is primarily to be served from.">
+                      <select id="location" name="location" placeholder="Anycity"></select>
+                  </div>
 
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
