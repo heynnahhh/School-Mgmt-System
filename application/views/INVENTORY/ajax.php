@@ -208,15 +208,15 @@ function hide_div(){
 
 
 $('.add_clone').on('click', function(){
-  // $('.department').clone().appendTo('.distribute').after("<hr>");
+//   $('.department').clone().appendTo('.distribute').after("<hr>");
 //   $('.department').last().clone().appendTo('.distribute').find("input").attr("name",function(i,oldVal) {
 //     return oldVal.replace(/\[(\d+)\]/,function(_,m){
 //         return "[" + (+m + 1) + "]";
 //     });
 // });
 // $('.del_clone').show();
-
-  return false;
+//
+//   return false;
 
 });
 

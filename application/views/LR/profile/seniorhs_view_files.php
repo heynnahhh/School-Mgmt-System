@@ -158,4 +158,4 @@
       <!--main content end-->
       <?php include '/../templates/footer.php';?>
 
-      <?php include '/../templates/scripts.php';?>
+      <?php include '/../templates/ajax.php';?>

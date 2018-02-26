@@ -39,6 +39,10 @@ $(document).ready(function() {
 
 });
 
+function view(){
+
+}
+
 $('#grade_lvl').on('change', function(){
 
   	$.ajax({

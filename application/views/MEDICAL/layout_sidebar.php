@@ -65,7 +65,7 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
+
           <li><a href="<?php echo site_url();?>/INVENTORY/home/compose_email"><i class="fa fa-circle-o"></i> Compose E-mail</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/transactions"><i class="fa fa-circle-o"></i> Transactions</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/inventory_items"><i class="fa fa-circle-o"></i> Inventory Items</a></li>
@@ -77,67 +77,16 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
+
               <li><a href="<?php echo site_url();?>/INVENTORY/home/stocks"><i class="fa fa-circle-o"></i> Stocks</a></li>
               <li><a href="<?php echo site_url();?>/INVENTORY/home/products"><i class="fa fa-circle-o"></i> Product List</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Expenses</a></li>
             </ul>
           </li>
-          <li>
-            <a href=""><i class="fa fa-circle-o"></i> Generate Report(s)
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="<?php echo site_url();?>/INVENTORY/home/reports_search"><i class="fa fa-circle-o"></i> Search</a></li>
-              <li><a href="<?php echo site_url();?>/INVENTORY/home/generate_apr"><i class="fa fa-circle-o"></i> Generate APR</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Generate PBB</a></li>
-            </ul>
-          </li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Dental Inventory</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Medical Inventory</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
         </ul>
       </li>
 
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-globe"></i> <span>Website</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
-          <li>
-            <a href=""><i class="fa fa-circle-o"></i> Manage Content
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <a href=""><i class="fa fa-circle-o"></i> Pages
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="<?php echo site_url();?>/website/Upload"><i class="fa fa-circle-o"></i> Home News</a></li>
-                  <li><a href="<?php echo site_url();?>/website/pages/pages_home"><i class="fa fa-circle-o"></i> Home Banner</a></li>
-                  <li><a href="<?php echo site_url();?>/website/Calendar_Cont"><i class="fa fa-circle-o"></i> Academic Calendar</a></li>
-                </ul>
-              </li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Widgets</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Forms</a></li>
-            </ul>
-          </li>
-          <li><a href="<?php echo site_url();?>/website/Home"><i class="fa fa-circle-o"></i> Preview</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
-        </ul>
-      </li>
 
       <li class="treeview active">
         <a href="#">

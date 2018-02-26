@@ -81,6 +81,14 @@ class Inventory_model extends CI_Model{
       return $query->result();
     }
 
+    public function get_item_info($m_data){
+      $this->db->select('item_code, item_category, item_name, item_desc, unit_cost');
+      $this->db->from('tbl_inv_items');
+      $this->db->where('item_code', $m_data);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
     public function insert_product($m_data){
       $this->db->insert('tbl_inv_items', $m_data);
     }
@@ -100,6 +108,11 @@ class Inventory_model extends CI_Model{
     public function update_transact($m_data){
       $this->db->where('receipt_no', $m_data['receipt_no']);
       $this->db->update('tbl_inv_transactions', $m_data);
+    }
+
+    public function update_item($m_data){
+      $this->db->where('item_code', $m_data['item_code']);
+      $this->db->update('tbl_inv_items', $m_data);
     }
 
 }
