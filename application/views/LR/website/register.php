@@ -26,7 +26,7 @@
                                   <br />to teaching and learning processes.
                                 </p>
                               </div>
-                              <form method="post" enctype="multipart/form-data">
+                              <form method="post" enctype="multipart/form-data" id="registerForm">
                       					<div class="col-sm-6">
                                   <div class="row">
                       							<div class="col-sm-4 form-group">
