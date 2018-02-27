@@ -48,7 +48,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Education Type</label>
-                                                  <select class="form-control" id="educ_type" name="educ_type" onchange="populate(this.id,'grade_lvl')">
+                                                  <select class="form-control adeduc_type" id="adeduc_type" name="educ_type">
                                                     <option></option>
                                                     <option>Junior High School</option>
                                                     <option>Senior High School</option>
@@ -56,28 +56,20 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Grade Level</label>
-                                                  <select class="form-control" id="grade_lvl" name="grade_lvl" disabled="">
+                                                  <select class="form-control adgrade_lvl" id="grade_lvl" name="grade_lvl">
                                                   </select>
                                                 </div>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Subject</label>
-                                                  <select class="form-control" id="lrn_subject" name="lrn_subject" disabled="">
-                                                    <option></option>
-                                                    <option>Araling Panlipunan</option>
-                                                    <option>English</option>
-                                                    <option>Filipino</option>
-                                                    <option>Science</option>
-                                                    <option>Core Subjects</option>
-                                                    <option>Subject Cores</option>
-                                                    <option>Cores</option>
+                                                  <select class="form-control adlrn_subject" id="lrn_subject" name="lrn_subject">
                                                   </select>
                                                 </div>
                                                 <div class="form-group col-sm-6">
                                                   <label>Topic</label>
                                                   <div class="input-group">
-                                                    <select class="form-control" id="topic" name="topic" disabled="">
+                                                    <select class="form-control sel_topic adtopic" id="topic" name="topic">
                                                     </select>
                                                     <div class="input-group-btn">
                                                       <button type="button" class="btn btn-theme btn-secondary" href="" data-toggle="modal" data-target="#myModal">Add Topic</button>
@@ -119,7 +111,7 @@
                                               </div>
                                               <div class="form-group">
                                                 <label>Learning Resource</label>
-                                                <input type="file" class="form-control-file">
+                                                <input type="file" name="upload_lrn" class="form-control-file">
                                               </div>
                                               <br />
                                             <button type="button" class="btn btn-theme btn-secondary">Upload</button>
@@ -151,22 +143,29 @@
                             <form action="index.html">
                               <div class="row">
                                 <div class="col-sm-6 form-group">
-                                  <label>Topic Name</label>
-                                   <input type="text" placeholder="Type Here..." class="form-control">
+                                  <label>Education Type</label>
+                                  <select class="form-control educ_type" id="educ_type" name="educ_type">
+                                    <option></option>
+                                    <option>Junior High School</option>
+                                    <option>Senior High School</option>
+                                  </select>
                                 </div>
                                 <div class="col-sm-6 form-group">
-                                  <label>Subject</label>
-                                  <select class="form-control" >
-                                    <option selected disabled>Choose</option>
-                                    <option>Araling Panlipunan</option>
-                                    <option>Edukasyon sa Pagpapakatao</option>
-                                    <option>Edukasyong Pantahanan at Pangkabuhayan</option>
-                                    <option>English</option>
-                                    <option>Filipino</option>
-                                    <option>Mathematics</option>
-                                    <option>Science</option>
-                                    <option>Technology and Livelihood Education</option>
+                                  <label>Grade Level</label>
+                                  <select class="form-control grade_lvl" id="grade_lvl" name="grade_lvl">
                                   </select>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-6 form-group">
+                                  <label>Subject</label>
+                                  <select class="form-control lrn_subject" name="lrn_subject" id="lrn_subject">
+
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                  <label>Topic Name</label>
+                                   <input type="text" class="form-control sel_topic topic" placeholder="Type Here..." name="topic" id="topic">
                                 </div>
                               </div>
                               <button type="button" class="btn btn-theme btn-secondary">Save</button>
