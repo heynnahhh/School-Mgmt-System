@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 	public function __construct(){
     parent::__construct();
       $this->load->library('form_validation');
-      $this->load->model('SMS/user');
+      $this->load->model('lr/lr_model');
 
   	}
 
@@ -63,10 +63,10 @@ class Home extends CI_Controller {
 	                    'username'=>$this->input->post('username'),
 	                    'password' => $this->input->post('password')
 	                );
-	                $checkLogin = $this->user->getRows($con);
+	                $checkLogin = $this->lr_model->getRows($con);
 	                if($checkLogin){
 	                    $this->session->set_userdata('logged_in',TRUE);
-	                    $this->session->set_userdata('uemail',$checkLogin['usernam']);
+	                    $this->session->set_userdata('uemail',$checkLogin['username']);
 	                    $this->session->set_userdata('userId',$checkLogin['lusa_lus_id']);
 	                    redirect('lr/profile');
 	                }else{

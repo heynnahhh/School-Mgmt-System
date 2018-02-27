@@ -40,8 +40,8 @@ body {
 }
 
 .container{
-  width: 1000px;
-  height: 520px;
+  width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   background: #fff;
@@ -49,15 +49,13 @@ body {
   -moz-box-shadow: 0px 0px 114px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
   z-index: 2;
-  top: 10%;
-  left: 14%;
   position: absolute;
 }
 
 .container-left{
   display: inline-block;
-  width:300px;
-  height: 520px;
+  width:25%;
+  height: 100%;
   float:left;
   position: relative;
   z-index: 10;
@@ -65,16 +63,16 @@ body {
 }
 
 .container-right{
-  width: 700px;
-  height: 520px;
+  width: 75%;
+  height: 100%;
   background-image: url('../img/photo4.jpg');
   float: right;
   position: relative;
 }
 
 .container-body{
-  width: 700px;
-  height: 520px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 10, 19, 0.5);
   float: right;
   position: relative;
@@ -123,12 +121,12 @@ body {
 
 .email {
   position: absolute;
-  margin-top: 200px;
+  margin-top: 260px;
   border: none;
   background: rgba(0,0,0,0);
-  margin-left: 60px;
+  margin-left: 70px;
   color: #000;
-  width: 196px;
+  width: 236px;
   height: 44px;
   padding-left: 3px;
   z-index: 100;
@@ -143,12 +141,12 @@ body {
 
 .pass {
   position: absolute;
-  margin-top: 250px;
+  margin-top: 310px;
   border: none;
   background: rgba(0,0,0,0);
-  margin-left: 60px;
+  margin-left: 70px;
   color: #000;
-  width: 196px;
+  width: 236px;
   height: 44px;
   padding-left: 3px;
   z-index: 100;
@@ -164,7 +162,7 @@ body {
 input[type=submit] {
   position: absolute;
   z-index: 100;
-  width: 200px;
+  width: 240px;
   height: 43px;
   border: 1px solid #fff;
   background: #7f0d8e;
@@ -172,7 +170,7 @@ input[type=submit] {
   color: #fff;
   font-size: 16px;
   border-radius: 3px;
-  margin-top: 350px;
+  margin-top: 400px;
   margin-left: 50px;
   transition: 0.5s;
   cursor: pointer;
@@ -191,8 +189,8 @@ input[type=submit]:focus {
   font-family: 'Roboto', sans-serif;
   color: #f3756a;
   font-size: 48px;
-  /*margin-left: -65px;*/
-  margin-top: 60px;
+  margin-left: 5%;
+  margin-top: 80px;
 }
 
 .info {
@@ -201,7 +199,7 @@ input[type=submit]:focus {
   font-family: 'Roboto', sans-serif;
   color: #7d8c7d;
   font-size: 14px;
-  margin-top: 150px;
+  margin-top: 170px;
 }
 
 /* responsive:
@@ -244,7 +242,7 @@ input[type=submit]:focus {
   }
 
   .form{
-      width: 200px;
+      width: 100%;
       margin-left: -60px;
   }
 
