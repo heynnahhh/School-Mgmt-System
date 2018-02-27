@@ -454,6 +454,9 @@ $('#btn-dsave').on('click', function(){
       console.log($(this).closest('.department').find('.i-quantity').val())
 
       //ADD TO DB
+
+      //MINUS QUANTITY
+      
   })
 
 })
