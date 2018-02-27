@@ -43,7 +43,6 @@ function hide_div(){
     tableParams.ajax = stocksUrl;
     tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
     $('#stock_tbl').DataTable(tableParams);
-
   }
 
     $(document).on('click', '#myBtn', function(){
@@ -56,7 +55,6 @@ function hide_div(){
 
     $('.sel_category').select2();
 
-    $('.del_clone').hide();
 
     $('#transacts_tbl tbody').on( 'click','.view', function () {
       var data = $('#transacts_tbl').DataTable().row( $(this).parents('tr') ).data();
@@ -204,21 +202,33 @@ function hide_div(){
 
     } );
 
+    $('#stock_tbl tbody').on( 'click', '.edit', function () {
+      var data = $('#stock_tbl').DataTable().row( $(this).parents('tr') ).data();
+      alert(data[0]);
+          $('#table').removeClass('col-xs-12');
+          $('#table').addClass('col-xs-7');
+          $('#form').show();
+
+          $.ajax({
+            type: "POST",
+            data: {'stock_no': data[0]},
+            url: '<?=site_url()?>/INVENTORY/ajax/get_stock_details',
+            dataType: 'json',
+            success: function(data){
+                if(data){
+                  var info = data.data[0];
+
+                  $('#item_name').val(info.item_name);
+                  $('#category').val(info.item_category);
+                  $('#quantity').val(info.quantity);
+
+                }
+            }
+          });
+
+    } );
+
 } );
-
-
-$('.add_clone').on('click', function(){
-//   $('.department').clone().appendTo('.distribute').after("<hr>");
-//   $('.department').last().clone().appendTo('.distribute').find("input").attr("name",function(i,oldVal) {
-//     return oldVal.replace(/\[(\d+)\]/,function(_,m){
-//         return "[" + (+m + 1) + "]";
-//     });
-// });
-// $('.del_clone').show();
-//
-//   return false;
-
-});
 
 
 $('#item_code').on('change', function(){
@@ -402,6 +412,56 @@ function cancel(){
   $('#table').addClass('col-xs-12');
   $('#form').hide();
 }
+
+//STOCK REGISTER
+var dQuantity;
+$('#stock_tbl tbody').on( 'click', '.btn-dist', function (){
+  var data = $('#stock_tbl').DataTable().row( $(this).parents('tr') ).data()
+  $('#d-name').val(data[1])
+  dQuantity = data[3]
+  $('#d-name').prop('disabled', true)
+})
+
+$('.add_clone').on('click', function(){
+  $('#department').clone().appendTo('.append').attr('clone-dept')
+  $('.del_clone').on('click', function(){
+    if($('.del_clone').length == 1){
+      return
+    }
+    $(this).closest('.department').remove()
+
+  });
+  $('.del_clone').show()
+});
+
+
+$('#btn-dsave').on('click', function(){
+
+  var q = 0
+  $('.i-quantity').each(function(){
+      q = q + parseInt($(this).val()) 
+  })
+
+  if(q > dQuantity){
+    alert('NOT ENOUGH QUANTITY')
+    return 
+  }
+
+  $('.s-dept').each(function(){
+      var d = $(this).val()
+      var qu = $(this).closest('.department').find('.i-quantity').val()
+      console.log($(this).val())
+      console.log($(this).closest('.department').find('.i-quantity').val())
+
+      //ADD TO DB
+
+      //MINUS QUANTITY
+      
+  })
+
+})
+
+
 
 
 </script>

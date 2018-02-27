@@ -89,6 +89,17 @@ class Inventory_model extends CI_Model{
       return $query->result();
     }
 
+    public function get_stock_details($m_data){
+      $this->db->select('tbl_inv_items.item_name,
+                        tbl_inv_items.item_category,
+                        tbl_inv_stocks.quantity');
+      $this->db->from('tbl_inv_stocks');
+      $this->db->join('tbl_inv_items' , 'tbl_inv_items.item_code = tbl_inv_stocks.ist_item_code');
+      $this->db->where('stock_no', $m_data);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
     public function insert_product($m_data){
       $this->db->insert('tbl_inv_items', $m_data);
     }

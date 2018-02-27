@@ -17,7 +17,7 @@ class ajax extends CI_Controller {
 
 			foreach ($m_data as $value) {
 				$row = array();
-				$row[] = '<a href="'.site_url().'/INVENTORY/home/stock_register'.$value->stock_no.'">'.$value->stock_no.'</a>';
+				$row[] = $value->stock_no;
 				$row[] = $value->item_name;
 				$row[] = $value->item_category;
 				if($value->quantity <= 0){
@@ -26,8 +26,8 @@ class ajax extends CI_Controller {
 				elseif($value->quantity > 0 ){
 					$row[] = $value->quantity;
 				}
-				$row[] = '<button type="button" class="btn bg-green" id="myBtn">Distribute</button>
-				          <button type="button" class="btn bg-blue edit" id="edit" onclick="edit()"><i class="fa fa-edit"></i></button>
+				$row[] = '<button type="button" class="btn bg-green btn-dist" id="myBtn">Distribute</button>
+				          <button type="button" class="btn bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
 				          <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;
 			}
@@ -274,6 +274,22 @@ class ajax extends CI_Controller {
 
 		echo json_encode($result);
 
+	}
+
+	public function get_stock_details(){
+		$data = $this->input->post();
+
+		$m_data = $data['stock_no'];
+
+		$values = $this->inventory_model->get_stock_details($m_data);
+
+		$result = array(
+			"data" => $values
+		);
+
+		echo json_encode($result);
+
+		
 	}
 
 	public function get_item_info(){

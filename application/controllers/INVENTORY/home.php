@@ -31,6 +31,7 @@ class Home extends CI_Controller {
 		$data = array();
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
 		$data['options'] = $this->inventory_model->get_department();
+		$data['categories'] = $this->inventory_model->get_category();
 		$this->load->view('INVENTORY/stock_register', $data);
 	}
 
