@@ -118,9 +118,14 @@ class Home extends CI_Controller {
 		$this->load->view('LR/website/seniorhs_view_files');
 	}
 
-	public function view_file()
+	public function jhs_view_file()
 	{
-		$this->load->view('LR/website/view_file');
+		$this->load->view('LR/website/jhs_view_file');
+	}
+
+	public function shs_view_file()
+	{
+		$this->load->view('LR/website/shs_view_file');
 	}
 
 	public function register()
@@ -168,9 +173,14 @@ class Home extends CI_Controller {
 		$this->load->view('LR/profile/seniorhs_view_files');
 	}
 
-	public function p_view_file()
+	public function p_jhs_view_file()
 	{
-		$this->load->view('LR/profile/view_file');
+		$this->load->view('LR/profile/jhs_view_file');
+	}
+
+	public function p_shs_view_file()
+	{
+		$this->load->view('LR/profile/shs_view_file');
 	}
 
 	public function activity_log()
