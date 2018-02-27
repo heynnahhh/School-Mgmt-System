@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 26, 2018 at 05:04 PM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 27, 2018 at 08:36 AM
+-- Server version: 5.7.19
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,14 +28,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `addresses`
 --
 
-CREATE TABLE `addresses` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `addresses`;
+CREATE TABLE IF NOT EXISTS `addresses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `students_info_lrn` int(11) NOT NULL,
   `street` varchar(50) NOT NULL,
   `barangay` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
-  `province` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `province` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `addresses`
@@ -55,13 +59,15 @@ INSERT INTO `addresses` (`id`, `students_info_lrn`, `street`, `barangay`, `city`
 -- Table structure for table `guardians`
 --
 
-CREATE TABLE `guardians` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `guardians`;
+CREATE TABLE IF NOT EXISTS `guardians` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `students_info_lrn` int(11) NOT NULL,
   `name` varchar(70) NOT NULL,
   `contact` varchar(15) NOT NULL,
-  `relationship` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `relationship` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guardians`
@@ -83,14 +89,16 @@ INSERT INTO `guardians` (`id`, `students_info_lrn`, `name`, `contact`, `relation
 -- Table structure for table `parents`
 --
 
-CREATE TABLE `parents` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `parents`;
+CREATE TABLE IF NOT EXISTS `parents` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `students_info_lrn` int(11) NOT NULL,
   `mother_name` varchar(70) NOT NULL,
   `mother_contact` varchar(15) NOT NULL,
   `father_name` varchar(70) NOT NULL,
-  `father_contact` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `father_contact` varchar(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `parents`
@@ -112,8 +120,9 @@ INSERT INTO `parents` (`id`, `students_info_lrn`, `mother_name`, `mother_contact
 -- Table structure for table `students_info`
 --
 
-CREATE TABLE `students_info` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `students_info`;
+CREATE TABLE IF NOT EXISTS `students_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `lrn` int(12) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `middle_name` varchar(50) DEFAULT NULL,
@@ -127,8 +136,9 @@ CREATE TABLE `students_info` (
   `religion` varchar(50) NOT NULL,
   `online_applicant` bit(1) NOT NULL,
   `date_registered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students_info`
@@ -150,12 +160,14 @@ INSERT INTO `students_info` (`id`, `lrn`, `first_name`, `middle_name`, `last_nam
 -- Table structure for table `tbl_inv_attachments`
 --
 
-CREATE TABLE `tbl_inv_attachments` (
-  `wat_id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tbl_inv_attachments`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_attachments` (
+  `wat_id` int(10) NOT NULL AUTO_INCREMENT,
   `file_name` varchar(155) NOT NULL,
   `file_path` varchar(155) NOT NULL,
-  `full_path` varchar(155) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `full_path` varchar(155) NOT NULL,
+  PRIMARY KEY (`wat_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_inv_attachments`
@@ -170,10 +182,13 @@ INSERT INTO `tbl_inv_attachments` (`wat_id`, `file_name`, `file_path`, `full_pat
 -- Table structure for table `tbl_inv_departments`
 --
 
-CREATE TABLE `tbl_inv_departments` (
-  `ide_id` int(11) NOT NULL,
-  `department` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `tbl_inv_departments`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_departments` (
+  `ide_id` int(11) NOT NULL AUTO_INCREMENT,
+  `department` varchar(255) NOT NULL,
+  PRIMARY KEY (`ide_id`),
+  KEY `department` (`department`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_inv_departments`
@@ -192,15 +207,19 @@ INSERT INTO `tbl_inv_departments` (`ide_id`, `department`) VALUES
 -- Table structure for table `tbl_inv_items`
 --
 
-CREATE TABLE `tbl_inv_items` (
-  `iit_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_inv_items`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_items` (
+  `iit_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_code` int(11) NOT NULL,
   `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `item_desc` text COLLATE utf8_unicode_ci NOT NULL,
   `item_category` varchar(255) CHARACTER SET latin1 NOT NULL,
   `product_status` enum('Active','Inactive') COLLATE utf8_unicode_ci NOT NULL,
-  `unit_cost` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `unit_cost` float NOT NULL,
+  PRIMARY KEY (`iit_id`),
+  UNIQUE KEY `item_code` (`item_code`) USING BTREE,
+  KEY `item_category` (`item_category`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tbl_inv_items`
@@ -221,10 +240,13 @@ INSERT INTO `tbl_inv_items` (`iit_id`, `item_code`, `item_name`, `item_desc`, `i
 -- Table structure for table `tbl_inv_item_category`
 --
 
-CREATE TABLE `tbl_inv_item_category` (
-  `iicat_id` int(11) NOT NULL,
-  `category` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `tbl_inv_item_category`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_item_category` (
+  `iicat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` varchar(255) NOT NULL,
+  PRIMARY KEY (`iicat_id`),
+  KEY `category` (`category`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_inv_item_category`
@@ -282,12 +304,15 @@ INSERT INTO `tbl_inv_item_category` (`iicat_id`, `category`) VALUES
 -- Table structure for table `tbl_inv_stocks`
 --
 
-CREATE TABLE `tbl_inv_stocks` (
-  `ist_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_inv_stocks`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_stocks` (
+  `ist_id` int(11) NOT NULL AUTO_INCREMENT,
   `stock_no` varchar(11) NOT NULL,
   `ist_item_code` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY (`ist_id`),
+  KEY `ist_product_code` (`ist_item_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_inv_stocks`
@@ -302,11 +327,15 @@ INSERT INTO `tbl_inv_stocks` (`ist_id`, `stock_no`, `ist_item_code`, `quantity`)
 -- Table structure for table `tbl_inv_stocks_per_department`
 --
 
-CREATE TABLE `tbl_inv_stocks_per_department` (
-  `ispd_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_inv_stocks_per_department`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_stocks_per_department` (
+  `ispd_id` int(11) NOT NULL AUTO_INCREMENT,
   `ispd_ide_id` int(11) NOT NULL,
   `item_code` int(11) NOT NULL,
-  `distributed_qty` int(11) NOT NULL
+  `distributed_qty` int(11) NOT NULL,
+  PRIMARY KEY (`ispd_id`),
+  KEY `ispd_ide_id` (`ispd_ide_id`),
+  KEY `item_code` (`item_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -315,8 +344,9 @@ CREATE TABLE `tbl_inv_stocks_per_department` (
 -- Table structure for table `tbl_inv_transactions`
 --
 
-CREATE TABLE `tbl_inv_transactions` (
-  `itr_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_inv_transactions`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_transactions` (
+  `itr_id` int(11) NOT NULL AUTO_INCREMENT,
   `receipt_no` int(11) NOT NULL,
   `itr_item_code` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
@@ -325,8 +355,10 @@ CREATE TABLE `tbl_inv_transactions` (
   `total_cost` decimal(11,0) NOT NULL,
   `received_by` varchar(40) NOT NULL,
   `received_fr` varchar(40) NOT NULL,
-  `date_received` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date_received` date NOT NULL,
+  PRIMARY KEY (`itr_id`),
+  KEY `itr_item_code` (`itr_item_code`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_inv_transactions`
@@ -343,12 +375,15 @@ INSERT INTO `tbl_inv_transactions` (`itr_id`, `receipt_no`, `itr_item_code`, `qu
 -- Table structure for table `tbl_inv_users`
 --
 
-CREATE TABLE `tbl_inv_users` (
-  `ius_id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tbl_inv_users`;
+CREATE TABLE IF NOT EXISTS `tbl_inv_users` (
+  `ius_id` int(10) NOT NULL AUTO_INCREMENT,
   `email` varchar(150) NOT NULL,
   `password` varchar(255) NOT NULL,
   `status` varchar(10) NOT NULL,
-  `ius_sus_id` varchar(10) NOT NULL
+  `ius_sus_id` varchar(10) NOT NULL,
+  PRIMARY KEY (`ius_id`),
+  UNIQUE KEY `ius_sus_id` (`ius_sus_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -357,12 +392,14 @@ CREATE TABLE `tbl_inv_users` (
 -- Table structure for table `tbl_lrmds_users`
 --
 
-CREATE TABLE `tbl_lrmds_users` (
-  `lus_id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lrmds_users`;
+CREATE TABLE IF NOT EXISTS `tbl_lrmds_users` (
+  `lus_id` int(10) NOT NULL AUTO_INCREMENT,
   `full_name` int(255) NOT NULL,
   `email` int(150) NOT NULL,
   `password` int(255) NOT NULL,
-  `status` int(10) NOT NULL
+  `status` int(10) NOT NULL,
+  PRIMARY KEY (`lus_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -371,14 +408,18 @@ CREATE TABLE `tbl_lrmds_users` (
 -- Table structure for table `tbl_lr_attachments`
 --
 
-CREATE TABLE `tbl_lr_attachments` (
-  `lup_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_attachments`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_attachments` (
+  `lup_id` int(11) NOT NULL AUTO_INCREMENT,
+  `lup_lr_code` varchar(11) NOT NULL,
   `file_name` varchar(155) NOT NULL,
   `file_path` varchar(155) NOT NULL,
   `full_path_url` varchar(155) NOT NULL,
   `file_type` varchar(40) NOT NULL,
-  `file_size` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `file_size` varchar(11) NOT NULL,
+  PRIMARY KEY (`lup_id`),
+  KEY `lup_lr_code` (`lup_lr_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -386,23 +427,25 @@ CREATE TABLE `tbl_lr_attachments` (
 -- Table structure for table `tbl_lr_attachments_info`
 --
 
-CREATE TABLE `tbl_lr_attachments_info` (
-  `latin_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_attachments_info`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_attachments_info` (
+  `latin_id` int(11) NOT NULL AUTO_INCREMENT,
   `lr_code` varchar(11) NOT NULL,
+  `topic_id` int(11) NOT NULL,
   `lr_title` varchar(155) NOT NULL,
   `description` text NOT NULL,
   `objective` text NOT NULL,
-  `learning_subj` varchar(155) NOT NULL,
-  `topic` text NOT NULL,
   `resource_type` varchar(40) NOT NULL,
   `intended_user` varchar(40) NOT NULL,
   `language` varchar(40) NOT NULL,
+  `publisher` varchar(255) NOT NULL,
   `date_published` date NOT NULL,
   `copyright` enum('yes','no') NOT NULL,
   `copyright_owner` varchar(40) NOT NULL,
-  `educ_type` enum('Senior High School','Junior High School') NOT NULL,
-  `grade_level` enum('Grade 7','Grade 8','Grade 9','Grade 10','Grade 11','Grade 12') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`latin_id`),
+  UNIQUE KEY `lr_code` (`lr_code`),
+  KEY `topic_id` (`topic_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -410,10 +453,13 @@ CREATE TABLE `tbl_lr_attachments_info` (
 -- Table structure for table `tbl_lr_educ_type`
 --
 
-CREATE TABLE `tbl_lr_educ_type` (
-  `lre_id` int(11) NOT NULL,
-  `educ_type` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `tbl_lr_educ_type`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_educ_type` (
+  `lre_id` int(11) NOT NULL AUTO_INCREMENT,
+  `educ_type` varchar(40) NOT NULL,
+  PRIMARY KEY (`lre_id`),
+  KEY `educ_type` (`educ_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_educ_type`
@@ -429,22 +475,27 @@ INSERT INTO `tbl_lr_educ_type` (`lre_id`, `educ_type`) VALUES
 -- Table structure for table `tbl_lr_grade_lvl`
 --
 
-CREATE TABLE `tbl_lr_grade_lvl` (
-  `lro_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_grade_lvl`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_grade_lvl` (
+  `lro_id` int(11) NOT NULL AUTO_INCREMENT,
   `educ_type` varchar(40) NOT NULL,
-  `grade_lvl` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `grade_lvl` varchar(40) NOT NULL,
+  PRIMARY KEY (`lro_id`),
+  KEY `educ_type` (`educ_type`),
+  KEY `grade_lvl` (`grade_lvl`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_grade_lvl`
 --
 
 INSERT INTO `tbl_lr_grade_lvl` (`lro_id`, `educ_type`, `grade_lvl`) VALUES
-(1, 'Junior High School', ''),
-(2, 'Junior High School', 'Grade 7'),
-(3, 'Junior High School', 'Grade 8'),
-(4, 'Senior High School', 'Grade 11'),
-(5, 'Senior High School', 'Grade 12');
+(1, 'Junior High School', 'Grade 7'),
+(2, 'Junior High School', 'Grade 8'),
+(3, 'Junior High School', 'Grade 9'),
+(4, 'Junior High School', 'Grade 10'),
+(5, 'Senior High School', 'Grade 11'),
+(6, 'Senior High School', 'Grade 12');
 
 -- --------------------------------------------------------
 
@@ -452,11 +503,15 @@ INSERT INTO `tbl_lr_grade_lvl` (`lro_id`, `educ_type`, `grade_lvl`) VALUES
 -- Table structure for table `tbl_lr_subjects`
 --
 
-CREATE TABLE `tbl_lr_subjects` (
-  `lres_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_subjects`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_subjects` (
+  `lres_id` int(11) NOT NULL AUTO_INCREMENT,
   `educ_type` varchar(40) NOT NULL,
-  `subject` varchar(155) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `subject` varchar(155) NOT NULL,
+  PRIMARY KEY (`lres_id`),
+  KEY `educ_type` (`educ_type`),
+  KEY `subject` (`subject`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_subjects`
@@ -464,9 +519,17 @@ CREATE TABLE `tbl_lr_subjects` (
 
 INSERT INTO `tbl_lr_subjects` (`lres_id`, `educ_type`, `subject`) VALUES
 (1, 'Junior High School', 'Araling Panlipunan'),
-(2, 'Junior High School', 'English'),
-(3, 'Senior High School', 'Vocational'),
-(4, 'Senior High School', 'Technical');
+(2, 'Junior High School', 'Arts'),
+(3, 'Junior High School', 'Values Education'),
+(4, 'Junior High School', 'Home Economics'),
+(5, 'Junior High School', 'English'),
+(6, 'Junior High School', 'Science'),
+(7, 'Junior High School', 'Filipino'),
+(8, 'Junior High School', 'Mathematics'),
+(9, 'Junior High School', 'Music'),
+(10, 'Junior High School', 'Health'),
+(11, 'Junior High School', 'Physical Education'),
+(12, 'Junior High School', 'Technology and Livelihood Education');
 
 -- --------------------------------------------------------
 
@@ -474,21 +537,20 @@ INSERT INTO `tbl_lr_subjects` (`lres_id`, `educ_type`, `subject`) VALUES
 -- Table structure for table `tbl_lr_topics`
 --
 
-CREATE TABLE `tbl_lr_topics` (
-  `lto_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_topics`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_topics` (
+  `lto_id` int(11) NOT NULL AUTO_INCREMENT,
+  `topic_id` int(11) NOT NULL,
   `educ_type` varchar(40) NOT NULL,
   `grade_lvl` varchar(40) NOT NULL,
   `subject` varchar(155) NOT NULL,
-  `topic_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_lr_topics`
---
-
-INSERT INTO `tbl_lr_topics` (`lto_id`, `educ_type`, `grade_lvl`, `subject`, `topic_name`) VALUES
-(1, 'Junior High School', 'Grade 7', 'Araling Panlipunan', 'topicsss'),
-(2, 'Senior High School', 'Grade 11', 'Technical', 'topicsjygjgkjg');
+  `topic_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`lto_id`),
+  UNIQUE KEY `topic_id` (`topic_id`),
+  KEY `educ_type` (`educ_type`),
+  KEY `grade_lvl` (`grade_lvl`),
+  KEY `subject` (`subject`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -496,21 +558,23 @@ INSERT INTO `tbl_lr_topics` (`lto_id`, `educ_type`, `grade_lvl`, `subject`, `top
 -- Table structure for table `tbl_lr_users_account`
 --
 
-CREATE TABLE `tbl_lr_users_account` (
-  `lusa_lus_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_users_account`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_users_account` (
+  `lusa_lus_id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(155) NOT NULL,
   `username` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
   `status` varchar(11) NOT NULL,
-  `account_type` enum('Member','Admin') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `account_type` enum('Member','Admin') NOT NULL,
+  UNIQUE KEY `lusa_lus_id` (`lusa_lus_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_users_account`
 --
 
 INSERT INTO `tbl_lr_users_account` (`lusa_lus_id`, `email`, `username`, `password`, `status`, `account_type`) VALUES
-(1, 'llh@gmail.com', 'lkjlj', 'hehe', '', 'Member'),
+(1, 'llh@gmail.com', 'hehe', 'hehe', '', 'Member'),
 (2, 'hannah@maganda.com', 'khkjh', '529ca8050a00180790cf88b63468826a', '', 'Member');
 
 -- --------------------------------------------------------
@@ -519,12 +583,14 @@ INSERT INTO `tbl_lr_users_account` (`lusa_lus_id`, `email`, `username`, `passwor
 -- Table structure for table `tbl_lr_users_activity`
 --
 
-CREATE TABLE `tbl_lr_users_activity` (
-  `luac_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_users_activity`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_users_activity` (
+  `luac_id` int(11) NOT NULL AUTO_INCREMENT,
   `activity` text NOT NULL,
   `date_of_activity` date NOT NULL,
   `time_of_activity` time NOT NULL,
-  `logged_in_session` datetime NOT NULL
+  `logged_in_session` datetime NOT NULL,
+  PRIMARY KEY (`luac_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -533,10 +599,12 @@ CREATE TABLE `tbl_lr_users_activity` (
 -- Table structure for table `tbl_lr_users_history`
 --
 
-CREATE TABLE `tbl_lr_users_history` (
+DROP TABLE IF EXISTS `tbl_lr_users_history`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_users_history` (
   `lush_lus_id` int(11) NOT NULL,
   `logged_in_session` datetime NOT NULL,
-  `logged_out_session` datetime NOT NULL
+  `logged_out_session` datetime NOT NULL,
+  UNIQUE KEY `lush_lus_id` (`lush_lus_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -545,8 +613,9 @@ CREATE TABLE `tbl_lr_users_history` (
 -- Table structure for table `tbl_lr_users_profile`
 --
 
-CREATE TABLE `tbl_lr_users_profile` (
-  `lus_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_lr_users_profile`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_users_profile` (
+  `lus_id` int(11) NOT NULL AUTO_INCREMENT,
   `last_name` varchar(40) NOT NULL,
   `first_name` varchar(40) NOT NULL,
   `middle_name` varchar(40) NOT NULL,
@@ -554,8 +623,9 @@ CREATE TABLE `tbl_lr_users_profile` (
   `birthdate` date NOT NULL,
   `gender` enum('Male','Female') NOT NULL,
   `contact_no` int(11) NOT NULL,
-  `area_of_expertise` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `area_of_expertise` varchar(40) NOT NULL,
+  PRIMARY KEY (`lus_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_users_profile`
@@ -571,8 +641,9 @@ INSERT INTO `tbl_lr_users_profile` (`lus_id`, `last_name`, `first_name`, `middle
 -- Table structure for table `tbl_md_employee_info`
 --
 
-CREATE TABLE `tbl_md_employee_info` (
-  `mdei_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_md_employee_info`;
+CREATE TABLE IF NOT EXISTS `tbl_md_employee_info` (
+  `mdei_id` int(11) NOT NULL AUTO_INCREMENT,
   `last_name` varchar(40) NOT NULL,
   `first_name` varchar(40) NOT NULL,
   `middle_name` varchar(40) NOT NULL,
@@ -583,7 +654,8 @@ CREATE TABLE `tbl_md_employee_info` (
   `contact_person` varchar(155) NOT NULL,
   `relationship` varchar(40) NOT NULL,
   `address` text NOT NULL,
-  `contact_person_no` int(11) NOT NULL
+  `contact_person_no` int(11) NOT NULL,
+  PRIMARY KEY (`mdei_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -592,9 +664,11 @@ CREATE TABLE `tbl_md_employee_info` (
 -- Table structure for table `tbl_md_grade_section`
 --
 
-CREATE TABLE `tbl_md_grade_section` (
+DROP TABLE IF EXISTS `tbl_md_grade_section`;
+CREATE TABLE IF NOT EXISTS `tbl_md_grade_section` (
   `grade_lvl` varchar(40) NOT NULL,
-  `section` varchar(40) NOT NULL
+  `section` varchar(40) NOT NULL,
+  UNIQUE KEY `section` (`section`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -614,8 +688,9 @@ INSERT INTO `tbl_md_grade_section` (`grade_lvl`, `section`) VALUES
 -- Table structure for table `tbl_md_student_info`
 --
 
-CREATE TABLE `tbl_md_student_info` (
-  `mdsp_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_md_student_info`;
+CREATE TABLE IF NOT EXISTS `tbl_md_student_info` (
+  `mdsp_id` int(11) NOT NULL AUTO_INCREMENT,
   `last_name` varchar(40) NOT NULL,
   `first_name` varchar(40) NOT NULL,
   `middle_name` varchar(40) NOT NULL,
@@ -628,8 +703,9 @@ CREATE TABLE `tbl_md_student_info` (
   `mother_contact` int(11) NOT NULL,
   `father_name` varchar(155) NOT NULL,
   `father_contact` int(11) NOT NULL,
-  `status` enum('Active','Inactive') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` enum('Active','Inactive') NOT NULL,
+  PRIMARY KEY (`mdsp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_md_student_info`
@@ -646,8 +722,9 @@ INSERT INTO `tbl_md_student_info` (`mdsp_id`, `last_name`, `first_name`, `middle
 -- Table structure for table `tbl_sms_users`
 --
 
-CREATE TABLE `tbl_sms_users` (
-  `sus_id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tbl_sms_users`;
+CREATE TABLE IF NOT EXISTS `tbl_sms_users` (
+  `sus_id` int(10) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(40) CHARACTER SET latin1 NOT NULL,
   `last_name` varchar(40) CHARACTER SET latin1 NOT NULL,
   `middle_name` varchar(40) CHARACTER SET latin1 NOT NULL,
@@ -655,8 +732,9 @@ CREATE TABLE `tbl_sms_users` (
   `email` varchar(150) CHARACTER SET latin1 NOT NULL,
   `password` varchar(255) CHARACTER SET latin1 NOT NULL,
   `status` varchar(10) CHARACTER SET latin1 NOT NULL,
-  `privilege` varchar(300) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `privilege` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`sus_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tbl_sms_users`
@@ -671,12 +749,14 @@ INSERT INTO `tbl_sms_users` (`sus_id`, `first_name`, `last_name`, `middle_name`,
 -- Table structure for table `tbl_wbs_attachments`
 --
 
-CREATE TABLE `tbl_wbs_attachments` (
-  `wat_id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tbl_wbs_attachments`;
+CREATE TABLE IF NOT EXISTS `tbl_wbs_attachments` (
+  `wat_id` int(10) NOT NULL AUTO_INCREMENT,
   `file_name` varchar(155) NOT NULL,
   `file_path` varchar(155) NOT NULL,
-  `full_path` varchar(155) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `full_path` varchar(155) NOT NULL,
+  PRIMARY KEY (`wat_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_wbs_attachments`
@@ -694,11 +774,13 @@ INSERT INTO `tbl_wbs_attachments` (`wat_id`, `file_name`, `file_path`, `full_pat
 -- Table structure for table `tbl_wbs_uploads`
 --
 
-CREATE TABLE `tbl_wbs_uploads` (
-  `wup_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_wbs_uploads`;
+CREATE TABLE IF NOT EXISTS `tbl_wbs_uploads` (
+  `wup_id` int(11) NOT NULL AUTO_INCREMENT,
   `file_name` varchar(255) NOT NULL,
   `file_path` varchar(255) NOT NULL,
-  `full_path` varchar(255) NOT NULL
+  `full_path` varchar(255) NOT NULL,
+  PRIMARY KEY (`wup_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -707,363 +789,19 @@ CREATE TABLE `tbl_wbs_uploads` (
 -- Table structure for table `tb_lrmds_attachments`
 --
 
-CREATE TABLE `tb_lrmds_attachments` (
-  `lat_id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tb_lrmds_attachments`;
+CREATE TABLE IF NOT EXISTS `tb_lrmds_attachments` (
+  `lat_id` int(10) NOT NULL AUTO_INCREMENT,
   `lat_sus_id` int(10) NOT NULL,
   `file_name` int(255) NOT NULL,
   `file_path` int(255) NOT NULL,
   `full_path` int(255) NOT NULL,
-  `lat_smo_id` int(10) NOT NULL
+  `lat_smo_id` int(10) NOT NULL,
+  PRIMARY KEY (`lat_id`),
+  UNIQUE KEY `lat_sus_id` (`lat_sus_id`),
+  UNIQUE KEY `lat_smo_id` (`lat_smo_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `addresses`
---
-ALTER TABLE `addresses`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `guardians`
---
-ALTER TABLE `guardians`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `parents`
---
-ALTER TABLE `parents`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `students_info`
---
-ALTER TABLE `students_info`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_inv_attachments`
---
-ALTER TABLE `tbl_inv_attachments`
-  ADD PRIMARY KEY (`wat_id`);
-
---
--- Indexes for table `tbl_inv_departments`
---
-ALTER TABLE `tbl_inv_departments`
-  ADD PRIMARY KEY (`ide_id`),
-  ADD KEY `department` (`department`);
-
---
--- Indexes for table `tbl_inv_items`
---
-ALTER TABLE `tbl_inv_items`
-  ADD PRIMARY KEY (`iit_id`),
-  ADD UNIQUE KEY `item_code` (`item_code`) USING BTREE,
-  ADD KEY `item_category` (`item_category`) USING BTREE;
-
---
--- Indexes for table `tbl_inv_item_category`
---
-ALTER TABLE `tbl_inv_item_category`
-  ADD PRIMARY KEY (`iicat_id`),
-  ADD KEY `category` (`category`);
-
---
--- Indexes for table `tbl_inv_stocks`
---
-ALTER TABLE `tbl_inv_stocks`
-  ADD PRIMARY KEY (`ist_id`),
-  ADD KEY `ist_product_code` (`ist_item_code`);
-
---
--- Indexes for table `tbl_inv_stocks_per_department`
---
-ALTER TABLE `tbl_inv_stocks_per_department`
-  ADD PRIMARY KEY (`ispd_id`),
-  ADD KEY `ispd_ide_id` (`ispd_ide_id`),
-  ADD KEY `item_code` (`item_code`);
-
---
--- Indexes for table `tbl_inv_transactions`
---
-ALTER TABLE `tbl_inv_transactions`
-  ADD PRIMARY KEY (`itr_id`),
-  ADD KEY `itr_item_code` (`itr_item_code`) USING BTREE;
-
---
--- Indexes for table `tbl_inv_users`
---
-ALTER TABLE `tbl_inv_users`
-  ADD PRIMARY KEY (`ius_id`),
-  ADD UNIQUE KEY `ius_sus_id` (`ius_sus_id`);
-
---
--- Indexes for table `tbl_lrmds_users`
---
-ALTER TABLE `tbl_lrmds_users`
-  ADD PRIMARY KEY (`lus_id`);
-
---
--- Indexes for table `tbl_lr_attachments`
---
-ALTER TABLE `tbl_lr_attachments`
-  ADD PRIMARY KEY (`lup_id`);
-
---
--- Indexes for table `tbl_lr_attachments_info`
---
-ALTER TABLE `tbl_lr_attachments_info`
-  ADD PRIMARY KEY (`latin_id`),
-  ADD UNIQUE KEY `lr_code` (`lr_code`);
-
---
--- Indexes for table `tbl_lr_educ_type`
---
-ALTER TABLE `tbl_lr_educ_type`
-  ADD PRIMARY KEY (`lre_id`),
-  ADD KEY `educ_type` (`educ_type`);
-
---
--- Indexes for table `tbl_lr_grade_lvl`
---
-ALTER TABLE `tbl_lr_grade_lvl`
-  ADD PRIMARY KEY (`lro_id`),
-  ADD KEY `educ_type` (`educ_type`),
-  ADD KEY `grade_lvl` (`grade_lvl`);
-
---
--- Indexes for table `tbl_lr_subjects`
---
-ALTER TABLE `tbl_lr_subjects`
-  ADD PRIMARY KEY (`lres_id`),
-  ADD KEY `educ_type` (`educ_type`),
-  ADD KEY `subject` (`subject`);
-
---
--- Indexes for table `tbl_lr_topics`
---
-ALTER TABLE `tbl_lr_topics`
-  ADD PRIMARY KEY (`lto_id`),
-  ADD KEY `educ_type` (`educ_type`),
-  ADD KEY `grade_lvl` (`grade_lvl`),
-  ADD KEY `subject` (`subject`);
-
---
--- Indexes for table `tbl_lr_users_account`
---
-ALTER TABLE `tbl_lr_users_account`
-  ADD UNIQUE KEY `lusa_lus_id` (`lusa_lus_id`);
-
---
--- Indexes for table `tbl_lr_users_activity`
---
-ALTER TABLE `tbl_lr_users_activity`
-  ADD PRIMARY KEY (`luac_id`);
-
---
--- Indexes for table `tbl_lr_users_history`
---
-ALTER TABLE `tbl_lr_users_history`
-  ADD UNIQUE KEY `lush_lus_id` (`lush_lus_id`);
-
---
--- Indexes for table `tbl_lr_users_profile`
---
-ALTER TABLE `tbl_lr_users_profile`
-  ADD PRIMARY KEY (`lus_id`);
-
---
--- Indexes for table `tbl_md_employee_info`
---
-ALTER TABLE `tbl_md_employee_info`
-  ADD PRIMARY KEY (`mdei_id`);
-
---
--- Indexes for table `tbl_md_grade_section`
---
-ALTER TABLE `tbl_md_grade_section`
-  ADD UNIQUE KEY `section` (`section`);
-
---
--- Indexes for table `tbl_md_student_info`
---
-ALTER TABLE `tbl_md_student_info`
-  ADD PRIMARY KEY (`mdsp_id`);
-
---
--- Indexes for table `tbl_sms_users`
---
-ALTER TABLE `tbl_sms_users`
-  ADD PRIMARY KEY (`sus_id`);
-
---
--- Indexes for table `tbl_wbs_attachments`
---
-ALTER TABLE `tbl_wbs_attachments`
-  ADD PRIMARY KEY (`wat_id`);
-
---
--- Indexes for table `tbl_wbs_uploads`
---
-ALTER TABLE `tbl_wbs_uploads`
-  ADD PRIMARY KEY (`wup_id`);
-
---
--- Indexes for table `tb_lrmds_attachments`
---
-ALTER TABLE `tb_lrmds_attachments`
-  ADD PRIMARY KEY (`lat_id`),
-  ADD UNIQUE KEY `lat_sus_id` (`lat_sus_id`),
-  ADD UNIQUE KEY `lat_smo_id` (`lat_smo_id`) USING BTREE;
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `addresses`
---
-ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `guardians`
---
-ALTER TABLE `guardians`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `parents`
---
-ALTER TABLE `parents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `students_info`
---
-ALTER TABLE `students_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT for table `tbl_inv_attachments`
---
-ALTER TABLE `tbl_inv_attachments`
-  MODIFY `wat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_inv_departments`
---
-ALTER TABLE `tbl_inv_departments`
-  MODIFY `ide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `tbl_inv_items`
---
-ALTER TABLE `tbl_inv_items`
-  MODIFY `iit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
---
--- AUTO_INCREMENT for table `tbl_inv_item_category`
---
-ALTER TABLE `tbl_inv_item_category`
-  MODIFY `iicat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
---
--- AUTO_INCREMENT for table `tbl_inv_stocks`
---
-ALTER TABLE `tbl_inv_stocks`
-  MODIFY `ist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `tbl_inv_stocks_per_department`
---
-ALTER TABLE `tbl_inv_stocks_per_department`
-  MODIFY `ispd_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_inv_transactions`
---
-ALTER TABLE `tbl_inv_transactions`
-  MODIFY `itr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tbl_inv_users`
---
-ALTER TABLE `tbl_inv_users`
-  MODIFY `ius_id` int(10) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_lrmds_users`
---
-ALTER TABLE `tbl_lrmds_users`
-  MODIFY `lus_id` int(10) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_lr_attachments`
---
-ALTER TABLE `tbl_lr_attachments`
-  MODIFY `lup_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_lr_attachments_info`
---
-ALTER TABLE `tbl_lr_attachments_info`
-  MODIFY `latin_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_lr_educ_type`
---
-ALTER TABLE `tbl_lr_educ_type`
-  MODIFY `lre_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `tbl_lr_grade_lvl`
---
-ALTER TABLE `tbl_lr_grade_lvl`
-  MODIFY `lro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `tbl_lr_subjects`
---
-ALTER TABLE `tbl_lr_subjects`
-  MODIFY `lres_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `tbl_lr_topics`
---
-ALTER TABLE `tbl_lr_topics`
-  MODIFY `lto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `tbl_lr_users_account`
---
-ALTER TABLE `tbl_lr_users_account`
-  MODIFY `lusa_lus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `tbl_lr_users_activity`
---
-ALTER TABLE `tbl_lr_users_activity`
-  MODIFY `luac_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_lr_users_profile`
---
-ALTER TABLE `tbl_lr_users_profile`
-  MODIFY `lus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `tbl_md_employee_info`
---
-ALTER TABLE `tbl_md_employee_info`
-  MODIFY `mdei_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_md_student_info`
---
-ALTER TABLE `tbl_md_student_info`
-  MODIFY `mdsp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tbl_sms_users`
---
-ALTER TABLE `tbl_sms_users`
-  MODIFY `sus_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_wbs_attachments`
---
-ALTER TABLE `tbl_wbs_attachments`
-  MODIFY `wat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `tbl_wbs_uploads`
---
-ALTER TABLE `tbl_wbs_uploads`
-  MODIFY `wup_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tb_lrmds_attachments`
---
-ALTER TABLE `tb_lrmds_attachments`
-  MODIFY `lat_id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -1073,6 +811,18 @@ ALTER TABLE `tb_lrmds_attachments`
 --
 ALTER TABLE `tbl_inv_items`
   ADD CONSTRAINT `tbl_inv_items_ibfk_1` FOREIGN KEY (`item_category`) REFERENCES `tbl_inv_item_category` (`category`);
+
+--
+-- Constraints for table `tbl_lr_attachments`
+--
+ALTER TABLE `tbl_lr_attachments`
+  ADD CONSTRAINT `tbl_lr_attachments_ibfk_1` FOREIGN KEY (`lup_lr_code`) REFERENCES `tbl_lr_attachments_info` (`lr_code`);
+
+--
+-- Constraints for table `tbl_lr_attachments_info`
+--
+ALTER TABLE `tbl_lr_attachments_info`
+  ADD CONSTRAINT `tbl_lr_attachments_info_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `tbl_lr_topics` (`topic_id`);
 
 --
 -- Constraints for table `tbl_lr_grade_lvl`
@@ -1105,6 +855,7 @@ ALTER TABLE `tbl_lr_users_account`
 --
 ALTER TABLE `tbl_lr_users_history`
   ADD CONSTRAINT `tbl_lr_users_history_ibfk_1` FOREIGN KEY (`lush_lus_id`) REFERENCES `tbl_lr_users_profile` (`lus_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
