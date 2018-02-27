@@ -3,7 +3,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" >
-    <!-- Content Header (Page header) -->
+    <!-- Content headerr (Page header) -->
     <section class="content-header">
       <h1><i class="fa fa-check-square-o"></i>
         Stock Register
@@ -31,7 +31,7 @@
                 <div class="form-group">
                   <label for="field-1" class="col-sm-3 control-label" style="padding-right:5px;">Item Name</label>
                   <div class="col-sm-8">
-                    <input type="search" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="search" class="form-control input-sm" name="item_name" id="item_name" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
@@ -39,9 +39,9 @@
                 <div class="form-group">
                   <label for="field-1" class="col-sm-3 control-label">Category</label>
                   <div class="col-sm-8">
-                    <select class="form-control select2" data-placeholder="Select" style="width: 100%;">
-                      <?php foreach ($options as $option){?>
-                        <option><?php echo $option->department?></option>
+                    <select class="form-control select2" data-placeholder="Select" id="category" style="width: 100%;">
+                      <?php foreach ($categories as $category){?>
+                        <option><?php echo $category->category?></option>
                       <?php };?>
                     </select>
                   </div>
@@ -51,7 +51,7 @@
                 <div class="form-group">
                   <label for="field-1" class="col-sm-3 control-label">Quantity</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="quantity" id="quantity" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
@@ -134,34 +134,39 @@
                 <div class="form-group">
                   <label for="field-1" class="col-sm-2 control-label" style="padding-right:5px;">Item Name</label>
                   <div class="col-sm-7">
-                    <input type="search" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input id="d-name" type="search" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
-              <div class="row department">
-                <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Department</label>
-                  <div class="col-sm-7">
-                    <select class="form-control select2" data-placeholder="Select" style="width: 100%;">
-                      <?php foreach ($options as $option){?>
-                        <option><?php echo $option->department?></option>
-                      <?php };?>
-                    </select>
-                  </div>
-                </div>
+              <div class="append">
+
                 <button type="button" class="btn btn-sm bg-blue add_clone"><i class="fa fa-plus-circle"></i></button>
-                <button type="button" class="btn btn-sm bg-red del_clone"><i class="fa fa-minus-circle"></i></button>
-                <div class="form-group">
-                  <label for="field-1" class="col-sm-2 control-label">Quantity</label>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control input-sm" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                <div id="department" class="row department">
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Department</label>
+                    <div class="col-sm-7">
+                      <select class="form-control select2 s-dept" data-placeholder="Select" style="width: 100%;">
+                        <?php foreach ($options as $option){?>
+                          <option><?php echo $option->department?></option>
+                        <?php };?>
+                      </select>
+                    </div>
                   </div>
+                  <button id="del-clone" type="button" class="btn btn-sm bg-red del_clone"><i class="fa fa-minus-circle"></i></button>
+                  <div class="form-group">
+                    <label for="field-1" class="col-sm-2 control-label">Quantity</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control input-sm i-quantity" name="itr_id" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    </div>
+                  </div>
+                  <br>
+                  <hr>
                 </div>
-              </div><hr>
+              </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-success">Save changes</button>
+            <button id="btn-dsave" type="button" class="btn btn-sm btn-success">Save changes</button>
             <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
           </div>
         </div><!-- /.modal-content -->
