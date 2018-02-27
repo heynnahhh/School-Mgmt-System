@@ -54,8 +54,8 @@ class ajax extends CI_Controller {
 				elseif($value->product_status == 'Active'){
 					$row[] = '<span class="badge bg-green">Active</span>';
 				}
-				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
-				<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>
+				<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}
 
@@ -78,8 +78,8 @@ class ajax extends CI_Controller {
 				$row[] = $value->quantity;
 				$row[] = $value->total_cost;
 				$row[] = $value->date_received;
-				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
-				<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>';
+				$row[] = '<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>
+				<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>';
 				$data[] = $row;
 			}
 

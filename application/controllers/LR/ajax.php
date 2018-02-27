@@ -122,12 +122,10 @@ class ajax extends CI_Controller {
         'lr_name' => $data['lr_name'],
         'description' => $data['description'],
         'objective' => $data['objective'],
-        'learning_subj' => $data['learning_subj'],
+        'publisher' => 'Hannah Liao',
         'language' => $data['language'],
         'date_published' => date("Y-m-d H:i:s"),
         'copyright' => $data['copyright'],
-        'educ_type' => $data['educ_type'],
-        'grade_level' => $data['grade_level']
       );
 
       $config['upload_path'] = './uploads/';
