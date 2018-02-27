@@ -35,11 +35,11 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Username</label>
-                                                  <input type="text" placeholder="Username" class="form-control" disabled="">
+                                                  <input type="text" placeholder="Username" class="form-control" readonly>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Email Address</label>
-                                                  <input type="text" placeholder="email@email.com" class="form-control" disabled="">
+                                                  <input type="text" placeholder="email@email.com" class="form-control" readonly>
                                                 </div>
                                               </div>
 
