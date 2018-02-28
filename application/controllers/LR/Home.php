@@ -108,6 +108,11 @@ class Home extends CI_Controller {
 		$this->load->view('LR/website/seniorhs_subjects');
 	}
 
+	public function strands()
+	{
+		$this->load->view('LR/website/strands');
+	}
+
 	public function juniorhs_view_file()
 	{
 		$this->load->view('LR/website/juniorhs_view_files');
@@ -161,6 +166,11 @@ class Home extends CI_Controller {
 	public function p_seniorhs_subjects()
 	{
 		$this->load->view('LR/profile/seniorhs_subjects');
+	}
+
+	public function p_strands()
+	{
+		$this->load->view('LR/profile/strands');
 	}
 
 	public function p_juniorhs_view_file()
