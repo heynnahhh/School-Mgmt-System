@@ -1,6 +1,4 @@
-<?php include '/../templates/header_profile.php';?>
-
-<?php include '/../templates/profile_nav.php';?>
+<?php include '/../templates/header.php';?>
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -19,13 +17,13 @@
       							<div class="col-md-12">
       								<div class="white-panel pn">
       									<div class="panel-heading">
-      										<div class="pull-left"><h3></i> Subjects</h3></div>
+      										<div class="pull-left"><h3></i> Strands</h3></div>
       										<br>
       									</div>
       									<div class="custom-check goleft mt">
       										<div class="tab-accordion">
       											<input class="tab" id="tab-one" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-one">Core Subjects
+      											<label class = "label-accordion" for="tab-one">ABM
       												<div class="pull-right hidden-phone">
       													<span class="badge bg-important">35</span>
       												</div>
@@ -65,28 +63,61 @@
                               </div><!-- /col-md-4 -->
       											</div>
       										</div>
-      										<div class="tab-accordion">
-      											<input class="tab" id="tab-two" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-two">Applied Subjects
-      												<div class="pull-right hidden-phone">
-      													<span class="badge bg-important">35</span>
-      												</div>
-      											</label>
-      											<div class="tab-content-accordion">
-      											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-      											</div>
-      										</div>
-      										<div class="tab-accordion">
-      											<input class="tab" id="tab-three" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-three">Specialized Subjects by Strands
-      												<div class="pull-right hidden-phone">
-      													<span class="badge bg-important">35</span>
-      												</div>
-      											</label>
-      											<div class="tab-content-accordion">
-      											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-      											</div>
-      										</div>
+                          <div class="tab-accordion">
+                            <input class="tab" id="tab-two" type="radio" name="tabs2">
+                            <label class = "label-accordion" for="tab-two">HUMSS
+                              <div class="pull-right hidden-phone">
+                                <span class="badge bg-important">35</span>
+                              </div>
+                            </label>
+                            <div class="tab-content-accordion">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                            </div>
+                          </div>
+                          <div class="tab-accordion">
+                            <input class="tab" id="tab-three" type="radio" name="tabs2">
+                            <label class = "label-accordion" for="tab-three">GAS
+                              <div class="pull-right hidden-phone">
+                                <span class="badge bg-important">35</span>
+                              </div>
+                            </label>
+                            <div class="tab-content-accordion">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                            </div>
+                          </div>
+                          <div class="tab-accordion">
+                            <input class="tab" id="tab-four" type="radio" name="tabs2">
+                            <label class = "label-accordion" for="tab-four">STEM
+                              <div class="pull-right hidden-phone">
+                                <span class="badge bg-important">35</span>
+                              </div>
+                            </label>
+                            <div class="tab-content-accordion">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                            </div>
+                          </div>
+                          <div class="tab-accordion">
+                            <input class="tab" id="tab-five" type="radio" name="tabs2">
+                            <label class = "label-accordion" for="tab-five">Home Economics
+                              <div class="pull-right hidden-phone">
+                                <span class="badge bg-important">35</span>
+                              </div>
+                            </label>
+                            <div class="tab-content-accordion">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                            </div>
+                          </div>
+                          <div class="tab-accordion">
+                            <input class="tab" id="tab-six" type="radio" name="tabs2">
+                            <label class = "label-accordion" for="tab-six">Automotive Servicing
+                              <div class="pull-right hidden-phone">
+                                <span class="badge bg-important">35</span>
+                              </div>
+                            </label>
+                            <div class="tab-content-accordion">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                            </div>
+                          </div>
       									</div><!-- /table-responsive -->
       								</div><!--/ White-panel -->
       							</div><! --/col-md-12 -->

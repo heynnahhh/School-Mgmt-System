@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 27, 2018 at 10:42 AM
+-- Generation Time: Feb 28, 2018 at 07:01 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -541,55 +541,83 @@ DROP TABLE IF EXISTS `tbl_lr_shs_subjects`;
 CREATE TABLE IF NOT EXISTS `tbl_lr_shs_subjects` (
   `lres_id` int(11) NOT NULL AUTO_INCREMENT,
   `educ_type` varchar(40) NOT NULL,
+  `grade_lvl` varchar(11) NOT NULL,
   `subject_type` varchar(155) NOT NULL,
   `strand` varchar(155) DEFAULT NULL,
   `subject` varchar(155) NOT NULL,
   PRIMARY KEY (`lres_id`),
-  KEY `educ_type` (`educ_type`)
+  KEY `educ_type` (`educ_type`),
+  KEY `strand` (`strand`)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_shs_subjects`
 --
 
-INSERT INTO `tbl_lr_shs_subjects` (`lres_id`, `educ_type`, `subject_type`, `strand`, `subject`) VALUES
-(1, 'Senior High School', 'Specialized Subject', 'STEM', 'General Chemistry 1'),
-(2, 'Senior High School', 'Applied Subject', NULL, 'Entrepreneurship'),
-(3, 'Senior High School', 'Core Subject', NULL, 'Oral Communication'),
-(4, 'Senior High School', 'Core Subject', NULL, 'Personal Development'),
-(5, 'Senior High School', 'Core Subject', NULL, 'Introduction to the Philosophy of the Human Person'),
-(6, 'Senior High School', 'Core Subject', NULL, 'Komunikasyon at Pananaliksik sa Wika at Kulturang Pilipino'),
-(7, 'Senior High School', 'Core Subject', NULL, 'General Mathematics'),
-(8, 'Senior High School', 'Core Subject', NULL, 'Earth and Life Science'),
-(9, 'Senior High School', 'Core Subject', NULL, 'PE and Health 1'),
-(10, 'Senior High School', 'Specialized Subject', 'HUMSS', 'Philippine Politics and Governance'),
-(11, 'Senior High School', 'Specialized Subject', 'HUMSS', 'Disciplines and Ideas in the Social Sciences'),
-(12, 'Senior High School', 'Specialized Subject', 'GAS', 'Elective 1 - General Biology 1'),
-(13, 'Senior High School', 'Specialized Subject', 'HE', 'Food and Beverages Services 1 and 2'),
-(14, 'Senior High School', 'Specialized Subject', 'Automotive', 'Automotive Servicing 1 and 2'),
-(15, 'Senior High School', 'Specialized Subject', 'GAS', 'Organization and Management'),
-(16, 'Senior High School', 'Specialized Subject', 'ABM', 'Organization and Management'),
-(17, 'Senior High School', 'Specialized Subject', 'ABM', 'Fundamentals of Accountancy, Business and Management 1'),
-(18, 'Senior High School', 'Specialized Subject', 'STEM', 'Pre-Calculus'),
-(19, 'Senior High School', 'Core Subject', NULL, '21st Century Literature from the Philippines and the World'),
-(20, 'Senior High School', 'Core Subject', NULL, 'PE and Health 3'),
-(21, 'Senior High School', 'Applied Subject', NULL, 'English for Academic and Professional Purposes'),
-(22, 'Senior High School', 'Applied Subject', NULL, 'Research Project'),
-(23, 'Senior High School', 'Applied Subject', NULL, 'Practical Research 1'),
-(24, 'Senior High School', 'Applied Subject', NULL, 'Empowerment Technologies/ICT'),
-(25, 'Senior High School', 'Specialized Subject', 'GAS', 'Philippine Politics and Governance'),
-(26, 'Senior High School', 'Specialized Subject', 'HUMSS', 'Disciplines and Ideas in the Social Sciences'),
-(27, 'Senior High School', 'Specialized Subject', 'GAS', 'Elective 2 - General Biology 2'),
-(28, 'Senior High School', 'Specialized Subject', 'HUMSS', 'Trends, Networks and Critical Thinking in the 21st Century'),
-(29, 'Senior High School', 'Specialized Subject', 'HUMSS', 'Creative Non-Fiction'),
-(30, 'Senior High School', 'Specialized Subject', 'ABM', 'Business Finance'),
-(31, 'Senior High School', 'Specialized Subject', 'ABM', 'Fundamentals of Accountancy, Business and Management 2'),
-(32, 'Senior High School', 'Specialized Subject', 'HE', 'Cookery 1 and 2'),
-(33, 'Senior High School', 'Specialized Subject', 'Automotive', 'Automotive Servicing 5 and 6'),
-(34, 'Senior High School', 'Specialized Subject', 'STEM', 'Pre-conservation, Documentation and Examination'),
-(35, 'Senior High School', 'Specialized Subject', 'STEM', 'Wood Conservation'),
-(36, 'Senior High School', 'Specialized Subject', 'STEM', 'Conservation of Rare Documents'),
-(37, 'Senior High School', 'Specialized Subject', 'HUMSS', 'Philippine Politics and Governance');
+INSERT INTO `tbl_lr_shs_subjects` (`lres_id`, `educ_type`, `grade_lvl`, `subject_type`, `strand`, `subject`) VALUES
+(1, 'Senior High School', 'Grade 11', 'Specialized Subject', 'STEM', 'General Chemistry 1'),
+(2, 'Senior High School', 'Grade 12', 'Applied Subject', NULL, 'Entrepreneurship'),
+(3, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'Oral Communication'),
+(4, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'Personal Development'),
+(5, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'Introduction to the Philosophy of the Human Person'),
+(6, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'Komunikasyon at Pananaliksik sa Wika at Kulturang Pilipino'),
+(7, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'General Mathematics'),
+(8, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'Earth and Life Science'),
+(9, 'Senior High School', 'Grade 11', 'Core Subject', NULL, 'PE and Health 1'),
+(10, 'Senior High School', 'Grade 11', 'Specialized Subject', 'HUMSS', 'Philippine Politics and Governance'),
+(11, 'Senior High School', 'Grade 11', 'Specialized Subject', 'HUMSS', 'Disciplines and Ideas in the Social Sciences'),
+(12, 'Senior High School', 'Grade 11', 'Specialized Subject', 'GAS', 'Elective 1 - General Biology 1'),
+(13, 'Senior High School', 'Grade 11', 'Specialized Subject', 'Home Economics', 'Food and Beverages Services 1 and 2'),
+(14, 'Senior High School', 'Grade 11', 'Specialized Subject', 'Automotive Servicing', 'Automotive Servicing 1 and 2'),
+(15, 'Senior High School', 'Grade 11', 'Specialized Subject', 'GAS', 'Organization and Management'),
+(16, 'Senior High School', 'Grade 11', 'Specialized Subject', 'ABM', 'Organization and Management'),
+(17, 'Senior High School', 'Grade 11', 'Specialized Subject', 'ABM', 'Fundamentals of Accountancy, Business and Management 1'),
+(18, 'Senior High School', 'Grade 11', 'Specialized Subject', 'STEM', 'Pre-Calculus'),
+(19, 'Senior High School', 'Grade 12', 'Core Subject', NULL, '21st Century Literature from the Philippines and the World'),
+(20, 'Senior High School', 'Grade 12', 'Core Subject', NULL, 'PE and Health 3'),
+(21, 'Senior High School', 'Grade 12', 'Applied Subject', NULL, 'English for Academic and Professional Purposes'),
+(22, 'Senior High School', 'Grade 12', 'Applied Subject', NULL, 'Research Project'),
+(23, 'Senior High School', 'Grade 12', 'Applied Subject', NULL, 'Practical Research 1'),
+(24, 'Senior High School', 'Grade 12', 'Applied Subject', NULL, 'Empowerment Technologies/ICT'),
+(25, 'Senior High School', 'Grade 12', 'Specialized Subject', 'HUMSS', 'Philippine Politics and Governance'),
+(26, 'Senior High School', 'Grade 12', 'Specialized Subject', 'HUMSS', 'Disciplines and Ideas in the Social Sciences'),
+(27, 'Senior High School', 'Grade 12', 'Specialized Subject', 'GAS', 'Elective 2 - General Biology 2'),
+(28, 'Senior High School', 'Grade 12', 'Specialized Subject', 'HUMSS', 'Trends, Networks and Critical Thinking in the 21st Century'),
+(29, 'Senior High School', 'Grade 12', 'Specialized Subject', 'HUMSS', 'Creative Non-Fiction'),
+(30, 'Senior High School', 'Grade 12', 'Specialized Subject', 'ABM', 'Business Finance'),
+(31, 'Senior High School', 'Grade 12', 'Specialized Subject', 'ABM', 'Fundamentals of Accountancy, Business and Management 2'),
+(32, 'Senior High School', 'Grade 12', 'Specialized Subject', 'Home Economics', 'Cookery 1 and 2'),
+(33, 'Senior High School', 'Grade 12', 'Specialized Subject', 'Automotive Servicing', 'Automotive Servicing 5 and 6'),
+(34, 'Senior High School', 'Grade 12', 'Specialized Subject', 'STEM', 'Pre-conservation, Documentation and Examination'),
+(35, 'Senior High School', 'Grade 12', 'Specialized Subject', 'STEM', 'Wood Conservation'),
+(36, 'Senior High School', 'Grade 12', 'Specialized Subject', 'STEM', 'Conservation of Rare Documents'),
+(37, 'Senior High School', 'Grade 12', 'Specialized Subject', 'HUMSS', 'Philippine Politics and Governance');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_lr_strands`
+--
+
+DROP TABLE IF EXISTS `tbl_lr_strands`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_strands` (
+  `lrs_id` int(11) NOT NULL AUTO_INCREMENT,
+  `strand` varchar(155) NOT NULL,
+  PRIMARY KEY (`lrs_id`),
+  UNIQUE KEY `strand` (`strand`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_strands`
+--
+
+INSERT INTO `tbl_lr_strands` (`lrs_id`, `strand`) VALUES
+(1, 'ABM'),
+(6, 'Automotive Servicing'),
+(3, 'GAS'),
+(5, 'Home Economics'),
+(2, 'HUMSS'),
+(4, 'STEM');
 
 -- --------------------------------------------------------
 
@@ -622,7 +650,7 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_users_account` (
   `email` varchar(155) NOT NULL,
   `username` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `status` varchar(11) NOT NULL,
+  `status` enum('Active','Inactive') NOT NULL,
   `account_type` enum('Member','Admin') NOT NULL,
   UNIQUE KEY `lusa_lus_id` (`lusa_lus_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
@@ -632,8 +660,8 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_users_account` (
 --
 
 INSERT INTO `tbl_lr_users_account` (`lusa_lus_id`, `email`, `username`, `password`, `status`, `account_type`) VALUES
-(1, 'llh@gmail.com', 'hehe', 'hehe', '', 'Member'),
-(2, 'hannah@maganda.com', 'khkjh', '529ca8050a00180790cf88b63468826a', '', 'Member');
+(1, 'llh@gmail.com', 'hehe', 'hehe', 'Active', 'Member'),
+(2, 'hannah@maganda.com', 'khkjh', '529ca8050a00180790cf88b63468826a', 'Active', 'Member');
 
 -- --------------------------------------------------------
 
@@ -644,11 +672,13 @@ INSERT INTO `tbl_lr_users_account` (`lusa_lus_id`, `email`, `username`, `passwor
 DROP TABLE IF EXISTS `tbl_lr_users_activity`;
 CREATE TABLE IF NOT EXISTS `tbl_lr_users_activity` (
   `luac_id` int(11) NOT NULL AUTO_INCREMENT,
+  `users_account` int(11) NOT NULL,
   `activity` text NOT NULL,
   `date_of_activity` date NOT NULL,
   `time_of_activity` time NOT NULL,
   `logged_in_session` datetime NOT NULL,
-  PRIMARY KEY (`luac_id`)
+  PRIMARY KEY (`luac_id`),
+  KEY `users_account` (`users_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -898,7 +928,8 @@ ALTER TABLE `tbl_lr_jhs_subjects`
 -- Constraints for table `tbl_lr_shs_subjects`
 --
 ALTER TABLE `tbl_lr_shs_subjects`
-  ADD CONSTRAINT `tbl_lr_shs_subjects_ibfk_1` FOREIGN KEY (`educ_type`) REFERENCES `tbl_lr_educ_type` (`educ_type`);
+  ADD CONSTRAINT `tbl_lr_shs_subjects_ibfk_1` FOREIGN KEY (`educ_type`) REFERENCES `tbl_lr_educ_type` (`educ_type`),
+  ADD CONSTRAINT `tbl_lr_shs_subjects_ibfk_2` FOREIGN KEY (`strand`) REFERENCES `tbl_lr_strands` (`strand`);
 
 --
 -- Constraints for table `tbl_lr_users_account`
@@ -907,10 +938,16 @@ ALTER TABLE `tbl_lr_users_account`
   ADD CONSTRAINT `tbl_lr_users_account_ibfk_1` FOREIGN KEY (`lusa_lus_id`) REFERENCES `tbl_lr_users_profile` (`lus_id`);
 
 --
+-- Constraints for table `tbl_lr_users_activity`
+--
+ALTER TABLE `tbl_lr_users_activity`
+  ADD CONSTRAINT `tbl_lr_users_activity_ibfk_1` FOREIGN KEY (`users_account`) REFERENCES `tbl_lr_users_account` (`lusa_lus_id`);
+
+--
 -- Constraints for table `tbl_lr_users_history`
 --
 ALTER TABLE `tbl_lr_users_history`
-  ADD CONSTRAINT `tbl_lr_users_history_ibfk_1` FOREIGN KEY (`lush_lus_id`) REFERENCES `tbl_lr_users_profile` (`lus_id`);
+  ADD CONSTRAINT `tbl_lr_users_history_ibfk_1` FOREIGN KEY (`lush_lus_id`) REFERENCES `tbl_lr_users_account` (`lusa_lus_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

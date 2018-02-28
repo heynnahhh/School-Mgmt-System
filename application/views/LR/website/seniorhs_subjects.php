@@ -65,7 +65,7 @@
       										</div>
       										<div class="tab-accordion">
       											<input class="tab" id="tab-two" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-two">Academic Track
+      											<label class = "label-accordion" for="tab-two">Applied Subjects
       												<div class="pull-right hidden-phone">
       													<span class="badge bg-important">35</span>
       												</div>
@@ -76,29 +76,7 @@
       										</div>
       										<div class="tab-accordion">
       											<input class="tab" id="tab-three" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-three">Arts & Design Track
-      												<div class="pull-right hidden-phone">
-      													<span class="badge bg-important">35</span>
-      												</div>
-      											</label>
-      											<div class="tab-content-accordion">
-      											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-      											</div>
-      										</div>
-      										<div class="tab-accordion">
-      											<input class="tab" id="tab-four" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-four">Sports Track
-      												<div class="pull-right hidden-phone">
-      													<span class="badge bg-important">35</span>
-      												</div>
-      											</label>
-      											<div class="tab-content-accordion">
-      											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-      											</div>
-      										</div>
-      										<div class="tab-accordion">
-      											<input class="tab" id="tab-five" type="radio" name="tabs2">
-      											<label class = "label-accordion" for="tab-five">TVL Track
+      											<label class = "label-accordion" for="tab-three">Specialized Subjects by Strands
       												<div class="pull-right hidden-phone">
       													<span class="badge bg-important">35</span>
       												</div>
