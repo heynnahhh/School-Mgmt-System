@@ -199,7 +199,7 @@ input[type=submit]:focus {
   font-family: 'Roboto', sans-serif;
   color: #7d8c7d;
   font-size: 14px;
-  margin-top: 170px;
+  margin: 200px 20px;
 }
 
 /* responsive:
