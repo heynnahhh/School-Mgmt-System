@@ -36,4 +36,10 @@ class Home extends CI_Controller {
 		$this->load->view('LRMDS/shs', $data);
 	}
 
+	public function users_account()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('LRMDS/users_account', $data);
+	}
+
 }

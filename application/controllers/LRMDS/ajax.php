@@ -92,7 +92,9 @@ class ajax extends CI_Controller {
 			foreach ($m_data as $value) {
 				$row = array();
 				$row[] = $value->subject;
+				$row[] = $value->strand;
 				$row[] = $value->grade_lvl;
+				$row[] = $value->subject_type;
 				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
 						<button type="button" class="btn btn-sm bg-red delete" id="delete"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;

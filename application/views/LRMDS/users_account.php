@@ -6,13 +6,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Subjects
+        Users Account
       </h1>
       <hr>
       <ol class="breadcrumb">
         <li><a><i class="fa fa-dashboard"></i>Learning Resource</a></li>
-        <li><a>Subjects</a></li>
-        <li><a>Senior High School</a></li>
+        <li><a>Configuration</a></li>
+        <li><a>Users Account</a></li>
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -73,30 +73,24 @@
         </div>
         <div class="col-xs-12" id="table">
           <div class="box box-solid">
-            <div class="box-header">
-              <h4 class="box-title"> Senior High School</h4>
-              <div class="btn-group pull-right">
-                <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Subject</button>
-              </div>
-            </div>
             <div class="box-body table-responsive">
-              <table id="shs_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
+              <table id="users_account_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
               <thead>
                   <tr>
-                      <th>Subject Name</th>
-                      <th>Strand</th>
-                      <th>Grade Level</th>
-                      <th>Subject Type</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>Logged-in</th>
+                      <th>Logged-out</th>
                       <th>Actions</th>
                   </tr>
               </thead>
               <tbody></tbody>
               <tfoot>
                   <tr>
-                      <th>Subject Name</th>
-                      <th>Strand</th>
-                      <th>Grade Level</th>
-                      <th>Subject Type</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>Logged-in</th>
+                      <th>Logged-out</th>
                       <th>Actions</th>
                   </tr>
               </tfoot>
