@@ -8,7 +8,7 @@
       <li class="header">MAIN NAVIGATION</li>
       <!-- Optionally, you can add icons to the links -->
       <li><a href="<?php echo site_url();?>/SMS/home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-      <li class="treeview">
+      <li class="treeview active">
         <a href="#">
           <i class="fa fa-globe"></i> <span>Learning Resource</span>
           <span class="pull-right-container">
@@ -16,46 +16,22 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo site_url();?>/LRMDS/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Topics</a></li>
           <li>
-            <a href=""><i class="fa fa-circle-o"></i> LRMDS
+            <a href=""><i class="fa fa-circle-o"></i> Subjects
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Assessment and Evaluation</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Storage and Maintenance</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Publication and Delivery</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Junior High School</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Senior High School</a></li>
             </ul>
           </li>
-          <li>
-            <a href=""><i class="fa fa-circle-o"></i> Manage Portal Content
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Home</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Resources</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Media Gallery</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Preview</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href=""><i class="fa fa-circle-o"></i> Settings
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Management</a></li>
-            </ul>
-          </li>
+          <li><a href="<?php echo site_url();?>/LRMDS/home/strands"><i class="fa fa-circle-o"></i> Strands</a></li>
         </ul>
       </li>
-
       <li class="treeview">
         <a href="#">
           <i class="fa fa-database"></i> <span>Inventory</span>

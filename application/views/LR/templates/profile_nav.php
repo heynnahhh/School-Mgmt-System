@@ -4,10 +4,11 @@
              <!-- sidebar menu start-->
              <ul class="sidebar-menu" id="nav-accordion">
 
-                 <p class="centered"><img src="<?php echo base_url();?>includes/lr/img/ui-sam.jpg" class="img-circle" width="60"></p>
-                 <h5 class="centered">Hi! Marcel Newman</h5>
+                 <p class="centered"><img src="<?php echo base_url();?>includes/lr/img/profile-pics/aljohn.jpg" class="img-circle" width="80" height="80"></p>
+                 <h5 class="centered">Aljohn Pangilinan</h5>
+                 <div class="centered"><span class="label label-danger">Admin</span></div><br />
                  <li class="sub-menu">
-                     <a href="<?php echo site_url();?>/lr/profile/activity_log" >
+                     <a href="<?php echo site_url();?>/lr/profile/activity_log">
                          <i class="fa fa-desktop"></i>
                          <span>Activity Log</span>
                      </a>

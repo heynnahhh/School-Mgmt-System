@@ -11,10 +11,10 @@ class Home extends CI_Controller {
 
 	}
 
-	public function index()
+	public function strands()
 	{
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('LRMDS/index', $data);
+		$this->load->view('LRMDS/strands', $data);
 	}
 
 }
