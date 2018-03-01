@@ -35,7 +35,7 @@
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
-      <header class="header black-bg">
+          <header class="header black-bg">
             <!--logo start-->
             <a href="<?php echo site_url();?>/lr/home" class="logo"><b>Araullo High School Learning Resource Portal</b></a>
             <!--logo end-->
@@ -79,17 +79,16 @@
           								</div>
           							</div>
           						</li>
-                              <!-- inbox dropdown end -->
-                      </ul>
+                    </ul>
                           <!--  notification end -->
-                      </div>
-                      <div class="top-menu">
-                      	<ul class="nav pull-right top-menu">
-                          <li><a class="logout" href="<?php echo site_url();?>/lr/register">Register</a></li>
-                          <li><a class="logout" href="" data-toggle="modal" data-target="#myModal">Login</a></li>
-                      	</ul>
-                      </div>
-                  </header>
+                  </div>
+                  <div class="top-menu">
+                  	<ul class="nav pull-right top-menu">
+                      <li><a class="logout" href="<?php echo site_url();?>/lr/register">Register</a></li>
+                      <li><a class="logout" href="" data-toggle="modal" data-target="#myModal">Login</a></li>
+                  	</ul>
+                  </div>
+                </header>
                 <!--header end-->
 
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
