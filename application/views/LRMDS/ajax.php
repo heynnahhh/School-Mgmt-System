@@ -21,6 +21,13 @@ var current_method = '<?php echo $this->uri->segment(3);?>';
 
 	  }
 
+	  else if(current_method == 'topics'){
+	  	tableParams.ajax = '<?=site_url()?>/LRMDS/ajax/view_topic';
+	  	tableParams.columnDefs = [{"width": "600px", "targets": 0},{"width": "200px", "targets": 1}];
+	    $('#topic_tbl').DataTable(tableParams);
+
+	  }
+
 	});
 
 </script>

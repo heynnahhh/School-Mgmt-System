@@ -17,7 +17,7 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Topics</a></li>
+          <li><a href="<?php echo site_url();?>/LRMDS/home/topics"><i class="fa fa-circle-o"></i> Topics</a></li>
           <li>
             <a href=""><i class="fa fa-circle-o"></i> Subjects
               <span class="pull-right-container">

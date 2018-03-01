@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 
 		$this->load->model('SMS/user');
 		$this->load->library('form_validation');
+		$this->sms_session->checkSession();
 
 	}
 
@@ -15,6 +16,12 @@ class Home extends CI_Controller {
 	{
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
 		$this->load->view('LRMDS/strands', $data);
+	}
+
+	public function topics()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('LRMDS/topics', $data);
 	}
 
 }
