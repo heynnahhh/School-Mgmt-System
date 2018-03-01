@@ -25,9 +25,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Accounts</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Sessions?</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Junior High School</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Senior High School</a></li>
             </ul>
           </li>
           <li><a href="<?php echo site_url();?>/LRMDS/home/strands"><i class="fa fa-circle-o"></i> Strands</a></li>
@@ -38,8 +37,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Junior High School</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Senior High School</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Accounts</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Sessions?</a></li>
             </ul>
           </li>
         </ul>
