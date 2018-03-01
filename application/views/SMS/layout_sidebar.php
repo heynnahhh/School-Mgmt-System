@@ -8,17 +8,18 @@
       <li class="header">MAIN NAVIGATION</li>
       <!-- Optionally, you can add icons to the links -->
       <li class="active"><a href="<?php echo site_url();?>/SMS/Home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-      <li class="treeview">
+      <li class="treeview active">
         <a href="#">
-          <i class="fa fa-globe"></i> <span>Learning Resource</span>
+          <i class="fa fa-book"></i> <span>Learning Resource</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
+          <li><a href="<?php echo site_url();?>/LRMDS/home/topics"><i class="fa fa-circle-o"></i> Topics</a></li>
           <li>
-            <a href=""><i class="fa fa-circle-o"></i> Configuration
+            <a href=""><i class="fa fa-circle-o"></i> Subjects
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -27,6 +28,18 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> User Accounts</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> User Sessions?</a></li>
+            </ul>
+          </li>
+          <li><a href="<?php echo site_url();?>/LRMDS/home/strands"><i class="fa fa-circle-o"></i> Strands</a></li>
+          <li>
+            <a href=""><i class="fa fa-circle-o"></i> Configuration
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Junior High School</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Senior High School</a></li>
             </ul>
           </li>
         </ul>
