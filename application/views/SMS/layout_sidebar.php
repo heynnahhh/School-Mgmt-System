@@ -16,41 +16,17 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="active"><a href="<?php echo site_url();?>/LRMDS/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Search</a></li>
+          <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
           <li>
-            <a href=""><i class="fa fa-circle-o"></i> LRMDS
+            <a href=""><i class="fa fa-circle-o"></i> Configuration
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Assessment and Evaluation</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Storage and Maintenance</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Publication and Delivery</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href=""><i class="fa fa-circle-o"></i> Manage Portal Content
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Home</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Resources</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Media Gallery</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Preview</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href=""><i class="fa fa-circle-o"></i> Settings
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Management</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Accounts</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Sessions?</a></li>
             </ul>
           </li>
         </ul>
@@ -71,7 +47,7 @@
           <li><a href="<?php echo site_url();?>/INVENTORY/home/inventory_items"><i class="fa fa-circle-o"></i> Inventory Items</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/stock_register"><i class="fa fa-circle-o"></i> Stock Register</a></li>
           <li>
-            <a href="<?php echo site_url();?>/INVENTORY/home/manage_records"><i class="fa fa-circle-o"></i> Manage Record(s)
+            <a href="<?php echo site_url();?>/INVENTORY/home/manage_records"><i class="fa fa-circle-o"></i> Generate Report(s)
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>

@@ -89,7 +89,7 @@
                                         <option>Senior High School</option>
                                     </select>
                         					</div>
-                      					<button type="button" class="btn btn-info submit">Register</button>
+                      					<button type="submit" class="btn btn-info submit">Register</button>
                       					</div>
                       				</form>
                     				</div>

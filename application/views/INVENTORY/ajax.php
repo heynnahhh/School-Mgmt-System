@@ -69,7 +69,7 @@ function hide_div(){
                 var info = data.data[0];
 
                 $('.full_details').removeAttr('style', 'display:none');
-
+                window.scrollTo(0, 0);
                 if( $('.left,.middle,.right').is(':empty') ){
 
                   $("<label>" + "Receipt #:" + "</label>" + "<p>" + info.receipt_no + "</p>").appendTo('.left').trigger('change');
@@ -439,12 +439,12 @@ $('#btn-dsave').on('click', function(){
 
   var q = 0
   $('.i-quantity').each(function(){
-      q = q + parseInt($(this).val()) 
+      q = q + parseInt($(this).val())
   })
 
   if(q > dQuantity){
     alert('NOT ENOUGH QUANTITY')
-    return 
+    return
   }
 
   $('.s-dept').each(function(){
@@ -456,7 +456,7 @@ $('#btn-dsave').on('click', function(){
       //ADD TO DB
 
       //MINUS QUANTITY
-      
+
   })
 
 })
