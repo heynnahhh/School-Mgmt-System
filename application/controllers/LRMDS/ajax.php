@@ -66,5 +66,44 @@ class ajax extends CI_Controller {
 			echo json_encode($result);
 	}
 
+	public function view_jhs(){
+		$m_data = $this->lrmds_model->get_jhs();
+		$data = array();
+
+			foreach ($m_data as $value) {
+				$row = array();
+				$row[] = $value->subject;
+				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+						<button type="button" class="btn btn-sm bg-red delete" id="delete"><i class="fa fa-trash-o"></i></button>';
+				$data[] = $row;
+			}
+
+			$result = array(
+				"data" => $data,
+			);
+
+			echo json_encode($result);
+	}
+
+	public function view_shs(){
+		$m_data = $this->lrmds_model->get_shs();
+		$data = array();
+
+			foreach ($m_data as $value) {
+				$row = array();
+				$row[] = $value->subject;
+				$row[] = $value->grade_lvl;
+				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+						<button type="button" class="btn btn-sm bg-red delete" id="delete"><i class="fa fa-trash-o"></i></button>';
+				$data[] = $row;
+			}
+
+			$result = array(
+				"data" => $data,
+			);
+
+			echo json_encode($result);
+	}
+
 
 }

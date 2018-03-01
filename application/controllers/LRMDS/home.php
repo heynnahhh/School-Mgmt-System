@@ -24,4 +24,16 @@ class Home extends CI_Controller {
 		$this->load->view('LRMDS/topics', $data);
 	}
 
+	public function jhs()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('LRMDS/jhs', $data);
+	}
+
+	public function shs()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('LRMDS/shs', $data);
+	}
+
 }
