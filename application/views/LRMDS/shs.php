@@ -6,11 +6,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Topics
+        Subjects
       </h1>
       <ol class="breadcrumb">
-        <li>Learning Resource</a></li>
-        <li><a><i class="fa fa-dashboard"></i>Topics</a></li>
+        <li><a><i class="fa fa-dashboard"></i>Learning Resource</a></li>
+        <li><a>Subjects</a></li>
+        <li><a>Senior High School</a></li>
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -20,18 +21,26 @@
       <div class="row">
         <div class="col-xs-12" id="table">
           <div class="box box-solid">
+            <div class="box-header">
+              <h4 class="box-title"> Senior High School</h4>
+              <div class="btn-group pull-right">
+                <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Subject</button>
+              </div>
+            </div>
             <div class="box-body table-responsive">
-              <table id="topic_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
+              <table id="shs_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
               <thead>
                   <tr>
-                      <th>Topic Name</th>
+                      <th>Subject Name</th>
+                      <th>Grade Level</th>
                       <th>Actions</th>
                   </tr>
               </thead>
               <tbody></tbody>
               <tfoot>
                   <tr>
-                      <th>Topic Name</th>
+                      <th>Subject Name</th>
+                      <th>Grade Level</th>
                       <th>Actions</th>
                   </tr>
               </tfoot>

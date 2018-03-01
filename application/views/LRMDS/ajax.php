@@ -28,6 +28,20 @@ var current_method = '<?php echo $this->uri->segment(3);?>';
 
 	  }
 
+	   else if(current_method == 'jhs'){
+	  	tableParams.ajax = '<?=site_url()?>/LRMDS/ajax/view_jhs';
+	  	tableParams.columnDefs = [{"width": "600px", "targets": 0},{"width": "200px", "targets": 1}];
+	    $('#jhs_tbl').DataTable(tableParams);
+
+	  }
+
+	   else if(current_method == 'shs'){
+	  	tableParams.ajax = '<?=site_url()?>/LRMDS/ajax/view_shs';
+	  	tableParams.columnDefs = [{"width": "600px", "targets": 0},{"width": "200px", "targets": 1}];
+	    $('#shs_tbl').DataTable(tableParams);
+
+	  }
+
 	});
 
 </script>

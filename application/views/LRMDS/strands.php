@@ -9,8 +9,8 @@
         Strands
       </h1>
       <ol class="breadcrumb">
-        <li>MAIN NAVIGATION</a></li>
-        <li><a><i class="fa fa-dashboard"></i>Strands</a></li>
+        <li><a><i class="fa fa-dashboard"></i>Learning Resource</a></li>
+        <li>Strands</a></li>
       </ol>
     </section>
   <!-- /.content-wrapper -->
