@@ -29,20 +29,20 @@
                                      <div class="col-lg-12">
                                         <div class="row">
 
-                                          <form>
+                                          <form method="post" enctype="multipart/form-data" id="topicForm">
                                             <div class="col-sm-7">
                                               <div class="form-group">
                                                 <label>Title of Learning Resource</label>
-                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control">
+                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control" name="lr_title" id="lr_title">
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Description</label>
-                                                  <textarea placeholder="Type Here..." class="form-control"></textarea>
+                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="description" id="description"></textarea>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Objective</label>
-                                                  <textarea placeholder="Type Here..." class="form-control"></textarea>
+                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="objective" id="objective"></textarea>
                                                 </div>
                                               </div>
                                               <div class="row">
@@ -56,23 +56,44 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Grade Level</label>
-                                                  <select class="form-control adgrade_lvl" id="grade_lvl" name="grade_lvl">
+                                                  <select class="form-control adgrade_lvl" id="adgrade_lvl" name="grade_lvl">
                                                   </select>
                                                 </div>
                                               </div>
                                               <div class="row">
+                                                <div class="col-sm-6 form-group adsubj_type" style="display:none;">
+                                                  <label>Subject Type</label>
+                                                  <select class="form-control adsubj_type" id="adsubj_type" name="subj_type">
+                                                    <option></option>
+                                                    <option>Core Subject</option>
+                                                    <option>Applied Subject</option>
+                                                    <option>Specialized Subject</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-sm-6 form-group adstrand" style="display:none;">
+                                                  <label>Strand</label>
+                                                  <select class="form-control adstrand" id="adstrand" name="strand">
+                                                    <option></option>
+                                                    <option>STEM</option>
+                                                    <option>HUMSS</option>
+                                                    <option>GAS</option>
+                                                    <option>Automotive</option>
+                                                    <option>ABM</option>
+                                                    <option>HE</option>
+                                                  </select>
+                                                </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Subject</label>
-                                                  <select class="form-control adlrn_subject" id="lrn_subject" name="lrn_subject">
+                                                  <select class="form-control adlrn_subject" id="adlrn_subject" name="lrn_subject">
                                                   </select>
                                                 </div>
                                                 <div class="form-group col-sm-6">
                                                   <label>Topic</label>
                                                   <div class="input-group">
-                                                    <select class="form-control sel_topic adtopic" id="topic" name="topic">
+                                                    <select class="form-control sel_topic adtopic" id="adtopic" name="topic_name">
                                                     </select>
                                                     <div class="input-group-btn">
-                                                      <button type="button" class="btn btn-theme btn-secondary" href="" data-toggle="modal" data-target="#myModal">Add Topic</button>
+                                                      <button type="button" class="btn btn-theme btn-secondary" data-toggle="modal" data-target="#myModal">Add Topic</button>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -80,7 +101,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Resource Type</label>
-                                                  <select class="form-control">
+                                                  <select class="form-control" id="lr_type" name="lr_type">
                                                     <option></option>
                                                     <option>Learning Module</option>
                                                     <option>Learning Material</option>
@@ -88,7 +109,7 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Intended Users</label>
-                                                  <select class="form-control">
+                                                  <select class="form-control" id="intended_user" name="intended_user">
                                                     <option></option>
                                                     <option>Students</option>
                                                     <option>Teachers</option>
@@ -98,7 +119,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Copyright</label>
-                                                  <select class="form-control">
+                                                  <select class="form-control" id="copyright" name="copyright">
                                                     <option></option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -106,15 +127,18 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Copyright Owner</label>
-                                                   <input type="text" placeholder="ex. CSS 101" class="form-control">
+                                                   <input type="text" placeholder="ex. CSS 101" class="form-control" id="copyright_owner" name="copyright_owner">
                                                 </div>
                                               </div>
-                                              <div class="form-group">
-                                                <label>Learning Resource</label>
-                                                <input type="file" name="upload_lrn" class="form-control-file">
+                                              <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                  <label>Learning Resource</label><br>
+                                                  <label class="btn btn-default btn-file btn-danger">
+                                                    <i class="fa fa-upload"></i> Choose file <input type="file" style="display:none;" name="upload_lrn" id="upload_lrn">
+                                                  </label>
+                                                </div>
                                               </div>
-                                              <br />
-                                            <button type="button" class="btn btn-theme btn-secondary">Upload</button>
+                                              <button type="submit" class="btn btn-theme btn-secondary submit">Upload</button>
                                             </div>
                                           </form>
                                         </div>
@@ -140,7 +164,7 @@
                         </div>
                         <div class="modal-body">
                            <div id="login-page">
-                            <form action="index.html">
+                            <form method="post" enctype="multipart/form-data">
                               <div class="row">
                                 <div class="col-sm-6 form-group">
                                   <label>Education Type</label>
@@ -157,18 +181,38 @@
                                 </div>
                               </div>
                               <div class="row">
+                                <div class="col-sm-6 form-group subj_type" style="display:none;">
+                                  <label>Subject Type</label>
+                                  <select class="form-control subj_type" id="subj_type" name="subj_type">
+                                    <option></option>
+                                    <option>Core Subject</option>
+                                    <option>Applied Subject</option>
+                                    <option>Specialized Subject</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 form-group strand" style="display:none;">
+                                  <label>Strand</label>
+                                  <select class="form-control strand" id="strand" name="strand">
+                                    <option></option>
+                                    <option>STEM</option>
+                                    <option>HUMSS</option>
+                                    <option>GAS</option>
+                                    <option>Automotive</option>
+                                    <option>ABM</option>
+                                    <option>HE</option>
+                                  </select>
+                                </div>
                                 <div class="col-sm-6 form-group">
-                                  <label>Subject</label>
-                                  <select class="form-control lrn_subject" name="lrn_subject" id="lrn_subject">
-
+                                  <label>Learning Subject</label>
+                                  <select class="form-control lrn_subject" id="lrn_subject" name="lrn_subject">
                                   </select>
                                 </div>
                                 <div class="col-sm-6 form-group">
                                   <label>Topic Name</label>
-                                   <input type="text" class="form-control sel_topic topic" placeholder="Type Here..." name="topic" id="topic">
+                                   <input type="text" class="form-control sel_topic" placeholder="Type Here..." name="topic" id="topic">
                                 </div>
                               </div>
-                              <button type="button" class="btn btn-theme btn-secondary">Save</button>
+                              <button type="submit" class="btn btn-theme btn-secondary submit">Save</button>
                             </form>
                           </div>
                         </div>

@@ -10,7 +10,7 @@
       <li class="active"><a href="<?php echo site_url();?>/SMS/Home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
       <li class="treeview active">
         <a href="#">
-          <i class="fa fa-globe"></i> <span>Learning Resource</span>
+          <i class="fa fa-book"></i> <span>Learning Resource</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -25,11 +25,23 @@
               </span>
             </a>
             <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Accounts</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> User Sessions?</a></li>
+            </ul>
+          </li>
+          <li><a href="<?php echo site_url();?>/LRMDS/home/strands"><i class="fa fa-circle-o"></i> Strands</a></li>
+          <li>
+            <a href=""><i class="fa fa-circle-o"></i> Configuration
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
               <li><a href="#"><i class="fa fa-circle-o"></i> Junior High School</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Senior High School</a></li>
             </ul>
           </li>
-          <li><a href="<?php echo site_url();?>/LRMDS/home/strands"><i class="fa fa-circle-o"></i> Strands</a></li>
         </ul>
       </li>
 
@@ -48,7 +60,7 @@
           <li><a href="<?php echo site_url();?>/INVENTORY/home/inventory_items"><i class="fa fa-circle-o"></i> Inventory Items</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/stock_register"><i class="fa fa-circle-o"></i> Stock Register</a></li>
           <li>
-            <a href="<?php echo site_url();?>/INVENTORY/home/manage_records"><i class="fa fa-circle-o"></i> Manage Record(s)
+            <a href="<?php echo site_url();?>/INVENTORY/home/manage_records"><i class="fa fa-circle-o"></i> Generate Report(s)
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>

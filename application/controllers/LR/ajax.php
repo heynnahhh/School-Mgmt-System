@@ -7,7 +7,6 @@ class ajax extends CI_Controller {
 
 		$this->load->library('form_validation');
 		$this->load->model('LR/lr_model');
-		$this->sms_session->checkSession();
 
 	}
 
@@ -20,6 +19,12 @@ class ajax extends CI_Controller {
         $this->add_user_profile($data['reg_info']);
       }
     }
+		elseif($data['add'] == 'topic'){
+			if($data['topic']){
+				unset($data['add']);
+				$this->add_topic($data['topic']);
+			}
+		}
 
   }
 
@@ -51,6 +56,25 @@ class ajax extends CI_Controller {
     }
   }
 
+	private function add_topic($data){
+	 if($data){
+		 $topic_id = uniqid('TOPIC');
+
+		 $m_data = array(
+			 'topic_id' => $topic_id,
+			 'educ_type' => $data['educ_type'],
+			 'grade_lvl' => $data['grade_lvl'],
+			 'subject_type' => $data['subject_type'],
+			 'strand' => $data['strand'],
+			 'subject' => $data['subject'],
+			 'topic_name' => $data['topic_name']
+		 );
+
+		 $this->lr_model->add_topic($m_data);
+
+	 }
+ }
+
 	public function get_grade_lvl(){
 		$data = $this->input->post();
 
@@ -71,12 +95,32 @@ class ajax extends CI_Controller {
 		}
 	}
 
-	public function get_subject(){
+	public function get_subject_type(){
 		$data = $this->input->post();
 
 		$m_data = $data['educ_type'];
 
-		$values = $this->lr_model->get_subject($m_data);
+		$values = $this->lr_model->get_subject_type($m_data);
+
+		if($values) {
+
+		foreach ($values as $value) {
+			$option = array();
+			$option[] = $value->subject_type;
+			$option_data[] = $option;
+		}
+
+		echo json_encode($option_data);
+
+		}
+	}
+
+	public function get_jhs_subjects(){
+		$data = $this->input->post();
+
+		$m_data = $data['educ_type'];
+
+		$values = $this->lr_model->get_jhs_subject($m_data);
 
 		if($values) {
 
@@ -91,12 +135,48 @@ class ajax extends CI_Controller {
 		}
 	}
 
-	public function get_topic(){
+	public function get_shs_subjects(){
+		$data = $this->input->post();
+
+		if($data['get'] == 'no strand'){
+			unset($data['get']);
+			$m_data = array(
+				'grade_lvl' => $data['grade_lvl'],
+				'subject_type' => $data['subj_type']
+			);
+		}
+		elseif($data['get'] == 'strand'){
+			unset($data['get']);
+			$m_data = array(
+				'grade_lvl' => $data['grade_lvl'],
+				'subject_type' => $data['subj_type'],
+				'strand' => $data['strand']
+			);
+		}
+
+		$values = $this->lr_model->get_shs_subject($m_data);
+
+		if($values) {
+
+		foreach ($values as $value) {
+			$option = array();
+			$option[] = $value->subject;
+			$option_data[] = $option;
+		}
+
+		echo json_encode($option_data);
+
+		}
+	}
+
+	public function get_topics(){
 		$data = $this->input->post();
 
 		$m_data = array(
 			'educ_type' => $data['educ_type'],
 			'grade_lvl' => $data['grade_lvl'],
+			'subject_type' => $data['subject_type'],
+			'strand' => $data['strand'],
 			'subject' => $data['subject']
 		);
 
@@ -155,18 +235,4 @@ class ajax extends CI_Controller {
     }
   }
 
-   private function add_topic($data){
-    if($data){
-
-      $m_data = array(
-        'educ_type' => $data['educ_type'],
-        'grade_lvl' => $data['grade_lvl'],
-        'subject' => $data['subject'],
-        'topic_name' => $data['topic_name']
-      );
-
-      $this->lr_model->add_topic($m_data);
-
-    }
-  }
 }
