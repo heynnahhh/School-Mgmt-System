@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2018 at 07:01 PM
+-- Generation Time: Mar 01, 2018 at 02:29 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -419,7 +419,7 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_attachments` (
   `file_size` varchar(11) NOT NULL,
   PRIMARY KEY (`lup_id`),
   KEY `lup_lr_code` (`lup_lr_code`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -445,7 +445,7 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_attachments_info` (
   PRIMARY KEY (`latin_id`),
   UNIQUE KEY `lr_code` (`lr_code`),
   KEY `topic_id` (`topic_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -511,7 +511,7 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_jhs_subjects` (
   PRIMARY KEY (`lres_id`),
   KEY `educ_type` (`educ_type`),
   KEY `subject` (`subject`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_lr_jhs_subjects`
@@ -630,13 +630,14 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_topics` (
   `lto_id` int(11) NOT NULL AUTO_INCREMENT,
   `topic_id` int(11) NOT NULL,
   `educ_type` varchar(155) NOT NULL,
+  `grade_lvl` varchar(40) NOT NULL,
   `subject_type` varchar(155) DEFAULT NULL,
   `strand` varchar(155) DEFAULT NULL,
   `subject` varchar(155) NOT NULL,
   `topic_name` varchar(255) NOT NULL,
   PRIMARY KEY (`lto_id`),
   UNIQUE KEY `topic_id` (`topic_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -679,7 +680,14 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_users_activity` (
   `logged_in_session` datetime NOT NULL,
   PRIMARY KEY (`luac_id`),
   KEY `users_account` (`users_account`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_users_activity`
+--
+
+INSERT INTO `tbl_lr_users_activity` (`luac_id`, `users_account`, `activity`, `date_of_activity`, `time_of_activity`, `logged_in_session`) VALUES
+(1, 2, 'NAgdL', '2018-03-14', '08:36:52', '2018-03-16 06:52:22');
 
 -- --------------------------------------------------------
 
@@ -694,6 +702,13 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_users_history` (
   `logged_out_session` datetime NOT NULL,
   UNIQUE KEY `lush_lus_id` (`lush_lus_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_lr_users_history`
+--
+
+INSERT INTO `tbl_lr_users_history` (`lush_lus_id`, `logged_in_session`, `logged_out_session`) VALUES
+(2, '2018-03-07 11:18:33', '2018-03-07 23:50:51');
 
 -- --------------------------------------------------------
 
@@ -722,6 +737,22 @@ CREATE TABLE IF NOT EXISTS `tbl_lr_users_profile` (
 INSERT INTO `tbl_lr_users_profile` (`lus_id`, `last_name`, `first_name`, `middle_name`, `address`, `birthdate`, `gender`, `contact_no`, `area_of_expertise`) VALUES
 (1, 'pangilinan', 'aljohn', 'olazo', 'kjhkjh', '2018-12-31', 'Male', 897897, 'Junior High School'),
 (2, 'hghjghj', 'jhghjg', 'jhgjhg', 'ghg', '2018-12-31', 'Male', 966, 'Junior High School');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_lr_users_profile_pic`
+--
+
+DROP TABLE IF EXISTS `tbl_lr_users_profile_pic`;
+CREATE TABLE IF NOT EXISTS `tbl_lr_users_profile_pic` (
+  `luspc_lusp_id` int(11) NOT NULL,
+  `image_name` varchar(155) NOT NULL,
+  `full_path` varchar(155) NOT NULL,
+  `file_path` varchar(155) NOT NULL,
+  `file_type` varchar(155) NOT NULL,
+  KEY `luspc_lua_id` (`luspc_lusp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -948,6 +979,12 @@ ALTER TABLE `tbl_lr_users_activity`
 --
 ALTER TABLE `tbl_lr_users_history`
   ADD CONSTRAINT `tbl_lr_users_history_ibfk_1` FOREIGN KEY (`lush_lus_id`) REFERENCES `tbl_lr_users_account` (`lusa_lus_id`);
+
+--
+-- Constraints for table `tbl_lr_users_profile_pic`
+--
+ALTER TABLE `tbl_lr_users_profile_pic`
+  ADD CONSTRAINT `tbl_lr_users_profile_pic_ibfk_1` FOREIGN KEY (`luspc_lusp_id`) REFERENCES `tbl_lr_users_profile` (`lus_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

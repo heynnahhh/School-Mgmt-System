@@ -8,7 +8,7 @@
       <li class="header">MAIN NAVIGATION</li>
       <!-- Optionally, you can add icons to the links -->
       <li class="active"><a href="<?php echo site_url();?>/SMS/Home/account"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-      <li class="treeview active">
+      <li class="treeview">
         <a href="#">
           <i class="fa fa-book"></i> <span>Learning Resource</span>
           <span class="pull-right-container">
@@ -39,7 +39,6 @@
             <ul class="treeview-menu">
               <li><a href="#"><i class="fa fa-circle-o"></i> User Accounts</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Sessions?</a></li>
             </ul>
           </li>
         </ul>
@@ -79,7 +78,7 @@
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-plus-square"></i> <span>Medical</span>
+          <i class="fa fa-medkit"></i> <span>Medical</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -102,7 +101,7 @@
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-plus-square"></i> <span>Dental</span>
+          <i class="fa fa-user-md"></i> <span>Dental</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
