@@ -36,6 +36,7 @@ class ajax extends CI_Controller {
 				$row = array();
 				$row[] = $value->topic_name;
 				$row[] = '<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+						<button type="button" class="btn btn-sm bg-blue view" id="view"><i class="fa fa-eye"></i></button>
 						<button type="button" class="btn btn-sm bg-red delete" id="delete"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;
 			}
@@ -118,6 +119,21 @@ class ajax extends CI_Controller {
 
 	}
 
+	public function get_topic_details(){
+	$data = $this->input->post();
+
+	$m_data = $data['topic_name'];
+
+	$values = $this->lrmds_model->get_topic_detail($m_data);
+
+	$result = array(
+		"data" => $values
+	);
+
+	echo json_encode($result);
+
+	}
+
 	public function get_strand_name(){
 		$data = $this->input->post();
 
@@ -178,7 +194,7 @@ class ajax extends CI_Controller {
 		if($data){
 
 			$m_data = array(
-				'subject' => $data['subject'],
+				'subject' => $data,
 				'educ_type' => "Junior High School"
 			);
 

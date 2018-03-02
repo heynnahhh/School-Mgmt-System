@@ -153,6 +153,52 @@ var current_method = '<?php echo $this->uri->segment(3);?>';
 
     } );
 
+
+// VIEW ***********************
+
+    $('#topic_tbl tbody').on( 'click','.view', function () {
+      var data = $('#topic_tbl').DataTable().row( $(this).parents('tr') ).data();
+
+        $.ajax({
+          type: "POST",
+          data: {'topic_name': data[0]},
+          url: '<?=site_url()?>/LRMDS/ajax/get_topic_details',
+          dataType: 'json',
+          success: function(data){
+              if(data){
+                var info = data.data[0];
+
+                $('.full_details').removeAttr('style', 'display:none');
+                window.scrollTo(0, 0);
+                if( $('.left,.middle,.right').is(':empty') ){
+
+                  $("<label>" + "Topic ID:" + "</label>" + "<p>" + info.topic_id + "</p>").appendTo('.left').trigger('change');
+                  $("<label>" + "Topic Name:" + "</label>" + "<p>" + info.topic_name + "</p>").appendTo('.middle');
+                  $("<label>" + "Education Type:" + "</label>" + "<p>" + info.educ_type + "</p>").appendTo('.right');
+                  $("<label>" + "Grade Level:" + "</label>" + "<p>" + info.grade_lvl + "</p>").appendTo('.left');
+                  $("<label>" + "Subject Type:" + "</label>" + "<p>" + info.subject_type + "</p>").appendTo('.middle');
+                  $("<label>" + "Strand:" + "</label>" + "<p>" + info.strand + "</p>").appendTo('.right');
+                  $("<label>" + "Subject:" + "</label>" + "<p>" + info.subject + "</p>").appendTo('.left');
+                }
+                else {
+                  $('.left,.middle,.right').empty();
+                  $("<label>" + "Topic ID:" + "</label>" + "<p>" + info.topic_id + "</p>").appendTo('.left').trigger('change');
+                  $("<label>" + "Topic Name:" + "</label>" + "<p>" + info.topic_name + "</p>").appendTo('.middle');
+                  $("<label>" + "Education Type:" + "</label>" + "<p>" + info.educ_type + "</p>").appendTo('.right');
+                  $("<label>" + "Grade Level:" + "</label>" + "<p>" + info.grade_lvl + "</p>").appendTo('.left');
+                  $("<label>" + "Subject Type:" + "</label>" + "<p>" + info.subject_type + "</p>").appendTo('.middle');
+                  $("<label>" + "Strand:" + "</label>" + "<p>" + info.strand + "</p>").appendTo('.right');
+                  $("<label>" + "Subject:" + "</label>" + "<p>" + info.subject + "</p>").appendTo('.left');
+                }
+
+              }
+
+          }
+        });
+
+    } );
+
+
 	});
 
 
