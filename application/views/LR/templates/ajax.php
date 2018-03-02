@@ -173,7 +173,7 @@
 				$('#adlrn_subject').on('change', function(){
 						$.ajax({
 						  type: "POST",
-						  data: {'educ_type': $('#adeduc_type').val(), 'grade_lvl': $('#adgrade_lvl').val(), 'subject_type':  $('#adsubj_type').val(), 'strand':  $('#adstrand').val(), 'subject':  $('#adlrn_subject').val() },
+						  data: {'educ_type': $('#adeduc_type').val(), 'grade_lvl': $('#adgrade_lvl option:selected').text(), 'subject_type':  $('#adsubj_type').val(), 'strand':  $('#adstrand').val(), 'subject':  $('#adlrn_subject option:selected').text() },
 						  url: '<?=site_url()?>/LR/ajax/get_topics',
 							dataType:'json',
 						  success: function(data){
@@ -338,7 +338,7 @@
 				$('#lrn_subject').on('change', function(){
 						$.ajax({
 						  type: "POST",
-						  data: {'educ_type': $('#educ_type').val(), 'grade_lvl': $('#grade_lvl').val(), 'subject_type':  $('#subj_type').val(), 'strand':  $('#strand').val(), 'subject':  $('#lrn_subject').val() },
+						  data: {'educ_type': $('#educ_type').val(), 'grade_lvl': $('#grade_lvl option:selected').text(), 'subject_type':  $('#subj_type').val(), 'strand':  $('#strand').val(), 'subject':  $('#lrn_subject option:selected').text() },
 						  url: '<?=site_url()?>/LR/ajax/get_topics',
 							dataType:'json',
 						  success: function(data){
@@ -362,7 +362,8 @@
 
 
 				$('#myModal').on('hidden.bs.modal', function () {
-		      $(this).find('input,textarea,select').val('');
+		      $(this).find('input,textarea,select').val(null);
+					$(this).find('select').empty();
 		    });
 
       });
@@ -385,13 +386,12 @@
 
 				var topicInfo = {
 					educ_type: $("select#educ_type").val(),
-					grade_lvl: $("select#grade_lvl").val(),
+					grade_lvl: $('#grade_lvl option:selected').text(),
 					subject_type: $("select#subj_type").val(),
 					strand: $("select#strand").val(),
-					subject: $("select#lrn_subject").val(),
+					subject: $('#lrn_subject option:selected').text(),
 					topic_name: $("input#topic").val()
 				};
-
 
 			  var params = {
 			    type: "POST",
@@ -426,16 +426,14 @@
 				else if(current_fn == 'upload'){
 					params.data = {'topic': topicInfo, 'add':'topic'};
 					params.success = function(data) {
-						//alert("Successfully Registered! You may log in now");
-						// console.log(data);
-						//location.reload();
+
 						$("#myModal").modal('hide');
 
 						 var unique_id = $.gritter.add({
 									// (string | mandatory) the heading of the notification
 									title: 'Success!',
 									// (string | mandatory) the text inside the notification
-									text: 'New topic is Successfully Saved!',
+									text: 'New Topic is Successfully Saved!',
 									// (string | optional) the image to display on the left
 									image: '<?php echo base_url();?>includes/lr/img/notif.png',
 									// (bool | optional) if you want it to fade out on its own or just sit there
@@ -453,6 +451,46 @@
 
 			});
 
+			$("#upload-lrnfile").on('click', function (e) {
+			  e.preventDefault();
+
+				var upload = {
+					topic: $("#adtopic option:selected").text(),
+					lr_title: $("input#adlr_title").val(),
+					description: $("textarea#addescription").val(),
+					objective: $("textarea#adobjective").val(),
+					resource_type: $("select#adlr_type").val(),
+					intended_user: $("select#adintended_user").val(),
+					language: $("input#adlanguage").val(),
+					copyright: $("select#adcopyright").val(),
+					copyright_owner: $("input#adcopyright_owner").val(),
+					upload: $("input:file").val()
+				}
+
+				$.ajax({
+					type: "POST",
+			    url: '<?=site_url()?>/LR/ajax/add',
+					data: {'upload': upload, 'add':'upload'},
+					success:	function(data) {
+
+						 var unique_id = $.gritter.add({
+									// (string | mandatory) the heading of the notification
+									title: 'Success!',
+									// (string | mandatory) the text inside the notification
+									text: 'Learning Resource Successfully Uploaded!',
+									// (string | optional) the image to display on the left
+									image: '<?php echo base_url();?>includes/lr/img/notif.png',
+									// (bool | optional) if you want it to fade out on its own or just sit there
+									sticky: false,
+									// (int | optional) the time you want it to be alive for before fading out
+									time: 2000,
+									// (string | optional) the class name you want to apply to that specific message
+									class_name: 'my-sticky-class'
+							});
+							return false;
+					}
+				});
+			});
 
 
 /***** UI *****/

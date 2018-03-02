@@ -28,4 +28,5 @@ class lrmds_model extends CI_Model{
 		$query = $this->db->get('tbl_lr_shs_subjects');
 		return $query->result();
 	}
+
 }
