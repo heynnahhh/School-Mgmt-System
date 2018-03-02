@@ -29,9 +29,9 @@
             <div class="box-body">
               <div class="row">
                 <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label">Subject Name</label>
+                  <label for="shs_subject" class="col-sm-2 control-label">Subject Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control input-sm" name="receipt_no" id="ed_receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="shs_subject" id="ed_shs_subject" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
@@ -39,7 +39,7 @@
                 <div class="form-group">
                   <label for="receipt_no" class="col-sm-2 control-label">Strand</label>
                   <div class="col-sm-8">
-                    <select class="sel_category item_code" name="item_category" id="ed_item_category" style="width: 100%;">
+                    <select class="sel_category item_code" name="strand" id="ed_strand" style="width: 100%;">
                           
                     </select>
                   </div>
@@ -49,7 +49,7 @@
                 <div class="form-group">
                   <label for="receipt_no" class="col-sm-2 control-label">Grade Level</label>
                   <div class="col-sm-8">
-                    <select class="sel_category item_code" name="item_category" id="ed_item_category" style="width: 100%;">
+                    <select class="sel_category item_code" name="grade_lvl" id="ed_grade_lvl" style="width: 100%;">
                           
                     </select>
                   </div>
@@ -59,7 +59,7 @@
                 <div class="form-group">
                   <label for="receipt_no" class="col-sm-2 control-label">Subject Type</label>
                   <div class="col-sm-8">
-                    <select class="sel_category item_code" name="item_category" id="ed_item_category" style="width: 100%;">
+                    <select class="sel_category item_code" name="subject_type" id="ed_subject_type" style="width: 100%;">
                           
                     </select>
                   </div>

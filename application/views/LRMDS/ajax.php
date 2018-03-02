@@ -84,85 +84,133 @@ var current_method = '<?php echo $this->uri->segment(3);?>';
     } );
 
     $('#jhs_tbl tbody').on( 'click', '.edit', function () {
-      // var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+      var data = $('#jhs_tbl').DataTable().row( $(this).parents('tr') ).data();
           $('#table').removeClass('col-xs-12');
           $('#table').addClass('col-xs-7');
           $('#form').show();
 
-          // $.ajax({
-          //   type: "POST",
-          //   data: {'item_code': data[0]},
-          //   url: '<?=site_url()?>/INVENTORY/ajax/get_item_info',
-          //   dataType: 'json',
-          //   success: function(data){
-          //       if(data){
-          //         var info = data.data[0];
+          $.ajax({
+            type: "POST",
+            data: {'subject': data[0]},
+            url: '<?=site_url()?>/LRMDS/ajax/get_jhs_subject',
+            dataType: 'json',
+            success: function(data){
+                if(data){
+                  var info = data.data[0];
 
-          //         $('#ed_item_code').val(info.item_code);
-          //         $('#ed_item_category').val(info.item_category);
-          //         $('#ed_item_desc').val(info.item_desc);
-          //         $('#ed_item_name').val(info.item_name);
-          //         $('#ed_unit_cost').val(info.unit_cost);
-          //       }
-          //   }
-          // });
+                  $('#ed_jhs_subject').val(info.subject);
+                }
+            }
+          });
 
     } );
 
     $('#shs_tbl tbody').on( 'click', '.edit', function () {
-      // var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+      var data = $('#shs_tbl').DataTable().row( $(this).parents('tr') ).data();
           $('#table').removeClass('col-xs-12');
           $('#table').addClass('col-xs-7');
           $('#form').show();
 
-          // $.ajax({
-          //   type: "POST",
-          //   data: {'item_code': data[0]},
-          //   url: '<?=site_url()?>/INVENTORY/ajax/get_item_info',
-          //   dataType: 'json',
-          //   success: function(data){
-          //       if(data){
-          //         var info = data.data[0];
+          $.ajax({
+            type: "POST",
+            data: {'subject': data[0]},
+            url: '<?=site_url()?>/LRMDS/ajax/get_shs_subject',
+            dataType: 'json',
+            success: function(data){
+                if(data){
+                  var info = data.data[0];
 
-          //         $('#ed_item_code').val(info.item_code);
-          //         $('#ed_item_category').val(info.item_category);
-          //         $('#ed_item_desc').val(info.item_desc);
-          //         $('#ed_item_name').val(info.item_name);
-          //         $('#ed_unit_cost').val(info.unit_cost);
-          //       }
-          //   }
-          // });
+                  $('#ed_shs_subject').val(info.subject);
+                  $('#ed_strand').val(info.strand);
+                  $('#ed_grade_lvl').val(info.grade_lvl);
+                  $('#ed_subject_type').val(info.subject_type);
+                }
+            }
+          });
 
     } );
 
 
     $('#strand_tbl tbody').on( 'click', '.edit', function () {
-      // var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+      var data = $('#strand_tbl').DataTable().row( $(this).parents('tr') ).data();
           $('#table').removeClass('col-xs-12');
           $('#table').addClass('col-xs-7');
           $('#form').show();
 
-          // $.ajax({
-          //   type: "POST",
-          //   data: {'item_code': data[0]},
-          //   url: '<?=site_url()?>/INVENTORY/ajax/get_item_info',
-          //   dataType: 'json',
-          //   success: function(data){
-          //       if(data){
-          //         var info = data.data[0];
+          $.ajax({
+            type: "POST",
+            data: {'strand': data[0]},
+            url: '<?=site_url()?>/LRMDS/ajax/get_strand_name',
+            dataType: 'json',
+            success: function(data){
+                if(data){
+                  var info = data.data[0];
 
-          //         $('#ed_item_code').val(info.item_code);
-          //         $('#ed_item_category').val(info.item_category);
-          //         $('#ed_item_desc').val(info.item_desc);
-          //         $('#ed_item_name').val(info.item_name);
-          //         $('#ed_unit_cost').val(info.unit_cost);
-          //       }
-          //   }
-          // });
+                  $('#ed_strand_name').val(info.strand);
+                }
+            }
+          });
 
     } );
 
 	});
+
+
+  $(".submit").on('click', function (e) {
+    e.preventDefault();
+
+    var jhs_subject = $("input#jhs_subject").val();
+    var strand = $("input#strand_name").val();
+
+    var params = {
+      type: "POST",
+      url: '<?=site_url()?>/LRMDS/ajax/add',
+      success: function(data) {
+        $("#myModal").modal('hide');
+        alert("Successfully Saved");
+        // console.log(data);
+        location.reload();
+      }
+    };
+
+    if(current_method == 'strands'){
+      params.data = {'strand': strand, 'add':'strands'};
+    }
+
+    else if(current_method == 'jhs'){
+      params.data = {'jhs_subject': jhs_subject, 'add':'jhs'};
+    }
+
+
+    $.ajax(params);
+
+  });
+
+
+  $(".update").on('click', function (e) {
+  e.preventDefault();
+  var edit_jhs_subject = $("input#ed_jhs_subject").val();
+
+  var params = {
+    type: "POST",
+    url: '<?=site_url()?>/LRMDS/ajax/edit',
+    success: function(data) {
+      alert("Successfully Updated!");
+      // console.log(data);
+      // location.reload();
+      $('#jhs_tbl').DataTable().ajax.reload();
+      cancel();
+    }
+  };
+
+  if(current_method == 'jhs'){
+    params.data = {'jhs_subject':edit_jhs_subject, 'edit':'jhs'};
+  }
+
+  $.ajax(params);
+
+});
+
 
 	function cancel(){
 	  $('#table').removeClass('col-xs-7');
