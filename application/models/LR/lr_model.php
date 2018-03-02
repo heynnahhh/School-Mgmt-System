@@ -51,8 +51,8 @@ class lr_model extends CI_Model{
 	}
 
 	public function upload_lrn($m_data){
-		$this->db->insert('tbl_lr_attachment_info', $m_data[0]);
-		$this->db->insert('tbl_lr_attachment', $m_data[1]);
+		$this->db->insert('tbl_lr_attachments_info', $m_data[0]);
+		$this->db->insert('tbl_lr_attachments', $m_data[1]);
 	}
 
   public function get_grade_lvl($m_data){
@@ -86,6 +86,13 @@ class lr_model extends CI_Model{
   public function get_topic($m_data){
     $this->db->select('topic_name');
     $this->db->where($m_data);
+    $query = $this->db->get('tbl_lr_topics');
+    return $query->result();
+  }
+
+  public function get_topic_id($m_data){
+    $this->db->select('topic_id');
+    $this->db->where('topic_name', $m_data);
     $query = $this->db->get('tbl_lr_topics');
     return $query->result();
   }
