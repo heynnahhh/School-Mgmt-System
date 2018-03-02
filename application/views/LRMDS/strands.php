@@ -21,6 +21,25 @@
   <!-- Main Content -->
     <section class="content">
       <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-solid full_details" style="display:none;">
+            <div class="box-header">
+              <h4 class="box-title"> Full Details:</h4>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-default btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body table-responsive">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-xs-3 left"></div>
+                  <div class="col-xs-3 middle"></div>
+                  <div class="col-xs-3 right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-xs-5 edit_form" id="form" style="display:none;">
           <div class="box box-primary">
             <div class="box-header bg-blue">

@@ -50,6 +50,13 @@ class lrmds_model extends CI_Model{
       return $query->result();
     }
 
+    public function get_topic_detail($m_data){
+      $this->db->select('topic_id,educ_type,grade_lvl,subject_type,strand,subject,topic_name');
+      $this->db->where('topic_name', $m_data);
+      $query = $this->db->get('tbl_lr_topics');
+      return $query->result();
+    }
+
 	public function insert_jhs_subject($m_data){
       $this->db->insert('tbl_lr_jhs_subjects', $m_data);
     }
