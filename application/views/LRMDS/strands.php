@@ -30,9 +30,9 @@
             <div class="box-body">
               <div class="row">
                 <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label">Strand Name</label>
+                  <label for="strand_name" class="col-sm-2 control-label">Strand Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control input-sm" name="receipt_no" id="ed_receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="strand_name" id="ed_strand_name" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
@@ -81,9 +81,9 @@
             <div class="modal-body">
               <div class="row">
                 <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label"> Strand Name</label>
+                  <label for="strand_name" class="col-sm-2 control-label"> Strand Name</label>
                   <div class="col-sm-5">
-                    <input type="text" class="form-control input-sm" name="receipt_no" id="receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" name="strand_name" id="strand_name" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div>

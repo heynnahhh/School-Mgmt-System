@@ -9,25 +9,6 @@ class ajax extends CI_Controller {
 		$this->load->model('LRMDS/lrmds_model');
 	}
 
-	public function add(){
-		$data = $this->input->post();
-
-		if ( $data['add'] == 'student'){
-			if($data['student_info']){
-				$this->add_student_info($data['student_info']);
-			}
-		}
-
-		elseif ( $data['add'] == 'employees'){
-			if($data['employee_info']) {
-				unset($data['add']);
-				$this->add_employee_info($data['employee_info']);
-			}
-		}
-
-	}
-
-
 	public function view_strand(){
 		$m_data = $this->lrmds_model->get_strand();
 		$data = array();
@@ -106,6 +87,118 @@ class ajax extends CI_Controller {
 
 			echo json_encode($result);
 	}
+
+	public function get_jhs_subject(){
+		$data = $this->input->post();
+
+		$m_data = $data['subject'];
+
+		$values = $this->lrmds_model->get_jhs_subject($m_data);
+
+		$result = array(
+			"data" => $values
+		);
+
+		echo json_encode($result);
+
+	}
+
+	public function get_shs_subject(){
+		$data = $this->input->post();
+
+		$m_data = $data['subject'];
+
+		$values = $this->lrmds_model->get_shs_subject($m_data);
+
+		$result = array(
+			"data" => $values
+		);
+
+		echo json_encode($result);
+
+	}
+
+	public function get_strand_name(){
+		$data = $this->input->post();
+
+		$m_data = $data['strand'];
+
+		$values = $this->lrmds_model->get_strand_name($m_data);
+
+		$result = array(
+			"data" => $values
+		);
+
+		echo json_encode($result);
+
+	}
+
+	public function add(){
+		$data = $this->input->post();
+
+		if ( $data['add'] == 'strands'){
+			if($data['strand']){
+				$this->add_strand($data['strand']);
+			}
+		}
+
+		else if ( $data['add'] == 'jhs'){
+			if($data['jhs_subject']){
+				$this->add_jhs_subject($data['jhs_subject']);
+			}
+		}
+	}
+
+	public function edit(){
+		$data = $this->input->post();
+		// echo $current_view;
+
+		if ( $data['edit'] == 'jhs'){
+			if($data['jhs_subject']){
+				unset($data['edit']);
+				$this->edit_jhs_subject($data['jhs_subject']);
+			}
+
+		}
+	}
+
+	private function add_strand($data){
+		if($data){
+
+			$m_data = array(
+				'strand' => $data
+			);
+
+			$this->lrmds_model->insert_strand($m_data);
+		} 
+
+	}
+
+	private function add_jhs_subject($data){
+		if($data){
+
+			$m_data = array(
+				'subject' => $data['subject'],
+				'educ_type' => "Junior High School"
+			);
+
+			$this->lrmds_model->insert_jhs_subject($m_data);
+		}
+
+	}
+
+	private function edit_jhs_subject($data){
+		if($data){
+
+			$m_data = array(
+				'subject' => $data,
+				'educ_type' => "Junior High School"
+			);
+
+			$this->lrmds_model->update_jhs_subject($m_data);
+		}
+	}
+
 
 
 }

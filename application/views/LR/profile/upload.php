@@ -33,16 +33,16 @@
                                             <div class="col-sm-7">
                                               <div class="form-group">
                                                 <label>Title of Learning Resource</label>
-                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control" name="lr_title" id="lr_title">
+                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control" name="lr_title" id="adlr_title">
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Description</label>
-                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="description" id="description"></textarea>
+                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="description" id="addescription"></textarea>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Objective</label>
-                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="objective" id="objective"></textarea>
+                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="objective" id="adobjective"></textarea>
                                                 </div>
                                               </div>
                                               <div class="row">
@@ -101,7 +101,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Resource Type</label>
-                                                  <select class="form-control" id="lr_type" name="lr_type">
+                                                  <select class="form-control" id="adlr_type" name="lr_type">
                                                     <option></option>
                                                     <option>Learning Module</option>
                                                     <option>Learning Material</option>
@@ -109,7 +109,7 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Intended Users</label>
-                                                  <select class="form-control" id="intended_user" name="intended_user">
+                                                  <select class="form-control" id="adintended_user" name="intended_user">
                                                     <option></option>
                                                     <option>Students</option>
                                                     <option>Teachers</option>
@@ -119,7 +119,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Copyright</label>
-                                                  <select class="form-control" id="copyright" name="copyright">
+                                                  <select class="form-control" id="adcopyright" name="copyright">
                                                     <option></option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -127,18 +127,22 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Copyright Owner</label>
-                                                   <input type="text" placeholder="ex. CSS 101" class="form-control" id="copyright_owner" name="copyright_owner">
+                                                   <input type="text" placeholder="ex. CSS 101" class="form-control" id="adcopyright_owner" name="copyright_owner">
                                                 </div>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
+                                                  <label>Language</label>
+                                                  <input type="text"  class="form-control" name="language" id="adlanguage">
+                                                </div>
+                                                <div class="col-sm-6 form-group">
                                                   <label>Learning Resource</label><br>
                                                   <label class="btn btn-default btn-file btn-danger">
-                                                    <i class="fa fa-upload"></i> Choose file <input type="file" style="display:none;" name="upload_lrn" id="upload_lrn">
+                                                    <i class="fa fa-upload"></i> Choose file <input type="file" name="upload_lrn" id="upload_lrn">
                                                   </label>
                                                 </div>
                                               </div>
-                                              <button type="submit" class="btn btn-theme btn-secondary submit">Upload</button>
+                                              <button type="submit" class="btn btn-theme btn-secondary" id="upload-lrnfile">Upload</button>
                                             </div>
                                           </form>
                                         </div>

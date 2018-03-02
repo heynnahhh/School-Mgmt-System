@@ -63,3 +63,4 @@ class lrmds_model extends CI_Model{
       $this->db->update('tbl_lr_jhs_subjects', $m_data);
     }
 }
+
