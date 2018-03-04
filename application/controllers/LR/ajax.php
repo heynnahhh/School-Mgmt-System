@@ -252,20 +252,7 @@ class ajax extends CI_Controller {
 
 			$topic_id = $this->lr_model->get_topic_id($data['topic']);
 
-      // $lrn_info = array(
-			// 	'lr_code' => $lr_code,
-			// 	'topic_id' => md5($topic_id),
-      //   'lr_title' => $data['lr_title'],
-      //   'description' => $data['description'],
-      //   'objective' => $data['objective'],
-			// 	'resource_type' => $data['resource_type'],
-			// 	'intended_user' => $data['intended_user'],
-			// 	'language' => $data['language'],
-      //   'publisher' => 'Hannah Liao',
-      //   'date_published' => date("Y-m-d H:i:s"),
-      //   'copyright' => $data['copyright'],
-			// 	'copyright_owner' => $data['copyright_owner'],
-      // );
+
 
 			foreach ($topic_id as $id) {
 				$lrn_info = array(
@@ -283,24 +270,6 @@ class ajax extends CI_Controller {
 					'copyright_owner' => $data['copyright_owner']
 				);
 			}
-
-      // $config['upload_path'] = './uploads/';
-      // $config['allowed_types'] = 'gif|jpg|png|txt';
-			//
-      // $this->load->library('upload', $config);
-			//
-      // $upload_lrn = 'upload_lrn';
-			//
-      // $this->upload->do_upload($upload_lrn);
-			//
-      // $lrn = array(
-			// 	'lup_lr_code' => $lr_code,
-      //   'file_name' => $this->upload->data('file_name'),
-      //   'file_path' => $this->upload->data('file_path'),
-      //   'full_path_url' => $this->upload->data('full_path'),
-      //   'file_type' => $this->upload->data('file_type'),
-      //   'file_size' => $this->upload->data('file_size')
-      // );
 
 			$config['upload_path']   = './uploads/';
       $config['overwrite'] = TRUE;
