@@ -42,6 +42,36 @@ a, a:hover, a:focus {
     height: 100%;
 }
 
+.valid-info{
+  margin: 4px;
+}
+
+.invalid-info{
+  margin: 4px;
+}
+
+
+.error{
+  display: none;
+  margin: 4px;
+}
+
+.error-show{
+  color:red;
+}
+input.invalid, textarea.invalid, select.invalid{
+  border: 2px solid red;
+  content: ;
+}
+input.valid, textarea.valid, select.valid{
+  border: 2px solid green;
+}
+
+.spinner_disabled::-webkit-inner-spin-button,
+.spinner_disabled::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+}
+
 .search {
 	margin-top:-4px;
 }

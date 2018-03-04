@@ -74,7 +74,7 @@ class Home extends CI_Controller {
                 }
             }
 
-    $this->load->view('SMS/form_login', $data);
+    $this->load->view('SMS/home',$data);
 
   }
 
