@@ -213,7 +213,7 @@ var current_method = '<?php echo $this->uri->segment(3);?>';
       url: '<?=site_url()?>/LRMDS/ajax/add',
       success: function(data) {
         $("#myModal").modal('hide');
-        alert("Successfully Saved");
+        // alert("Successfully Saved");
         // console.log(data);
         location.reload();
       }
