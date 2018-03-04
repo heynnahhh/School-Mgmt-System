@@ -24,6 +24,3 @@
   <script src="<?php echo base_url();?>includes/lr/website/js/common-scripts.js"></script>
   <script src="<?php echo base_url();?>includes/lr/website/js/gritter/js/jquery.gritter.js"></script>
 
-<script type="text/javascript">
-
-</script>

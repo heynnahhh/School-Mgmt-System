@@ -30,64 +30,77 @@
                       					<div class="col-sm-6">
                                   <div class="row">
                       							<div class="col-sm-4 form-group">
-                      								<input type="text" placeholder="Surname" class="form-control"  name="last_name" id="last_name" >
+                      								<input type="text" placeholder="Surname" class="form-control"  name="last_name" id="last_name">
+                                      <span class="error">This field is required</span>
                       							</div>
                       							<div class="col-sm-4 form-group">
-                      								<input type="text" placeholder="First Name" class="form-control" name="first_name" id="first_name">
+                      								<input type="text" placeholder="First Name" class="form-control" name="first_name" id="first_name" required>
+                                      <span class="error">This field is required</span>
                       							</div>
                       							<div class="col-sm-4 form-group">
                       								<input type="text" placeholder="Middle Name" class="form-control" name="middle_name" id="middle_name">
+                                      <span class="error">This field is required</span>
                       							</div>
                       						</div>
                       						<div class="form-group">
                       							<label>Address</label>
-                      							<textarea placeholder="" rows="3" class="form-control" name="address" id="address"></textarea>
+                      							<textarea placeholder="" rows="3" class="form-control" name="address" id="address" required></textarea>
+                                    <span class="error">This field is required</span>
                       						</div>
                                   <div class="row">
                       							<div class="col-sm-6 form-group">
                       								<label>Birthdate</label>
-                      								<input type="date" class="form-control" name="birthdate" id="birthdate">
+                      								<input type="date" class="form-control" name="birthdate" id="birthdate" required>
                       							</div>
                       							<div class="col-sm-6 form-group">
                       								<label>Gender</label>
-                                      <select class="form-control" name="gender" id="gender">
+                                      <select class="form-control" name="gender" id="gender" required>
                                         <option selected disabled>Choose</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                       </select>
+                                      <span class="error">This field is required</span>
                       							</div>
                       						</div>
                                   <div class="row">
                                     <div class="col-sm-6 form-group">
                                       <label>Phone Number</label>
-                                      <input type="text" class="form-control" name="contact_no" id="contact_no">
+                                      <input type="number" class="form-control spinner_disabled" name="contact_no" id="contact_no" required>
+                                      <span class="error">This field is required</span>
                                     </div>
-                                    <div class="col-sm-6 form-group">
+                                    <div class="col-sm-6 form-group" id="email-span">
                                       <label>Email Address</label>
-                                      <input type="text" placeholder="ex. araullo.high@gmail.com" class="form-control" name="email" id="email">
+                                      <input type="email" placeholder="ex. araullo.high@gmail.com" class="form-control" name="email" id="email">
+                                      <span class="valid-info" style="display:none;"> Email is valid <i class = 'fa fa-check-circle'></i></span>
+                                      <span class="invalid-info" style="display:none;"> Email is invalid <i class = 'fa fa-times-circle'></i></span>
+                                      <span class="error">This field is required</span>
                                     </div>
                                   </div>
                         					<div class="form-group">
                         						<label>Username</label>
-                        						<input type="text" placeholder="" class="form-control" name="username" id="username">
+                        						<input type="text" placeholder="" class="form-control" name="username" id="username" required>
+                                    <span class="error">This field is required</span>
                         					</div>
                       						<div class="row">
                       							<div class="col-sm-6 form-group">
                       								<label>Password</label>
-                      								<input type="password" class="form-control">
+                      								<input type="password" name="password" id="password" class="form-control">
+                                      <span class="error">This field is required</span>
                       							</div>
                       							<div class="col-sm-6 form-group">
                       								<label>Re-enter Password</label>
-                      								<input type="password" class="form-control" name="password" id="password">
+                      								<input type="password" class="form-control" name="re-password" id="re-password" required>
+                                      <span class="error">This field is required</span>
                       							</div>
                       						</div>
                         					<div class="form-group">
                         						<label>Area of Expertise</label>
-                        						<select class="form-control" name="area_of_expertise" id="area_of_expertise">
+                        						<select class="form-control" name="area_of_expertise" id="area_of_expertise" required>
                                         <option selected disabled> </option>
                                         <option>Junior High School</option>
                                         <option>Senior High School</option>
                                     </select>
+                                    <span class="error">This field is required</span>
                         					</div>
                       					<button type="submit" class="btn btn-info submit">Register</button>
                       					</div>

@@ -11,10 +11,10 @@ class sms_session {
 					$this->CI->load->library('session');
 	    }
 
-        public function checkSession()
+        public function checkSession($data)
         {
         	if(!isset($this->CI->session->logged_in)) {
-					redirect(base_url()); exit;
+					redirect($data); exit;
 					}
 					else
 					return;

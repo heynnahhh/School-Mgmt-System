@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['lr/login'] = 'LR/home/login';
+$route['lr/account'] = 'LR/home/account';
 $route['lr/juniorhs'] = 'LR/home/juniorhs';
 $route['lr/seniorhs'] = 'LR/home/seniorhs';
 $route['lr/juniorhs_subjects'] = 'LR/home/juniorhs_subjects';

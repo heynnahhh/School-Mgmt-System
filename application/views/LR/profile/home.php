@@ -26,7 +26,7 @@
 
         						<div class="mySlides fade-slide">
         						  <div class="numbertext">2 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/img/ny.jpg" style="width:100%; height: 500px;"">
+        						  <img src="<?php echo base_url();?>includes/lr/img/ny.jpg" style="width:100%; height: 500px;">
         						  <div class="text">
         								<h1 class="carousel-caption-header">Slide 2</h1>
         								<p class="carousel-caption-text hidden-sm hidden-xs">
@@ -37,7 +37,7 @@
 
         						<div class="mySlides fade-slide">
         						  <div class="numbertext">3 / 3</div>
-        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%; height: 500px;"">
+        						  <img src="<?php echo base_url();?>includes/lr/img/product.jpg" style="width:100%; height: 500px;">
         							<div class="text">
         								<h1 class="carousel-caption-header">Slide 3</h1>
         								<p class="carousel-caption-text hidden-sm hidden-xs">
@@ -60,104 +60,8 @@
       				<!-- //banner -->
                 </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
+      <?php include '/../templates/latest_addition.php';?>
 
-
-
-      <!-- **********************************************************************************************************************************************************
-      RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->
-
-                  <div class="col-lg-3 ds">
-                    <!--JUNIOR HIGH SECTION-->
-						<h3>Junior High School Latest Addition</h3>
-
-                      <!-- First Action -->
-                      <div class="desc">
-
-                      	<div class="details">
-                      		<p><muted>Grade 7 - Module type</muted><br/>
-                      		   <a href="#">James Brown</a><br/> subscribed to your newslettedsadasdasdsr.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Action -->
-                      <div class="desc">
-
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-
-                       <!-- SENIOR HIGH SECTION -->
-						<h3>Senior High School Latest Addition</h3>
-                                            <!-- First Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-
-                  </div><!-- /col-lg-3 -->
               </div><! --/row -->
           </section>
       </section>

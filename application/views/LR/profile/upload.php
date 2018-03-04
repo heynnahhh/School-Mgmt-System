@@ -29,26 +29,26 @@
                                      <div class="col-lg-12">
                                         <div class="row">
 
-                                          <form method="post" enctype="multipart/form-data" id="topicForm">
+                                          <form action="../upload/upload" method="post" enctype="multipart/form-data" id="topicForm">
                                             <div class="col-sm-7">
                                               <div class="form-group">
                                                 <label>Title of Learning Resource</label>
-                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control" name="lr_title" id="adlr_title">
+                                                <input type="text" placeholder="ex. CSS HTML 101" class="form-control" name="lr_title" id="adlr_title" required>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Description</label>
-                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="description" id="addescription"></textarea>
+                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="description" id="addescription" required></textarea>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Objective</label>
-                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="objective" id="adobjective"></textarea>
+                                                  <textarea placeholder="Type Here..." class="form-control" rows="3" name="objective" id="adobjective" required></textarea>
                                                 </div>
                                               </div>
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Education Type</label>
-                                                  <select class="form-control adeduc_type" id="adeduc_type" name="educ_type">
+                                                  <select class="form-control adeduc_type" id="adeduc_type" name="educ_type" required>
                                                     <option></option>
                                                     <option>Junior High School</option>
                                                     <option>Senior High School</option>
@@ -56,7 +56,7 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Grade Level</label>
-                                                  <select class="form-control adgrade_lvl" id="adgrade_lvl" name="grade_lvl">
+                                                  <select class="form-control adgrade_lvl" id="adgrade_lvl" name="grade_lvl" required>
                                                   </select>
                                                 </div>
                                               </div>
@@ -84,13 +84,13 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Subject</label>
-                                                  <select class="form-control adlrn_subject" id="adlrn_subject" name="lrn_subject">
+                                                  <select class="form-control adlrn_subject" id="adlrn_subject" name="lrn_subject" required>
                                                   </select>
                                                 </div>
                                                 <div class="form-group col-sm-6">
                                                   <label>Topic</label>
                                                   <div class="input-group">
-                                                    <select class="form-control sel_topic adtopic" id="adtopic" name="topic_name">
+                                                    <select class="form-control sel_topic adtopic" id="adtopic" name="topic_name" required>
                                                     </select>
                                                     <div class="input-group-btn">
                                                       <button type="button" class="btn btn-theme btn-secondary" data-toggle="modal" data-target="#myModal">Add Topic</button>
@@ -101,7 +101,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Resource Type</label>
-                                                  <select class="form-control" id="adlr_type" name="lr_type">
+                                                  <select class="form-control" id="adlr_type" name="lr_type" required>
                                                     <option></option>
                                                     <option>Learning Module</option>
                                                     <option>Learning Material</option>
@@ -109,7 +109,7 @@
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Intended Users</label>
-                                                  <select class="form-control" id="adintended_user" name="intended_user">
+                                                  <select class="form-control" id="adintended_user" name="intended_user" required>
                                                     <option></option>
                                                     <option>Students</option>
                                                     <option>Teachers</option>
@@ -119,7 +119,7 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Copyright</label>
-                                                  <select class="form-control" id="adcopyright" name="copyright">
+                                                  <select class="form-control" id="adcopyright" name="copyright" required>
                                                     <option></option>
                                                     <option>Yes</option>
                                                     <option>No</option>
@@ -133,12 +133,12 @@
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Language</label>
-                                                  <input type="text"  class="form-control" name="language" id="adlanguage">
+                                                  <input type="text"  class="form-control" name="language" id="adlanguage" required>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Learning Resource</label><br>
                                                   <label class="btn btn-default btn-file btn-danger">
-                                                    <i class="fa fa-upload"></i> Choose file <input type="file" name="upload_lrn" id="upload_lrn">
+                                                    <i class="fa fa-upload"></i> Choose file <input type="file" name="upload_lrn" id="upload_lrn" required>
                                                   </label>
                                                 </div>
                                               </div>
@@ -168,7 +168,7 @@
                         </div>
                         <div class="modal-body">
                            <div id="login-page">
-                            <form method="post" enctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data" id="add_topic_form">
                               <div class="row">
                                 <div class="col-sm-6 form-group">
                                   <label>Education Type</label>
@@ -223,100 +223,9 @@
                       </div>
                     </div>
                   </div>
-      <!-- **********************************************************************************************************************************************************
-      RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->
-                  <div class="col-lg-3 ds">
-                    <!--JUNIOR HIGH SECTION-->
-					         	<h3>Junior High School Latest Addition</h3>
 
-                      <!-- First Action -->
-                      <div class="desc">
+      <?php include '/../templates/latest_addition.php';?>
 
-                      	<div class="details">
-                      		<p><muted>Grade 7 - Module type</muted><br/>
-                      		   <a href="#">James Brown</a><br/> subscribed to your newslettedsadasdasdsr.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Action -->
-                      <div class="desc">
-
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-
-                       <!-- SENIOR HIGH SECTION -->
-						        <h3>Senior High School Latest Addition</h3>
-                                            <!-- First Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Action -->
-                      <div class="desc">
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-
-                  </div><!-- /col-lg-3 -->
               </div><! --/row -->
           </section>
       </section>

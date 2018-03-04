@@ -99,15 +99,14 @@
           				        <h4 class="modal-title" id="myModalLabel">Login</h4>
           				      </div>
           				      <div class="modal-body">
-          				         <div id="login-page">
-
-          						  <form class="form-login" action="<?php echo site_url('lr/home');?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                        <div id="login-page">
+          						  <form class="form-login" action="<?php echo site_url('lr/login');?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                           <img src = "<?php echo base_url();?>includes/lr/img/logo.png">
-                          <h2 class = 'form-login-heading'>AHS - Learning Resource Portal</h2>                       
+                          <h2 class = 'form-login-heading'>AHS - Learning Resource Portal</h2>
             							<div class="login-wrap">
-            								<input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+            								<input type="text" class="form-control" name="username" placeholder="Username" autofocus required>
             								<br>
-            								<input type="password" class="form-control" name="" placeholder="Password">
+            								<input type="password" class="form-control" name="password" placeholder="Password" required>
             								<label class="checkbox">
             									<span class="pull-right">
             										<a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
@@ -121,7 +120,7 @@
             										Create an account
             									</a>
             								</div>
-            							</div>          								
+            							</div>
           						  </form>
           						</div>
       				      </div>

@@ -4,6 +4,98 @@
 			var current_fn = '<?php echo $this->uri->segment(3);?>';
       $(document).ready(function () {
 
+				$('#last_name').keyup(function(event){
+					var input = $(this);
+					var last_name = input.val();
+					if(last_name){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");
+					}
+				});
+
+				$('#first_name').keyup(function(event){
+					var input = $(this);
+					var first_name = input.val();
+					if(first_name){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#middle_name').keyup(function(event){
+					var input = $(this);
+					var middle_name = input.val();
+					if(middle_name){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#address').keyup(function(event){
+					var input = $(this);
+					var address = input.val();
+					if(address){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#birthdate').on('input', function(){
+					var input = $(this);
+					var birthdate = input.val();
+					if(birthdate){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#gender').on('input', function(){
+					var input = $(this);
+					var gender = input.val();
+					if(gender){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#contact_no').keyup(function(event){
+					var input = $(this);
+					var contact_no = input.val();
+					if(contact_no){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#email').on('input', function(){
+					var input = $(this);
+					var re = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+					var email = re.test(input.val());
+					if(email){input.removeClass("invalid").addClass("valid");
+						$('.valid-info').show();
+						$('.invalid-info').hide();
+					}else{input.removeClass("valid").addClass("invalid");
+						$('.invalid-info').show();
+						$('.valid-info').hide();
+					}
+				});
+
+				$('#username').keyup(function(event){
+					var input = $(this);
+					var username = input.val();
+					if(username){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#password').keyup(function(event){
+					var input = $(this);
+					var password = input.val();
+					if(password){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#re-password').keyup(function(event){
+					var input = $(this);
+					var re_password = input.val();
+					if(re_password){
+						input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
+				$('#area_of_expertise').on('input', function(){
+					var input = $(this);
+					var area_of_expertise = input.val();
+					if(area_of_expertise){input.removeClass("invalid").addClass("valid");}
+					else{input.removeClass("valid").addClass("invalid");}
+				});
+
         if( current_method == 'home'){
 
           var unique_id = $.gritter.add({
@@ -22,6 +114,50 @@
           });
           return false;
         }
+
+				if( current_method == 'account'){
+
+					var unique_id = $.gritter.add({
+							// (string | mandatory) the heading of the notification
+							title: 'Success!',
+							// (string | mandatory) the text inside the notification
+							text: 'You are now logged in',
+							// (string | optional) the image to display on the left
+							image: '<?php echo base_url();?>includes/lr/img/megaphone.png',
+							// (bool | optional) if you want it to fade out on its own or just sit there
+							sticky: false,
+							// (int | optional) the time you want it to be alive for before fading out
+							time: 3000,
+							// (string | optional) the class name you want to apply to that specific message
+							class_name: 'my-sticky-class'
+					});
+					return false;
+				}
+
+				if( current_method == 'login'){
+
+					var unique_id = $.gritter.add({
+							// (string | mandatory) the heading of the notification
+							title: 'Login:',
+							// (string | mandatory) the text inside the notification
+							text: '<?php
+								if(!empty($success_msg)){
+									echo '<p>'.$success_msg.'</p>';
+								}elseif(!empty($error_msg)){
+									echo '<p>'.$error_msg.'</p>';
+								}
+							?>',
+							// (string | optional) the image to display on the left
+							image: '<?php echo base_url();?>includes/lr/img/megaphone.png',
+							// (bool | optional) if you want it to fade out on its own or just sit there
+							sticky: false,
+							// (int | optional) the time you want it to be alive for before fading out
+							time: 3000,
+							// (string | optional) the class name you want to apply to that specific message
+							class_name: 'my-sticky-class'
+					});
+					return false;
+				}
 
 				// $('.sel_topic').select2();
 
@@ -44,7 +180,7 @@
 								$('#adlrn_subject').empty();
 								$('#adgrade_lvl').append('<option>' + '</option>');
 									$.each($json,function(i,data){
-										$('#adgrade_lvl').append('<option value="'+i+'">'+data+'</option>');
+										$('#adgrade_lvl').append('<option value="'+data+'">'+data+'</option>');
 									});
 							}
 							else if(data == null){
@@ -126,7 +262,7 @@
 										$('#adlrn_subject').append('<option>' + '</option>');
 
 											$.each($json,function(i,data){
-												$('#adlrn_subject').append('<option value="'+i+'">'+data+'</option>');
+												$('#adlrn_subject').append('<option value="'+data+'">'+data+'</option>');
 											});
 									}
 									else if(data == null){
@@ -158,7 +294,7 @@
 									$('#adlrn_subject').append('<option>' + '</option>');
 
 										$.each($json,function(i,data){
-											$('#adlrn_subject').append('<option value="'+i+'">'+data+'</option>');
+											$('#adlrn_subject').append('<option value="'+data+'">'+data+'</option>');
 										});
 								}
 								else if(data == null){
@@ -184,7 +320,7 @@
 										$('#adtopic').append('<option>' + '</option>');
 
 						          $.each($json,function(i,data){
-												$('#adtopic').append('<option value="'+i+'">'+data+'</option>');
+												$('#adtopic').append('<option value="'+data+'">'+data+'</option>');
 						          });
 						      }
 						      else if(data == null){
@@ -213,7 +349,7 @@
 								$('#lrn_subject').empty();
 								$('#grade_lvl').append('<option>' + '</option>');
 									$.each($json,function(i,data){
-										$('#grade_lvl').append('<option value="'+i+'">'+data+'</option>');
+										$('#grade_lvl').append('<option value="'+data+'">'+data+'</option>');
 									});
 							}
 							else if(data == null){
@@ -295,7 +431,7 @@
 										$('#lrn_subject').append('<option>' + '</option>');
 
 											$.each($json,function(i,data){
-												$('#lrn_subject').append('<option value="'+i+'">'+data+'</option>');
+												$('#lrn_subject').append('<option value="'+data+'">'+data+'</option>');
 											});
 									}
 									else if(data == null){
@@ -322,7 +458,7 @@
 									$('#lrn_subject').append('<option>' + '</option>');
 
 										$.each($json,function(i,data){
-											$('#lrn_subject').append('<option value="'+i+'">'+data+'</option>');
+											$('#lrn_subject').append('<option value="'+data+'">'+data+'</option>');
 										});
 								}
 								else if(data == null){
@@ -349,7 +485,7 @@
 										$('#topic').append('<option>' + '</option>');
 
 						          $.each($json,function(i,data){
-												$('#topic').append('<option value="'+i+'">'+data+'</option>');
+												$('#topic').append('<option value="'+data+'">'+data+'</option>');
 						          });
 						      }
 						      else if(data == null){
@@ -363,7 +499,9 @@
 
 				$('#myModal').on('hidden.bs.modal', function () {
 		      $(this).find('input,textarea,select').val(null);
-					$(this).find('select').empty();
+		      $(this).find('.subj_type, .strand').hide();
+		      $(this).find('select#grade_lvl,select#subj_type,select#strand,select#lrn_subject').empty();
+
 		    });
 
       });
@@ -380,7 +518,7 @@
 			    contact_no: $("input#contact_no").val(),
 			    email: $("input#email").val(),
 			    username: $("input#username").val(),
-			    password: $("input#password").val(),
+			    re_password: $("input#re-password").val(),
 					area_of_expertise: $("select#area_of_expertise").val()
 			  };
 
@@ -390,7 +528,7 @@
 					subject_type: $("select#subj_type").val(),
 					strand: $("select#strand").val(),
 					subject: $('#lrn_subject option:selected').text(),
-					topic_name: $("input#topic").val()
+					topic_name: $("input#topic").val(),
 				};
 
 			  var params = {
@@ -403,7 +541,8 @@
 					params.success = function(data) {
 			      //alert("Successfully Registered! You may log in now");
 			      // console.log(data);
-			      //location.reload();
+			      // location.reload();
+						$('#registerForm')[0].reset();
 						$(this).find('input,select').val('');
 
 			       var unique_id = $.gritter.add({
@@ -443,53 +582,14 @@
 									// (string | optional) the class name you want to apply to that specific message
 									class_name: 'my-sticky-class'
 							});
+
+						 $('#add_topic_form')[0].reset();
 							return false;
 					};
 				}
 
 			  $.ajax(params);
 
-			});
-
-			$("#upload-lrnfile").on('click', function (e) {
-			  e.preventDefault();
-
-				var upload = {
-					topic: $("#adtopic option:selected").text(),
-					lr_title: $("input#adlr_title").val(),
-					description: $("textarea#addescription").val(),
-					objective: $("textarea#adobjective").val(),
-					resource_type: $("select#adlr_type").val(),
-					intended_user: $("select#adintended_user").val(),
-					language: $("input#adlanguage").val(),
-					copyright: $("select#adcopyright").val(),
-					copyright_owner: $("input#adcopyright_owner").val(),
-					upload: $("input:file").val()
-				}
-
-				$.ajax({
-					type: "POST",
-			    url: '<?=site_url()?>/LR/ajax/add',
-					data: {'upload': upload, 'add':'upload'},
-					success:	function(data) {
-
-						 var unique_id = $.gritter.add({
-									// (string | mandatory) the heading of the notification
-									title: 'Success!',
-									// (string | mandatory) the text inside the notification
-									text: 'Learning Resource Successfully Uploaded!',
-									// (string | optional) the image to display on the left
-									image: '<?php echo base_url();?>includes/lr/img/notif.png',
-									// (bool | optional) if you want it to fade out on its own or just sit there
-									sticky: false,
-									// (int | optional) the time you want it to be alive for before fading out
-									time: 2000,
-									// (string | optional) the class name you want to apply to that specific message
-									class_name: 'my-sticky-class'
-							});
-							return false;
-					}
-				});
 			});
 
 
