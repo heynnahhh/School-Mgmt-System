@@ -7,7 +7,7 @@ class Home extends CI_Controller {
     parent::__construct();
       $this->load->library('form_validation');
       $this->load->model('LR/user');
-
+			$this->load->model('LR/lr_model');
   	}
 
 	public function index()
@@ -15,32 +15,33 @@ class Home extends CI_Controller {
 		$this->load->view('LR/website/home');
 	}
 
+  public function account(){
+          $data = array();
+          if($this->session->userdata('logged_in')){
+              $data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+              $uname = $this->session->userdata('userId');
+              $user = $data['user']['status'];
+							$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+							$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 
+                if($user == 'Active'){
+                    $this->load->view('LR/profile/home', $data);
+										// echo $user;
+                }
 
-	  public function account(){
-	          $data = array();
-	          if($this->session->userdata('logged_in')){
-	              $data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-	              $uname = $this->session->userdata('userId');
-	              $user = $data['user']['status'];
+                elseif($user == 0){
+                  // $id = $data['user']['id'];
+                  // $data['requests'] = $this->member->getRequested($id);
+                  // $data['query'] = $this->books->getBooks();
+                  $this->load->view('SMS/home',$data);
+                }
+          }
 
-	                if($user == 'Active'){
-	                    $this->load->view('LR/profile/home', $data);
-	                }
+          else{
+              redirect('SMS/home');
+          }
 
-	                elseif($user == 0){
-	                  // $id = $data['user']['id'];
-	                  // $data['requests'] = $this->member->getRequested($id);
-	                  // $data['query'] = $this->books->getBooks();
-	                  $this->load->view('SMS/home',$data);
-	                }
-	          }
-
-	          else{
-	              redirect('SMS/home');
-	          }
-
-	    }
+    }
 
 	  public function login(){
 
@@ -67,7 +68,7 @@ class Home extends CI_Controller {
 	                    if($checkLogin){
 	                        $this->session->set_userdata('logged_in',TRUE);
 	                        $this->session->set_userdata('uname',$checkLogin['username']);
-	                        $this->session->set_userdata('userId',$checkLogin['lusa_lus_id']);
+	                        $this->session->set_userdata('userId',$checkLogin['lusa_id']);
 	                        redirect('lr/account');
 	                    }else{
 	                        $data['error_msg'] = 'Wrong email or password, please try again.';
@@ -89,8 +90,8 @@ class Home extends CI_Controller {
 
 	public function juniorhs()
 	{
-		echo md5('maganda');
-		// $this->load->view('LR/website/juniorhs');
+		// echo md5('maganda');
+		$this->load->view('LR/website/juniorhs');
 	}
 
 	public function seniorhs()
@@ -147,48 +148,181 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/home', $data);
 	}
 
 	public function p_juniorhs()
 	{
-		$this->sms_session->checkSession('lr/home');
-		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('LR/profile/juniorhs', $data);
+			$this->sms_session->checkSession('lr/home');
+			$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+			$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+			$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+			$data['jhs'] = $this->lr_model->get_jhs_lvl();
+
+			$this->load->view('LR/profile/juniorhs', $data);
 	}
 
 	public function p_seniorhs()
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs'] = $this->lr_model->get_shs_lvl();
+
 		$this->load->view('LR/profile/seniorhs', $data);
 	}
 
-	public function p_juniorhs_subjects()
+	public function p_grade_7()
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('LR/profile/juniorhs_subjects', $data);
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['jhs'] = $this->lr_model->get_jhs_subjects();
+		$data['jhs_lvl'] = $this->lr_model->get_jhs_lvl();
+
+		$this->load->view('LR/profile/grade_7', $data);
 	}
 
-	public function p_seniorhs_subjects()
+	public function p_grade_8()
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('LR/profile/seniorhs_subjects', $data);
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['jhs'] = $this->lr_model->get_jhs_subjects();
+		$data['jhs_lvl'] = $this->lr_model->get_jhs_lvl();
+
+		$this->load->view('LR/profile/grade_8', $data);
 	}
 
-	public function p_strands()
+	public function p_grade_9()
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
-		$this->load->view('LR/profile/strands',$data);
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['jhs'] = $this->lr_model->get_jhs_subjects();
+		$data['jhs_lvl'] = $this->lr_model->get_jhs_lvl();
+
+		$this->load->view('LR/profile/grade_9', $data);
+	}
+
+	public function p_grade_10()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['jhs'] = $this->lr_model->get_jhs_subjects();
+		$data['jhs_lvl'] = $this->lr_model->get_jhs_lvl();
+
+		$this->load->view('LR/profile/grade_10', $data);
+	}
+
+	public function p_grade_11()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+
+		$this->load->view('LR/profile/grade_11', $data);
+	}
+
+	public function p_grade_12()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+
+		$this->load->view('LR/profile/grade_12', $data);
+	}
+
+	public function p_core_subjects_g11()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+		$data['shs_cs_subj_g11'] = $this->lr_model->get_shs_cs_subj_g11();
+
+		$this->load->view('LR/profile/core_subjects_g11', $data);
+	}
+
+	public function p_core_subjects_g12()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+		$data['shs_cs_subj_g12'] = $this->lr_model->get_shs_cs_subj_g12();
+
+		$this->load->view('LR/profile/core_subjects_g12', $data);
+	}
+
+	public function p_applied_subjects_g11()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+		$data['shs_as_subj_g11'] = $this->lr_model->get_shs_as_subj_g11();
+
+		$this->load->view('LR/profile/applied_subjects_g11', $data);
+	}
+
+	public function p_applied_subjects_g12()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+		$data['shs_as_subj_g12'] = $this->lr_model->get_shs_as_subj_g12();
+
+		$this->load->view('LR/profile/applied_subjects_g12', $data);
+	}
+
+	public function p_specialized_subjects_g11()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+		$data['shs_ss_strand'] = $this->lr_model->get_shs_ss_strand();
+
+		$this->load->view('LR/profile/specialized_subjects_g11', $data);
+	}
+
+	public function p_specialized_subjects_g12()
+	{
+		$this->sms_session->checkSession('lr/home');
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
+		$data['shs_lvl'] = $this->lr_model->get_shs_lvl();
+		$data['shs_ss_strand'] = $this->lr_model->get_shs_ss_strand();
+
+		$this->load->view('LR/profile/specialized_subjects_g12', $data);
 	}
 
 	public function p_juniorhs_view_file()
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/juniorhs_view_files',$data);
 	}
 
@@ -196,6 +330,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/seniorhs_view_files',$data);
 	}
 
@@ -203,6 +339,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/jhs_view_file',$data);
 	}
 
@@ -210,6 +348,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/shs_view_file',$data);
 	}
 
@@ -217,6 +357,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/activity_log', $data);
 	}
 
@@ -224,6 +366,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/log_history', $data);
 	}
 
@@ -231,6 +375,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/upload', $data);
 	}
 
@@ -238,6 +384,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/change_pass', $data);
 	}
 
@@ -245,6 +393,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/edit_profile',$data);
 	}
 
@@ -252,6 +402,8 @@ class Home extends CI_Controller {
 	{
 		$this->sms_session->checkSession('lr/home');
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$data['user_info'] = $this->lr_model->get_users_profile($this->session->userdata('userId'));
+		$data['user_pic'] = $this->lr_model->get_users_profile_pic($this->session->userdata('userId'));
 		$this->load->view('LR/profile/search',$data);
 	}
 

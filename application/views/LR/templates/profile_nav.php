@@ -4,10 +4,11 @@
              <!-- sidebar menu start-->
              <ul class="sidebar-menu" id="nav-accordion">
 
-                 <p class="centered"><img src="<?php echo base_url();?>includes/lr/img/profile-pics/aljohn.jpg" class="img-circle" width="80" height="80"></p>
-                 <h5 class="centered"><?php echo $user['email']?>
+                 <p class="centered"><img src="<?php echo base_url();?>asd/profile_pic/<?php echo $user_pic[0]->image_name;?>" class="img-circle" width="80" height="80"></p>
+                 <h5 class="centered"><?php echo $user_info[0]->first_name?> <?php echo $user_info[0]->last_name?>
                   </small></h5>
-                 <div class="centered"><span class="label label-danger">Admin</span></div><br />
+                 <div class="centered"><span class="label label-danger"><?php echo $user['account_type']?>
+                 </span></div><br />
                  <li class="sub-menu">
                      <a href="<?php echo site_url();?>/lr/profile/activity_log">
                          <i class="fa fa-desktop"></i>
