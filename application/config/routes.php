@@ -65,12 +65,24 @@ $route['lr/register'] = 'LR/home/register';
 $route['lr/search'] = 'LR/home/search';
 
 
+$route['lr/profile/juniorhs/Grade%207'] = 'LR/home/p_grade_7';
+$route['lr/profile/juniorhs/Grade%208'] = 'LR/home/p_grade_8';
+$route['lr/profile/juniorhs/Grade%209'] = 'LR/home/p_grade_9';
+$route['lr/profile/juniorhs/Grade%2010'] = 'LR/home/p_grade_10';
+$route['lr/profile/seniorhs/Grade%2011'] = 'LR/home/p_grade_11';
+$route['lr/profile/seniorhs/Grade%2012'] = 'LR/home/p_grade_12';
+$route['lr/profile/seniorhs/Grade%2011/core_subjects'] = 'LR/home/p_core_subjects_g11';
+$route['lr/profile/seniorhs/Grade%2011/applied_subjects'] = 'LR/home/p_applied_subjects_g11';
+$route['lr/profile/seniorhs/Grade%2011/specialized_subjects'] = 'LR/home/p_specialized_subjects_g11';
+$route['lr/profile/seniorhs/Grade%2012/core_subjects'] = 'LR/home/p_core_subjects_g12';
+$route['lr/profile/seniorhs/Grade%2012/applied_subjects'] = 'LR/home/p_applied_subjects_g12';
+$route['lr/profile/seniorhs/Grade%2012/specialized_subjects'] = 'LR/home/p_specialized_subjects_g12';
+
+
 $route['lr/profile'] = 'LR/home/p_home';
 $route['lr/profile/juniorhs'] = 'LR/home/p_juniorhs';
 $route['lr/profile/seniorhs'] = 'LR/home/p_seniorhs';
-$route['lr/profile/juniorhs_subjects'] = 'LR/home/p_juniorhs_subjects';
 $route['lr/profile/seniorhs_subjects'] = 'LR/home/p_seniorhs_subjects';
-$route['lr/profile/strands'] = 'LR/home/p_strands';
 $route['lr/profile/juniorhs_view_files'] = 'LR/home/p_juniorhs_view_file';
 $route['lr/profile/seniorhs_view_files'] = 'LR/home/p_seniorhs_view_file';
 $route['lr/profile/jhs_view_file'] = 'LR/home/p_shs_view_file';

@@ -19,7 +19,7 @@ class User extends CI_Model{
 		}
 
         if(array_key_exists("id",$params)){
-            $this->db->where('lusa_lus_id',$params['id']);
+            $this->db->where('lusa_id',$params['id']);
 			$query = $this->db->get();
 			$result = $query->row_array();
         }

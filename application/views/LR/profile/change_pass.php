@@ -30,30 +30,38 @@
                                      <div class="col-lg-12">
                                         <div class="row">
 
-                                          <form>
+                                          <form action="<?php echo site_url();?>/LR/ajax/edit_password" method="POST" enctype="multipart/form-data">
+                                            <?php
+                                              if(!empty($success_msg)){
+                                                echo '<p>'.$success_msg.'</p>';
+                                              }elseif(!empty($error_msg)){
+                                                echo '<p>'.$error_msg.'</p>';
+                                              }
+                                            ?>
                                             <div class="col-sm-7">
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>Username</label>
-                                                  <input type="text" placeholder="Username" class="form-control" readonly>
+                                                  <input type="text" placeholder="Username" class="form-control" readonly value="<?php echo $user['username'];?>">
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Email Address</label>
-                                                  <input type="text" placeholder="email@email.com" class="form-control" readonly>
+                                                  <input type="text" placeholder="email@email.com" class="form-control" readonly value="<?php echo $user['email'];?>">
                                                 </div>
                                               </div>
 
                                               <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                   <label>New Password</label>
-                                                  <input type="password" class="form-control">
+                                                  <input type="hidden" class="form-control" name="lusa_id" value="<?php echo $user['lusa_id'];?>">
+                                                  <input type="password" class="form-control" name = "change_password">
                                                 </div>
                                                 <div class="col-sm-6 form-group">
                                                   <label>Repeat New Password</label>
-                                                  <input type="text" class="form-control">
+                                                  <input type="password" class="form-control" name="change_re_password">
                                                 </div>
                                               </div>
-                                            <button type="button" class="btn btn-info">Change Password</button>
+                                            <button type="password" class="btn btn-info">Change Password</button>
                                             </div>
                                           </form>
 
@@ -72,7 +80,7 @@
                   </div>
 
       <?php include '/../templates/latest_addition.php';?>
-      
+
               </div><! --/row -->
           </section>
       </section>

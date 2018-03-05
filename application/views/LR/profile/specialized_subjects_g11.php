@@ -7,31 +7,31 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
 
-	     <!--main content start-->
-      <section id="main-content">
+       <section id="main-content">
           <section class="wrapper">
 
-              <div class="row">
+                <div class="row">
                   <div class="col-lg-9 main-chart">
-        					 <h3><i class="fa fa-angle-right"></i> Senior High School Resources</h3>
-        						<hr></i>
-        						<div class="row mt">
-        							<div class="col-md-12">
-        								<div class="white-panel pn">
-        									<div class="panel-heading">
-        										<div class="pull-left"><h3></i> Senior High School Levels</h3></div>
-        										<br>
-        									</div>
-        									<div class="custom-check goleft mt">
+                   <h3><i class="fa fa-angle-right"></i> Senior High School Resources</h3>
+                    <hr></i>
+                    <div class="row mt">
+                      <div class="col-md-12">
+                        <div class="white-panel pn">
+                          <div class="panel-heading">
+                            <div class="pull-left"><h3></i><h3> Grade 11 <i class="fa fa-angle-right"></i> Specialized Subjects by Strands</h3></div>
+                            <br>
+                          </div>
+
+                          <div class="custom-check goleft mt">
         										 <table id="todo" class="table table-hover custom-check">
         										  <tbody>
-                                <?php foreach ($shs as $senior) {?>
+                                <?php foreach ($shs_ss_strand as $shs_ss_strand) {?>
         											<tr>
         												<td>
                                     <?php echo '<a href="';?>
-                                      <?php echo base_url('index.php/lr/profile/seniorhs/');?><?php echo $senior->grade_lvl;?>
+
                                     <?php echo '">';?>
-                                      <?php echo $senior->grade_lvl;?>
+                                      <?php echo $shs_ss_strand->strand;?>
                                     <?php echo '</a>';?>
                                     <?php echo '<div class="pull-right hidden-phone">';?>
                                       <?php echo '<span class="badge bg-important">35</span>';?>
@@ -42,13 +42,17 @@
         											</tr>
         										  </tbody>
         									  </table>
-        									</div><!-- /table-responsive -->
-        								</div><!--/ White-panel -->
-        							</div><! --/col-md-12 -->
-        						</div><! -- row -->
+
+                          </div><!-- /table-responsive -->
+                        </div><!--/ White-panel -->
+                      </div><! --/col-md-12 -->
+                    </div><! -- row -->
+                  </div>
+
+       <?php include '/../templates/latest_addition.php';?>
+
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
-      <?php include '/../templates/latest_addition.php';?>
 
               </div><! --/row -->
           </section>

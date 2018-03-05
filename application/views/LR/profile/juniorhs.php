@@ -25,35 +25,18 @@
         									<div class="custom-check goleft mt">
         										 <table id="todo" class="table table-hover custom-check">
         										  <tbody>
+                                <?php foreach ($jhs as $junior) {?>
         											<tr>
         												<td>
-        													<a href="index.html#">Grade 7</a>
-        													<div class="pull-right hidden-phone">
-        														<span class="badge bg-important">35</span>
-        													</div>
-        												</td>
-        											</tr>
-        											<tr>
-        												<td>
-        													<a href="index.html#">Grade 8</a>
-        													<div class="pull-right hidden-phone">
-        														<span class="badge bg-important">35</span>
-        													</div>
-        												</td>
-        											</tr>
-        											<tr>
-        												<td>
-        													<a href="index.html#">Grade 9</a>
-        													<div class="pull-right hidden-phone">
-        														<span class="badge bg-important">35</span>
-        													</div>
-        												</td>
-        											</tr>
-        											<tr>
-        												<td>
-        													<a href="index.html#">Grade 10</a>
-        													<div class="pull-right hidden-phone">
-        														<span class="badge bg-important">35</span>
+                                    <?php echo '<a href="';?>
+                                      <?php echo base_url('index.php/lr/profile/juniorhs/');?><?php echo $junior->grade_lvl;?>
+                                    <?php echo '">';?>
+                                      <?php echo $junior->grade_lvl;?>
+                                    <?php echo '</a>';?>
+                                    <?php echo '<div class="pull-right hidden-phone">';?>
+                                      <?php echo '<span class="badge bg-important">35</span>';?>
+                                    <?php echo '</div>';?>
+                                <?php }?>
         													</div>
         												</td>
         											</tr>
@@ -66,7 +49,7 @@
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
       <?php include '/../templates/latest_addition.php';?>
-      
+
               </div><! --/row -->
           </section>
       </section>
