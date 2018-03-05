@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 
 		$this->load->model('SMS/user');
 		$this->load->library('form_validation');
-		$this->sms_session->checkSession();
+		$this->sms_session->checkSession(base_url());
 
 	}
 
@@ -40,6 +40,12 @@ class Home extends CI_Controller {
 	{
 		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
 		$this->load->view('LRMDS/users_account', $data);
+	}
+
+	public function users_privilege()
+	{
+		$data['user'] = $this->user->getRows(array('id'=>$this->session->userdata('userId')));
+		$this->load->view('LRMDS/users_privilege', $data);
 	}
 
 }

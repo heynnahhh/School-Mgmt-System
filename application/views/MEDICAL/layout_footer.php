@@ -101,6 +101,8 @@
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 <!-- date-range-picker -->
 <script src="<?php echo base_url();?>includes/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- PACE -->
+<script src="<?php echo base_url();?>includes/plugins/pace/pace.min.js"></script>
 
 <?php include 'ajax.php'; ?>
 

@@ -1,6 +1,7 @@
 <script>
 var current_method = '<?php echo $this->uri->segment(3);?>';
 	$(document).ready(function(){
+		$(document).ajaxStart(function() { Pace.restart(); });
 
 		$('.strand-class').hide();
 
@@ -297,7 +298,7 @@ var current_method = '<?php echo $this->uri->segment(3);?>';
 
     } );
 
-	});
+});
 
 
   $(".submit").on('click', function (e) {

@@ -11,7 +11,19 @@ class Inventory_model extends CI_Model{
                             tbl_inv_items.item_name,
                             tbl_inv_items.item_category');
           $this->db->from('tbl_inv_stocks');
-          $this->db->join('tbl_inv_items' , 'tbl_inv_items.item_code = tbl_inv_stocks.ist_item_code');
+          $this->db->join('tbl_inv_items', 'tbl_inv_items.item_code = tbl_inv_stocks.ist_item_code');
+          $query = $this->db->get();
+          return $query->result();
+    }
+
+    public function get_Stocks_dept($m_data){
+          $this->db->select('tbl_inv_stocks_per_department.department,
+                            tbl_inv_items.item_name,
+                            tbl_inv_items.item_category,
+                            tbl_inv_stocks_per_department.distributed_qty');
+          $this->db->where('department', $m_data);
+          $this->db->from('tbl_inv_stocks_per_department');
+          $this->db->join('tbl_inv_items', 'tbl_inv_items.item_code = tbl_inv_stocks_per_department.item_code');
           $query = $this->db->get();
           return $query->result();
     }
@@ -89,16 +101,30 @@ class Inventory_model extends CI_Model{
       return $query->result();
     }
 
-    public function get_stock_details($m_data){
-      $this->db->select('tbl_inv_items.item_name,
-                        tbl_inv_items.item_category,
-                        tbl_inv_stocks.quantity');
-      $this->db->from('tbl_inv_stocks');
-      $this->db->join('tbl_inv_items' , 'tbl_inv_items.item_code = tbl_inv_stocks.ist_item_code');
-      $this->db->where('stock_no', $m_data);
-      $query = $this->db->get();
+    public function get_existing_data($m_data){
+      $this->db->select('stock_no, ist_item_code, quantity');
+      $this->db->where('ist_item_code', $m_data);
+      $query = $this->db->get('tbl_inv_stocks');
       return $query->result();
     }
+
+    public function get_item_code($m_data){
+      $this->db->select('item_code');
+      $this->db->where('item_name', $m_data);
+      $query = $this->db->get('tbl_inv_items');
+      return $query->result();
+    }
+
+    // public function get_stock_details($m_data){
+    //   $this->db->select('tbl_inv_items.item_name,
+    //                     tbl_inv_items.item_category,
+    //                     tbl_inv_stocks.quantity');
+    //   $this->db->from('tbl_inv_stocks');
+    //   $this->db->join('tbl_inv_items' , 'tbl_inv_items.item_code = tbl_inv_stocks.ist_item_code');
+    //   $this->db->where('stock_no', $m_data);
+    //   $query = $this->db->get();
+    //   return $query->result();
+    // }
 
     public function insert_product($m_data){
       $this->db->insert('tbl_inv_items', $m_data);
@@ -113,7 +139,17 @@ class Inventory_model extends CI_Model{
     }
 
     public function insert_transacts($m_data){
-      $this->db->insert('tbl_inv_transactions', $m_data);
+      if(isset($m_data[1])){
+        $this->db->insert('tbl_inv_transactions', $m_data[0]);
+        $this->db->insert('tbl_inv_stocks', $m_data[1]);
+      }else{
+        $this->db->insert('tbl_inv_transactions', $m_data);
+      }
+
+    }
+
+    public function insert_distrib($m_data){
+      $this->db->insert('tbl_inv_stocks_per_department', $m_data);
     }
 
     public function update_transact($m_data){
@@ -124,6 +160,18 @@ class Inventory_model extends CI_Model{
     public function update_item($m_data){
       $this->db->where('item_code', $m_data['item_code']);
       $this->db->update('tbl_inv_items', $m_data);
+    }
+
+    public function update_stock($m_data){
+      $this->db->where('stock_no', $m_data['stock_no']);
+      $this->db->update('tbl_inv_stocks', $m_data);
+    }
+
+    // DELETE *******
+
+    public function delete($table,$m_data){
+      $this->db->where($m_data);
+      $this->db->delete($table);
     }
 
 }

@@ -70,11 +70,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Terrobias</td>
-                      <td>Marc Dominic</td>
-                      <td>I</td>
-                    </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -85,6 +81,67 @@
         </div>
       </div>
       <!-- col -->
+      <div class="col-md-12">
+        <div class="box">
+          <div class="box-body">
+            <div class="form-group">
+                <label> RECORDS:</label>&nbsp;&nbsp;
+                <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#StudentConsultation">
+                <i class="fa fa-plus-square"></i> Add Consultation</a>
+            </div>
+            <hr>
+            <table id="denstud_records" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Date:</th>
+                  <th>Complaint / Ailment:</th>
+                  <th>Treatment / Medicine:</th>
+                  <th>Remarks:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/18/17</td>
+                  <td>Heart burn</td>
+                  <td>Biogesic</td>
+                  <td>N.A</td>
+                </tr>
+                <tr>
+                  <td>1/18/2018</td>
+                  <td>Fungi</td>
+                  <td>Lotion</td>
+                  <td>N.A</td>
+                </tr>
+                <tr>
+                  <td>1/18/2018</td>
+                  <td>Fungi</td>
+                  <td>Lotion</td>
+                  <td>N.A</td>
+                </tr>
+                <tr>
+                  <td>1/18/2018</td>
+                  <td>Fungi</td>
+                  <td>Lotion</td>
+                  <td>N.A</td>
+                </tr>
+                <tr>
+                  <td>1/18/2018</td>
+                  <td>Fungi</td>
+                  <td>Lotion</td>
+                  <td>N.A</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- col -->
+    </div>
+    <!-- row -->
+  </div>
+
     </div>
     <!-- row -->
   </div>

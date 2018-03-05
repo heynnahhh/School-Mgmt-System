@@ -9,3 +9,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.css">
 
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">
+<!-- Pace style -->
+<link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/pace/pace.min.css">

@@ -98,6 +98,8 @@
 <script src="<?php echo base_url();?>includes/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="<?php echo base_url();?>includes/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.js"></script>
+<!-- PACE -->
+<script src="<?php echo base_url();?>includes/plugins/pace/pace.min.js"></script>
 
 <?php include 'ajax.php';?>
 

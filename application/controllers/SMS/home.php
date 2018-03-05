@@ -24,7 +24,7 @@ class Home extends CI_Controller {
               $user = $data['user']['status'];
 
                 if($user == 1){
-                    $this->load->view('SMS/home', $data);
+                    redirect('LRMDS/home/topics');
                 }
 
                 elseif($user == 0){

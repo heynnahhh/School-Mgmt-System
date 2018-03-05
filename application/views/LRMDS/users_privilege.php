@@ -6,13 +6,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Users Account
+        Users Privilege
       </h1>
       <hr>
       <ol class="breadcrumb">
-        <li><a><i class="fa fa-dashboard"></i> Learning Resource</a></li>
+        <li><a><i class="fa fa-dashboard"></i>Learning Resource</a></li>
         <li><a>Configuration</a></li>
-        <li><a>Users Account</a></li>
+        <li><a>Users Privilege</a></li>
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -20,7 +20,7 @@
   <!-- Main Content -->
     <section class="content">
       <div class="row">
-        <div class="col-xs-5 edit_form" id="form" style="display:none;">
+        <!-- <div class="col-xs-5 edit_form" id="form" style="display:none;">
           <div class="box box-primary">
             <div class="box-header bg-blue">
               <h4 class="box-title"><i class="fa fa-edit"></i> Edit</h4>
@@ -70,17 +70,16 @@
             </div>
           </form>
           </div>
-        </div>
+        </div> -->
         <div class="col-xs-12" id="table">
           <div class="box box-solid">
             <div class="box-body table-responsive">
-              <table id="users_account_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
+              <table id="users_privilege_tbl" class="table table-bordered table-hover" cellspacing="0" width="100%">
               <thead>
                   <tr>
                       <th>Username</th>
                       <th>Email</th>
-                      <th>Logged-in</th>
-                      <th>Logged-out</th>
+                      <th>Privilege</th>
                       <th>Actions</th>
                   </tr>
               </thead>
@@ -89,8 +88,7 @@
                   <tr>
                       <th>Username</th>
                       <th>Email</th>
-                      <th>Logged-in</th>
-                      <th>Logged-out</th>
+                      <th>Privilege</th>
                       <th>Actions</th>
                   </tr>
               </tfoot>
@@ -100,7 +98,7 @@
         </div>
       </div>
 
-    <div class="modal fade" id="myModal" role="dialog">
+    <!-- <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header gray">
@@ -155,7 +153,7 @@
           </form>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    </div><!-- /.modal --> -->
 
 
     </section>

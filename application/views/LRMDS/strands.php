@@ -21,25 +21,6 @@
   <!-- Main Content -->
     <section class="content">
       <div class="row">
-        <div class="col-xs-12">
-          <div class="box box-solid full_details" style="display:none;">
-            <div class="box-header">
-              <h4 class="box-title"> Full Details:</h4>
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-default btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body table-responsive">
-              <div class="col-xs-12">
-                <div class="row">
-                  <div class="col-xs-3 left"></div>
-                  <div class="col-xs-3 middle"></div>
-                  <div class="col-xs-3 right"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="col-xs-5 edit_form" id="form" style="display:none;">
           <div class="box box-primary">
             <div class="box-header bg-blue">
@@ -52,6 +33,7 @@
                   <label for="strand_name" class="col-sm-2 control-label">Strand Name</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control input-sm" name="strand_name" id="ed_strand_name" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                    <input type="text" class="form-control input-sm" readonly style="display:none;" name="strand_id" id="ed_strand_id">
                   </div>
                 </div>
               </div><hr>
@@ -112,6 +94,20 @@
               <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
             </div>
           </form>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="delModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <h4>Are you sure you want to delete?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger yes" id="yes">Yes</button>
+            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+          </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
