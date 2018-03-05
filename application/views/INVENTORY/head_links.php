@@ -16,3 +16,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <!-- Pace style -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/pace/pace.min.css">
+<link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.css" rel="stylesheet" />

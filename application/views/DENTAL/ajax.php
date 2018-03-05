@@ -1,6 +1,7 @@
 <script>
 
 $(document).ready(function(){
+  $(document).ajaxStart(function() { Pace.restart(); });
   var emp_infoUrl = '<?=site_url()?>/DENTAL/ajax/view_employee_info';
   var stud_infoUrl = '<?=site_url()?>/DENTAL/ajax/view_student_info';
   var current_method = '<?php echo $this->uri->segment(3);?>';
@@ -30,6 +31,9 @@ $(document).ready(function(){
       $('#emp_list').DataTable(tableParams);
 
     }
+
+        $('#denstud_records').DataTable();
+        $('#denemp_records').DataTable();
 });
 
 $('#grade_lvl').on('change', function(){

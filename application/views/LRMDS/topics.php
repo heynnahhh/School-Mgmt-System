@@ -10,8 +10,8 @@
       </h1>
       <hr>
       <ol class="breadcrumb">
-        <li>Learning Resource</a></li>
-        <li><a><i class="fa fa-dashboard"></i>Topics</a></li>
+        <li><i class="fa fa-dashboard"></i> Learning Resource</a></li>
+        <li><a>Topics</a></li>
       </ol>
     </section>
   <!-- /.content-wrapper -->
@@ -47,9 +47,67 @@
             <div class="box-body">
               <div class="row">
                 <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label">Topic Name</label>
+                  <label for="receipt_no" class="col-sm-3 control-label">Topic ID</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control input-sm" readonly name="receipt_no" id="ed_receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="receipt_no" class="col-sm-3 control-label">Topic Name</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control input-sm" name="receipt_no" id="ed_receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="itr_item_code" class="col-sm-3 control-label">Education Type</label>
+                  <div class="col-sm-8">
+                    <select class="form-control item_code" name="itr_item_code" id="ed_item_code" style="width: 100%;">
+                      <option selected="selected">Select Item:</option>
+                    </select>
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="itr_item_code" class="col-sm-3 control-label">Grade Level</label>
+                  <div class="col-sm-8">
+                    <select class="form-control item_code" name="itr_item_code" id="ed_item_code" style="width: 100%;">
+                      <option selected="selected">Select Item:</option>
+                    </select>
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="itr_item_code" class="col-sm-3 control-label">Subject Type</label>
+                  <div class="col-sm-8">
+                    <select class="form-control item_code" name="itr_item_code" id="ed_item_code" style="width: 100%;">
+                      <option selected="selected">Select Item:</option>
+                    </select>
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="itr_item_code" class="col-sm-3 control-label">Strand</label>
+                  <div class="col-sm-8">
+                    <select class="form-control item_code" name="itr_item_code" id="ed_item_code" style="width: 100%;">
+                      <option selected="selected">Select Item:</option>
+                    </select>
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="itr_item_code" class="col-sm-3 control-label">Subject</label>
+                  <div class="col-sm-8">
+                    <select class="form-control item_code" name="itr_item_code" id="ed_item_code" style="width: 100%;">
+                      <option selected="selected">Select Item:</option>
+                    </select>
                   </div>
                 </div>
               </div><hr>
@@ -81,6 +139,20 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="delModal" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h4>Are you sure you want to delete?</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-danger yes" id="yes">Yes</button>
+              <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
     </section>
   </div>

@@ -7,41 +7,102 @@ var current_method = '<?php echo $this->uri->segment(3); ?>';
 $(document).ready(function() {
   $(document).ajaxStart(function() { Pace.restart(); });
 
-function hide_div(){
-  if($('edit_form').hasAttribute('style')){
+  function hide_div(){
+    if($('edit_form').hasAttribute('style')){
 
+    }
   }
-}
 
   var tableParams = {
         "paging": true,
         "autoWidth": false,
-        "tableTools": {
-           "aButtons": [ "copy", "print", {
-                 "sExtends": "collection",
-                   "sButtonText": "Save",
-                    "aButtons": [ "csv", "xls", "pdf" ]
-                  }
-                ]
-              }
-
+        "dom": 'Bfrtip'
   };
 
   if (current_method == 'inventory_items'){
     tableParams.ajax = itemsUrl;
-    tableParams.columnDefs = [{"width": "100px", "targets": 0},{"width": "500px", "targets": 1},{"width": "300px", "targets": 2},
+    tableParams.columnDefs = [{"width": "100px", "targets": 0},{"width": "450px", "targets": 1},{"width": "300px", "targets": 2},
       {"width": "40px", "targets": 3}];
+    tableParams.buttons = [{
+      "extend": 'print',
+      "title": 'Item Lists',
+      "text": 'Print',
+      "autoPrint": false,
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }, {
+      "extend": 'pdf',
+      "title": 'Item Lists',
+      "filename": 'Items',
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }, {
+      "extend": 'excel',
+      "title": 'Item Lists',
+      "filename": 'Items',
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }];
     $('#items_tbl').DataTable(tableParams);
   }
   else if(current_method == 'transactions'){
     tableParams.ajax = transactsUrl;
     tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
+    tableParams.buttons = [{
+      "extend": 'print',
+      "title": 'Transaction Records',
+      "text": 'Print',
+      "autoPrint": false,
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }, {
+      "extend": 'pdf',
+      "title": 'Transaction Records',
+      "filename": 'Transaction-Records',
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }, {
+      "extend": 'excel',
+      "title": 'Transaction Records',
+      "filename": 'Transaction-Records',
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }];
     $('#transacts_tbl').DataTable(tableParams);
 
   }
   else if(current_method == 'stock_register'){
     tableParams.ajax = stocksUrl;
     tableParams.columnDefs = [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}];
+    tableParams.buttons = [{
+      "extend": 'print',
+      "title": 'Stocks List',
+      "text": 'Print',
+      "autoPrint": false,
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }, {
+      "extend": 'pdf',
+      "title": 'Stocks Lists',
+      "filename": 'Stocks',
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }, {
+      "extend": 'excel',
+      "title": 'Stocks Lists',
+      "filename": 'Stocks',
+      "exportOptions": {
+        "columns": [ 0,1,2,3,4 ]
+      }
+    }];
     $('#stock_tbl').DataTable(tableParams);
   }
 
@@ -50,11 +111,12 @@ function hide_div(){
     });
 
     $('#myModal').on('hidden.bs.modal', function () {
-      $(this).find('input,textarea,select').val('');
+      $(this).find('input,textarea,select').val(null);
     });
 
     $('.sel_category').select2();
 
+// VIEW DETAILS *****************************
 
     $('#transacts_tbl tbody').on( 'click','.view', function () {
       var data = $('#transacts_tbl').DataTable().row( $(this).parents('tr') ).data();
@@ -142,6 +204,8 @@ function hide_div(){
 
     } );
 
+// EDIT *****************************
+
     $('#transacts_tbl tbody').on( 'click', '.edit', function () {
         var data = $('#transacts_tbl').DataTable().row( $(this).parents('tr') ).data();
         $('#table').removeClass('col-xs-12');
@@ -202,34 +266,95 @@ function hide_div(){
 
     } );
 
-    $('#stock_tbl tbody').on( 'click', '.edit', function () {
-      var data = $('#stock_tbl').DataTable().row( $(this).parents('tr') ).data();
-      alert(data[0]);
-          $('#table').removeClass('col-xs-12');
-          $('#table').addClass('col-xs-7');
-          $('#form').show();
+    // $('#stock_tbl tbody').on( 'click', '.edit', function () {
+    //   var data = $('#stock_tbl').DataTable().row( $(this).parents('tr') ).data();
+    //   // alert(data[0]);
+    //       $('#table').removeClass('col-xs-12');
+    //       $('#table').addClass('col-xs-7');
+    //       $('#form').show();
+    //
+    //       $.ajax({
+    //         type: "POST",
+    //         data: {'stock_no': data[0]},
+    //         url: '<?=site_url()?>/INVENTORY/ajax/get_stock_details',
+    //         dataType: 'json',
+    //         success: function(data){
+    //             if(data){
+    //               var info = data.data[0];
+    //
+    //               $('#item_name').val(info.item_name);
+    //               $('#category').val(info.item_category);
+    //               $('#quantity').val(info.quantity);
+    //
+    //             }
+    //         }
+    //       });
+    //
+    // } );
 
-          $.ajax({
-            type: "POST",
-            data: {'stock_no': data[0]},
-            url: '<?=site_url()?>/INVENTORY/ajax/get_stock_details',
-            dataType: 'json',
-            success: function(data){
-                if(data){
-                  var info = data.data[0];
 
-                  $('#item_name').val(info.item_name);
-                  $('#category').val(info.item_category);
-                  $('#quantity').val(info.quantity);
+    // DELETE *********************************
 
-                }
-            }
-          });
 
+    $('#transacts_tbl tbody').on( 'click', '.delete', function () {
+      var data = $('#transacts_tbl').DataTable().row( $(this).parents('tr') ).data();
+				$("#delModal").modal();
+				onClickDel(data);
     } );
 
-} );
+    $('#items_tbl tbody').on( 'click', '.delete', function () {
+      var data = $('#items_tbl').DataTable().row( $(this).parents('tr') ).data();
+				$("#delModal").modal();
+				onClickDel(data);
+    } );
 
+    $('#stock_tbl tbody').on( 'click', '.delete', function () {
+      var data = $('#stock_tbl').DataTable().row( $(this).parents('tr') ).data();
+			$("#delModal").modal();
+			onClickDel(data);
+    } );
+
+		function onClickDel(data){
+
+			$('#yes').on('click', function(e){
+        e.preventDefault();
+				var params = {
+					type: "POST",
+					url: '<?=site_url()?>/INVENTORY/ajax/delete',
+					success: function(data){
+						$("#delModal").modal('hide');
+						$('#transacts_tbl').DataTable().ajax.reload();
+						$('#items_tbl').DataTable().ajax.reload();
+						$('#stock_tbl').DataTable().ajax.reload();
+				  },
+					error: function(data){
+						$("#delModal").modal('hide');
+						alert('DELETE: Restricted!');
+            $('#items_tbl').DataTable().ajax.reload();
+            var data = null;
+					}
+				}
+
+				if(current_method == 'transactions'){
+					params.data = {'receipt_no': data[0], 'delete':'transactions'};
+				}
+				if(current_method == 'inventory_items'){
+					params.data = {'item_code': data[0], 'delete':'inventory_items'};
+				}
+				if(current_method == 'stock_register'){
+					params.data = {'stock_no': data[0], 'delete':'stock_register'};
+				}
+
+				$.ajax(params);
+
+			});
+		}
+
+
+
+});
+
+//SELECT TRIGGER *******************************
 
 $('#item_code').on('change', function(){
 
@@ -302,6 +427,9 @@ $('#quantity').on('keyup', function(){
   $('#total_cost').val(total_cost);
 });
 
+
+// SUBMIT/UPDATE BUTTON ***************
+
 $(".submit").on('click', function (e) {
   e.preventDefault();
   var category = $("input#category").val();
@@ -332,7 +460,10 @@ $(".submit").on('click', function (e) {
       $("#myModal").modal('hide');
       alert("successfully saved!");
       // console.log(data);
-      location.reload();
+      // location.reload();
+      $('#transacts_tbl').DataTable().ajax.reload();
+      $('#items_tbl').DataTable().ajax.reload();
+      $('#stock_tbl').DataTable().ajax.reload();
     }
   };
 
@@ -340,7 +471,7 @@ $(".submit").on('click', function (e) {
     params.data = {'category': category, 'items':items, 'add':'inventory_items'};
   }
 
-  else if(current_method == 'transactions'){
+  if(current_method == 'transactions'){
     params.data = {'transacts':transacts, 'add':'transactions'};
   }
 
@@ -402,15 +533,46 @@ $('.date_received').datepicker({
     format: 'yyyy-mm-dd'
   })
 
-function add(){
-  $('#table2').hide();
-  $('#form2').show();
-}
-
 function cancel(){
   $('#table').removeClass('col-xs-7');
   $('#table').addClass('col-xs-12');
   $('#form').hide();
+}
+
+function showDepartments(data){
+  $('#stock_dept_tbl').DataTable().clear().draw().destroy();
+
+  if(data == 'Inventory'){
+    $('#stock_dept_tbl_div').hide();
+    $('#stock_tbl_div').show();
+    $('#stock_dept_tbl').DataTable().clear().draw().destroy();
+  }
+  else{
+    $('#stock_dept_tbl_div').show();
+    $('#stock_tbl_div').hide();
+    $('#stock_dept_tbl').DataTable({
+      "ajax": {
+        "url": '<?=site_url()?>/INVENTORY/ajax/view_stocks_dept',
+        "type": "POST",
+        "data": {
+          "department": data
+        }
+      },
+      "paging": true,
+      "autoWidth": false,
+      "columnDefs": [{"width": "150px", "targets": 0},{"width": "400px", "targets": 1}],
+      "tableTools": {
+         "aButtons": [ "copy", "print", {
+               "sExtends": "collection",
+                 "sButtonText": "Save",
+                  "aButtons": [ "csv", "xls", "pdf" ]
+                }
+              ]
+            }
+    });
+
+
+  }
 }
 
 //STOCK REGISTER
@@ -429,7 +591,6 @@ $('.add_clone').on('click', function(){
       return
     }
     $(this).closest('.department').remove()
-
   });
   $('.del_clone').show()
 });
@@ -440,7 +601,7 @@ $('#btn-dsave').on('click', function(){
   var q = 0
   $('.i-quantity').each(function(){
       q = q + parseInt($(this).val())
-  })
+  });
 
   if(q > dQuantity){
     alert('NOT ENOUGH QUANTITY')
@@ -450,16 +611,48 @@ $('#btn-dsave').on('click', function(){
   $('.s-dept').each(function(){
       var d = $(this).val()
       var qu = $(this).closest('.department').find('.i-quantity').val()
-      console.log($(this).val())
-      console.log($(this).closest('.department').find('.i-quantity').val())
+      // console.log(d)
+      // console.log(qu)
 
       //ADD TO DB
 
+      var distrib = {
+        'item_name': $('#d-name').val(),
+        'department': d,
+        'quantity': qu
+      };
+
+      $.ajax({
+        type:"POST",
+        data: {'distrib': distrib, 'add': 'stock_register'},
+        url: '<?=site_url()?>/INVENTORY/ajax/add',
+        success: function(data){
+          $("#myModal").modal('hide');
+          alert("successfully saved!");
+          $('#stock_tbl').DataTable().ajax.reload();
+        }
+
+      });
+
       //MINUS QUANTITY
 
-  })
+      var quanLeft = {
+        'item_name': $('#d-name').val(),
+        'quantity': qu
+      };
 
-})
+      $.ajax({
+        type: "POST",
+        data: {'subtract': quanLeft},
+        url: '<?=site_url()?>/INVENTORY/ajax/subt',
+        success: function(data){
+          console.log('Quantity Subtracted');
+        }
+      });
+
+  });
+
+});
 
 
 

@@ -11,3 +11,5 @@
 <!-- DataTables -->
 <link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/datatables/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="<?php echo base_url();?>includes/dist/css/skins/skin-maroon.css">
+<!-- Pace style -->
+<link rel="stylesheet" href="<?php echo base_url();?>includes/plugins/pace/pace.min.css">

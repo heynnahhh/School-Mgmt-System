@@ -132,7 +132,7 @@
               <h4 class="box-title"> Transact Records</h4>
               <div class="btn-group pull-right">
                 <button type="button" class="btn bg-maroon" id="myBtn"><i class="fa fa-plus-circle"></i> New Transaction</button>
-                <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button>
+                <!-- <button type="button" class="btn bg-green" id="myBtn3"><i class="fa fa-file-excel-o"></i> Import Data From Excel</button> -->
               </div>
             </div>
             <div class="box-body table-responsive">
@@ -255,6 +255,19 @@
               <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
             </div>
           </form>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="delModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <h4>Are you sure you want to delete?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger yes" id="yes">Yes</button>
+            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+          </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->

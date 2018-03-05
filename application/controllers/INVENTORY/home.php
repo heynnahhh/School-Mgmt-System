@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 
 		$this->load->model('SMS/user');
 		$this->load->model('INVENTORY/inventory_model');
-		$this->sms_session->checkSession();
+		$this->sms_session->checkSession(base_url());
 
 	}
 

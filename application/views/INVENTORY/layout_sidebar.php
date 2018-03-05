@@ -38,7 +38,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="<?php echo site_url();?>/LRMDS/home/users_account"><i class="fa fa-circle-o"></i> User Accounts</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> User Privilege</a></li>
+              <li><a href="<?php echo site_url();?>/LRMDS/home/users_privilege"><i class="fa fa-circle-o"></i> User Privilege</a></li>
             </ul>
           </li>
         </ul>
@@ -53,7 +53,7 @@
         <ul class="treeview-menu">
           <li><a href="<?php echo site_url();?>/INVENTORY/home"><i class="fa fa-circle-o"></i> Dashboard</a></li>
 
-          <li><a href="<?php echo site_url();?>/INVENTORY/home/compose_email"><i class="fa fa-circle-o"></i> Compose E-mail</a></li>
+          <!--<li><a href="<?php echo site_url();?>/INVENTORY/home/compose_email"><i class="fa fa-circle-o"></i> Compose E-mail</a></li>-->
           <li><a href="<?php echo site_url();?>/INVENTORY/home/transactions"><i class="fa fa-circle-o"></i> Transactions</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/inventory_items"><i class="fa fa-circle-o"></i> Inventory Items</a></li>
           <li><a href="<?php echo site_url();?>/INVENTORY/home/stock_register"><i class="fa fa-circle-o"></i> Stock Register</a></li>

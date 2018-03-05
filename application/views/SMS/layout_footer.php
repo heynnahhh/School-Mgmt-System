@@ -94,6 +94,13 @@
 <script src="<?php echo base_url();?>includes/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- dateTime -->
 <script src="<?php echo base_url();?>includes/website/js/dateTime.js"></script>
+<!-- PACE -->
+<script src="<?php echo base_url();?>includes/plugins/pace/pace.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(document).ajaxStart(function() { Pace.restart(); });
+  });
+</script>
 
 </body>
 </html>

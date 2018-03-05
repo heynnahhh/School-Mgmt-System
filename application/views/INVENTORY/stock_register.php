@@ -71,25 +71,25 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#" onclick="showDepartments()">Inventory</a><li>
-                  <li><a href="#" onclick="showDepartments()">Senior High</a><li>
-                  <li><a href="#" onclick="showDepartments()">Math</a><li>
-                  <li><a href="#" onclick="showDepartments()">English</a><li>
-                  <li><a href="#" onclick="showDepartments()">MAPEH</a><li>
-                  <li><a href="#" onclick="showDepartments()">TLE-HE</a><li>
-                  <li><a href="#" onclick="showDepartments()">Non-Teachings</a><li>
-                  <li><a href="#" onclick="showDepartments()">Science</a><li>
-                  <li><a href="#" onclick="showDepartments()">Social Studies</a><li>
-                  <li><a href="#" onclick="showDepartments()">Filipino</a><li>
-                  <li><a href="#" onclick="showDepartments()">Values Ed</a><li>
-                  <li><a href="#" onclick="showDepartments()">TLE-Voc</a><li>
-                  <li><a href="#" onclick="showDepartments()">Library</a><li>
-                  <li><a href="#" onclick="showDepartments()">Medical</a><li>
-                  <li><a href="#" onclick="showDepartments()">Dental</a><li>
+                  <li><a href="#" onclick="showDepartments('Inventory')">Inventory</a><li>
+                  <li><a href="#" onclick="showDepartments('Senior High')">Senior High</a><li>
+                  <li><a href="#" onclick="showDepartments('Math')">Math</a><li>
+                  <li><a href="#" onclick="showDepartments('English')">English</a><li>
+                  <li><a href="#" onclick="showDepartments('MAPEH')">MAPEH</a><li>
+                  <li><a href="#" onclick="showDepartments('TLE-HE')">TLE-HE</a><li>
+                  <li><a href="#" onclick="showDepartments('Non-Teachings')">Non-Teachings</a><li>
+                  <li><a href="#" onclick="showDepartments('Science')">Science</a><li>
+                  <li><a href="#" onclick="showDepartments('Social Studies')">Social Studies</a><li>
+                  <li><a href="#" onclick="showDepartments('Filipino')">Filipino</a><li>
+                  <li><a href="#" onclick="showDepartments('Values Ed')">Values Ed</a><li>
+                  <li><a href="#" onclick="showDepartments('TLE-Voc')">TLE-Voc</a><li>
+                  <li><a href="#" onclick="showDepartments('Library')">Library</a><li>
+                  <li><a href="#" onclick="showDepartments('Medical')">Medical</a><li>
+                  <li><a href="#" onclick="showDepartments('Dental')">Dental</a><li>
                 </ul>
               </div>
             </div>
-            <div class="box-body">
+            <div class="box-body" id="stock_tbl_div">
               <table id="stock_tbl" class="table table-striped table-bordered" cellspacing="0" width="100%">
               <thead>
                   <tr>
@@ -103,6 +103,30 @@
               <tfoot>
                   <tr>
                       <th>Stock No.</th>
+                      <th>Item Name</th>
+                      <th>Category</th>
+                      <th>Available Quantity</th>
+                      <th>Manage</th>
+                  </tr>
+              </tfoot>
+              <tbody>
+              </tbody>
+              </table>
+            </div>
+            <div class="box-body" id="stock_dept_tbl_div" style="display:none;">
+              <table id="stock_dept_tbl" class="table table-striped table-bordered" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                      <th>Department</th>
+                      <th>Item Name</th>
+                      <th>Category</th>
+                      <th>Available Quantity</th>
+                      <th>Manage</th>
+                  </tr>
+              </thead>
+              <tfoot>
+                  <tr>
+                      <th>Department</th>
                       <th>Item Name</th>
                       <th>Category</th>
                       <th>Available Quantity</th>
@@ -139,8 +163,7 @@
                 </div>
               </div><hr>
               <div class="append">
-
-                <button type="button" class="btn btn-sm bg-blue add_clone"><i class="fa fa-plus-circle"></i></button>
+                <button type="button" class="btn btn-sm bg-blue add_clone"><i class="fa fa-plus-circle"></i> Add Department</button><br><br>
                 <div id="department" class="row department">
                   <div class="form-group">
                     <label for="field-1" class="col-sm-2 control-label">Department</label>
@@ -167,6 +190,20 @@
           </div>
           <div class="modal-footer">
             <button id="btn-dsave" type="button" class="btn btn-sm btn-success">Save changes</button>
+            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="delModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <h4>Are you sure you want to delete?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger yes" id="yes">Yes</button>
             <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
           </div>
         </div><!-- /.modal-content -->

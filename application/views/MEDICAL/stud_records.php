@@ -29,10 +29,11 @@
                 <i class="fa fa-plus-square"></i> Add Student</a>
               </div>
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Choose Year:</label>
                 <div class="box-body">
-                  <select class="form-control" style="width: 100%;">
+                  <select class="form-control" style="width: 100%;" id="sgrade_lvl">
+                    <option selected="selected">Select Grade Level:</option>>
                     <option>Grade 7</option>
                     <option>Grade 8</option>
                     <option>Grade 9</option>
@@ -45,32 +46,27 @@
               <div class="form-group">
                 <label>Choose Section:</label>
                 <div class="box-body">
-                  <select class="form-control" style="width: 100%;">
-                    <option>Grade 7</option>
-                    <option>Grade 8</option>
-                    <option>Grade 9</option>
-                    <option>Grade 10</option>
-                    <option>Grade 11</option>
-                    <option>Grade 12</option>
+                  <select class="form-control" style="width: 100%;" id="ssection">
+
                   </select>
                 </div>
-              </div>
+              </div> -->
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-12">
               <div class="form-group">
                 <table id="stud_list" class="table table-bordered table-striped">
                   <thead>
                     <tr>
+                      <th>#</th>
                       <th>Surname:</th>
                       <th>Name:</th>
-                      <th>Middle Initial</th>
+                      <th>Middle Name</th>
                       <th>Status</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr></tr>
                   </tbody>
                 </table>
               </div>
@@ -87,8 +83,6 @@
           <div class="box-body">
             <div class="form-group">
                 <label> RECORDS:</label>&nbsp;&nbsp;
-                <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#StudentConsultation">
-                <i class="fa fa-plus-square"></i> Add Consultation</a>
             </div>
             <hr>
             <table id="stud_records" class="table table-bordered table-striped">
@@ -101,36 +95,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>12/18/17</td>
-                  <td>Heart burn</td>
-                  <td>Biogesic</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
-                <tr>
-                  <td>1/18/2018</td>
-                  <td>Fungi</td>
-                  <td>Lotion</td>
-                  <td>N.A</td>
-                </tr>
+
               </tbody>
             </table>
           </div>
@@ -152,7 +117,7 @@
           <h3 class="modal-title"><i class="fa fa-plus-square"></i> Student Profile</h3>
         </div>
 
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" id="addstud">
           <div class="modal-body">
             <div class="row">
               <div class="col-md-12">
@@ -180,7 +145,7 @@
                         <div class="col-xs-6">
                           <label>YEAR:</label>
                           <select class="form-control" id="grade_lvl" name="grade_lvl">
-                            <option selected="selected">Select Grade Level:</option>>
+                            <option selected="selected" placeholder="Select Grade Level"></option>
                             <option>Grade 7</option>
                             <option>Grade 8</option>
                             <option>Grade 9</option>
@@ -278,6 +243,7 @@
           </div>
 
           <div class="modal-body">
+            <form method="post" enctype="multipart/form-data" id="addcons">
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
@@ -294,6 +260,7 @@
                               <i class="fa fa-calendar"></i>
                             </div>
                             <input type="text" class="form-control pull-right" id="stud_date_consult">
+                            <input type="hidden" readonly id="hid_id">
                           </div>
                           <!-- /.input group -->
                         </div>
@@ -306,7 +273,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <label>COMPLAINT / AILMENTS:</label>
-                          <textarea class="form-control" rows="3" style="width: 212%;"></textarea>
+                          <textarea class="form-control" rows="3" style="width: 212%;" id="complaint"></textarea>
                         </div>
                       </div>
                     </div>
@@ -317,7 +284,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <label>TREATMENT / MEDICINE:</label>
-                          <textarea class="form-control" rows="3" style="width: 212%;"></textarea>
+                          <textarea class="form-control" rows="3" style="width: 212%;" id="treatment"></textarea>
                         </div>
                       </div>
                     </div>
@@ -328,7 +295,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <label>REMARKS:</label>
-                          <textarea class="form-control" rows="3" style="width: 212%;"></textarea>
+                          <textarea class="form-control" rows="3" style="width: 212%;" id="remarks"></textarea>
                         </div>
                       </div>
                     </div>
@@ -339,12 +306,26 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Save Changes</button>
+              <button type="button" class="btn btn-primary pull-right consulSubmit">Save Changes</button>
             </div>
+          </form>
           </div>
         </div>
       </div>
     </div>
     <!-- /MODALS -->
+    <div class="modal fade" id="delModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <h4>Are you sure you want to delete?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger yes" id="yes">Yes</button>
+            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </div>
 <?php include 'layout_footer.php';?>

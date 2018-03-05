@@ -7,7 +7,7 @@ class ajax extends CI_Controller {
 
 		$this->load->library('form_validation');
 		$this->load->model('INVENTORY/inventory_model');
-		$this->sms_session->checkSession();
+		$this->load->helper('string');
 
 	}
 
@@ -27,8 +27,35 @@ class ajax extends CI_Controller {
 					$row[] = $value->quantity;
 				}
 				$row[] = '<button type="button" class="btn bg-green btn-dist" id="myBtn">Distribute</button>
-				          <button type="button" class="btn bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
-				          <button type="button" class="btn bg-red" id="del"><i class="fa fa-trash-o"></i></button>';
+				          <button type="button" class="btn btn-sm bg-red delete"><i class="fa fa-trash-o"></i></button>';
+				$data[] = $row;
+			}
+
+			$result = array(
+				"data" => $data,
+			);
+
+		echo json_encode($result);
+	}
+
+	public function view_stocks_dept(){
+		$data = $this->input->post();
+		$m_data = $this->inventory_model->get_Stocks_dept($data['department']);
+		$data = array();
+
+			foreach ($m_data as $value) {
+				$row = array();
+				$row[] = $value->department;
+				$row[] = $value->item_name;
+				$row[] = $value->item_category;
+				if($value->distributed_qty <= 0){
+					$row[] = '<span class="badge bg-red">Out of Stock</span>';
+				}
+				elseif($value->distributed_qty > 0 ){
+					$row[] = $value->distributed_qty;
+				}
+				$row[] = '<button type="button" class="btn bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+				          <button type="button" class="btn btn-sm bg-red delete"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;
 			}
 
@@ -55,7 +82,8 @@ class ajax extends CI_Controller {
 					$row[] = '<span class="badge bg-green">Active</span>';
 				}
 				$row[] = '<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>
-				<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>';
+				<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+				<button type="button" class="btn btn-sm bg-red delete"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;
 			}
 
@@ -79,7 +107,8 @@ class ajax extends CI_Controller {
 				$row[] = $value->total_cost;
 				$row[] = $value->date_received;
 				$row[] = '<button type="button" class="btn btn-sm bg-aqua view" id="view"><i class="fa fa-eye"></i></button>
-				<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>';
+				<button type="button" class="btn btn-sm bg-blue edit" id="edit"><i class="fa fa-edit"></i></button>
+				<button type="button" class="btn btn-sm bg-red delete"><i class="fa fa-trash-o"></i></button>';
 				$data[] = $row;
 			}
 
@@ -90,6 +119,77 @@ class ajax extends CI_Controller {
 		echo json_encode($result);
 			// print_r($result);
 	}
+
+
+		public function get_item_details(){
+			$data = $this->input->post();
+
+			$item_code = explode(' - ', $data['item_code']);
+
+			$m_data = $item_code[0];
+
+			$values = $this->inventory_model->get_details($m_data);
+
+			if($values) {
+
+				foreach ($values as $value){
+					$option = array();
+					$option[] = $value->unit_cost;
+					$option_data[] = $option;
+				}
+
+			echo json_encode($option_data);
+
+			}
+		}
+
+		public function get_transact_details(){
+			$data = $this->input->post();
+
+			$m_data = $data['receipt_no'];
+
+			$values = $this->inventory_model->get_transact_details($m_data);
+
+			$result = array(
+				"data" => $values
+			);
+
+			echo json_encode($result);
+
+		}
+
+		// public function get_stock_details(){
+		// 	$data = $this->input->post();
+		//
+		// 	$m_data = $data['stock_no'];
+		//
+		// 	$values = $this->inventory_model->get_stock_details($m_data);
+		//
+		// 	$result = array(
+		// 		"data" => $values
+		// 	);
+		//
+		// 	echo json_encode($result);
+		//
+		//
+		// }
+
+		public function get_item_info(){
+			$data = $this->input->post();
+
+			$m_data = $data['item_code'];
+
+			$values = $this->inventory_model->get_item_info($m_data);
+
+			$result = array(
+				"data" => $values
+			);
+
+			echo json_encode($result);
+
+		}
+
+// ADD *************************
 
 	public function add(){
 		$data = $this->input->post();
@@ -105,13 +205,16 @@ class ajax extends CI_Controller {
 				$this->add_items($data['items']);
 			}
 		}
-
 		elseif ( $data['add'] == 'transactions'){
 			if($data['transacts']) {
 				$this->add_transacts($data['transacts']);
 			}
 		}
-
+		elseif ( $data['add'] == 'stock_register'){
+			if($data['distrib']) {
+				$this->add_distrib($data['distrib']);
+			}
+		}
 	}
 
 	private function add_category($data){
@@ -148,8 +251,9 @@ class ajax extends CI_Controller {
 		if ($data) {
 
 			$item_code = explode(' - ', $data['item_code']);
+			$stock_no = random_string('alnum', 4);
 
-			$m_data = array(
+			$trans_data = array(
 				'receipt_no' => $data['receipt_no'],
 				'itr_item_code' => $item_code[0],
 				'quantity' => $data['quantity'],
@@ -161,27 +265,73 @@ class ajax extends CI_Controller {
 				'date_received' => $data['date_received']
 			);
 
-			$this->inventory_model->insert_transacts($m_data);
+			$qty = $this->inventory_model->get_existing_data($item_code[0]);
+
+			if(!empty($qty)){
+
+					$quantity = $qty[0]->quantity + $data['quantity'];
+
+					$stock_data = array(
+						'stock_no' => $qty[0]->stock_no,
+						'ist_item_code' => $qty[0]->ist_item_code,
+						'quantity' => $quantity
+					);
+
+					$this->inventory_model->update_stock($stock_data);
+					$this->inventory_model->insert_transacts($trans_data);
+			}
+			elseif(empty($qty)){
+
+				$stocks_data = array(
+					'stock_no' => $stock_no,
+					'ist_item_code' => $item_code[0],
+					'quantity' => $data['quantity']
+				);
+
+				$m_data = array($trans_data, $stocks_data);
+				$this->inventory_model->insert_transacts($m_data);
+			}
 		}
 	}
 
-	private function add_stocks(){
-		if($data = $this->input->post()){
+
+	private function add_distrib($data){
+		if($data){
+
+			$item_code = $this->inventory_model->get_item_code($data['item_name']);
 
 			$m_data = array(
-				'ist_product_code' => $data['ist_product_code'],
-				'product_qty' => $data['product_qty'],
-				'product_qty_left' => $data['product_qty'],
-				'import_date' => date("Y-m-d H:i:s"),
-				'as_of_date' => date("Y-m-d H:i:s")
+				'department' => $data['department'],
+				'item_code' => $item_code[0]->item_code,
+				'distributed_qty' => $data['quantity']
 			);
 
-			$this->inventory_model->insert_stocks($m_data);
+			// print_r($m_data);
+			$this->inventory_model->insert_distrib($m_data);
+
 		}
-		// needs to set url
-		$this->stocks();
+	}
+
+	public function subt(){
+		$data = $this->input->post();
+
+		$item_code = $this->inventory_model->get_item_code($data['subtract']['item_name']);
+		$ex_data = $this->inventory_model->get_existing_data($item_code[0]->item_code);
+
+
+		$quantity_left = $ex_data[0]->quantity - $data['subtract']['quantity'];
+
+		$m_data = array(
+			'stock_no' => $ex_data[0]->stock_no,
+			'ist_item_code' => $item_code[0]->item_code,
+			'quantity' => $quantity_left
+		);
+
+		$this->inventory_model->update_stock($m_data);
 
 	}
+
+// EDIT **************************
 
 	public function edit(){
 		$data = $this->input->post();
@@ -239,72 +389,53 @@ class ajax extends CI_Controller {
 		}
 	}
 
-	public function get_item_details(){
-		$data = $this->input->post();
+	// DELETE FUNCTION ****************************
 
-		$item_code = explode(' - ', $data['item_code']);
-
-		$m_data = $item_code[0];
-
-		$values = $this->inventory_model->get_details($m_data);
-
-		if($values) {
-
-			foreach ($values as $value){
-				$option = array();
-				$option[] = $value->unit_cost;
-				$option_data[] = $option;
+		public function delete(){
+			$data = $this->input->post();
+			// echo $current_view;
+			if ( $data['delete'] == 'transactions'){
+				if($data['receipt_no']){
+					unset($data['delete']);
+					$this->delete_transact($data['receipt_no']);
+				}
 			}
-
-		echo json_encode($option_data);
-
+			elseif ( $data['delete'] == 'inventory_items'){
+				if($data['item_code']){
+					unset($data['delete']);
+					$this->delete_item($data['item_code']);
+				}
+			}
+			elseif ( $data['delete'] == 'stock_register'){
+				if($data['stock_no']){
+					unset($data['delete']);
+					$this->delete_stock($data['stock_no']);
+				}
+			}
 		}
-	}
 
-	public function get_transact_details(){
-		$data = $this->input->post();
+		private function delete_transact($data){
+			if($data){
+				$m_data = array('receipt_no' => $data);
+				$table = 'tbl_inv_transactions';
+				$this->inventory_model->delete($table,$m_data);
+			}
+		}
 
-		$m_data = $data['receipt_no'];
+		private function delete_item($data){
+			if($data){
+				$m_data = array('item_code' => $data);
+				$table = 'tbl_inv_items';
+				$this->inventory_model->delete($table,$m_data);
+			}
+		}
 
-		$values = $this->inventory_model->get_transact_details($m_data);
-
-		$result = array(
-			"data" => $values
-		);
-
-		echo json_encode($result);
-
-	}
-
-	public function get_stock_details(){
-		$data = $this->input->post();
-
-		$m_data = $data['stock_no'];
-
-		$values = $this->inventory_model->get_stock_details($m_data);
-
-		$result = array(
-			"data" => $values
-		);
-
-		echo json_encode($result);
-
-		
-	}
-
-	public function get_item_info(){
-		$data = $this->input->post();
-
-		$m_data = $data['item_code'];
-
-		$values = $this->inventory_model->get_item_info($m_data);
-
-		$result = array(
-			"data" => $values
-		);
-
-		echo json_encode($result);
-
-	}
+		private function delete_stock($data){
+			if($data){
+				$m_data = array('stock_no' => $data);
+				$table = 'tbl_inv_stocks';
+				$this->inventory_model->delete($table,$m_data);
+			}
+		}
 
 }

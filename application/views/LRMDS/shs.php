@@ -49,28 +49,8 @@
               <div class="row">
                 <div class="form-group">
                   <label for="shs_subject" class="col-sm-2 control-label">Subject Name</label>
-                  <div class="col-sm-8">
+                  <div class="col-sm-10">
                     <input type="text" class="form-control input-sm" name="shs_subject" id="ed_shs_subject" data-validate="required" data-message-required="Value Required" value="" autofocus="">
-                  </div>
-                </div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label">Strand</label>
-                  <div class="col-sm-8">
-                    <select class="sel_category item_code" name="strand" id="ed_strand" style="width: 100%;">
-                          
-                    </select>
-                  </div>
-                </div>
-              </div><hr>
-              <div class="row">
-                <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label">Grade Level</label>
-                  <div class="col-sm-8">
-                    <select class="sel_category item_code" name="grade_lvl" id="ed_grade_lvl" style="width: 100%;">
-                          
-                    </select>
                   </div>
                 </div>
               </div><hr>
@@ -78,8 +58,36 @@
                 <div class="form-group">
                   <label for="receipt_no" class="col-sm-2 control-label">Subject Type</label>
                   <div class="col-sm-8">
-                    <select class="sel_category item_code" name="subject_type" id="ed_subject_type" style="width: 100%;">
-                          
+                    <select class="form-control input-sm" name="subject_type" id="ed_subject_type" style="width: 100%;">
+                      <option>Core Subject</option>
+                      <option>Applied Subject</option>
+                      <option>Specialized Subject</option>
+                    </select>
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="receipt_no" class="col-sm-2 control-label">Strand</label>
+                  <div class="col-sm-8">
+                    <select class="form-control input-sm " name="strand" id="ed_strand" style="width: 100%;">
+                      <option>STEM</option>
+                      <option>HUMSS</option>
+                      <option>GAS</option>
+                      <option>Automotive Servicing</option>
+                      <option>ABM</option>
+                      <option>Home Economics</option>
+                    </select>
+                  </div>
+                </div>
+              </div><hr>
+              <div class="row">
+                <div class="form-group">
+                  <label for="grade_lvl" class="col-sm-2 control-label">Grade Level</label>
+                  <div class="col-sm-8">
+                    <select class="form-control input-sm " name="grade_lvl" id="ed_grade_lvl" style="width: 100%;">
+                      <option>Grade 11</option>
+                      <option>Grade 12</option>
                     </select>
                   </div>
                 </div>
@@ -103,9 +111,9 @@
               <thead>
                   <tr>
                       <th>Subject Name</th>
+                      <th>Subject Type</th>
                       <th>Strand</th>
                       <th>Grade Level</th>
-                      <th>Subject Type</th>
                       <th>Actions</th>
                   </tr>
               </thead>
@@ -113,9 +121,9 @@
               <tfoot>
                   <tr>
                       <th>Subject Name</th>
+                      <th>Subject Type</th>
                       <th>Strand</th>
                       <th>Grade Level</th>
-                      <th>Subject Type</th>
                       <th>Actions</th>
                   </tr>
               </tfoot>
@@ -136,38 +144,41 @@
             <div class="modal-body">
               <div class="row">
                 <div class="form-group">
-                  <label for="receipt_no" class="col-sm-2 control-label"> Subject Name</label>
-                  <div class="col-sm-5">
-                    <input type="text" class="form-control input-sm" name="receipt_no" id="receipt_no" data-validate="required" data-message-required="Value Required" value="" autofocus="">
+                  <label for="subject" class="col-sm-3 control-label"> Subject Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control input-sm" name="subject" id="adsubject" data-validate="required" data-message-required="Value Required" value="" autofocus="">
                   </div>
                 </div>
               </div><hr>
               <div class="row">
                   <div class="form-group">
-                    <label for="unit_cost" class="col-sm-2 control-label">Grade Level</label>
-                    <div class="col-sm-5">
-                      <select class="sel_category item_code" name="item_category" id="ed_item_category" style="width: 100%;">
-                          
+                    <label for="grade_lvl" class="col-sm-3 control-label">Grade Level</label>
+                    <div class="col-sm-8">
+                      <select class="form-control input-sm" name="grade_lvl" id="adgrade_lvl" style="width: 100%;">
+                        <option value="Grade 11">Grade 11</option>
+                        <option value="Grade 12">Grade 12</option>
                       </select>
                     </div>
                   </div>
                 </div><hr>
                 <div class="row">
                   <div class="form-group">
-                    <label for="unit_cost" class="col-sm-2 control-label">Subject Type</label>
-                    <div class="col-sm-5">
-                      <select class="sel_category item_code" name="item_category" id="ed_item_category" style="width: 100%;">
-                          
+                    <label for="subject_type" class="col-sm-3 control-label">Subject Type</label>
+                    <div class="col-sm-8">
+                      <select class="form-control input-sm" name="subject_type" id="adsubject_type" style="width: 100%;">
+                        <option value="Core Subject">Core Subject</option>
+                        <option value="Applied Subject">Applied Subject</option>
+                        <option value="Specialized Subject">Specialized Subject</option>
                       </select>
                     </div>
                   </div>
                 </div><hr>
                 <div class="row">
-                  <div class="form-group">
-                    <label for="unit_cost" class="col-sm-2 control-label">Strand</label>
-                    <div class="col-sm-5">
-                      <select class="sel_category item_code" name="item_category" id="ed_item_category" style="width: 100%;">
-                          
+                  <div class="form-group strand-class">
+                    <label for="strand" class="col-sm-3 control-label">Strand</label>
+                    <div class="col-sm-8">
+                      <select class="form-control input-sm" name="strand" id="adstrand" style="width: 100%;">
+                        <option></option>
                       </select>
                     </div>
                   </div>
@@ -182,6 +193,19 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <div class="modal fade" id="delModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <h4>Are you sure you want to delete?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger yes" id="yes">Yes</button>
+            <button type="button" class="btn btn-sm bg-gray" data-dismiss="modal">Cancel</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     </section>
   </div>
